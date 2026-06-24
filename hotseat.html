@@ -694,6 +694,7 @@ function checkanswer() {
   oneclicked = parseInt(event.target.id.substring(0, 1)) - 1;
   if (oneclicked == accyAnswer) {
     con.push(1);
+    pose("happy");
     numcorrect++;
     for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.pointerEvents = "none";
@@ -786,6 +787,7 @@ function checkanswer() {
     }, 1300) };
   } else {
     con.push(0);
+    pose("confused");
     for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.pointerEvents = "none";
     }
