@@ -28,7 +28,8 @@
    <option value="ja-JP">Japanese</option>
    <option value="hi-IN">Hindi</option>
  </select>
- <textarea id="answer"></textarea>
+ <input id="answer"></input>
+  <input id="answer56"></input>
  <div id="circles">
  <div id="1mcq" style="left: 10.6dvh; top: 65.5dvh" class="mcqfrfr hidden"><span id="1imcq" class="imcq"></span></div>
  <div id="2mcq" style="right: 10.6dvh; top: 65.5dvh" class="mcqfrfr hidden"><span id="2imcq"class="imcq"></span></div>
@@ -48,7 +49,6 @@
    <option value="270">4:30</option>
    <option value="300">5:00</option>
  </select>
- <textarea class="hidden" maxlength="1000" placeholder="Type the answer here..." id="answer"></textarea>
  <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = 'study'.concat(current.concat('.html'))" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
@@ -84,6 +84,7 @@
   transition: 0.6s;
   z-index: 3000;
   font-size: 2dvh;
+  font-family: fredokaone;
 }
 #microphone {
   width: 100%;
@@ -464,9 +465,22 @@
   #answer {
     width: 30dvh;
     height: 6dvh;
-    z-index: 5000;
+    z-index: -5000;
+    opacity: 0;
+    pointer-events: none; 
     top: 3dvh;
     left: 3dvh;
+    color: black;
+  }
+  #answer56 {
+    width: 30dvh;
+    height: 6dvh;
+    z-index: -5000;
+    opacity: 0;
+    pointer-events: none; 
+    top: 3dvh;
+    left: 3dvh;
+    color: black;
   }
   #loadbar {
   }
@@ -597,7 +611,6 @@
   }
 </style>
 <script>
-localStorage.setItem("1qat", "5");
 if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("awall").style.backgroundColor = "black";
   document.getElementById("time").style.backgroundColor = "#3a3a3a";
@@ -609,7 +622,6 @@ if (localStorage.getItem("darkmode") == "1") {
   window.innerHeight;
   document.getElementById("title").style.transition = "0.3s color";
   document.body.style.backgroundColor = "black";
-  document.getElementById("answer").style.color = "white";
   document.getElementById("check").style.outline = "1.5dvh solid #3a3a3a";
   document.getElementById("check").style.backgroundColor = "black";
   document.getElementById("redo").style.outline = "1.5dvh solid #3a3a3a";
@@ -644,7 +656,7 @@ function finish() {
 }
 function redo() {
   sessionStorage.setItem("stu", current);
-  sessionStorage.setItem("wpr", "hotseat");
+  sessionStorage.setItem("wpr", "hotseatauditory");
   window.location.href = "justamoment.html";
 }
 con = [];
@@ -660,18 +672,6 @@ audio = false;
 let recognition = null;
 let finalTranscript = "";
 let restartTimer = null;
-
-function setRecognition() {
-  setInterval(function() {
-    valueofanswerbox = document.getElementById("answer").value;
-    for (i = 0; i < 4; i++) {
-      if(comparetwo(document.getElementsByClassName("imcq")[i].value, valueofanswerbox)) {
-        checkanswer(i);
-      }
-    }
-  }, 100);
-}
-
 function comparetwo(yco, ycidk) {
     newword = "";
     allwords = [];
@@ -767,61 +767,100 @@ function comparetwo(yco, ycidk) {
     correcton = numhave >= numtobeat;
     return correcton;
 }
+answerBox = document.getElementById("answer");
+// 1. CRITICAL: Declare this globally (outside the function) so the timer persists
+let checkTimeout;
 
 function toggleaudio() {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SpeechRecognition) {
-    alert("Your browser does not support speech recognition.");
-    return;
-  }
+    const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
 
-  const answerBox = document.getElementById("answer");
-
-  if (!audio) {
-    audio = true;
-    document.getElementById("microphone").src = "microphonered.png";
-
-    recognition = new SpeechRecognition();
-    recognition.lang = document.getElementById("lildropdown").value;
-    recognition.continuous = true;       // true for Safari pseudo-continuous
-    recognition.interimResults = true;   // true so we capture partials immediately
-
-    let tempTranscript = "";
-
-    recognition.onresult = (event) => {
-      let finalTranscript = "";
-      for (let i = event.resultIndex; i < event.results.length; ++i) {
-        const transcript = event.results[i][0].transcript;
-        if (event.results[i].isFinal) {
-          finalTranscript += transcript + " ";
-        } else {
-          tempTranscript = transcript;
-        }
-      }
-      answerBox.value = finalTranscript + tempTranscript;
-    };
-
-    recognition.onerror = (event) => {
-      console.log("Speech recognition error:", event.error);
-    };
-
-    recognition.onend = () => {
-      if (audio) recognition.start(); // restart if still active
-    };
-
-    recognition.start();
-
-  } else {
-    audio = false;
-    document.getElementById("microphone").src = "microphone.png";
-
-    if (recognition) {
-      recognition.onend = null;  // prevent auto-restart
-      recognition.stop();
+    if (!SpeechRecognition) {
+        alert("Speech recognition not supported.");
+        return;
     }
-  }
-}
 
+    if (!audio) {
+        audio = true;
+        document.getElementById("microphone").src =
+            "microphonered.png";
+
+        recognition = new SpeechRecognition();
+
+        recognition.lang =
+            document.getElementById("lildropdown").value;
+
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.maxAlternatives = 1;
+
+        recognition.onresult = (event) => {
+
+            let spokenText = "";
+
+            // ONLY PROCESS NEW RESULTS
+            for (
+                let i = event.resultIndex;
+                i < event.results.length;
+                i++
+            ) {
+                spokenText += event.results[i][0].transcript + " ";
+            }
+
+            spokenText = spokenText
+                .toLowerCase()
+                .replace(/[^\w\s]/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+
+            document.getElementById("answer").value =
+                spokenText;
+
+            const options =
+                document.getElementsByClassName("imcq");
+
+            for (let u = 0; u < options.length; u++) {
+
+                const optionText = options[u].textContent
+                    .toLowerCase()
+                    .replace(/[^\w\s]/g, "")
+                    .replace(/\s+/g, " ")
+                    .trim();
+
+                if (comparetwo(optionText, spokenText)) {
+                    checkanswer(u);
+                    return;
+                }
+            }
+        };
+
+        recognition.onerror = (event) => {
+            console.log(event.error);
+        };
+
+        recognition.onend = () => {
+            if (audio) {
+                recognition.start();
+            }
+        };
+
+        recognition.start();
+
+    } else {
+
+        audio = false;
+
+        document.getElementById("microphone").src =
+            "microphone.png";
+
+        if (recognition) {
+            recognition.onend = null;
+            recognition.stop();
+            recognition = null;
+        }
+    }
+}
+    
 function next2() {
   document.getElementById("time").style.pointerEvents = "none";
   pose("happy");
@@ -891,6 +930,8 @@ function next2() {
 numcorrect = 0;
 function checkanswer(hahahhh) {
   oneclicked = hahahhh;
+  if (audio) { toggleaudio() }
+  document.getElementById("answer").value = "";
   if (oneclicked == accyAnswer) {
     con.push(1);
     pose("happy");
@@ -898,6 +939,8 @@ function checkanswer(hahahhh) {
     for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.pointerEvents = "none";
     }
+    document.getElementById("audio").style.pointerEvents = "none";
+    document.getElementById("lildropdown").style.pointerEvents = "none";
     document.getElementsByClassName("mcqfrfr")[accyAnswer].style.backgroundColor = "rgb(45, 204, 112)";
     document.getElementsByClassName("mcqfrfr")[accyAnswer].style.outlineWidth = "1dvh";
     document.getElementsByClassName("mcqfrfr")[accyAnswer].style.width = "calc((100dvw - 20dvh) / 2)"
@@ -915,6 +958,8 @@ function checkanswer(hahahhh) {
       for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.opacity = 0;
     }
+      document.getElementById("audio").style.opacity = 0;
+      document.getElementById("lildropdown").style.opacity = 0;
     }, 600) }
     if (!gameEnd) { setTimeout(function() {
     for (i = 0; i < 4; i++) {
@@ -975,11 +1020,15 @@ function checkanswer(hahahhh) {
     document.getElementsByClassName("mcqfrfr")[1].style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[2].style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[3].style.opacity = 1;
+      document.getElementById("audio").style.opacity = 1;
+      document.getElementById("lildropdown").style.opacity = 1;
     document.getElementById("question2").style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[0].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[1].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[2].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[3].style.pointerEvents = "initial";
+      document.getElementById("audio").style.pointerEvents = "all";
+      document.getElementById("lildropdown").style.pointerEvents = "all";
     window.innerHeight;
 
     }, 1300) };
@@ -989,6 +1038,8 @@ function checkanswer(hahahhh) {
     for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.pointerEvents = "none";
     }
+    document.getElementById("audio").style.pointerEvents = "none";
+    document.getElementById("lildropdown").style.pointerEvents = "none";
     document.getElementsByClassName("mcqfrfr")[oneclicked].style.backgroundColor = "rgb(255, 133, 0)";
     document.getElementsByClassName("mcqfrfr")[oneclicked].style.outlineWidth = "1dvh";
     document.getElementsByClassName("mcqfrfr")[oneclicked].style.width = "calc((100dvw - 20dvh) / 2)"
@@ -1009,6 +1060,8 @@ function checkanswer(hahahhh) {
       for (i = 0; i < 4; i++) {
       document.getElementsByClassName("mcqfrfr")[i].style.opacity = 0;
     }
+      document.getElementById("audio").style.opacity = 0;
+      document.getElementById("lildropdown").style.opacity = 0;
     }, 3600) }
     if (!gameEnd) { setTimeout(function() {
     for (i = 0; i < 4; i++) {
@@ -1069,11 +1122,15 @@ function checkanswer(hahahhh) {
     document.getElementsByClassName("mcqfrfr")[1].style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[2].style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[3].style.opacity = 1;
+      document.getElementById("audio").style.opacity = 1;
+      document.getElementById("lildropdown").style.opacity = 1;
     document.getElementById("question2").style.opacity = 1;
     document.getElementsByClassName("mcqfrfr")[0].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[1].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[2].style.pointerEvents = "initial";
     document.getElementsByClassName("mcqfrfr")[3].style.pointerEvents = "initial";
+      document.getElementById("audio").style.pointerEvents = "all";
+      document.getElementById("lildropdown").style.pointerEvents = "all";
     window.innerHeight;
 
     }, 4300) };
@@ -1085,6 +1142,10 @@ function startTimer() {
     if (secondsLeft == 1) {
       gameEnd = true;
       secondsLeft--;
+      if (audio) { toggleaudio() }
+      document.getElementById("answer").value = "";
+      document.getElementById("audio").style.pointerEvents = "none";
+      document.getElementById("lildropdown").style.pointerEvents = "none";
       document.getElementById("qtext").innerHTML = "0";
       for (i = 0; i < 4; i++) {
         document.getElementsByClassName("mcqfrfr")[i].style.pointerEvents = "none";
