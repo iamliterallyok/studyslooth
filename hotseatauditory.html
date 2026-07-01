@@ -811,12 +811,6 @@ function toggleaudio() {
                 spokenText += event.results[i][0].transcript + " ";
             }
 
-            spokenText = spokenText
-                .toLowerCase()
-                .replace(/[^\w\s]/g, "")
-                .replace(/\s+/g, " ")
-                .trim();
-
             document.getElementById("answer").value =
                 spokenText;
 
@@ -825,12 +819,7 @@ function toggleaudio() {
 
             for (let u = 0; u < options.length; u++) {
 
-                const optionText = options[u].textContent
-                    .toLowerCase()
-                    .replace(/[^\w\s]/g, "")
-                    .replace(/\s+/g, " ")
-                    .trim();
-
+                const optionText = options[u];
                 if (comparetwo(optionText, spokenText)) {
                     checkanswer(u);
                     return;
