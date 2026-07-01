@@ -676,7 +676,7 @@ function comparetwo(yco, ycidk) {
     newword = "";
     allwords = [];
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    thequestion = ycidk.toLowerCase();.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    thequestion = ycidk.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     for (i = 0; i < thequestion.length; i++) {
       if (i+1 == thequestion.length) {
         if (alphabet.indexOf(thequestion[i]) != -1) {
@@ -695,7 +695,7 @@ function comparetwo(yco, ycidk) {
     }
     newword = "";
     allwordsa = [];
-    thequestion = yco..toLowerCase();.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    thequestion = yco.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     for (i = 0; i < thequestion.length; i++) {
       if (i+1 == thequestion.length) {
         if (alphabet.indexOf(thequestion[i]) != -1) {
