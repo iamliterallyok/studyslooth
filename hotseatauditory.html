@@ -677,7 +677,8 @@ function comparetwo(yco, ycidk) {
     allwords = [];
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     thequestion = ycidk.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    console.log(thequestion);
+    console.log([...ycidk]);
+    console.log([...ycidk].map(x => x.codePointAt(0).toString(16)));onsole.log(thequestion);
     for (i = 0; i < thequestion.length; i++) {
       if (i+1 == thequestion.length) {
         if (alphabet.indexOf(thequestion[i]) != -1) {
