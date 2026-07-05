@@ -496,9 +496,9 @@ function showpopup(nameofgame) {
     case "matching":
       document.getElementById("playbutton").setAttribute("onclick", `
       if (tog1 == 1) {
-      redirecttoads('matchingsingleplayer');
-      } else {
       redirecttoads('matchingmultiplayer');
+      } else {
+      redirecttoads('matchingsingleplayer');
       }
       `);
       document.getElementsByClassName("sat")[1].classList.add("hidden");
