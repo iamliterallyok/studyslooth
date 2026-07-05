@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<html>
+<body>
+<div id="firstpart" class="">
+<div id="fullscreen">
+  <div id="grid"></div>
+ <div id="popup">
+   <span id="title">
+   </span>
+   <div id="showanswer"><span id="desc"></span><div id="gatb"></div></div>
+   <div id="torabody"></div>
+   <div id="torahead"></div>
+   <button id="next" onclick="next()">Next</button>
+ </div>
+  </div>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = 'study'.concat(current.concat('.html'))" id="x">X</span>
+</div>
+<div id="secondpart" class="hidden">
+     <button class="hidden" id="finish" onclick="finish()">Done</button>
+   <button class="hidden" id="redo" onclick="redo()">Redo</button>
+  <div id="torabody2"></div>
+  <div id="torahead2"></div>
+  <div class="fmq2"><div id="lilgrayguy"></div></div>
+  <div id="fmq">
+    <div id="whitebit"></div>
+    <span id="sq">Struggle Questions</span>
+  </div>
+  <div id="percentage">
+  <div id="middlecircle">
+    <span id="textim"></span>
+  </div>
+  <div id="frontcircle"></div>
+  </div>
+</div>
+</body>
+<style>
+.card {
+  height: 12.75dvh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 3dvh;
+  transition: 1.4s transform, 1.4s width, 1.4s height, 1.4s box-shadow, 1.4s opacity; 
+  transform-style: preserve-3d;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+.bigcard {
+  cursor: pointer;
+}
+.backspan {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 1dvh);
+  font-size: 3dvh;
+  color: #c12020;
+  text-align: center;
+  transition: 0.6s color;
+}
+.frontside, .backside {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5dvh;
+  padding: 2dvh;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+.frontside {
+  background-color: #efefef;
+}
+.backside {
+  background-color: #efefef;
+  transform: rotateY(180deg);
+  transition: 0.6s background-color;
+}
+#grid {
+  top: 17dvh;
+  width: calc(100dvw - 10dvh);
+  max-width: 100dvh;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 57dvh;
+  position: absolute;
+}
+#finish:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#redo:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#finish {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  left: calc(50% - 15dvh);
+  bottom: 54dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+#redo {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  left: calc(50% + 3dvh);
+  bottom: 54dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+#torahead2 {
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    width: 18.41dvh;
+    height: 12.90dvh;
+    position: absolute;
+    bottom: 5.71dvh; /*+1*/
+    left: 50%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("toraheadnormal.png");
+    transition: 0.8s transform;
+    
+  }
+  #torabody2 {
+    bottom: 2.9dvh;
+    right: calc(50% - 7.2dvh);
+    position: absolute;
+    width: 17.56dvh;
+    height: 13.42dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("torabody.png");
+    z-index: 1000;
+  }
+  #lilgrayguy {
+    position: absolute;
+    top: 12dvh;
+    left: 0;
+    width: 100%;
+    height: 3dvh;
+    background-image: linear-gradient(rgba(0,0,0,0), #efefef);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .sqq {
+    width: calc(100% - 7dvh);
+    right: 1dvh;
+    top: 4.5dvh;
+    background-color: white;
+    border-radius: 0.5dvh;
+    position: absolute;
+    padding: 0.5dvh;
+    word-wrap: break-word;
+  }
+  #sq {
+    width: calc(100% - 3dvh);
+    text-align: center;
+    color: black;
+    top: 0.5dvh;
+    left: 3.5dvh;
+    position: absolute;
+    z-index: 0;
+    font-size: 2.5dvh;
+    white-space: nowrap;
+  }
+  #whitebit {
+    z-index: 1;
+    width: 110%;
+    right: -5%;
+    top: -5%;
+    position: absolute;
+    background-color: white;
+    height: 110%;
+    transition: 1.5s;
+  }
+  #fmq {
+    width: calc(100% - 16dvh);
+    height: 15dvh;
+    top: 22.5dvh;
+    background-color: #efefef;
+    position: absolute;
+    right: 3dvh;
+    border-radius: 3dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .fmq2 {
+    width: calc(100% - 16dvh);
+    height: 15dvh;
+    top: 22.5dvh;
+    background-color: #efefef;
+    position: absolute;
+    right: 3dvh;
+    border-radius: 3dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #textim {
+    color: white;
+    transition: 2s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 10dvh;
+  }
+  #middlecircle {
+    width: 67.5%;
+    height: 67.5%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1; 
+  }
+  #percentage {
+    z-index: 2;
+    width: 45dvh;
+    height: 45dvh;
+    border-radius: 22.5dvh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+  }
+  #frontcircle {
+    width: 110%;
+    height: 110%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+  }
+  #secondpart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #firstpart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #gatb {
+    width: 100%;
+    height: 10dvh;
+    top: 20dvh;
+    position: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #efefef);
+    z-index: 1;
+    pointer-events: none;
+  }
+  #showanswer {
+    overflow-y: scroll;
+    width: 100%;
+    height: 20dvh;
+    left: 0;
+    top: 10dvh;
+    position: absolute;
+  }
+  #torahead {
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: 18.41dvh;
+    height: 12.90dvh;
+    position: absolute;
+    top: -8.31dvh;
+    right: -5.2dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("toraheadnormal.png");
+    transition: 0.8s transform;
+  }
+  #torabody {
+    top: -5.5dvh;
+    right: 6.03dvh;
+    position: absolute;
+    width: 17.56dvh;
+    height: 13.42dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("torabody.png");
+  }
+  #qtext {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 4.5dvh;
+    transform: translateY(-50%);
+  }
+  button {
+  font-family: fredokaone;
+  }
+  @font-face {
+  font-family: fredokaone;
+  src: url("FredokaOne-Regular.otf");
+  }
+  textarea {
+    font-family: fredokaone;
+  }
+  body {
+    font-family: fredokaone;
+    overflow: hidden;
+  }
+  #question {
+    width: calc(100% - 8dvh);
+    left: 4dvh;
+    top: 18dvh;
+    height: 20dvh;
+    position: absolute;
+    overflow-y: scroll;
+    color: #c12020;
+    border-radius: 3dvh;
+    word-wrap: break-word;
+    transition: 0.6s opacity;
+  }
+  #answer {
+    width: calc(100dvw - 8.4dvh);
+    left: 50%;
+    height: 20dvh;
+    position: absolute;
+    top: 40dvh;
+    border-radius: 3dvh;
+    border: none;
+    transform: translateX(-50%);
+    background-color: rgba(200, 200, 200, 0.3);
+    font-size: 2.5dvh;
+    padding: 2dvh 2dvh 4dvh 2dvh;
+    resize: none;
+    transition: 0.6s opacity;
+  }
+  #loadbar {
+    width: calc(100dvw - 20dvh);
+    position: fixed;
+    top: 3.5dvh;
+    left: 3.5dvh;
+    height: 7dvh;
+    border-radius: 5dvh;
+    outline: 2dvh solid rgba(200, 200, 200, 0.3);
+    overflow: hidden;
+  }
+  #x {
+    color: #c12020;
+    font-size: 10dvh;
+    text-align: center;
+    width: 14.5dvh;
+    height: 12.5dvh;
+    position: absolute;
+    right: 0;
+    top: 1dvh;
+  }
+  #insloadbar {
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    border-radius: 5dvh;
+    position: absolute;
+    background-color: #c12020;
+    width: 0;
+  }
+  #popup {
+    z-index: 102;
+    width: calc(100% - 4.75dvh);
+    height: 100dvh;
+    background-color: #efefef;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 90dvh;
+    border-radius: 4.5dvh;
+    transition: 0.6s;
+  }
+  #title {
+    left: 2dvh;
+    top: 2dvh;
+    width: calc(100% - 4dvh);
+    position: absolute;
+    font-size: 6dvh;
+    transition: 0.6s color;
+    color: #efefef;
+  }
+  #desc {
+    left: 2dvh;
+    width: calc(100% - 4dvh);
+    position: absolute;
+    font-size: 6dvh;
+    transition: 2s color;
+    color: #000000;
+    font-size: 3dvh;
+    word-wrap: break-word;
+  }
+  #question::-webkit-scrollbar {
+  display: none;
+}
+#check {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  right: 5dvh;
+  bottom: 34dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+  body {
+    overflow-y: hidden;
+  }
+#next {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  right: 2.625dvh;
+  top: 31.5dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+}
+#check:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#next:hover {
+  outline: 1.5dvh solid #c12020;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#question {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+  .sqqdm {
+    width: calc(100% - 7dvh);
+    right: 1dvh;
+    top: 4.5dvh;
+    background-color: black;
+    border-radius: 0.5dvh;
+    position: absolute;
+    padding: 0.5dvh;
+    color: white;
+    word-wrap: break-word;
+  }
+</style>
+<script>
+if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("title").transition = "none";
+  window.innerHeight;
+  document.getElementById("title").style.color = "#3a3a3a";
+  window.innerHeight;
+  document.getElementById("title").style.transition = "0.3s color";
+  document.body.style.backgroundColor = "black";
+  document.getElementById("redo").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("redo").style.backgroundColor = "black";
+  document.getElementById("finish").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("finish").style.backgroundColor = "black";
+  document.getElementById("next").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("next").style.backgroundColor = "black";
+  document.getElementById("popup").style.backgroundColor = "#3a3a3a";
+  document.getElementById("gatb").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("desc").style.color = "white";
+  document.getElementById("whitebit").style.backgroundColor = "black";
+  document.getElementById("fmq").style.backgroundColor = "#3a3a3a";
+  document.getElementById("lilgrayguy").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("middlecircle").style.backgroundColor = "black";
+  document.getElementById("frontcircle").style.backgroundColor = "black";
+  document.getElementById("sq").style.color = "white";
+  document.getElementById("textim").style.color = "black";
+}
+
+if (sessionStorage.getItem("setToUse")) {
+current = sessionStorage.getItem("setToUse");
+sessionStorage.removeItem("setToUse");
+} else {
+window.location.href = "studyurlerror.html";
+}
+currentq = 1;
+congratsmsg = ["Great Job!", "Perfect!", "Nice Work!", "Good Work!", "Good Job!"];
+nopemsg = ["Oops", "Not quite", ":(", "Not exactly", "Erm, actually..."];
+clbl = 0;
+function finish() {
+  window.location.href = "study".concat(current, ".html");
+}
+function redo() {
+  sessionStorage.setItem("stu", current);
+  sessionStorage.setItem("wpr", "matchingsingleplayer");
+  window.location.href = "justamoment.html";
+}
+// ===== Cubic Bezier Implementation =====
+function cubicBezier(x1, y1, x2, y2) {
+  function A(a1, a2) { return 1 - 3*a2 + 3*a1 }
+  function B(a1, a2) { return 3*a2 - 6*a1 }
+  function C(a1)     { return 3*a1 }
+
+  function bezier(t, a1, a2) {
+    return ((A(a1,a2)*t + B(a1,a2))*t + C(a1))*t
+  }
+  function slope(t, a1, a2) {
+    return 3*A(a1,a2)*t*t + 2*B(a1,a2)*t + C(a1)
+  }
+
+  function getT(x) {
+    let t = x
+    for (let i=0; i<5; i++) {
+      let s = slope(t, x1, x2)
+      if (s === 0) return t
+      let xCalc = bezier(t, x1, x2) - x
+      t -= xCalc / s
+    }
+    return t
+  }
+
+  return function(x) {
+    return bezier(getT(x), y1, y2)
+  }
+}
+
+// ===== Animation Loop =====
+function animate(target, duration, easing, callback) {
+  const start = performance.now()
+
+  function step(now) {
+    let progress = Math.min((now - start) / duration, 1)
+    let eased = easing(progress)
+    let val = eased * target
+    callback(val)
+    if (progress < 1) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
+}
+
+// ===== Example easing: CSS "ease-in-out" =====
+const easeInOut = cubicBezier(0.42, 0, 0.58, 1)
+const frontcircle = document.getElementById("frontcircle")
+
+numcorrect = 0;
+// ===== Your Results Function =====
+function showresults() {
+  document.getElementById("sq").innerHTML = "Question Summary:"
+  if (localStorage.getItem("darkmode") == "1") {
+    document.body.style.backgroundColor = "black";
+  } else {
+    document.body.style.backgroundColor = "white";
+  }
+  howdidido = Math.floor(360 * (numcorrect / allnumbersclone.length)).toString();
+  ofo = numcorrect / allnumbersclone.length;
+  if (allnumbersclone.length == 0) {
+    ofo = 0;
+    howdidido = "0";
+  }
+  if (ofo < 0.4) {
+    cfc = "#ff8500";
+    posescore("sad");
+  } else if (ofo < 0.7) {
+    cfc = "#ffe017";
+    posescore("confused");
+  } else if (ofo < 0.9) {
+    cfc = "#a8c96e";
+    posescore("happy");
+  } else {
+    cfc = "#2dcc70";
+    posescore("amazed");
+  }
+  for (i = 0; i < con.length; i++) {
+    createsq(true, con[i].toString());
+  }
+  if (howdidido == 360) {
+  document.getElementById("percentage").style.backgroundColor = "#2dcc70";
+  } else if (localStorage.getItem("darkmode") != "1") {
+  document.getElementById("percentage").style.backgroundImage = "conic-gradient(".concat(cfc, " 0deg, ", cfc, " ", howdidido, "deg, #efefef ", howdidido, "deg, #efefef 360deg)");
+  } else {
+  document.getElementById("percentage").style.backgroundImage = "conic-gradient(".concat(cfc, " 0deg, ", cfc, " ", howdidido, "deg, #3a3a3a ", howdidido, "deg, #3a3a3a 360deg)");
+  }
+  document.getElementById("textim").innerHTML = Math.floor(ofo * 100) + "%";
+  document.getElementById("firstpart").classList.add("hidden")
+  document.getElementById("secondpart").classList.remove("hidden")
+  setTimeout(function() {
+    frontcircle.classList.add("hidden");
+  }, 3000);
+  setTimeout(function() {
+      document.getElementById("textim").style.color = cfc;
+  animate(360, 2000, easeInOut, (val) => {
+    // Build a valid conic-gradient
+    frontcircle.style.backgroundColor = "rgba(0,0,0,0)";
+    if (localStorage.getItem("darkmode") == "1") {
+    frontcircle.style.backgroundImage = 
+      `conic-gradient(from 0deg, rgba(0,0,0,0) 0deg ${val}deg, black ${val}deg 360deg)`
+    } else {
+    frontcircle.style.backgroundImage = 
+      `conic-gradient(from 0deg, rgba(0,0,0,0) 0deg ${val}deg, white ${val}deg 360deg)`
+    }
+  })}, 1000);
+  setTimeout(function() {
+    document.getElementById("percentage").style.top = "30dvh";
+    document.getElementById("percentage").style.left = "10.5dvh";
+    document.getElementById("percentage").style.width = "15dvh";
+    document.getElementById("percentage").style.height = "15dvh";
+    document.getElementById("textim").style.fontSize = "3.33dvh";
+  }, 4000)
+  setTimeout(function() {
+    document.getElementById("whitebit").style.width = 0;
+    document.getElementById("finish").classList.remove("hidden");
+    document.getElementById("redo").classList.remove("hidden");
+  }, 6000)
+}
+
+function createsq(tof, type) {
+  newSQ = document.createElement("div");
+  newSQ.innerHTML = "Q: " + localStorage.getItem(current.concat("q", type)) + "<br><span style='font-weight: bold'>A: " + localStorage.getItem(current.concat("a", type)) + "</span>";
+  if (localStorage.getItem("darkmode") == "1") {
+    newSQ.classList.add("sqq");
+    newSQ.classList.add("sqqdm");
+  } else {
+    newSQ.classList.add("sqq");
+  }
+  if (tof == true) {
+    newSQ.style.outline = "0.3dvh solid #2dcc70";
+  } else {
+    newSQ.style.outline = "0.3dvh solid #ff8500";
+  }
+  document.getElementById("fmq").appendChild(newSQ);
+  resizeSQs();
+}
+window.addEventListener("resize", resizeSQs);
+function resizeSQs() {
+  totaltop = 0.045 * window.innerHeight;
+  for (a = 0; a < document.getElementsByClassName("sqq").length; a++) {
+    document.getElementsByClassName("sqq")[a].style.top = totaltop + "px";
+    totaltop += document.getElementsByClassName("sqq")[a].offsetHeight + 0.01 * window.innerHeight;
+  }
+}
+
+window.addEventListener("resize", resizeSQs);
+function resizeSQs() {
+  totaltop = 0.045 * window.innerHeight;
+  for (i = 0; i < document.getElementsByClassName("sqq").length; i++) {
+    document.getElementsByClassName("sqq")[i].style.top = totaltop + "px";
+    totaltop += document.getElementsByClassName("sqq")[i].offsetHeight + 0.01 * window.innerHeight;
+  }
+}
+function pose(exp) {
+  if (exp == "confused") {
+    document.getElementById("torahead").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "happy") {
+    document.getElementById("torahead").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else {
+    document.getElementById("torahead").style.backgroundImage = "url('toraheadnormal.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
+  }
+}
+newremaining = parseInt(localStorage.getItem(current.concat("qat")));
+numofqtotalls = parseInt(localStorage.getItem(current.concat("qat")));
+totalnumofrounds = Math.floor(numofqtotalls/8);
+rnqts = numofqtotalls%8;
+if (rnqts != 0) { rnqts = 1 } 
+totalrounds = numofqtotalls + rnqts;
+gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
+allnumbers = [];
+allnumbersclone = [];
+for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
+  allnumbers.push(0); 
+}
+for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
+  randNum = Math.floor(Math.random() * parseInt(localStorage.getItem(current.concat("qat"))));
+  while (allnumbers[randNum] != 0) {
+    randNum = Math.floor(Math.random() * parseInt(localStorage.getItem(current.concat("qat"))));
+  }
+  allnumbers[randNum] = i;
+}
+if (gthan16) { makecards(8); } else { makecards(parseInt(localStorage.getItem(current.concat("qat")))) }
+
+function makecards(numtomake) {
+  newremaining -= numtomake;
+  totalspots = [];
+  for (i = 0; i < numtomake * 2; i++) {
+    totalspots.push(0);
+  }
+  for (i = 1; i <= numtomake; i++) {
+    for (b = 0; b < 2; b++) {
+      randNum = Math.floor(Math.random() * (numtomake*2));
+      while (totalspots[randNum] != 0) {
+        randNum = Math.floor(Math.random() * (numtomake*2));
+      }
+      if (b == 0) {
+        totalspots[randNum] = `q${allnumbers[i-1]}`;
+      } else {
+        totalspots[randNum] = `a${allnumbers[i-1]}`;
+      }
+    }
+  }
+
+  for (i = 0; i < totalspots.length; i++) {
+    makeonecard(totalspots[i], i+1);
+  }
+}
+
+function makeonecard(whattomake, wheretoput) {
+  newDiv = document.createElement("div");
+  newDiv.classList.add("card");
+  rowplacement = wheretoput % 4;
+  if (rowplacement == 0) { rowplacement = 4; }
+  wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+  newDiv.style.width = wval + "px";
+  newDiv.style.left = wval/2 + (rowplacement-1) * (wval + 0.02 * window.innerHeight) + "px";
+  column = (wheretoput-rowplacement) / 4;
+  newDiv.style.top = 0.06375 * window.innerHeight + (column * (0.1475 * window.innerHeight)) + "px";
+  randomDeg = 10 - Math.floor(Math.random() * 21);
+  newDiv.style.transform = `translate(-50%, -50%) rotateZ(${randomDeg}deg)`;
+  newDiv.setAttribute("onclick", "revealCard()");
+  newDiv.value = whattomake;
+  newDiv1 = document.createElement("div");
+  newDiv1.classList.add("frontside");
+  newDiv.appendChild(newDiv1);
+  newDiv2 = document.createElement("div");
+  newDiv2.classList.add("backside");
+  newDiv.appendChild(newDiv2);
+  newSpan = document.createElement("span");
+  newSpan.classList.add("backspan");
+  whentocomein = Math.floor(Math.random() * 300);
+  setTimeout(fadein, whentocomein, newDiv);
+  if (whattomake.substring(0,1) == "a") {
+    newSpan.innerHTML = localStorage.getItem(current.concat("a", whattomake.substring(1)));
+  } else {
+    newSpan.innerHTML = localStorage.getItem(current.concat("q", whattomake.substring(1)));
+  }
+  if (localStorage.getItem("darkmode") == "1") {
+    newDiv1.style.backgroundColor = "#3a3a3a";
+    newDiv2.style.backgroundColor = "#3a3a3a";
+    newSpan.style.color = "white";
+  }
+  newDiv2.appendChild(newSpan);
+  document.getElementById("grid").appendChild(newDiv);
+}
+
+function fadein(divtfn) {
+  divtfn.style.opacity = 1;
+}
+
+function revealCard() {
+  for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+    document.getElementsByClassName("card")[i].style.pointerEvents = "none";
+  }
+  event.target.style.transform = "translate(-50%, -50%) rotateY(180deg)";
+  wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+  event.target.style.width = wval * 1.6 + "px";
+  event.target.style.height = "21.2dvh";
+  event.target.style.zIndex = "101";
+  event.target.classList.add("bigcard");
+  event.target.style.boxShadow = "0dvh 0dvh 10dvh rgba(0,0,0,0.2)";
+  fclicked = event.target;
+  for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+    if (!(document.getElementsByClassName("card")[i].classList.contains("done"))) {
+    document.getElementsByClassName("card")[i].setAttribute("onclick", "compare()");
+    document.getElementsByClassName("card")[i].style.pointerEvents = "all";
+    }
+  }
+  event.target.style.pointerEvents = "none";
+}
+con = [];
+function compare() {
+  allnumbersclone.push(0);
+  for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+    document.getElementsByClassName("card")[i].style.pointerEvents = "none";
+  }
+  event.target.style.transform = "translate(-50%, -50%) rotateY(180deg)";
+  wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+  event.target.style.width = wval * 1.6 + "px";
+  event.target.style.height = "21.2dvh";
+  event.target.style.zIndex = "101";
+  event.target.classList.add("bigcard");
+  event.target.style.boxShadow = "0dvh 0dvh 10dvh rgba(0,0,0,0.2)";
+  firstclicked = fclicked.value;
+  sclicked = event.target;
+  secondclicked = event.target.value; 
+  if (((firstclicked.substring(0, 1) == "q" && secondclicked.substring(0, 1) == "a") || (firstclicked.substring(0, 1) == "a" && secondclicked.substring(0, 1) == "q")) && firstclicked.substring(1) == secondclicked.substring(1)) {
+    setTimeout(function() {
+    numcorrect++;
+    con.push(parseInt(firstclicked.substring(1)));
+    fclicked.children[1].children[0].style.color = "white";
+    fclicked.children[1].style.backgroundColor = "#2dcc70";
+    sclicked.children[1].children[0].style.color = "white";
+    sclicked.children[1].style.backgroundColor = "#2dcc70";
+    }, 1200);
+    setTimeout(function() {
+      sclicked.style.opacity = 0;
+      sclicked.classList.add("done");
+      sclicked.style.pointerEvents = "none";
+      sclicked.style.height = "0.001dvh";
+      sclicked.style.width = "0.001dvh";
+    }, 3400);
+    setTimeout(function() {
+      fclicked.style.opacity = 0;
+      fclicked.classList.add("done");
+      fclicked.style.pointerEvents = "none";
+      fclicked.style.height = "0.001dvh";
+      fclicked.style.width = "0.001dvh";
+    }, 3600);
+    setTimeout(function() {
+      if (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length) {
+      if (newremaining <= 0) {
+      setTimeout(showresults, 1000);
+      } else {
+      for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+        document.getElementsByClassName("card")[i].remove();
+      }
+      allnumbers.splice(0,8);
+      if (allnumbers.length < 8) {
+        makecards(allnumbers.length);
+      } else {
+        makecards(8);
+      }
+      }
+      } else {
+      for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+        if (!(document.getElementsByClassName("card")[i].classList.contains("done"))) {
+        document.getElementsByClassName("card")[i].style.pointerEvents = "all";
+        document.getElementsByClassName("card")[i].setAttribute("onclick", "revealCard()");
+        }
+      }
+      }
+    }, 4000)
+  } else {
+    setTimeout(function() {
+      randomDeg = 10 - Math.floor(Math.random() * 21);
+      sclicked.style.transform = `translate(-50%, -50%) rotateY(0deg) rotateZ(${randomDeg}deg)`;
+      wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+      sclicked.style.width = wval + "px"; 
+      sclicked.style.height = "12.75dvh";
+      sclicked.style.zIndex = "100";
+      sclicked.classList.remove("bigcard");
+      sclicked.style.boxShadow = "none";
+    }, 3400)
+    setTimeout(function() {
+      randomDeg = 10 - Math.floor(Math.random() * 21);
+      fclicked.style.transform = `translate(-50%, -50%) rotateY(0deg) rotateZ(${randomDeg}deg)`;
+      wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+      fclicked.style.width = wval + "px"; 
+      fclicked.style.height = "12.75dvh";
+      fclicked.style.zIndex = "100";
+      fclicked.classList.remove("bigcard");
+      fclicked.style.boxShadow = "none";
+    }, 3600)
+    setTimeout(function() {
+      for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+        if (!(document.getElementsByClassName("card")[i].classList.contains("done"))) {
+        document.getElementsByClassName("card")[i].style.pointerEvents = "all";
+        document.getElementsByClassName("card")[i].setAttribute("onclick", "revealCard()");
+        }
+      }
+    }, 4000)
+  }
+}
+
+window.addEventListener("resize", function() {
+  for (i = 0; i < document.getElementsByClassName("card").length; i++) {
+    newDiv = document.getElementsByClassName("card")[i];
+    wval = (document.getElementById("grid").offsetWidth - 0.06 * window.innerHeight) / 4;
+    if (newDiv.classList.contains("bigcard")) {
+    newDiv.style.width = wval * 1.6 + "px";
+    } else {
+    newDiv.style.width = wval + "px";
+    }
+    rowplacement = (i+1) % 4;
+    if (rowplacement == 0) { rowplacement = 4; }
+    newDiv.style.left = wval/2 + (rowplacement-1) * (wval + 0.02 * window.innerHeight) + "px";
+  }
+})
+
+function posescore(exp) {
+  setTimeout(function() {
+  if (exp == "confused") {
+    document.getElementById("torahead2").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "happy") {
+    document.getElementById("torahead2").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "amazed") {
+    document.getElementById("torahead2").style.backgroundImage = "url('toraheadamazed.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else {
+    document.getElementById("torahead2").style.backgroundImage = "url('toraheadsad.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+    setTimeout(function() {
+      document.getElementById("torahead2").style.transition = "1.2s transform";
+      window.innerHeight;
+      document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(-30deg)";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("torahead2").style.transition = "0.8s transform";
+      window.innerHeight;
+      document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(0deg)";
+    }, 2200)
+  }
+  }, 1500);
+}
+
+</script>
+</html>
