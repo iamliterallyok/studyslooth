@@ -697,6 +697,8 @@ totalnumofrounds = Math.floor(numofqtotalls/8);
 rnqts = numofqtotalls%8;
 if (rnqts != 0) { rnqts = 1 } 
 totalrounds = numofqtotalls + rnqts;
+totalnumslides = totalrounds;
+currentslide++;
 gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
 allnumbers = [];
 allnumbersclone = [];
@@ -846,6 +848,15 @@ function compare() {
       for (i = 0; i < document.getElementsByClassName("card").length; i++) {
         document.getElementsByClassName("card")[i].remove();
       }
+      document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+      currentslide++;
+      if (currentslide == totalslidenum) {
+        clbl = 100;
+      }
+      if (clbl != 100) {
+      clbl += (100 * (currentslide/totalslidenum));
+      }
+      document.getElementById("insloadbar").style.width = clbl + "%";
       allnumbers.splice(0,8);
       if (allnumbers.length < 8) {
         makecards(allnumbers.length);
