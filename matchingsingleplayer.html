@@ -698,7 +698,7 @@ rnqts = numofqtotalls%8;
 if (rnqts != 0) { rnqts = 1 } 
 totalrounds = numofqtotalls + rnqts;
 totalnumslides = totalrounds;
-currentslide++;
+currentslide=0;
 gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
 allnumbers = [];
 allnumbersclone = [];
