@@ -233,7 +233,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    font-size: 10dvh;
+    font-size: 11.5dvh;
   }
   #middlecircle {
     width: 67.5%;
@@ -598,25 +598,10 @@ function showresults() {
   } else {
     document.body.style.backgroundColor = "white";
   }
-  howdidido = Math.floor(360 * (numcorrect / allnumbersclone.length)).toString();
+  howdidido = "360";
   ofo = numcorrect / allnumbersclone.length;
-  if (allnumbersclone.length == 0) {
-    ofo = 0;
-    howdidido = "0";
-  }
-  if (ofo < 0.4) {
-    cfc = "#ff8500";
-    posescore("sad");
-  } else if (ofo < 0.7) {
-    cfc = "#ffe017";
-    posescore("confused");
-  } else if (ofo < 0.9) {
-    cfc = "#a8c96e";
-    posescore("happy");
-  } else {
-    cfc = "#2dcc70";
-    posescore("amazed");
-  }
+  cfc = "#2dcc70";
+  posescore("amazed");
   for (i = 0; i < con.length; i++) {
     createsq(true, con[i].toString());
   }
@@ -627,7 +612,7 @@ function showresults() {
   } else {
   document.getElementById("percentage").style.backgroundImage = "conic-gradient(".concat(cfc, " 0deg, ", cfc, " ", howdidido, "deg, #3a3a3a ", howdidido, "deg, #3a3a3a 360deg)");
   }
-  document.getElementById("textim").innerHTML = Math.floor(ofo * 100) + "%";
+  document.getElementById("textim").innerHTML = localStorage.getItem(current.concat("qat");
   document.getElementById("firstpart").classList.add("hidden")
   document.getElementById("secondpart").classList.remove("hidden")
   setTimeout(function() {
