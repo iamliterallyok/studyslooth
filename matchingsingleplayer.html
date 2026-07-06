@@ -715,6 +715,7 @@ for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
 if (gthan16) { makecards(8); } else { makecards(parseInt(localStorage.getItem(current.concat("qat")))) }
 
 function makecards(numtomake) {
+  document.getElementById("insloadbar").style.backgroundColor = "#c12020";
   newremaining -= numtomake;
   totalspots = [];
   for (i = 0; i < numtomake * 2; i++) {
