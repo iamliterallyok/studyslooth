@@ -410,7 +410,7 @@
     top: 0;
     border-radius: 5dvh;
     position: absolute;
-    background-color: #c12020;
+    background-color: white;
     width: 0;
   }
   #slpt {
@@ -749,7 +749,7 @@ totalnumofrounds = Math.floor(numofqtotalls/8);
 rnqts = numofqtotalls%8;
 if (rnqts != 0) { rnqts = 1 } 
 totalrounds = numofqtotalls + rnqts;
-totalnumslides = totalrounds;
+totalslidenum = totalrounds;
 currentslide = 0; 
 gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
 allnumbers = [];
@@ -769,6 +769,7 @@ if (gthan16) { makecards(8, "red"); } else { makecards(parseInt(localStorage.get
 }
 
 function makecards(numtomake, roblue) {
+  document.getElementById("insloadbar").style.backgroundColor = "white";
   newremaining -= numtomake;
   totalspots = [];
   for (i = 0; i < numtomake * 2; i++) {
