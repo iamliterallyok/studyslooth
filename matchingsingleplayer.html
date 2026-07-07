@@ -714,7 +714,6 @@ for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
 if (gthan16) { makecards(8); } else { makecards(parseInt(localStorage.getItem(current.concat("qat")))) }
 
 function makecards(numtomake) {
-  pose("normal");
   document.getElementById("insloadbar").style.backgroundColor = "#c12020";
   newremaining -= numtomake;
   totalspots = [];
@@ -824,8 +823,8 @@ function compare() {
     currentslide++;
     clbl = (100 * (currentslide/totalslidenum));
     document.getElementById("insloadbar").style.width = clbl + "%";
-    pose("happy");
     }
+    pose("happy");
     setTimeout(function() {
     numcorrect++;
     con.push(parseInt(firstclicked.substring(1)));
@@ -905,6 +904,9 @@ function compare() {
       }
     }, 4000)
   }
+  setTimeout(function() {
+    pose("normal");
+  }, 3600);
 }
 
 window.addEventListener("resize", function() {
