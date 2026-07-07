@@ -38,7 +38,7 @@ I grant You a free-to-use, limited, non-exclusive, non-transferable, revocable l
 
 **4.** You may not commercially exploit or resell or redistribute This Software for any quantifiable monetary gain. 
 
-**5.**You may not circumvent technical copyright protections as protected by the Governing State and Country. 
+**5.** You may not circumvent technical copyright protections as protected by the Governing State and Country. 
 
 **6.** Except where prohibited by applicable law, You may not reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code, underlying ideas, algorithms, or structure. 
 
