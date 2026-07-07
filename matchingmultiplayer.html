@@ -748,9 +748,8 @@ numofqtotalls = parseInt(localStorage.getItem(current.concat("qat")));
 totalnumofrounds = Math.floor(numofqtotalls/8);
 rnqts = numofqtotalls%8;
 if (rnqts != 0) { rnqts = 1 } 
-totalrounds = numofqtotalls + rnqts;
-totalslidenum = totalrounds;
-currentslide = 0; 
+totalslidenum = rnqts + totalnumofrounds;
+currentslide=0;
 gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
 allnumbers = [];
 allnumbersclone = [];
@@ -878,6 +877,13 @@ function compare() {
   sclicked = event.target;
   secondclicked = event.target.value; 
   if (((firstclicked.substring(0, 1) == "q" && secondclicked.substring(0, 1) == "a") || (firstclicked.substring(0, 1) == "a" && secondclicked.substring(0, 1) == "q")) && firstclicked.substring(1) == secondclicked.substring(1)) {
+    if (newremaining > 0 && (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length)) {
+    document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+    currentslide++;
+    clbl = (100 * (currentslide/totalslidenum));
+    document.getElementById("insloadbar").style.width = clbl + "%";
+    }
+    pose("happy");
     if (cred) {
       redscore++;
     } else {
@@ -909,20 +915,13 @@ function compare() {
     setTimeout(function() {
       if (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length) {
       if (newremaining <= 0) {
+      document.getElementById("insloadbar").style.width = "100%";
+      document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
       setTimeout(showresults, 1000);
       } else {
       for (i = 0; i < document.getElementsByClassName("card").length; i++) {
         document.getElementsByClassName("card")[i].remove();
       }
-      document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
-      currentslide++;
-      if (currentslide == totalslidenum) {
-        clbl = 100;
-      }
-      if (clbl != 100) {
-      clbl += (100 * (currentslide/totalslidenum));
-      }
-      document.getElementById("insloadbar").style.width = clbl + "%";
       allnumbers.splice(0,8);
       if (allnumbers.length < 8) {
         makecards(allnumbers.length);
@@ -998,6 +997,9 @@ function compare() {
       }
     }, 4000)
   }
+  setTimeout(function() {
+    pose("normal");
+  }, 3600);
 }
 
 window.addEventListener("resize", function() {
