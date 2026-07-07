@@ -714,6 +714,7 @@ for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
 if (gthan16) { makecards(8); } else { makecards(parseInt(localStorage.getItem(current.concat("qat")))) }
 
 function makecards(numtomake) {
+  pose("normal");
   document.getElementById("insloadbar").style.backgroundColor = "#c12020";
   newremaining -= numtomake;
   totalspots = [];
@@ -818,6 +819,13 @@ function compare() {
   sclicked = event.target;
   secondclicked = event.target.value; 
   if (((firstclicked.substring(0, 1) == "q" && secondclicked.substring(0, 1) == "a") || (firstclicked.substring(0, 1) == "a" && secondclicked.substring(0, 1) == "q")) && firstclicked.substring(1) == secondclicked.substring(1)) {
+    if (newremaining > 0 && (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length)) {
+    document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+    currentslide++;
+    clbl = (100 * (currentslide/totalslidenum));
+    document.getElementById("insloadbar").style.width = clbl + "%";
+    pose("happy");
+    }
     setTimeout(function() {
     numcorrect++;
     con.push(parseInt(firstclicked.substring(1)));
@@ -850,12 +858,6 @@ function compare() {
       for (i = 0; i < document.getElementsByClassName("card").length; i++) {
         document.getElementsByClassName("card")[i].remove();
       }
-      document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
-      currentslide++;
-      if (clbl != 100) {
-      clbl = (100 * (currentslide/totalslidenum));
-      }
-      document.getElementById("insloadbar").style.width = clbl + "%";
       allnumbers.splice(0,8);
       if (allnumbers.length < 8) {
         makecards(allnumbers.length);
@@ -873,6 +875,7 @@ function compare() {
       }
     }, 4000)
   } else {
+    pose("confused");
     setTimeout(function() {
       randomDeg = 10 - Math.floor(Math.random() * 21);
       sclicked.style.transform = `translate(-50%, -50%) rotateY(0deg) rotateZ(${randomDeg}deg)`;
