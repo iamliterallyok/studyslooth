@@ -825,6 +825,9 @@ function compare() {
     currentslide++;
     clbl = (100 * (currentslide/totalslidenum));
     document.getElementById("insloadbar").style.width = clbl + "%";
+    } else if (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length) {
+    document.getElementById("insloadbar").style.width = "100%";
+    document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
     }
     pose("happy");
     setTimeout(function() {
@@ -850,8 +853,6 @@ function compare() {
     setTimeout(function() {
       if (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length) {
       if (newremaining <= 0) {
-      document.getElementById("insloadbar").style.width = "100%";
-      document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
       setTimeout(showresults, 1000);
       } else {
       for (i = 0; i < document.getElementsByClassName("card").length; i++) {
