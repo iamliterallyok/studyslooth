@@ -942,6 +942,7 @@ function compare() {
       }
     }, 4000)
   } else {
+    pose("confused");
     setTimeout(function() {
       randomDeg = 10 - Math.floor(Math.random() * 21);
       sclicked.style.transform = `translate(-50%, -50%) rotateY(0deg) rotateZ(${randomDeg}deg)`;
