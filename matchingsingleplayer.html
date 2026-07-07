@@ -696,8 +696,7 @@ numofqtotalls = parseInt(localStorage.getItem(current.concat("qat")));
 totalnumofrounds = Math.floor(numofqtotalls/8);
 rnqts = numofqtotalls%8;
 if (rnqts != 0) { rnqts = 1 } 
-totalrounds = numofqtotalls + rnqts;
-totalslidenum = totalrounds;
+totalslidenum = rnqts + totalnumofrounds;
 currentslide=0;
 gthan16 = parseInt(localStorage.getItem(current.concat("qat"))) >= 8;
 allnumbers = [];
@@ -844,8 +843,7 @@ function compare() {
     setTimeout(function() {
       if (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length) {
       if (newremaining <= 0) {
-      clbl = 100;
-      document.getElementById("insloadbar").style.width = clbl + "%";
+      document.getElementById("insloadbar").style.width = "100%";
       document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
       setTimeout(showresults, 1000);
       } else {
