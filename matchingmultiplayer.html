@@ -877,6 +877,8 @@ function compare() {
   sclicked = event.target;
   secondclicked = event.target.value; 
   if (((firstclicked.substring(0, 1) == "q" && secondclicked.substring(0, 1) == "a") || (firstclicked.substring(0, 1) == "a" && secondclicked.substring(0, 1) == "q")) && firstclicked.substring(1) == secondclicked.substring(1)) {
+    fclicked.classList.add("done");
+    sclicked.classList.add("done");
     if (newremaining > 0 && (document.getElementsByClassName("card done").length == document.getElementsByClassName("card").length)) {
     document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
     currentslide++;
@@ -900,14 +902,12 @@ function compare() {
     }, 1200);
     setTimeout(function() {
       sclicked.style.opacity = 0;
-      sclicked.classList.add("done");
       sclicked.style.pointerEvents = "none";
       sclicked.style.height = "0.001dvh";
       sclicked.style.width = "0.001dvh";
     }, 3400);
     setTimeout(function() {
       fclicked.style.opacity = 0;
-      fclicked.classList.add("done");
       fclicked.style.pointerEvents = "none";
       fclicked.style.height = "0.001dvh";
       fclicked.style.width = "0.001dvh";
