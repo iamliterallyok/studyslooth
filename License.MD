@@ -4,7 +4,7 @@ Copyright © 2026 iamliterallyok. All Rights Reserved.
 
 ### Update Notice
 
-This license is subject to change. Should this license change, continued use of This Software after the updated EULA becomes effectives constitutes acceptance of the revised terms. 
+This license is subject to change. Should this license change, continued use of This Software after the updated EULA becomes effective constitutes acceptance of the revised terms. 
 
 Any updates to This Software are also governed by this EULA unless accompanied by another license
 
