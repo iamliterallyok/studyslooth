@@ -1,3 +1,5 @@
+Copyright © 2026 iamliterallyok. All Rights Reserved.
+
 # [Projecttor](https://iamliterallyok.github.io/projecttor "Projecttor")
 ---
 ---
