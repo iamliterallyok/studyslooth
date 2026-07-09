@@ -25,13 +25,13 @@
 <div style="top: 69.75dvh" class="srem"><img src="../media/images/torafullbody.png" class="srimgtora"><div class="wrapbox"></div><div onclick="document.getElementById('srem7').classList.add('hidden')" class="srembutton">Got it!</div>Use the dropdown menu to select between 27 study subjects, each with 10 pictures to scroll through and pick from.</div></div>
 </div>
 <div id="sidebar">
-<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="study.html"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="play.html"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="sets.html"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a href="create.html"><div style="top: 54dvh" class="hyperlink"><img src="../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="import.html"><div style="top: 67.5dvh" class="hyperlink selected"><img src="../media/images/toolbar/importselected.png" class="hpimg"><p class="hplabel selected">Import</p></div></a>
-<a href="settings.html"><div style="top: 85.5dvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="../index.html"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../create/"><div style="top: 54dvh" class="hyperlink"><img src="../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5dvh" class="hyperlink selected"><img src="../media/images/toolbar/importselected.png" class="hpimg"><p class="hplabel selected">Import</p></div></a>
+<a href="../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 
 </div>
 <div id="content">
@@ -538,7 +538,7 @@ if (localStorage.getItem("numofsets")) {} else {
   localStorage.setItem("numofsets", "0");
 }
 if (localStorage.getItem("numofsets") == "10") {
-  window.location.href = "toomanysets.html";
+  window.location.href = "../sets/toomanysets.html";
 } else {
   current = (parseInt(localStorage.getItem("numofsets")) + 1).toString();
 }
@@ -648,7 +648,7 @@ function save() {
       localStorage.setItem(current.concat("q", (i + 1).toString()), document.getElementsByClassName("qblank")[i].value);
       localStorage.setItem(current.concat("a", (i + 1).toString()), document.getElementsByClassName("ablank")[i].value);
     }
-    window.location.href = "sets.html";
+    window.location.href = "../sets/";
   }
 }
 currentselectedpic = 0;
