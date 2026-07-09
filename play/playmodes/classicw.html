@@ -6,21 +6,21 @@
 <html>
 <body>
 <div id="reminders">
-<div class="srembg hidden" style="background-color: rgba(0, 0, 0, 0.01)" id="srem3"><div id="blackpart"></div><div style="top: 38dvh" class="srem"><img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem3').classList.add('hidden'); document.getElementById('cgroups').style.background = 'none'; if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Click the buttons highlighted below to control which participants or teams score points for correct answers.</div></div>
+<div class="srembg hidden" style="background-color: rgba(0, 0, 0, 0.01)" id="srem3"><div id="blackpart"></div><div style="top: 38dvh" class="srem"><img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem3').classList.add('hidden'); document.getElementById('cgroups').style.background = 'none'; if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Click the buttons highlighted below to control which participants or teams score points for correct answers.</div></div>
 <div class="srembg hidden" id="srem4"><div class="toggler"><div class="groupbased2 selected">Group-Based</div><div style="background-color: black; color: white" class="individualbased2">Individual-Based</div></div><div style="top: 68.75dvh" class="srem">
-<img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem4').classList.add('hidden'); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Use the buttons above to switch between a free-for-all and a battle between two to ten teams.</div></div>
-<div class="srembg hidden" id="srem5"><img style="left: 20.5dvh; bottom: 21dvh" id="speechtriangle" src="speechtrianglejett.png"><div style="bottom: 3.5dvh; left: 26dvh" id="speech"><span class="text4speech"></div></span><div style="top: 37dvh" class="srem">
-<img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem5').classList.add('hidden'); preludeSlide(); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Read the blank below to determine which participants are representing their teams for this question.</div></div>
+<img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem4').classList.add('hidden'); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Use the buttons above to switch between a free-for-all and a battle between two to ten teams.</div></div>
+<div class="srembg hidden" id="srem5"><img style="left: 20.5dvh; bottom: 21dvh" id="speechtriangle" src="../../media/images/speechtrianglejett.png"><div style="bottom: 3.5dvh; left: 26dvh" id="speech"><span class="text4speech"></div></span><div style="top: 37dvh" class="srem">
+<img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem5').classList.add('hidden'); preludeSlide(); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Read the blank below to determine which participants are representing their teams for this question.</div></div>
 </div>
 <div class="hidden" id="flipScreen">
   <div id="flipContainer">
-    <img id="flipPhone" src="flipphone.gif">
+    <img id="flipPhone" src="../../media/images/flipphone.gif">
     <p id="fpmessage">This feature is only supported on wide screens.</p>
   </div>
 </div>
 <div class="screen" id="pregame">
 <button onclick="togglesettings()" id="settings"><span style="position: absolute; right: 4dvh; bottom: 0dvh">Settings</span></button><div id="settingsarea">
-<img onclick="togglesettings()" src="closesettings.png" id="closesettings">
+<img onclick="togglesettings()" src="../../media/images/closesettings.png" id="closesettings">
 <span style="position: absolute; right: 2dvh; top: 3dvh; font-size: 5dvh; width: calc(100% - 10.5dvh); text-decoration: underline">Game Settings</span>
 <span style="position: absolute; right: 2dvh; top: 12dvh; font-size: 4.5dvh; width: 100%; text-decoration: underline">Game Length</span>
 <span style="position: absolute; right: 14dvh; top: 17.5dvh; font-size: 3.5dvh; width: 100%">Endless Mode</span><div style="top: 18dvh" onclick="toggler(0)" class="setval slidergroup"><div class="slider"></div></div>
@@ -35,15 +35,15 @@
 <span style="position: absolute; right: 14dvh; top: 66.5dvh; font-size: 3.5dvh; width: 100%">Sound Effects</span><div style="top: 67dvh" onclick="toggler(2)" class="setval slidergroup"><div class="slider"></div></div>
 </div>
 <button onclick="home()" id="homepregame"><span style="position: absolute; right: 4dvh; bottom: 0dvh">Home</span></button>
-<div id="titleslide"><div id="logocomponents"><img id="logotop" src="classicwlogo.png"><p style="margin-top: 9dvh" id="nameofset"></p></div><div id="halfwhite"></div></div>
+<div id="titleslide"><div id="logocomponents"><img id="logotop" src="../../media/images/classic/classicwlogo.png"><p style="margin-top: 9dvh" id="nameofset"></p></div><div id="halfwhite"></div></div>
 <div id="toggler"><div onclick="toggletype()" class="groupbased selected">Group-Based</div><div onclick="toggletype()" class="individualbased">Individual-Based</div></div>
 <div id="groups">
-<img src="add.png" onclick="addgroup()" id="add">
+<img src="../../media/images/add.png" onclick="addgroup()" id="add">
 <div id="actualgroups">
 <div class="group"><input placeholder="Team Name..." class="teamname"><textarea placeholder="Enter this team's members' names like this...
 ex: John
 Sue
-Stacy" class="names"></textarea><img class="remove" onclick="remove()" src="delete.png"></div>
+Stacy" class="names"></textarea><img class="remove" onclick="remove()" src="../../media/images/delete.png"></div>
 </div>
 </div>
 <div class="hidden" id="individuals">
@@ -58,19 +58,19 @@ Rachel
 Adelaide..." id="individnames"></textarea>
 </div>
 <button onclick="start()" id="startbutton">Start</button>
-<div class="bg" style="background-image: url('classicwbackground.gif'); background-color: black"></div>
+<div class="bg" style="background-image: url('../../media/images/classic/classicwbackground.gif'); background-color: black"></div>
 </div>
 <div class="hidden screen" id="prelude">
 <div id="jett">
-<img src="jettheadnormal.png" id="jetthead">
-<img src="jettbody.png" id="jettbody">
-<img id="speechtriangle" src="speechtrianglejett.png">
+<img src="../../media/images/jettheadnormal.png" id="jetthead">
+<img src="../../media/images/jettbody.png" id="jettbody">
+<img id="speechtriangle" src="../../media/images/speechtrianglejett.png">
 <div id="speech"><span id="text4speech"></div></span>
 </div>
-<img src="getready.png" id="pointvalue">
+<img src="../../media/images/getready.png" id="pointvalue">
 <p id="ptdescription">The next question is worth 100 points.</p>
 <div id="loadbaroutline"><div id="loadbar" style="background-color: #fe7c00"></div></div>
-<div style="background-color: black; background-image: url('classicwbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/classic/classicwbackground.gif')" class="bg"></div>
 <div id="toolbar">
 <div class="questionval"></div>
 <div onclick="skip()" style="left: 1dvh" class="toolbarbutton">Skip</div>
@@ -89,8 +89,8 @@ Adelaide..." id="individnames"></textarea>
 <div id="whiteboardDiv">
   <div id="wtoolbar">
     <input type="color" id="pickacolor" oninput="document.getElementById('pickacolor').style.border = '1dvh solid white'; document.getElementById('eraser').style.border = '1dvh solid rgba(255, 255, 255, 0.5)'" value="#000000">
-    <div onclick="document.getElementById('eraser').style.border = '1dvh solid white'; document.getElementById('pickacolor').style.border = '1dvh solid rgba(255, 255, 255, 0.5)'; wbdcolor='white';"id="eraser"><img id="eraserimg" src="eraser.png"></div>
-    <div id="clear" onclick="wctx.clearRect(0, 0, wb.width, wb.height)"><img id="eraserimg" src="clear.png"></div>
+    <div onclick="document.getElementById('eraser').style.border = '1dvh solid white'; document.getElementById('pickacolor').style.border = '1dvh solid rgba(255, 255, 255, 0.5)'; wbdcolor='white';"id="eraser"><img id="eraserimg" src="../../media/images/eraser.png"></div>
+    <div id="clear" onclick="wctx.clearRect(0, 0, wb.width, wb.height)"><img id="eraserimg" src="../../media/images/clear.png"></div>
     <input type="range" min="1" max="100" value="3" id="strokeWidth">
   </div>
   <canvas id="whiteboard">
@@ -103,7 +103,7 @@ Adelaide..." id="individnames"></textarea>
 <div style="left: 14dvh" onclick="home()" class="toolbarbutton">Home</div>
 <div style="left: 27dvh" onclick="finish()" class="toolbarbutton">Finish</div>
 </div>
-<div style="background-color: black; background-image: url('classicwbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/classic/classicwbackground.gif')" class="bg"></div>
 </div>
 <div class="hidden screen" id="scoreboard">
 <div id="animationsdiv" class="hidden"></div>
@@ -122,12 +122,12 @@ Adelaide..." id="individnames"></textarea>
 </div>
 <div id="sbteams">
 </div>
-<div style="background-color: black; background-image: url('classicwbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/classic/classicwbackground.gif')" class="bg"></div>
 </div>
 <div class="hidden screen" id="endofgame">
 <div onclick="home()" id="returntohome">Return Home</div>
 <div onclick="hideallbutone('scoreboard')" id="showscoreboard">Show Scoreboard</div>
-<img src="jettendslide.gif" id="jettendslide">
+<img src="../../media/images/jettendslide.gif" id="jettendslide">
 <div id="gold" class="threedcontainer">
   <div class="threedmedal">
     <div class="front">
@@ -167,52 +167,52 @@ Adelaide..." id="individnames"></textarea>
     <div class="backinterior"></div>
   </div>
 </div>
-<div style="background-color: black; background-image: url('classicwbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/classic/classicwbackground.gif')" class="bg"></div>
 </div>
 <div id="audioElements">
   <audio id="twowaudio">
-  <source src="twowclassic.ogg" type="audio/ogg">
-  <source src="twowclassic.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/twowclassic.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/twowclassic.mp3" type="audio/mpeg">
 </audio>
 <audio id="threewaudio">
-  <source src="threewclassic.ogg" type="audio/ogg">
-  <source src="threewclassic.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/threewclassic.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/threewclassic.mp3" type="audio/mpeg">
 </audio>
 <audio id="stealaudio">
-  <source src="steal.ogg" type="audio/ogg">
-  <source src="steal.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/steal.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/steal.mp3" type="audio/mpeg">
 </audio>
 <audio id="spliceaudio">
-  <source src="splice.ogg" type="audio/ogg">
-  <source src="splice.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/splice.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/splice.mp3" type="audio/mpeg">
 </audio>
 <audio id="eliminateaudio">
-  <source src="eliminate.ogg" type="audio/ogg">
-  <source src="eliminate.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/eliminate.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/eliminate.mp3" type="audio/mpeg">
 </audio>
 <audio id="sdbgaudio" loop>
-  <source src="classicbgmusic.ogg" type="audio/ogg">
-  <source src="classicbgmusic.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/classicbgmusic.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/classicbgmusic.mp3" type="audio/mpeg">
 </audio>
 <audio id="clickaudio">
-  <source src="click.ogg" type="audio/ogg">
-  <source src="click.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/click.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/click.mp3" type="audio/mpeg">
 </audio>
 <audio id="doubleaudio">
-  <source src="double.ogg" type="audio/ogg">
-  <source src="double.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/double.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/double.mp3" type="audio/mpeg">
 </audio>
 <audio id="suddendeathaudio">
-  <source src="suddendeath.ogg" type="audio/ogg">
-  <source src="suddendeath.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/suddendeath.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/suddendeath.mp3" type="audio/mpeg">
 </audio>
 <audio id="correctaudio">
-  <source src="correct.ogg" type="audio/ogg">
-  <source src="correct.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/correct.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/correct.mp3" type="audio/mpeg">
 </audio>
 <audio id="incorrectaudio">
-  <source src="incorrect.ogg" type="audio/ogg">
-  <source src="incorrect.mp3" type="audio/mpeg">
+  <source src="../../media/audio/ogg/incorrect.ogg" type="audio/ogg">
+  <source src="../../media/audio/mp3/incorrect.mp3" type="audio/mpeg">
 </audio>
 </div>
 </body>
@@ -641,7 +641,7 @@ border-radius: 1dvh;
     top: 0;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("coinshine.png");
+    background-image: url("../../media/images/coinshine.png");
   }
   .mts {
     position: absolute;
@@ -831,7 +831,7 @@ text-align: center;
 color: white;
 border-radius: 1dvh;
 height: 10dvh;
-background-image: url("halfwhite.png");
+background-image: url("../../media/images/halfwhite.png");
 background-position: 50% 50%;
 background-size: cover;
 position: absolute;
@@ -1037,7 +1037,7 @@ font-family: fredokaone;
 }
 @font-face {
 font-family: fredokaone;
-src: url("FredokaOne-Regular.otf");
+src: url("../../media/fonts/fredokaone.otf");
 }
 #startbutton {
   position: absolute;
@@ -1355,7 +1355,7 @@ if (sessionStorage.getItem("setToUse")) {
 current = sessionStorage.getItem("setToUse");
 sessionStorage.removeItem("setToUse");
 } else {
-window.location.href = "urlerror.html";
+window.location.href = "../../play/urlerror.html";
 }
 { //resize function
 window.addEventListener("resize", resizee);
@@ -1423,7 +1423,7 @@ document.getElementById("bronze").style.top = "50%";
 }
 resizee();
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
-document.getElementById("titleslide").style.backgroundImage = "url('".concat(localStorage.getItem(current.concat("p")), ".png')");
+document.getElementById("titleslide").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
 ar = false;
 document.addEventListener('keydown', (event) => {
 if (event.key == "ArrowRight" && ar == false) {
@@ -1488,7 +1488,7 @@ newTxt.setAttribute("placeholder", "Team Members' Names...");
 newTxt.classList.add("names");
 newDiv.appendChild(newTxt);
 newImg = document.createElement("img");
-newImg.src = "delete.png";
+newImg.src = "../../media/images/delete.png";
 newImg.setAttribute("onclick", "remove()");
 newImg.classList.add("remove");
 newDiv.appendChild(newImg);
@@ -1879,7 +1879,7 @@ document.getElementsByClassName("toolbarbutton")[5].style.opacity = 1;
 document.getElementsByClassName("toolbarbutton")[2].style.pointerEvents = "all";
 document.getElementsByClassName("toolbarbutton")[5].style.pointerEvents = "all"; }
 for (i = 0; i < document.getElementsByClassName("cgroup").length; i++) {
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('halfblack.png')";
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/halfblack.png')";
 window[(i + 1).toString().concat("status")] = 0;
 }
 if (qn == parseInt(localStorage.getItem(current.concat("qat")))) {
@@ -1957,7 +1957,7 @@ document.getElementsByClassName("toolbarbutton")[5].style.opacity = 1;
 document.getElementsByClassName("toolbarbutton")[2].style.pointerEvents = "all";
 document.getElementsByClassName("toolbarbutton")[5].style.pointerEvents = "all"; }
 for (i = 0; i < document.getElementsByClassName("cgroup").length; i++) {
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('halfwhite.png')";
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/halfwhite.png')";
 window[(i + 1).toString().concat("status")] = 0;
 }
 if (qn == parseInt(localStorage.getItem(current.concat("qat")))) {
@@ -2027,7 +2027,7 @@ document.getElementById("loadbar").offsetHeight;
 document.getElementById("loadbar").style.width = "0%";
 }
 function home() {
-window.location.href = "play.html";
+window.location.href = "../../play/";
 }
 }
 { //questions and answers functions
@@ -2073,14 +2073,14 @@ if (soundeffects) {
   document.getElementById("correctaudio").play();
   document.getElementById("incorrectaudio").load();
 }
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('correct.png')";
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/correct.png')";
 } else {
 window[numToCC.toString().concat("status")] = 0;
 if (soundeffects) {
   document.getElementById("incorrectaudio").play();
   document.getElementById("correctaudio").load();
 }
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('halfwhite.png')";}
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/halfwhite.png')";}
 }
 function reveal() {
 if (soundeffects) {
