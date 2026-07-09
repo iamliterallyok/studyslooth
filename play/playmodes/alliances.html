@@ -6,13 +6,13 @@
 <html>
 <body>
 <div id="allreminders">
-<div class="srembg hidden" id="srem1"><div class="srem"><img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="preludeSlide(); document.getElementById('srem1').classList.add('hidden')" class="srembutton">Got it!</div><span id="ineedtochangetexthere"></span></div></div>
-<div class="srembg hidden" id="srem2"><div class="srem"><img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem2').classList.add('hidden'); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Make sure to select EVERY participant's name in the winning alliance, not just the individual who answered the question.</div></div>
-<div class="srembg hidden" style="background-color: rgba(0, 0, 0, 0.01)" id="srem3"><div id="blackpart"></div><div style="top: 38dvh" class="srem"><img src="jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem3').classList.add('hidden'); document.getElementById('cgroups').style.background = 'none'; if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Click the buttons highlighted below to control which participants score points for correct answers.</div></div>
+<div class="srembg hidden" id="srem1"><div class="srem"><img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="preludeSlide(); document.getElementById('srem1').classList.add('hidden')" class="srembutton">Got it!</div><span id="ineedtochangetexthere"></span></div></div>
+<div class="srembg hidden" id="srem2"><div class="srem"><img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem2').classList.add('hidden'); if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Make sure to select EVERY participant's name in the winning alliance, not just the individual who answered the question.</div></div>
+<div class="srembg hidden" style="background-color: rgba(0, 0, 0, 0.01)" id="srem3"><div id="blackpart"></div><div style="top: 38dvh" class="srem"><img src="../../media/images/jettfullbody.png" class="srimgjett"><div class="wrapbox"></div><div onclick="document.getElementById('srem3').classList.add('hidden'); document.getElementById('cgroups').style.background = 'none'; if (soundeffects) { document.getElementById('clickaudio').play(); }" class="srembutton">Got it!</div>Click the buttons highlighted below to control which participants score points for correct answers.</div></div>
 </div>
 <div class="screen" id="pregame">
 <button onclick="togglesettings()" id="settings"><span style="position: absolute; right: 4dvh; bottom: 0dvh">Settings</span></button><div id="settingsarea">
-<img onclick="togglesettings()" src="closesettings.png" id="closesettings">
+<img onclick="togglesettings()" src="../../media/images/closesettings.png" id="closesettings">
 <span style="position: absolute; right: 2dvh; top: 3dvh; font-size: 5dvh; width: calc(100% - 10.5dvh); text-decoration: underline">Game Settings</span>
 <span style="position: absolute; right: 2dvh; top: 12dvh; font-size: 4.5dvh; width: 100%; text-decoration: underline">Game Length</span>
 <span style="position: absolute; right: 14dvh; top: 17.5dvh; font-size: 3.5dvh; width: 100%">Endless Mode</span><div style="top: 18dvh" onclick="toggler(0)" class="setval slidergroup"><div class="slider"></div></div>
@@ -32,7 +32,7 @@
 <span style="position: absolute; right: 14dvh; top: 86dvh; font-size: 3.5dvh; width: 100%">Sound Effects</span><div style="top: 86.5dvh" onclick="toggler(4)" class="setval slidergroup"><div class="slider"></div></div>
 </div>
 <button onclick="home()" id="homepregame"><span style="position: absolute; right: 4dvh; bottom: 0dvh">Home</span></button>
-<div id="titleslide"><div id="logocomponents"><img id="logotop" src="allianceslogo.png"><p style="margin-top: 9dvh" id="nameofset"></p></div><div id="halfwhite"></div></div>
+<div id="titleslide"><div id="logocomponents"><img id="logotop" src="../../media/images/alliances/allianceslogo.png"><p style="margin-top: 9dvh" id="nameofset"></p></div><div id="halfwhite"></div></div>
 
 <div id="individuals">
 <textarea placeholder="Enter all players' names here, following this example...
@@ -46,24 +46,24 @@ Rachel
 Adelaide..." id="individnames"></textarea>
 </div>
 <button onclick="start()" id="startbutton">Start</button>
-<div class="bg" style="background-image: url('alliancesbackground.gif')"></div>
+<div class="bg" style="background-image: url('../../media/images/alliances/alliancesbackground.gif')"></div>
 </div>
 <div class="hidden screen" id="loadingscreen">
 <p id="loadingdot">Loading... (0%)</p>
 <div id="loadbaroutline2"><div id="loadbar2"></div></div>
-<div style="background-color: black; background-image: url('alliancesblackbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/alliances/alliancesblackbackground.gif')" class="bg"></div>
 </div>
 <div class="hidden screen" id="prelude">
 <div id="jett">
-<img src="jettheadnormal.png" id="jetthead">
-<img src="jettbody.png" id="jettbody">
-<img id="speechtriangle" src="speechtrianglejett.png">
+<img src="../../media/images/jettheadnormal.png" id="jetthead">
+<img src="../../media/images/jettbody.png" id="jettbody">
+<img id="speechtriangle" src="../../media/images/speechtrianglejett.png">
 <div id="speech"><span id="text4speech"></div></span>
 </div>
 <img id="pointvalue">
 <p id="ptdescription"></p>
 <div id="loadbaroutline"><div id="loadbar"></div></div>
-<div style="background-color: black; background-image: url('alliancesblackbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/alliances/alliancesblackbackground.gif')" class="bg"></div>
 <div id="toolbar">
 <div class="questionval"></div>
 <div onclick="skip()" style="left: 1dvh" class="toolbarbutton">Skip</div>
@@ -86,7 +86,7 @@ Adelaide..." id="individnames"></textarea>
 <div style="left: 14dvh" onclick="home()" class="toolbarbutton">Home</div>
 <div style="left: 27dvh" onclick="finish()" class="toolbarbutton">Finish</div>
 </div>
-<div style="background-color: red; background-image: url('alliancesbackground.gif')" class="bg"></div>
+<div style="background-color: red; background-image: url('../../media/images/alliances/alliancesbackground.gif')" class="bg"></div>
 </div>
 <div class="hidden screen" id="scoreboard">
 <div id="animationsdiv" class="hidden">
@@ -128,12 +128,12 @@ Adelaide..." id="individnames"></textarea>
 </div>
 <div id="sbteams">
 </div>
-<div style="background-color: red; background-image: url('alliancesbackground.gif')" class="bg"></div>
+<div style="background-color: red; background-image: url('../../media/images/alliances/alliancesbackground.gif')" class="bg"></div>
 </div>
 <div class="hidden screen" id="endofgame">
 <div onclick="home()" id="returntohome">Return Home</div>
 <div onclick="hideallbutone('scoreboard')" id="showscoreboard">Show Scoreboard</div>
-<img src="jettendslide.gif" id="jettendslide">
+<img src="../../media/images/jettendslide.gif" id="jettendslide">
 <div id="gold" class="threedcontainer">
 <div class="threedmedal">
 <div class="front">
@@ -173,7 +173,7 @@ Adelaide..." id="individnames"></textarea>
 <div class="backinterior"></div>
 </div>
 </div>
-<div style="background-color: black; background-image: url('alliancesblackbackground.gif')" class="bg"></div>
+<div style="background-color: black; background-image: url('../../media/images/alliances/alliancesblackbackground.gif')" class="bg"></div>
 </div>
 <div id="audioElements">
 <audio id="twowaudio">
@@ -558,7 +558,7 @@ left: 0;
 top: 0;
 background-position: 50% 50%;
 background-size: cover;
-background-image: url("coinshine.png");
+background-image: url("../../media/images/coinshine.png");
 }
 .mts {
 position: absolute;
@@ -748,7 +748,7 @@ text-align: center;
 color: white;
 border-radius: 1dvh;
 height: 10dvh;
-background-image: url("halfblack.png");
+background-image: url("../../media/images/halfblack.png");
 background-position: 50% 50%;
 background-size: cover;
 position: absolute;
@@ -942,7 +942,7 @@ font-family: fredokaone;
 }
 @font-face {
 font-family: fredokaone;
-src: url("FredokaOne-Regular.otf");
+src: url("../../media/fonts/fredokaone.otf");
 }
 #startbutton {
 position: absolute;
@@ -1156,10 +1156,10 @@ if (sessionStorage.getItem("setToUse")) {
 current = sessionStorage.getItem("setToUse");
 sessionStorage.removeItem("setToUse");
 } else {
-window.location.href = "urlerror.html";
+window.location.href = "../../play/urlerror.html";
 }
 { //load images
-imgToLoad = ["almystery", "alliancesblackbackground.gif", "basicnflag", "saturatedincorrect"];
+imgToLoad = ["../../media/images/alliances/almystery", "../../media/images/alliances/alliancesblackbackground.gif", "../../media/images/alliances/flags/basicnflag", "../../media/images/saturatedincorrect"];
 ptvalues = [1000, 1100, 1200, 1300, 1400, 1500];
 game = "al";
 powerplayanimlength = ["doubleanim", "spliceanim", "stealanim", "eliminateanim"];
@@ -1170,30 +1170,30 @@ sdframes = 58;
 eliminateanim = 79;
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 for (i = 0; i < alphabet.length; i++) {
-imgToLoad.push(alphabet[i].concat("nflag"));
+imgToLoad.push("../../media/images/alliances/flags/" + alphabet[i].concat("nflag"));
 }
 for (i = 0; i < ptvalues.length; i++) {
-imgToLoad.push(game.concat(ptvalues[i].toString()));
+imgToLoad.push("../../media/images/alliances/" + game.concat(ptvalues[i].toString()));
 }
 for (i = 0; i < 4; i++) {
-imgToLoad.push("alf".concat((i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/alf".concat((i + 1).toString()));
 }
 for (a = 0; a < ptvalues.length; a++) {
 for (i = 4; i < 7; i++) {
-imgToLoad.push("al".concat(ptvalues[a].toString(), "f", (i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/al".concat(ptvalues[a].toString(), "f", (i + 1).toString()));
 }
 }
 for (i = 0; i < 7; i++) {
-imgToLoad.push("almysteryf".concat((i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/almysteryf".concat((i + 1).toString()));
 }
 for (i = 7; i < 11; i++) {
-imgToLoad.push("almystery3000f".concat((i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/almystery3000f".concat((i + 1).toString()));
 }
 for (i = 7; i < 11; i++) {
-imgToLoad.push("almystery1000f".concat((i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/almystery1000f".concat((i + 1).toString()));
 }
 for (i = 7; i < 11; i++) {
-imgToLoad.push("almystery500f".concat((i + 1).toString()));
+imgToLoad.push("../../media/images/alliances/allanims/almystery500f".concat((i + 1).toString()));
 }
 sdal = sdframes;
 eal = eliminateanim;
@@ -1233,7 +1233,7 @@ img.height = 300;
 img.classList.add("hidden");
 img.id = imgToLoad[i];
 img.style.display = "none";
-if (imgToLoad[i] == "alliancesblackbackground.gif") {
+if (imgToLoad[i] == "../../media/images/alliances/alliancesblackbackground.gif") {
 img.src = imgToLoad[i];
 } else {
 img.src = imgToLoad[i].concat(".png");
@@ -1288,7 +1288,7 @@ document.getElementById("bronze").style.top = "50%";
 }
 resizee();
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
-document.getElementById("titleslide").style.backgroundImage = "url('".concat(localStorage.getItem(current.concat("p")), ".png')");
+document.getElementById("titleslide").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
 ar = false;
 document.addEventListener('keydown', (event) => {
 if (event.key == "ArrowRight" && ar == false) {
@@ -1351,7 +1351,7 @@ newTxt.setAttribute("placeholder", "Team Members' Names...");
 newTxt.classList.add("names");
 newDiv.appendChild(newTxt);
 newImg = document.createElement("img");
-newImg.src = "delete.png";
+newImg.src = "../../media/images/delete.png";
 newImg.setAttribute("onclick", "remove()");
 newImg.classList.add("remove");
 newDiv.appendChild(newImg);
@@ -1691,10 +1691,10 @@ document.getElementsByClassName("cn")[i].style.color = "white";
 } else {
 document.getElementsByClassName("cn")[i].style.color = "black";
 }
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('".concat(document.getElementsByClassName("cn")[i].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/alliances/flags/".concat(document.getElementsByClassName("cn")[i].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
 } else {
 document.getElementsByClassName("cn")[i].style.color = "black";
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('basicnflag.png')";
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/alliances/flags/basicnflag.png')";
 }
 window[(i + 1).toString().concat("status")] = 0;
 }
@@ -1737,13 +1737,13 @@ document.getElementById("text4speech").innerHTML = "Get into groups of up to ".c
 if (mystery) {
 document.getElementById("ptdescription").innerHTML = "<br>This next question is worth an unknown amount of points!";
 document.getElementById("loadbar").style.backgroundColor = "rgba(0, 0, 0, 0)";
-document.getElementById("loadbar").style.backgroundImage = "url('mysteryloadbar.png')";
-document.getElementById("pointvalue").src = "almystery.png";
+document.getElementById("loadbar").style.backgroundImage = "url('../../media/images/alliances/mysteryloadbar.png')";
+document.getElementById("pointvalue").src = "../../media/images/alliances/almystery.png";
 } else {
 document.getElementById("ptdescription").innerHTML = "<br>This next question is worth ".concat(pointVal.toString(), " points.");
 document.getElementById("loadbar").style.backgroundColor = ptcolors[ptvalues.indexOf(pointVal)];
 document.getElementById("loadbar").style.backgroundImage = "none";
-document.getElementById("pointvalue").src = game.concat(pointVal.toString(), ".png");
+document.getElementById("pointvalue").src = "../../media/images/alliances/" + game.concat(pointVal.toString(), ".png");
 }
 ogmyst = mystery;
 ogptval = pointVal;
@@ -1781,10 +1781,10 @@ document.getElementsByClassName("cn")[i].style.color = "white";
 } else {
 document.getElementsByClassName("cn")[i].style.color = "black";
 }
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('".concat(document.getElementsByClassName("cn")[i].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/alliances/flags/".concat(document.getElementsByClassName("cn")[i].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
 } else {
 document.getElementsByClassName("cn")[i].style.color = "black";
-document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('basicnflag.png')";
+document.getElementsByClassName("cgroup")[i].style.backgroundImage = "url('../../media/images/alliances/flags/basicnflag.png')";
 }
 window[(i + 1).toString().concat("status")] = 0;
 }
@@ -1835,13 +1835,13 @@ document.getElementById("text4speech").innerHTML = "Get into groups of up to ".c
 if (mystery) {
 document.getElementById("ptdescription").innerHTML = "<br>This next question is worth an unknown amount of points!";
 document.getElementById("loadbar").style.backgroundColor = "rgba(0, 0, 0, 0)";
-document.getElementById("loadbar").style.backgroundImage = "url('mysteryloadbar.png')";
-document.getElementById("pointvalue").src = "almystery.png";
+document.getElementById("loadbar").style.backgroundImage = "url('../../media/images/alliances/mysteryloadbar.png')";
+document.getElementById("pointvalue").src = "../../media/images/alliances/almystery.png";
 } else {
 document.getElementById("ptdescription").innerHTML = "<br>This next question is worth ".concat(pointVal.toString(), " points.");
 document.getElementById("loadbar").style.backgroundColor = ptcolors[ptvalues.indexOf(pointVal)];
 document.getElementById("loadbar").style.backgroundImage = "none";
-document.getElementById("pointvalue").src = game.concat(pointVal.toString(), ".png");
+document.getElementById("pointvalue").src = "../../media/images/alliances/" + game.concat(pointVal.toString(), ".png");
 }
 setTimeout(resetLoadBar, 1000 * loadval, questionnumber);
 }
@@ -1867,7 +1867,7 @@ document.getElementById("loadbar").offsetHeight;
 document.getElementById("loadbar").style.width = "0%";
 }
 function home() {
-window.location.href = "play.html";
+window.location.href = "../../play/";
 }
 }
 { //questions and answers functions
@@ -1923,7 +1923,7 @@ if (soundeffects) {
 document.getElementById("correctaudio").play();
 document.getElementById("incorrectaudio").load();
 }
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('correct.png')";
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/correct.png')";
 } else if (window[numToCC.toString().concat("status")] == 1) {
 document.getElementsByClassName("cn")[numToCC - 1].style.color = "white";
 window[numToCC.toString().concat("status")] = 2;
@@ -1931,7 +1931,7 @@ if (soundeffects) {
 document.getElementById("incorrectaudio").play();
 document.getElementById("correctaudio").load();
 }
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('incorrect.png')";
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/incorrect.png')";
 } else {
 window[numToCC.toString().concat("status")] = 0;
 if (soundeffects) {
@@ -1946,10 +1946,10 @@ document.getElementsByClassName("cn")[numToCC - 1].style.color = "white";
 } else {
 document.getElementsByClassName("cn")[numToCC - 1].style.color = "black";
 }
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('".concat(document.getElementsByClassName("cn")[numToCC - 1].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/alliances/flags/".concat(document.getElementsByClassName("cn")[numToCC - 1].innerHTML.substring(0, 1).toLowerCase(), "nflag.png')");
 } else {
 document.getElementsByClassName("cn")[numToCC - 1].style.color = "black";
-document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('basicnflag.png')";
+document.getElementsByClassName("cgroup")[numToCC - 1].style.backgroundImage = "url('../../media/images/alliances/flags/basicnflag.png')";
 }
 }
 }
@@ -2055,9 +2055,9 @@ let newFlag = document.createElement("div");
 newFlag.style.left = b * 16 + "dvh";
 newFlag.classList.add("flag");
 if (normal == 0) {
-newFlag.style.backgroundImage = "url('".concat(ftu[b], ".png')");
+newFlag.style.backgroundImage = "url('../../media/images/alliances/flags/".concat(ftu[b], ".png')");
 } else {
-newFlag.style.backgroundImage = "url('saturatedincorrect.png')";
+newFlag.style.backgroundImage = "url('../../media/images/saturatedincorrect.png')";
 }
 newDiv.appendChild(newFlag);
 }
@@ -2102,7 +2102,7 @@ delay = 1000;
 numSF = 11;
 numpreSF = 7;
 nmanim = "almystery";
-document.getElementById("animscore").style.backgroundImage = "url('almysteryf1.png')";
+document.getElementById("animscore").style.backgroundImage = "url('../../media/images/alliances/allanims/almysteryf1.png')";
 } else {
 delay = 0;
 numSF = 7;
@@ -2118,12 +2118,12 @@ setTimeout(function() {
 }, delay)
 for (i = 0; i < numpreSF; i++) {
 setTimeout(function(frame) {
-document.getElementById("animscore").style.backgroundImage = "url('".concat(nmanim, "f", frame, ".png')");
+document.getElementById("animscore").style.backgroundImage = "url('../../media/images/alliances/allanims/".concat(nmanim, "f", frame, ".png')");
 }, (i * 41.67) + delay, (i + 1).toString());
 }
 for (i = numpreSF; i < numSF; i++) {
 setTimeout(function(frame) {
-document.getElementById("animscore").style.backgroundImage = "url('".concat(nmanim, pointVal.toString(), "f", frame, ".png')");
+document.getElementById("animscore").style.backgroundImage = "url('../../media/images/alliances/allanims/".concat(nmanim, pointVal.toString(), "f", frame, ".png')");
 }, (i * 41.67) + delay, (i + 1).toString());
 }
 setTimeout(function() {
@@ -2146,7 +2146,7 @@ if (animationsenabled) {
   ar = true;
   renderflags(1);
   animateFlags();
-  document.getElementById("animscore").style.backgroundImage = "url('bigredx.png')";
+  document.getElementById("animscore").style.backgroundImage = "url('../../media/images/alliances/bigredx.png')";
   document.getElementById("wrongmessage").classList.remove("hidden");
   document.getElementById("wrongmessage").innerHTML = messages[message];
   setTimeout(function() {
@@ -2178,7 +2178,7 @@ document.getElementsByTagName("audio")[i].load();
 if (soundeffects) {
 document.getElementById("clickaudio").play();
 }
-document.getElementsByClassName("bg")[3].style.backgroundImage = "url('alliancesblackbackground.gif')";
+document.getElementsByClassName("bg")[3].style.backgroundImage = "url('../../media/images/alliances/alliancesblackbackground.gif')";
 document.getElementsByClassName("t2")[0].classList.add("hidden");
 document.getElementById("returntohome2").classList.remove("hidden");
 document.getElementById("backtoendslide").classList.remove("hidden");
