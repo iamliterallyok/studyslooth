@@ -50,3 +50,7 @@ Study Modes like *Chronological Order* or *Sketch and Answer* promote actual und
 ---
 ---
 ---
+
+Final Note:
+**Projecttor** does contain limited, *Elementary-Approved* advertisements.\
+(meaning that they were approved by elementary teachers!)
