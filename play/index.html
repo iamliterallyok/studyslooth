@@ -225,7 +225,7 @@ function creategroup(n2c) {
   nDiv.classList.add("group");
   nDiv.classList.add("grpfilter");
   nDiv.setAttribute("onclick", "redirect('sets/play" + n2c + ".html')");
-  nDiv.style.backgroundImage = "url('../media/images/".concat(localStorage.getItem(n2c + "p"), ".png')");
+  nDiv.style.backgroundImage = "url('../media/images/setcovers/".concat(localStorage.getItem(n2c + "p"), ".png')");
   document.getElementById("groups").appendChild(nDiv);
   nDivi = document.createElement("div");
   nDivi.classList.add("insidetext");
