@@ -11,18 +11,18 @@
   <div id="playbutton">Study</div>
 </div></div>
 <div id="sidebar">
-<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="study.html"><div style="top: 13.5dvh" class="hyperlink selected"><img src="studyselected.png" class="hpimg"><p class="hplabel selected">Study</p></div></a>
-<a href="play.html"><div style="top: 27dvh" class="hyperlink"><img src="play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="sets.html"><div style="top: 40.5dvh" class="hyperlink"><img src="sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a href="create.html"><div style="top: 54dvh" class="hyperlink"><img src="create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="import.html"><div style="top: 67.5dvh" class="hyperlink"><img src="import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="settings.html"><div style="top: 85.5dvh" class="hyperlink"><img src="settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="../../index.html"><div style="top: 0dvh" class="hyperlink"><img src="../../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../../study/"><div style="top: 13.5dvh" class="hyperlink selected"><img src="../../media/images/toolbar/studyselected.png" class="hpimg"><p class="hplabel selected">Study</p></div></a>
+<a href="../../play/"><div style="top: 27dvh" class="hyperlink"><img src="../../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../../create/"><div style="top: 54dvh" class="hyperlink"><img src="../../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 </div>
 <div id="wbgnew"></div>
 <div id="content">
 <div id="heading"><div id="fadedbg"></div><span id="nameofset"></span></div>
-<p id="desc">Choose between a variety of different ways to study.</p><div onclick="redirecttoads('setupmagicmemorize')" id="magicmemorize"><img class="mmlogo" src="mmlogo.png"></div>
+<p id="desc">Choose between a variety of different ways to study.</p><div onclick="redirecttoads('setupmagicmemorize')" id="magicmemorize"><img class="mmlogo" src="../../media/images/studymode/mmlogo.png"></div>
 <p class="desc" id="descr">Recommended for You:</p>
 <p class="desc" id="descw">For Written Learners:</p>
 <p class="desc" id="desca">For Auditory Learners:</p>
@@ -44,7 +44,7 @@
   z-index: -100000;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url("whitebg.png");
+  background-image: url("../../media/images/whitebg.png");
 }
 .sat {
   white-space: nowrap;
@@ -185,7 +185,7 @@
 }
 #magicmemorize {
   height: 30dvh;
-  background-image: url('magicmemorizebackground.gif');
+  background-image: url('../../media/images/studymode/magicmemorizebackground.gif');
   width: calc(100% - 9dvh);
   left: 3.5dvh;
   outline: 1.5dvh solid #c12020;
@@ -226,7 +226,7 @@
 }
 @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("../../media/fonts/fredokaone.otf");
 }
 body {
   font-family: fredokaone;
@@ -377,19 +377,19 @@ if (localStorage.getItem("numofsets")) {} else {
   localStorage.setItem("numofsets", "0");
 }
 if (localStorage.getItem(current.concat("n"))) {} else {
-  window.location.href = "setnotfound2.html";
+  window.location.href = "../../study/setnotfound3.html";
 }
 if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
-  window.location.href = "setnotfound2.html";
+  window.location.href = "../../study/setnotfound3.html";
 }
 if (localStorage.getItem("pref")) {} else {
-  window.location.href = "yourpreferences.html";
+  window.location.href = "../../study/preferences/";
 }
 if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
-  window.location.href = "set".concat(current, "preferences.html");
+  window.location.href = "../../study/preferences/set".concat(current, ".html");
 }
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
-document.getElementById("fadedbg").style.backgroundImage = "url('".concat(localStorage.getItem(current.concat("p")), ".png')");
+document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
 arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
 if (localStorage.getItem("darkmode") == "1") {
   document.body.style.backgroundColor = "black";
@@ -401,9 +401,9 @@ if (localStorage.getItem("darkmode") == "1") {
       document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("black.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
     } else {
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("selected.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
       document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
     }
   }
@@ -434,7 +434,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
       document.getElementsByClassName("satwtg")[1].textContent = "Singleplayer/Multiplayer";
       document.getElementById("not").innerHTML = "Hot Seat";
-      document.getElementById("actpopup").style.backgroundImage = "url('hotseatbackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/hotseatbackground.png')";
       document.getElementById("desconot").innerHTML = "Race against the Clock to Answer Each Question. Use the buttons below to decide whether you want to study by speaking, with a friend, or with a simpler true-or-false game mode.";
       resizeeverything();
       break;
@@ -450,7 +450,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("sat")[2].classList.add("hidden");
       document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
       document.getElementById("not").innerHTML = "Unscramble";
-      document.getElementById("actpopup").style.backgroundImage = "url('defaultstudymodebackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
       document.getElementById("desconot").innerHTML = "Unscramble the word to decipher the answer to a question. Use the buttons to control whether or not you answer with your keyboard or your voice.";
       resizeeverything();
       break;
@@ -466,7 +466,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("sat")[2].classList.add("hidden");
       document.getElementsByClassName("satwtg")[0].textContent = "Whiteboard";
       document.getElementById("not").innerHTML = "Explain";
-      document.getElementById("actpopup").style.backgroundImage = "url('defaultstudymodebackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
       if (localStorage.getItem(current.concat('whiteboardrecommended')) != "1") {
       document.getElementById("desconot").innerHTML = "Study by finding a friend and taking turns explaining the concept on the screen to one another.";
       } else {
@@ -489,7 +489,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
       document.getElementsByClassName("satwtg")[1].textContent = "Timed Game Mode";
       document.getElementById("not").innerHTML = "Read and Answer";
-      document.getElementById("actpopup").style.backgroundImage = "url('defaultstudymodebackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
       document.getElementById("desconot").innerHTML = "Study by reading the question and typing out the answer. Use the buttons below to decide if you want to study using your voice or race the clock in the timed game mode.";
       resizeeverything();
       break;
@@ -505,7 +505,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("sat")[2].classList.add("hidden");
       document.getElementsByClassName("satwtg")[0].textContent = "Singleplayer/Multiplayer";
       document.getElementById("not").innerHTML = "Matching";
-      document.getElementById("actpopup").style.backgroundImage = "url('defaultstudymodebackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
       document.getElementById("desconot").innerHTML = "Uncover matching tiles until you've cleared the board. Use the button below to decide whether you want to study by yourself or with a friend.";
       resizeeverything();
       break;
@@ -521,7 +521,7 @@ function showpopup(nameofgame) {
       document.getElementsByClassName("sat")[2].classList.add("hidden");
       document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
       document.getElementById("not").innerHTML = "Use Notes";
-      document.getElementById("actpopup").style.backgroundImage = "url('defaultstudymodebackground.png')";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
       document.getElementById("desconot").innerHTML = "Use your Notes to answer questions. Use the button below to decide whether or not you want to answer with your voice."; 
       resizeeverything();
       break;
@@ -531,8 +531,8 @@ function showpopup(nameofgame) {
 }
 function redirecttoads(whichpage) {
   sessionStorage.setItem("stu", current);
-  sessionStorage.setItem("wpr", whichpage);
-  window.location.href = "justamoment.html";
+  sessionStorage.setItem("wpr", "../study/studymodes/".concat(whichpage));
+  window.location.href = "../../redirecting/";
 }
 oneswbgs = ["2048", "Grid Breaker", "Hot Seat", "Cast Fishing", "Continuous Tic-Tac-Toe", "Hot Seat-Multiplayer", "Hot Seat-Auditory", "Hot Seat-Multiplayer True or False", "Hot Seat-True or False", "True or False"];
 wstudymodes = ["Read and Answer", "Use Notes to Answer", "Practice Quiz", "Unscramble"];
@@ -707,12 +707,12 @@ function creategroup(category, name) {
   }
   if (oneswbgs.indexOf(name) != -1) {
     if (name.substring(0, 3) == "Hot") {
-    newDiv.style.backgroundImage = "url('hotseatbackground.png')";
+    newDiv.style.backgroundImage = "url('../../media/images/studymode/hotseatbackground.png')";
     } else {
-    newDiv.style.backgroundImage = "url('".concat(newtext.toLowerCase, "background.png')");
+    newDiv.style.backgroundImage = "url('../../media/images/studymode/".concat(newtext.toLowerCase, "background.png')");
     }
   } else {
-    newDiv.style.backgroundImage = "url('defaultstudymodebackground.png')";
+    newDiv.style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
   }
 }
 if (localStorage.getItem("darkmode") == "1") {
@@ -740,7 +740,7 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("close").style.color = "white";
 }
 orderofgrps = ["r"];
-if (localStorage.getItem("pref")) {} else { window.location.href = "userquestions.html" };
+if (localStorage.getItem("pref")) {} else { window.location.href = "../../study/preferences/" };
 orderofgrps.push(localStorage.getItem("pref"));
 for (i = 0; i < 6; i++) {
   if (ogorder[i] != orderofgrps[1]) {
