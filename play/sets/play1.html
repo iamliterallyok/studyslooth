@@ -243,9 +243,9 @@ function creategroup(n2c) {
   newDiv = document.createElement("div");
   newDiv.classList.add("group");
   if (n2c == "classicw") {
-  newDiv.style.backgroundImage = `../../media/images/classic/` + "url('".concat(n2c, "background.gif')");
+  newDiv.style.backgroundImage = "url('../../media/images/classic/".concat(n2c, "background.gif')");
   } else {
-  newDiv.style.backgroundImage = `../../media/images/${n2c}/` + "url('".concat(n2c, "background.gif')");
+  newDiv.style.backgroundImage = `url('../../media/images/${n2c}/`.concat(n2c, "background.gif')");
   }
   newDiv.setAttribute("onclick", "redirecttoads('../play/playmodes/".concat(n2c, "')"));
   newImg = document.createElement("img");
