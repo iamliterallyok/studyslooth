@@ -8,13 +8,13 @@
 </script>
 <body>
 <div id="sidebar">
-<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="study.html"><div style="top: 13.5dvh" class="hyperlink"><img src="study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="play.html"><div style="top: 27dvh" class="hyperlink"><img src="play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="sets.html"><div style="top: 40.5dvh" class="hyperlink selected"><img src="setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
-<a href="create.html"><div style="top: 54dvh" class="hyperlink"><img src="create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="import.html"><div style="top: 67.5dvh" class="hyperlink"><img src="import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="settings.html"><div style="top: 85.5dvh" class="hyperlink"><img src="settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="../../index.html"><div style="top: 0dvh" class="hyperlink"><img src="../../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../../play/"><div style="top: 27dvh" class="hyperlink"><img src="../../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../../sets/"><div style="top: 40.5dvh" class="hyperlink selected"><img src="../../media/images/toolbar/setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
+<a href="../../create/"><div style="top: 54dvh" class="hyperlink"><img src="../../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 
 </div>
 <div id="content">
@@ -24,8 +24,8 @@
 <div id="insidetoolbar">
 <div onclick="redirectstudy()" style="width: 11dvh; left: 1.5dvh" class="obj">Study</div>
 <div onclick="redirectplay()" style="width: 9dvh; left: 16.5dvh" class="obj">Play</div>
-<div onclick="download()" style="width: 4dvh; left: 29.5dvh; background-image: url('download.png')" class="obj"></div>
-<div onclick="deleteset()" style="width: 4dvh; left: 37.5dvh; background-image: url('delete.png')" class="obj"></div>
+<div onclick="download()" style="width: 4dvh; left: 29.5dvh; background-image: url('../../media/images/download.png')" class="obj"></div>
+<div onclick="deleteset()" style="width: 4dvh; left: 37.5dvh; background-image: url('../../media/images/delete.png')" class="obj"></div>
 
 </div>
 </div>
@@ -52,7 +52,7 @@
 </div>
 
 <div id="qaa">Questions/Answers
-<img onclick="addgroup()" src="add.png" id="addquestion">
+<img onclick="addgroup()" src="../../media/images/add.png" id="addquestion">
 <div id="actualquestions">
 </div>
 </div>
@@ -291,7 +291,7 @@
 }
 @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("../../media/fonts/fredokaone.otf");
 }
 body {
   font-family: fredokaone;
@@ -379,7 +379,7 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-  background-image: url("whitebg.png");
+  background-image: url("../../media/images/whitebg.png");
   background-position: 50% 50%;
   background-size: cover;
   overflow: hidden;
@@ -420,10 +420,10 @@ if (localStorage.getItem("numofsets")) {} else {
   localStorage.setItem("numofsets", "0");
 }
 if (localStorage.getItem(current.concat("n"))) {} else {
-  window.location.href = "setnotfound.html";
+  window.location.href = "../../sets/setnotfound.html";
 }
 if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
-  window.location.href = "setnotfound.html";
+  window.location.href = "../../sets/setnotfound.html";
 }
 numq = 0;
 function removegroup() {
@@ -490,7 +490,7 @@ function addgroup() {
   newGroup.appendChild(newA);
   newRemove = document.createElement("img");
   newRemove.classList.add("deletegroup");
-  newRemove.src = "delete.png";
+  newRemove.src = "../../media/images/delete.png";
   newGroup.appendChild(newRemove);
   newGroup.style.top = 0.005 * window.innerHeight + ((numq - 1) * window.innerHeight * 0.16);
   newRemove.setAttribute("onclick", "removegroup()");
@@ -530,7 +530,7 @@ function save() {
       localStorage.setItem(current.concat("q", (i + 1).toString()), document.getElementsByClassName("qblank")[i].value);
       localStorage.setItem(current.concat("a", (i + 1).toString()), document.getElementsByClassName("ablank")[i].value);
     }
-    window.location.href = "sets.html";
+    window.location.href = "../../sets/";
   }
 }
 currentselectedpic = parseInt(localStorage.getItem(current.concat("p")));
@@ -544,7 +544,7 @@ if (currentselectedpic < 11) {
 function changeimgs() {
   whichcategory = (parseInt(document.getElementById("category").value)) - 1;
   for (i = 0; i < document.getElementsByClassName("picselection").length; i++) {
-    document.getElementsByClassName("picselection")[i].style.backgroundImage = "url('".concat(((whichcategory * 10) + (i + 1)).toString(), ".png')");
+    document.getElementsByClassName("picselection")[i].style.backgroundImage = "url('../../media/images/setcovers/".concat(((whichcategory * 10) + (i + 1)).toString(), ".png')");
     rem = currentselectedpic % 10;
     if (rem == 0) { rem = 10; } 
     leveltwo = ((currentselectedpic - rem) / 10) + 1;
@@ -576,7 +576,7 @@ function selectapic() {
     }
   }
   currentselectedpic = ((parseInt(document.getElementById("category").value) - 1) * 10) + numIndex;
-  document.getElementById("fadedbg").style.backgroundImage = "url('".concat(currentselectedpic.toString(), ".png')");
+  document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/".concat(currentselectedpic.toString(), ".png')");
   for (i = 0; i < document.getElementsByClassName("picselection").length; i++) {
     if (document.getElementsByClassName("picselection")[i] != event.target) {
       if (localStorage.getItem("darkmode") == "1") {
@@ -625,7 +625,7 @@ changeimgs();
 resizeeverything();
 window.addEventListener("resize", resizeeverything);
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current + "n");
-document.getElementById("fadedbg").style.backgroundImage = "url('" + localStorage.getItem(current + "p") + ".png')";
+document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/" + localStorage.getItem(current + "p") + ".png')";
 function redirect(url) {
   window.location.href = url;
 }
@@ -667,26 +667,26 @@ if (localStorage.getItem("darkmode")) {} else {
 }
 ses = current;
 function redirectstudy() {
-  window.location.href = "study".concat(current, ".html");
+  window.location.href = "../../study/sets/study".concat(current, ".html");
 }
 function deleteset() {
   for (i = (parseInt(current) + 1); i < 11; i++) {
+    localStorage.setItem((i - 1).toString().concat("bt"), localStorage.getItem(i.toString().concat("bt")));
     localStorage.setItem((i - 1).toString().concat("n"), localStorage.getItem(i.toString().concat("n")));
     localStorage.setItem((i - 1).toString().concat("a"), localStorage.getItem(i.toString().concat("a")));
     localStorage.setItem((i - 1).toString().concat("qat"), localStorage.getItem(i.toString().concat("qat")));
     localStorage.setItem((i - 1).toString().concat("p"), localStorage.getItem(i.toString().concat("p")));
-        localStorage.setItem((i - 1).toString().concat("wqc"), localStorage.getItem(i.toString().concat("wqc")));
-        localStorage.setItem((i - 1).toString().concat("bt"), localStorage.getItem(i.toString().concat("bt")));
+    localStorage.setItem((i - 1).toString().concat("wqc"), localStorage.getItem(i.toString().concat("wqc")));
     for (a = 1; a <= parseInt(localStorage.getItem(i.toString().concat("qat"))); a++) {
       localStorage.setItem((i - 1).toString().concat("q", a.toString()), localStorage.getItem(i.toString().concat("q", a.toString())));
       localStorage.setItem((i - 1).toString().concat("a", a.toString()), localStorage.getItem(i.toString().concat("a", a.toString())));
     }
   }
   localStorage.setItem("numofsets", (parseInt(localStorage.getItem("numofsets")) - 1).toString());
-  window.location.href = "sets.html";
+  window.location.href = "../../sets/";
 }
 function redirectplay() {
-  window.location.href = "play".concat(current, ".html");
+  window.location.href = "../../play/sets/play".concat(current, ".html");
 }
 function download() {
   qaaa = "";
@@ -709,9 +709,9 @@ if (localStorage.getItem("darkmode") == "1") {
       document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("black.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
     } else {
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("selected.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
       document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
     }
   }
