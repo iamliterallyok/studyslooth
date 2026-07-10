@@ -17,7 +17,7 @@
  <div id="question"><span style="font-size: 3dvh" id="qtext">Say the Answer out Loud to each of the questions using the microphone button. Don't forget to stop recording when you're done! Choose how much time you want to race: 
  </span></div>
  <div class="hidden" id="question2"><span id="qtext2"></span></div>
-  <button class="hidden" onclick="toggleaudio()" id="audio"><img src="../../media/images/studymodes/microphone.png" id="microphone"></button>
+  <button class="hidden" onclick="toggleaudio()" id="audio"><img src="../../media/images/studymode/microphone.png" id="microphone"></button>
  <select class="hidden" id="lildropdown">
    <option value="en-US">English</option>
    <option value="zh-CN">Mandarin</option>
@@ -245,7 +245,7 @@
     left: 50%;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
     
   }
@@ -257,7 +257,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
     z-index: 1000;
   }
   #lilgrayguy {
@@ -402,7 +402,7 @@
     right: -5.2dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
   }
   #torabody {
@@ -413,7 +413,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
   }
   #qtext {
     position: absolute;
@@ -786,7 +786,7 @@ function toggleaudio() {
 
         audio = true;
         document.getElementById("microphone").src =
-            "../../media/images/studymodes/microphonered.png";
+            "../../media/images/studymode/microphonered.png";
 
         recognition = new SpeechRecognition();
 
@@ -848,7 +848,7 @@ function toggleaudio() {
         audio = false;
 
         document.getElementById("microphone").src =
-            "../../media/images/studymodes/microphone.png";
+            "../../media/images/studymode/microphone.png";
 
         if (recognition) {
             recognition.onend = null;
@@ -1458,29 +1458,29 @@ function check() {
 }
 function pose(exp) {
   if (exp == "confused") {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadconfused.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadhappy.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadnormal.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadnormal.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
   }
 }
 function posescore(exp) {
   setTimeout(function() {
   if (exp == "confused") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadconfused.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadhappy.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "amazed") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadamazed.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadamazed.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadsad.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadsad.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
     setTimeout(function() {
       document.getElementById("torahead2").style.transition = "1.2s transform";
