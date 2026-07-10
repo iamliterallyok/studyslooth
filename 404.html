@@ -3,19 +3,19 @@
 
 <body>
 <div id="sidebar">
-<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="study.html"><div style="top: 13.5dvh" class="hyperlink"><img src="study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="play.html"><div style="top: 27dvh" class="hyperlink"><img src="play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="sets.html"><div style="top: 40.5dvh" class="hyperlink selected"><img src="setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
-<a href="create.html"><div style="top: 54dvh" class="hyperlink"><img src="create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="import.html"><div style="top: 67.5dvh" class="hyperlink"><img src="import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="settings.html"><div style="top: 85.5dvh" class="hyperlink"><img src="settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="study/"><div style="top: 13.5dvh" class="hyperlink"><img src="media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="play/"><div style="top: 27dvh" class="hyperlink"><img src="media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="sets/"><div style="top: 40.5dvh" class="hyperlink selected"><img src="media/images/toolbar/setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
+<a href="create/"><div style="top: 54dvh" class="hyperlink"><img src="media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="import/"><div style="top: 67.5dvh" class="hyperlink"><img src="media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 
 </div>
 <div id="content">
 <div id="heading"></div>
 <!-- <div id="fadedbg"></div><span id="nameofset"></span></div> -->
-<div id="message">Error 404:<br><span style="font-size: 7dvh">Page not Found.</span><img id="jatis" src="jatis.png"><a href="sets.html"><div id="returnhome">Return Home</div></a></div>
+<div id="message">Error 404:<br><span style="font-size: 7dvh">Page not Found.</span><img id="jatis" src="media/images/jatis.png"><a href="sets/"><div id="returnhome">Return Home</div></a></div>
 </div>
 </body>
 <style>
@@ -82,7 +82,7 @@
 }
 @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("media/fonts/fredokaone.otf");
 }
 body {
   font-family: fredokaone;
@@ -132,7 +132,7 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-  background-image: url("whitebg.png");
+  background-image: url("media/images/whitebg.png");
   background-position: 50% 50%;
   background-size: cover;
   overflow: hidden;
@@ -171,9 +171,9 @@ if (localStorage.getItem("darkmode") == "1") {
       document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("black.png");
+      document.getElementsByClassName("hpimg")[i].src = "media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
     } else {
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("selected.png");
+      document.getElementsByClassName("hpimg")[i].src = "media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
       document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
     }
   }
