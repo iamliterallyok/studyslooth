@@ -21,7 +21,7 @@
   <button onclick="check()" id="check">Check</button>
  <div id="question"><span id="qtext">
  </span></div>
- <button style="opacity: 0" onclick="toggleaudio()" id="audio"><img src="microphone.png" id="microphone"></button>
+ <button style="opacity: 0" onclick="toggleaudio()" id="audio"><img src="../../media/images/studymode/microphone.png" id="microphone"></button>
  <select class="hidden" id="lildropdown">
    <option value="en-US">English</option>
    <option value="zh-CN">Mandarin</option>
@@ -35,7 +35,7 @@
  <textarea maxlength="1000" placeholder="Write some notes about the concept here..." id="inputnotes"></textarea>
  <textarea class="hidden" maxlength="1000" placeholder="Click the button and start talking and the answer will appear here..." id="answer"></textarea>
  <div class="hidden" id="notes"></div>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = 'study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -146,7 +146,7 @@
     left: 50%;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
     
   }
@@ -158,7 +158,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
     z-index: 1000;
   }
   #lilgrayguy {
@@ -312,7 +312,7 @@
     right: -5.2dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
   }
   #torabody {
@@ -323,7 +323,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
   }
   #qtext {
     position: absolute;
@@ -339,7 +339,7 @@
   }
   @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("../../media/fonts/fredokaone.otf");
   }
   textarea {
     font-family: fredokaone;
@@ -588,7 +588,7 @@ function toggleaudio() {
   if (!audio) {
     audio = true;
     if (localStorage.getItem("darkmode") != "1") {
-      document.getElementById("microphone").src = "microphonered.png";
+      document.getElementById("microphone").src = "../../media/images/studymode/microphonered.png";
     } else {
       document.getElementById("audio").style.backgroundColor = "#c12020";
     }
@@ -626,7 +626,7 @@ function toggleaudio() {
   } else {
     audio = false;
     if (localStorage.getItem("darkmode") != "1") {
-      document.getElementById("microphone").src = "microphone.png";
+      document.getElementById("microphone").src = "../../media/images/studymode/microphone.png";
     } else {
       document.getElementById("audio").style.backgroundColor = "#3a3a3a";
     }
@@ -641,7 +641,7 @@ if (sessionStorage.getItem("setToUse")) {
 current = sessionStorage.getItem("setToUse");
 sessionStorage.removeItem("setToUse");
 } else {
-window.location.href = "studyurlerror.html";
+window.location.href = "../../study/studyurlerror.html";
 }
 document.getElementById("qtext").innerHTML = "Write notes about the question: ".concat(localStorage.getItem(current.concat("q1")));
 congratsmsg = ["Great Job!", "Perfect!", "Nice Work!", "Good Work!", "Good Job!"];
@@ -654,12 +654,12 @@ clbl = 0;
 notestoUse = [];
 isquestions = false;
 function finish() {
-  window.location.href = "study".concat(current, ".html");
+  window.location.href = "../../study/sets/study".concat(current, ".html");
 }
 function redo() {
   sessionStorage.setItem("stu", current);
-  sessionStorage.setItem("wpr", "usenotestospeak");
-  window.location.href = "justamoment.html";
+  sessionStorage.setItem("wpr", "../study/studymodes/usenotestospeak");
+  window.location.href = "../../redirecting/";
 }
 // ===== Cubic Bezier Implementation =====
 function cubicBezier(x1, y1, x2, y2) {
@@ -987,29 +987,29 @@ function check() {
 }
 function pose(exp) {
   if (exp == "confused") {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadnormal.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadnormal.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
   }
 }
 function posescore(exp) {
   setTimeout(function() {
   if (exp == "confused") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "amazed") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadamazed.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadamazed.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadsad.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadsad.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
     setTimeout(function() {
       document.getElementById("torahead2").style.transition = "1.2s transform";
