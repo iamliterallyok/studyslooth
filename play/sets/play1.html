@@ -247,7 +247,7 @@ function creategroup(n2c) {
   } else {
   newDiv.style.backgroundImage = `../../media/images/${n2c}/` + "url('".concat(n2c, "background.gif')");
   }
-  newDiv.setAttribute("onclick", "redirecttoads('../../play/playmodes/".concat(n2c, "')"));
+  newDiv.setAttribute("onclick", "redirecttoads('../play/playmodes/".concat(n2c, "')"));
   newImg = document.createElement("img");
   newImg.classList.add("smalllogo");
   if (n2c == "classicw") {
