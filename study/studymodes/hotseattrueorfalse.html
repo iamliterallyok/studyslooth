@@ -35,7 +35,7 @@
    <option value="300">5:00</option>
  </select>
  <textarea class="hidden" maxlength="1000" placeholder="Type the answer here..." id="answer"></textarea>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = 'study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -217,7 +217,7 @@
     left: 50%;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
     
   }
@@ -229,7 +229,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
     z-index: 1000;
   }
   #lilgrayguy {
@@ -374,7 +374,7 @@
     right: -5.2dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
   }
   #torabody {
@@ -385,7 +385,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
   }
   #qtext {
     position: absolute;
@@ -411,7 +411,7 @@
   }
   @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("../../media/fonts/fredokaone.otf");
   }
   textarea {
     font-family: fredokaone;
@@ -613,19 +613,19 @@ if (sessionStorage.getItem("setToUse")) {
 current = sessionStorage.getItem("setToUse");
 sessionStorage.removeItem("setToUse");
 } else {
-window.location.href = "studyurlerror.html";
+window.location.href = "../../study/studyurlerror.html";
 }
 currentq = 1;
 congratsmsg = ["Great Job!", "Perfect!", "Nice Work!", "Good Work!", "Good Job!"];
 nopemsg = ["Oops", "Not quite", ":(", "Not exactly", "Erm, actually..."];
 clbl = 0;
 function finish() {
-  window.location.href = "study".concat(current, ".html");
+  window.location.href = "../../study/sets/study".concat(current, ".html");
 }
 function redo() {
   sessionStorage.setItem("stu", current);
-  sessionStorage.setItem("wpr", "hotseattrueorfalse");
-  window.location.href = "justamoment.html";
+  sessionStorage.setItem("wpr", "../study/studymodes/hotseattrueorfalse");
+  window.location.href = "../../redirecting/";
 }
 con = [];
 allnumbers = [];
@@ -1210,29 +1210,29 @@ function check() {
 }
 function pose(exp) {
   if (exp == "confused") {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead").style.backgroundImage = "url('toraheadnormal.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadnormal.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
   }
 }
 function posescore(exp) {
   setTimeout(function() {
   if (exp == "confused") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadconfused.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadhappy.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "amazed") {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadamazed.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadamazed.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead2").style.backgroundImage = "url('toraheadsad.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadsad.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
     setTimeout(function() {
       document.getElementById("torahead2").style.transition = "1.2s transform";
