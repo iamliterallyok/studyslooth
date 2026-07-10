@@ -2,13 +2,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
 <div id="sidebar">
-<a href="index.html"><div style="top: 0dvh" class="hyperlink"><img src="homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="study.html"><div style="top: 13.5dvh" class="hyperlink"><img src="studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="play.html"><div style="top: 27dvh" class="hyperlink selected"><img src="playselected.png" class="hpimg"><p class="hplabel selected">Play</p></div></a>
-<a href="sets.html"><div style="top: 40.5dvh" class="hyperlink"><img src="setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a href="create.html"><div style="top: 54dvh" class="hyperlink"><img src="createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="import.html"><div style="top: 67.5dvh" class="hyperlink"><img src="importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="settings.html"><div style="top: 85.5dvh" class="hyperlink"><img src="settingsorange.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="../../index.html"><div style="top: 0dvh" class="hyperlink"><img src="../../media/images/toolbar/homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../../play/"><div style="top: 27dvh" class="hyperlink selected"><img src="../../media/images/toolbar/playselected.png" class="hpimg"><p class="hplabel selected">Play</p></div></a>
+<a href="../../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../../media/images/toolbar/setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../../create/"><div style="top: 54dvh" class="hyperlink"><img src="../../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../../media/images/toolbar/settingsorange.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 </div>
 <div id="content">
 <div id="heading"><div id="fadedbg"></div><span id="nameofset"></span></div>
@@ -49,7 +49,7 @@
 }
 @font-face {
   font-family: fredokaone;
-  src: url("FredokaOne-Regular.otf");
+  src: url("../../media/fonts/fredokaone.otf");
 }
 body {
   font-family: fredokaone;
@@ -150,7 +150,7 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-  background-image: url("whitebg.png");
+  background-image: url("../../media/images/whitebg.png");
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -200,13 +200,13 @@ if (localStorage.getItem("numofsets")) {} else {
   localStorage.setItem("numofsets", "0");
 }
 if (localStorage.getItem(current.concat("n"))) {} else {
-  window.location.href = "setnotfound2.html";
+  window.location.href = "../../play/setnotfound2.html";
 }
 if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
-  window.location.href = "setnotfound2.html";
+  window.location.href = "../../play/setnotfound2.html";
 }
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
-document.getElementById("fadedbg").style.backgroundImage = "url('".concat(localStorage.getItem(current.concat("p")), ".png')");
+document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
 arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
 if (localStorage.getItem("darkmode") == "1") {
   document.body.style.backgroundColor = "black";
@@ -218,9 +218,9 @@ if (localStorage.getItem("darkmode") == "1") {
       document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("black.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
     } else {
-      document.getElementsByClassName("hpimg")[i].src = arrayOfPictureNames[i].concat("selected.png");
+      document.getElementsByClassName("hpimg")[i].src = "../../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
       document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
     }
   }
@@ -237,16 +237,24 @@ function redirect(url) {
 function redirecttoads(whichpage) {
   sessionStorage.setItem("stu", current);
   sessionStorage.setItem("wpr", whichpage);
-  window.location.href = "justamoment.html";
+  window.location.href = "../../redirecting/";
 }
 function creategroup(n2c) {
   newDiv = document.createElement("div");
   newDiv.classList.add("group");
-  newDiv.style.backgroundImage = "url('".concat(n2c, "background.gif')");
-  newDiv.setAttribute("onclick", "redirecttoads('".concat(n2c, "')"));
+  if (n2c == "classicw") {
+  newDiv.style.backgroundImage = "url('../../media/images/classic/".concat(n2c, "background.gif')");
+  } else {
+  newDiv.style.backgroundImage = `url('../../media/images/${n2c}/`.concat(n2c, "background.gif')");
+  }
+  newDiv.setAttribute("onclick", "redirecttoads('../play/playmodes/".concat(n2c, "')"));
   newImg = document.createElement("img");
   newImg.classList.add("smalllogo");
-  newImg.src = n2c.concat("logo.png");
+  if (n2c == "classicw") {
+  newImg.src = `../../media/images/classic/` + n2c.concat("logo.png");
+  } else {
+  newImg.src = `../../media/images/${n2c}/` + n2c.concat("logo.png");
+  }
   newDiv.appendChild(newImg);
   document.getElementById("groups").appendChild(newDiv);
 }
