@@ -181,7 +181,7 @@
     left: 50%;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
     
   }
@@ -193,7 +193,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
     z-index: 1000;
   }
   #lilgrayguy {
@@ -337,7 +337,7 @@
     right: -5.2dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/toraheadnormal.png");
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
     transition: 0.8s transform;
   }
   #torabody {
@@ -348,7 +348,7 @@
     height: 13.42dvh;
     background-position: 50% 50%;
     background-size: cover;
-    background-image: url("../../media/images/studymodes/torabody.png");
+    background-image: url("../../media/images/studymode/torabody.png");
   }
   #qtext {
     position: absolute;
@@ -1071,29 +1071,29 @@ function check() {
 }
 function pose(exp) {
   if (exp == "confused") {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadconfused.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadhappy.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymodes/toraheadnormal.png')";
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadnormal.png')";
     document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
   }
 }
 function posescore(exp) {
   setTimeout(function() {
   if (exp == "confused") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadconfused.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "happy") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadhappy.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else if (exp == "amazed") {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadamazed.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadamazed.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
   } else {
-    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymodes/toraheadsad.png')";
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadsad.png')";
     document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
     setTimeout(function() {
       document.getElementById("torahead2").style.transition = "1.2s transform";
