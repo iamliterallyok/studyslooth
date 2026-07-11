@@ -635,6 +635,9 @@
 </style>
 <script>
 if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("whiteblur").style.backgroundColor = "black";
+  document.getElementById("qtext2").style.color = "white";
+  document.getElementById("qtext").style.color = "white";
   document.getElementById("title").transition = "none";
   window.innerHeight;
   document.getElementById("title").style.color = "#3a3a3a";
@@ -645,6 +648,8 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("redo").style.backgroundColor = "black";
   document.getElementById("finish").style.outline = "1.5dvh solid #3a3a3a";
   document.getElementById("finish").style.backgroundColor = "black";
+  document.getElementById("check").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("check").style.backgroundColor = "black";
   document.getElementById("next").style.outline = "1.5dvh solid #3a3a3a";
   document.getElementById("next").style.backgroundColor = "black";
   document.getElementById("popup").style.backgroundColor = "#3a3a3a";
@@ -681,17 +686,7 @@ function checknarrowwide() {
 }
 allselectors = [false,false,false,false,false,false];
 allselectorsclone = [false,false,false,false,false,false];
-function togglebutton(ntchange) {
-  if (allselectors[ntchange] == false) {
-    allselectors[ntchange] = true;
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "../../media/images/studymode/selectedbutton.png";
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "#c12020";
-  } else {
-    allselectors[ntchange] = false;
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "none";
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "white";
-  }
-}
+
 prefmod = -1;
 function togglebuttonmod(ntchange) {
   if (allselectors[ntchange] == false) {
@@ -708,7 +703,11 @@ function togglebuttonmod(ntchange) {
     prefmod = -1;
     allselectors[ntchange] = false;
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "black";
+    } else {
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "white";
+    }
   }
 }
 function togglebutton(ntchange) {
@@ -719,7 +718,11 @@ function togglebutton(ntchange) {
   } else {
     allselectors[ntchange] = false;
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "black";
+    } else {
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "white";
+    }
   }
 }
 currentaorw = "";
@@ -729,13 +732,21 @@ function aorwclick(ntchange) {
   if (currentaorw != ntchange) {
     currentaorw = ntchange;
     document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundColor = "black";
+    } else {
     document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundColor = "white";
+    }
     document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "../../media/images/studymode/selectedbutton.png";
     document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "#c12020";
   } else {
     currentaorw = "";
     document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "black";
+    } else {
     document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "white";
+    }
   }
 }
 allnames =
@@ -815,6 +826,10 @@ function ans(answertq) {
       if (allselectorsclone[i] == true) {
         togglebutton(i);
       }
+      if (localStorage.getItem("darkmode") == "1") {
+        document.getElementsByClassName("selectorforas")[i].style.backgroundColor = "black";
+        document.getElementsByClassName("spantopshelf")[i].style.color = "white";
+      }
     }
     }, 600);
     setTimeout(function() {
@@ -892,7 +907,11 @@ function ans(answertq) {
           } else {
             document.getElementsByClassName("selectorforas")[i].classList.add("hidden");
           }
+          if (localStorage.getItem("darkmode") == "1") {
+          document.getElementsByClassName("clickablething")[i].style.backgroundColor = "black";
+          } else {
           document.getElementsByClassName("clickablething")[i].style.backgroundColor = "white";
+          }
           document.getElementsByClassName("clickablething")[i].style.backgroundImage = "none";
         }
       }, 600)
@@ -901,6 +920,7 @@ function ans(answertq) {
         document.getElementById("question2").style.opacity = 1;
         document.getElementById("allselectors").classList.remove("hidden");
         document.getElementById("check").classList.remove("hidden");
+        document.getElementById("insloadbar").style.backgroundColor = "#c12020";
       }, 1000)
     }}
   } else {
@@ -936,6 +956,7 @@ function donine() {
       document.getElementById("no").style.opacity = 1;
       document.getElementById("no").style.pointerEvents = "initial";
       document.getElementById("question2").style.opacity = 1;
+      document.getElementById("insloadbar").style.backgroundColor = "#c12020";
     }, 1000);
   }
 }
@@ -946,9 +967,9 @@ function doten(yon) {
   pose("happy");
   setTimeout(function() {
     if (localStorage.getItem(current + "whiteboardrecommended")) {
-      window.href = `../../study/sets/study${current}.html`;
+      window.location.href = `../../study/sets/study${current}.html`;
     } else {
-      window.href = `../../study/preferences/set${current}.html`;
+      window.location.href = `../../study/preferences/set${current}.html`;
     }
   }, 2000);
 }
