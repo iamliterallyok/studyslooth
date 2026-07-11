@@ -383,6 +383,7 @@ if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
   window.location.href = "../../study/setnotfound3.html";
 }
 if (localStorage.getItem("timed")) {} else {
+  sessionStorage.setItem("wpr", current);
   window.location.href = "../../study/preferences/";
 }
 if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
