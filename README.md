@@ -30,7 +30,7 @@ One-device learning in Study Slooth's *Play Mode* also accommodates school syste
 ## 2. Physical Engagement / Play and Study Modes
 Both *Study Mode* and *Play Mode* cultivate physical engagement.
 
-In *Play Mode,* all of the modes are built in such a way that kids can team up without a device directly in front of them. This means that they can discuss answers together, problem solve, and subconsciously build soft skills without the fear of digital distractions.
+In *Play Mode,* all of the modes are built in such a way that kids can team up without a device directly in front of them. This means that they can discuss answers together, problem solve, and subconsciously build soft skills without the interference of digital distractions.
 
 In *Study Mode,* a substantial portion of the study modes are made for social learners, meaning that Study Slooth revolutionizes education by incorporating styles of learning that rely on communication and social interaction.
 
