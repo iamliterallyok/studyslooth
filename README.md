@@ -1,6 +1,6 @@
 Copyright © 2026 iamliterallyok. All Rights Reserved.
 
-# [Study Slooth](https://iamliterallyok.github.io/studyslooth "Study Slooth")
+# [Study SLOOTH](https://iamliterallyok.github.io/studyslooth "Study Slooth")
 ---
 ---
 ---
