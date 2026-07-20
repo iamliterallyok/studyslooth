@@ -385,9 +385,10 @@ if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
 if (localStorage.getItem("timed")) {} else {
   sessionStorage.setItem("setToUse", current);
   window.location.href = "../../study/preferences/";
-}
+} else {
 if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
   window.location.href = "../../study/preferences/set".concat(current, ".html");
+}
 }
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
 document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
