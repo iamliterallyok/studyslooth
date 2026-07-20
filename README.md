@@ -52,5 +52,4 @@ Study Modes like *Chronological Order* or *Sketch and Answer* promote actual und
 ---
 
 Final Note:
-**Study Slooth** may contain limited, *Elementary-Approved* advertisements.\
-(meaning that they were approved by elementary teachers!)
+**Study Slooth** does contain advertisements that were selected with the innocence of children in mind.
