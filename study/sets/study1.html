@@ -382,13 +382,13 @@ if (localStorage.getItem(current.concat("n"))) {} else {
 if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
   window.location.href = "../../study/setnotfound3.html";
 }
-if (localStorage.getItem("timed")) {} else {
-  sessionStorage.setItem("setToUse", current);
-  window.location.href = "../../study/preferences/";
-} else {
+if (localStorage.getItem("timed")) {
 if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
   window.location.href = "../../study/preferences/set".concat(current, ".html");
 }
+} else {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = "../../study/preferences/";
 }
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current.concat("n"));
 document.getElementById("fadedbg").style.backgroundImage = "url('../../media/images/setcovers/".concat(localStorage.getItem(current.concat("p")), ".png')");
