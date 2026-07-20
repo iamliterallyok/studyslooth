@@ -774,7 +774,7 @@ function ans(answertq) {
   document.getElementById("bigctr").style.pointerEvents = "none";
   document.getElementById("yes").style.pointerEvents = "none";
   document.getElementById("no").style.pointerEvents = "none";
-  pose("happy");
+  py");
   setTimeout(function() {
   document.getElementById("qtext").innerHTML = allnames[0];
   if (lll == 2) {
@@ -819,7 +819,7 @@ function ans(answertq) {
     document.getElementById("question").style.pointerEvents = "none";
     document.getElementById("yes").style.pointerEvents = "none";
     document.getElementById("no").style.pointerEvents = "none";
-    pose("happy");
+    py");
     setTimeout(function() {
     document.getElementById("qtext2").innerHTML = "Confirm the following choices:"
     for (i = 0; i < 6; i++) {
@@ -838,6 +838,7 @@ function ans(answertq) {
       document.getElementById("allselectors").style.zIndex = 9;
       document.getElementById("check").classList.remove("hidden");
       document.getElementById("insloadbar").style.backgroundColor = "#c12020";
+      pose("normal");
     }, 1000);
   } else if (lll == 6) {
     if (allselectors.indexOf(true) == -1) {
@@ -871,6 +872,7 @@ function ans(answertq) {
       document.getElementById("question2").style.opacity = 1;
       document.getElementById("insloadbar").style.backgroundColor = "#c12020";
       document.getElementById("check").classList.remove("hidden");
+      pose("normal");
     }, 1000)
     }
   } else if (lll == 7) {
@@ -921,6 +923,7 @@ function ans(answertq) {
         document.getElementById("allselectors").classList.remove("hidden");
         document.getElementById("check").classList.remove("hidden");
         document.getElementById("insloadbar").style.backgroundColor = "#c12020";
+        pose("normal");
       }, 1000)
     }}
   } else {
@@ -957,6 +960,7 @@ function donine() {
       document.getElementById("no").style.pointerEvents = "initial";
       document.getElementById("question2").style.opacity = 1;
       document.getElementById("insloadbar").style.backgroundColor = "#c12020";
+      pose("normal");
     }, 1000);
   }
 }
@@ -964,7 +968,7 @@ function doten(yon) {
   localStorage.setItem("timed", yon);
   document.getElementById("insloadbar").style.width = "100%";
   document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
-  pose("happy");
+  py");
   setTimeout(function() {
     if (localStorage.getItem(current + "whiteboardrecommended")) {
       window.location.href = `../../study/sets/study${current}.html`;
@@ -1321,7 +1325,7 @@ function check() {
       document.getElementById("popup").style.boxShadow = "0 0 10dvh rgb(173, 173, 173)";
     }
     allcorrect++;
-    pose("happy");
+    py");
     document.getElementById("answer").style.pointerEvents = "none";
     document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
     document.getElementById("popup").style.top = "60dvh";
