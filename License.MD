@@ -1,6 +1,6 @@
 Copyright © 2026 iamliterallyok. All Rights Reserved.
 
-# License and Terms of Service | Projecttor
+# License and Terms of Use | Projecttor
 
 ### Update Notice
 
