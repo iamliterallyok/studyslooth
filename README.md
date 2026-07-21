@@ -43,4 +43,4 @@ Study Modes like *Chronological Order* or *Sketch and Answer* promote actual und
 ---
 
 Final Note:
-**Study Slooth™** does contain advertisements that were selected with the innocence of children in mind.
+**Study Slooth™** may contain advertisements. However, these advertisements were selected with the intent to keep the site completely family-friendly. 
