@@ -1,41 +1,1181 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Input Saver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-
-  <label for="1terms">1terms: </label><input id="1terms"><br>
-  <label for="1whiteboardrecommended">1whiteboardrecommended: </label><input id="1whiteboardrecommended"><br>
-  <label for="1chronological">1chronological: </label><input id="1chronological"><br><br>
-
-  <button id="saveButton">Save Inputs</button>
-
-  <script>
-    const inputIds = ["1terms", "1whiteboardrecommended", "1chronological"];
-
-    document.getElementById("saveButton").addEventListener("click", () => {
-      inputIds.forEach(id => {
-        const input = document.getElementById(id);
-        if (input) {
-          localStorage.setItem(id, input.value);
-        }
-      });
-      alert("All values saved!");
-    });
-
-    // Optional: load saved values on page load
-    window.addEventListener("DOMContentLoaded", () => {
-      inputIds.forEach(id => {
-        const savedValue = localStorage.getItem(id);
-        if (savedValue !== null) {
-          const input = document.getElementById(id);
-          if (input) input.value = savedValue;
-        }
-      });
-    });
-  </script>
-
+<html>
+<body onload="checknarrowwide()">
+<div id="firstpart" class="">
+<div id="fullscreen">
+  <div id="question2"><span id="qtext2"><span></span><br><br><span id="tco">Is this set ordered like "Term/Definition" rather than "Question/Answer"?</span></span></div>
+  <button onclick="ans('1')" id="yes"></button>
+  <button onclick="ans('0')" id="no"></button>
+  <div id="bgimg"></div>
+ <div id="popup">
+   <span id="title">
+   </span>
+   <div id="showanswer"><span id="desc"></span><div id="gatb"></div></div>
+   <div id="torabody"></div>
+   <div id="torahead"></div>
+   <button id="next" onclick="next()">Next</button>
+ </div>
+  </div>
+ <div id="loadbar"><div id="insloadbar"></div></div><a href="../../study/"><span id="x">X</span></a>
+</div>
+<div id="secondpart" class="hidden">
+     <button class="hidden" id="finish" onclick="finish()">Done</button>
+   <button class="hidden" id="redo" onclick="redo()">Redo</button>
+  <div id="torabody2"></div>
+  <div id="torahead2"></div>
+  <div class="fmq2"><div id="lilgrayguy"></div></div>
+  <div id="fmq">
+    <div id="whitebit"></div>
+    <span id="sq">Struggle Questions</span>
+  </div>
+  <div id="percentage">
+  <div id="middlecircle">
+    <span id="textim"></span>
+  </div>
+  <div id="frontcircle"></div>
+  </div>
+</div>
 </body>
+<style>
+  #tco {
+    font-size: 5.5dvh;
+    word-wrap: break-word;
+    white-space: wrap;
+    transition: 0.6s opacity;
+    pointer-events: none;
+  }
+  #bgimg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1000;
+    left: 0;
+    top: 0;
+    opacity: 0.25;
+    background-size: cover;
+    background-position: 50% 50%;
+    filter: blur(1dvh);
+  }
+  .clickablething {
+    width: 8dvh;
+    height: 8dvh;
+    position: absolute;
+    border: 0.5dvh solid #c12020;
+    border-radius: 1dvh;
+    background-color: white;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .clbtnarrow {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 5dvh;
+  }
+  .clbtwide {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4dvh;
+  }
+  .spantopshelf {
+    position: absolute;
+    width: 100%;
+    color: #c12020;
+    white-space: nowrap;
+  }
+  .sptswide {
+    left: 3dvh;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: left;
+    font-size: 5dvh;
+  }
+  .sptsnarrow {
+    top: 1dvh;
+    font-size: 3.5dvh;
+    text-align: center;
+  }
+  .selectorforas {
+    position: absolute;
+    outline: 1dvh solid #c12020;
+    border-radius: 1.5dvh;
+    color: #c12020;
+    background-color: white;
+    width: calc((100dvw - 8dvh) / 2 - 3dvh);
+    max-width: 42dvh;
+    height: 14dvh;
+  }
+  #allselectors {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: calc(100dvw - 8dvh);
+    max-width: 90dvh;
+    height: 50dvh;
+    top: 26dvh;
+    transition: 0.6s opacity;
+  }
+  #yes {
+    position: absolute;
+    width: 10dvh;
+    height: 10dvh;
+    top: 45dvh;
+    left: calc(50dvw - 15dvh);
+    border-radius: 3dvh;
+    border: none;
+    background-color: #2dcc70;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/yes.png");
+    box-shadow: 0 0 20dvh #2dcc70;
+    z-index: 3;
+    transition: 0.6s opacity;
+    cursor: pointer;
+  }
+  #no {
+    cursor: pointer;
+    position: absolute;
+    width: 10dvh;
+    height: 10dvh;
+    top: 45dvh;
+    right: calc(50dvw - 15dvh);
+    border-radius: 3dvh;
+    border: none;
+    background-color: #ff8500;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/no.png");
+    box-shadow: 0 0 20dvh #ff8500;
+    z-index: 3;
+    transition: 0.6s opacity;
+  }
+  #qtext2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 90%;
+    text-align: center;
+    font-size: 4.5dvh;
+    transform: translate(-50%, 0%);
+    transition: 1s font-size;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.6s opacity;
+  }
+  #question2 {
+    width: calc(100% - 4dvh);
+    left: 2dvh;
+    top: 18dvh;
+    height: 80dvh;
+    position: absolute;
+    color: #c12020;
+    border-radius: 3dvh;
+    word-wrap: break-word;
+    transition: 0.6s opacity;
+    z-index: 3;
+    overflow: hidden;
+    font-size: 5dvh;
+  }
+  #whiteblur {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+    height: 30dvh;
+    width: 30dvh;
+    z-index: -1;
+    filter: blur(8dvh);
+    pointer-events: none;
+  }
+.pit1 {
+  position: absolute;
+  background-position: 50% 50%;
+  background-size: cover;
+  transform: translate(-50%, -50%) rotateX(110deg) rotateZ(180deg);
+  width: 30dvh;
+  height: 20dvh;
+  border-radius: 9dvh;
+  filter: blur(5dvh);
+  transition: 5s width, 5s height, 5s box-shadow, 1s filter, 1s border-radius, 1s opacity;
+  opacity: 0.6;
+}
+.pit1:hover {
+  filter: none;
+  border-radius: 2dvh;
+}
+#bigctr {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: none;
+  transition: 0.6s opacity;
+}
+#ctrlol {
+  width: calc(100dvw - 20dvh);
+  max-width: 80dvh;
+  height: calc(100dvw - 20dvh);
+  max-height: 80dvh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateX(70deg);
+  border-radius: 50%;
+}
+#finish:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#redo:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#finish {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  left: calc(50% - 15dvh);
+  bottom: 54dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+#redo {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  left: calc(50% + 3dvh);
+  bottom: 54dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+#torahead2 {
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    width: 18.41dvh;
+    height: 12.90dvh;
+    position: absolute;
+    bottom: 5.71dvh; /*+1*/
+    left: 50%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
+    transition: 0.8s transform;
+    
+  }
+  #torabody2 {
+    bottom: 2.9dvh;
+    right: calc(50% - 7.2dvh);
+    position: absolute;
+    width: 17.56dvh;
+    height: 13.42dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/torabody.png");
+    z-index: 1000;
+  }
+  #lilgrayguy {
+    position: absolute;
+    top: 12dvh;
+    left: 0;
+    width: 100%;
+    height: 3dvh;
+    background-image: linear-gradient(rgba(0,0,0,0), #efefef);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .sqq {
+    width: calc(100% - 7dvh);
+    right: 1dvh;
+    top: 4.5dvh;
+    background-color: white;
+    border-radius: 0.5dvh;
+    position: absolute;
+    padding: 0.5dvh;
+    word-wrap: break-word;
+  }
+  #sq {
+    width: calc(100% - 3dvh);
+    text-align: center;
+    color: black;
+    top: 0.5dvh;
+    left: 3.5dvh;
+    position: absolute;
+    z-index: 0;
+    font-size: 2.5dvh;
+    white-space: nowrap;
+  }
+  #whitebit {
+    z-index: 1;
+    width: 110%;
+    right: -5%;
+    top: -5%;
+    position: absolute;
+    background-color: white;
+    height: 110%;
+    transition: 1.5s;
+  }
+  #fmq {
+    width: calc(100% - 16dvh);
+    height: 15dvh;
+    top: 22.5dvh;
+    background-color: #efefef;
+    position: absolute;
+    right: 3dvh;
+    border-radius: 3dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .fmq2 {
+    width: calc(100% - 16dvh);
+    height: 15dvh;
+    top: 22.5dvh;
+    background-color: #efefef;
+    position: absolute;
+    right: 3dvh;
+    border-radius: 3dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #textim {
+    color: white;
+    transition: 2s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 10dvh;
+  }
+  #middlecircle {
+    width: 67.5%;
+    height: 67.5%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1; 
+  }
+  #percentage {
+    z-index: 2;
+    width: 45dvh;
+    height: 45dvh;
+    border-radius: 22.5dvh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+  }
+  #frontcircle {
+    width: 110%;
+    height: 110%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+  }
+  #secondpart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #firstpart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #gatb {
+    width: 100%;
+    height: 10dvh;
+    top: 20dvh;
+    position: fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #efefef);
+    z-index: 1;
+    pointer-events: none;
+  }
+  #showanswer {
+    overflow-y: scroll;
+    width: 100%;
+    height: 20dvh;
+    left: 0;
+    top: 10dvh;
+    position: absolute;
+  }
+  #torahead {
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: 18.41dvh;
+    height: 12.90dvh;
+    position: absolute;
+    top: -8.31dvh;
+    right: -5.2dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/toraheadnormal.png");
+    transition: 0.8s transform;
+  }
+  #torabody {
+    top: -5.5dvh;
+    right: 6.03dvh;
+    position: absolute;
+    width: 17.56dvh;
+    height: 13.42dvh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../../media/images/studymode/torabody.png");
+  }
+  #qtext {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-size: 6.5dvh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  button {
+  font-family: fredokaone;
+  }
+  @font-face {
+  font-family: fredokaone;
+  src: url("../../media/fonts/fredokaone.otf");
+  }
+  textarea {
+    font-family: fredokaone;
+  }
+  body {
+    font-family: fredokaone;
+    overflow: hidden;
+  }
+  #question {
+    width: calc(100% - 8dvh);
+    left: 4dvh;
+    top: 28dvh;
+    height: 50dvh;
+    position: absolute;
+    overflow-y: scroll;
+    color: #c12020;
+    border-radius: 3dvh;
+    word-wrap: break-word;
+    transition: 0.6s opacity;
+    z-index: 3;
+    pointer-events: none;
+  }
+  #answer {
+    width: calc(100dvw - 8.4dvh);
+    left: 50%;
+    height: 20dvh;
+    position: absolute;
+    top: 40dvh;
+    border-radius: 3dvh;
+    border: none;
+    transform: translateX(-50%);
+    background-color: rgba(200, 200, 200, 0.3);
+    font-size: 2.5dvh;
+    padding: 2dvh 2dvh 4dvh 2dvh;
+    resize: none;
+    transition: 0.6s opacity;
+  }
+  #loadbar {
+    width: calc(100dvw - 20dvh);
+    position: fixed;
+    top: 3.5dvh;
+    left: 3.5dvh;
+    height: 7dvh;
+    border-radius: 5dvh;
+    outline: 2dvh solid rgba(200, 200, 200, 0.3);
+    overflow: hidden;
+  }
+  #x {
+    color: #c12020;
+    font-size: 10dvh;
+    text-align: center;
+    width: 14.5dvh;
+    height: 12.5dvh;
+    position: absolute;
+    right: 0;
+    top: 1dvh;
+  }
+  #insloadbar {
+    height: 100%;
+    transition: 0.6s;
+    left: 0;
+    top: 0;
+    border-radius: 5dvh;
+    position: absolute;
+    background-color: #c12020;
+    width: 0;
+  }
+  #popup {
+    z-index: 10;
+    width: calc(100% - 4.75dvh);
+    height: 100dvh;
+    background-color: #efefef;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 90dvh;
+    border-radius: 4.5dvh;
+    transition: 0.6s;
+  }
+  #title {
+    left: 2dvh;
+    top: 2dvh;
+    width: calc(100% - 4dvh);
+    position: absolute;
+    font-size: 6dvh;
+    transition: 0.6s color;
+    color: #efefef;
+  }
+  #desc {
+    left: 2dvh;
+    width: calc(100% - 4dvh);
+    position: absolute;
+    font-size: 6dvh;
+    transition: 2s color;
+    color: #000000;
+    font-size: 3dvh;
+    word-wrap: break-word;
+  }
+  #question::-webkit-scrollbar {
+  display: none;
+}
+#check {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  left: 5dvh;
+  bottom: 4dvh;
+  position: absolute;
+  z-index: 12;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+  transition: 0.6s opacity;
+}
+  body {
+    overflow-y: hidden;
+  }
+#next {
+  width: 12dvh;
+  height: 6dvh;
+  border-radius: 2dvh;
+  border: none;
+  outline: 1.5dvh solid #efefef;
+  background-color: white;
+  color: #c12020;
+  right: 2.625dvh;
+  top: 31.5dvh;
+  position: absolute;
+  z-index: 2;
+  font-family: fredokaone;
+  font-size: 3.5dvh;
+  cursor: pointer;
+}
+#check:hover {
+  outline: 1.5dvh solid #c12020;
+}
+#next:hover {
+  outline: 1.5dvh solid #c12020;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#question {wide { $0
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+  .sqqdm {
+    width: calc(100% - 7dvh);
+    right: 1dvh;
+    top: 4.5dvh;
+    background-color: black;
+    border-radius: 0.5dvh;
+    position: absolute;
+    padding: 0.5dvh;
+    color: white;
+    word-wrap: break-word;
+  }
+</style>
+<script>
+if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("qtext2").style.color = "white";
+  document.getElementById("title").transition = "none";
+  window.innerHeight;
+  document.getElementById("title").style.color = "#3a3a3a";
+  window.innerHeight;
+  document.getElementById("title").style.transition = "0.3s color";
+  document.body.style.backgroundColor = "black";
+  document.getElementById("redo").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("redo").style.backgroundColor = "black";
+  document.getElementById("finish").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("finish").style.backgroundColor = "black";
+  document.getElementById("next").style.outline = "1.5dvh solid #3a3a3a";
+  document.getElementById("next").style.backgroundColor = "black";
+  document.getElementById("popup").style.backgroundColor = "#3a3a3a";
+  document.getElementById("gatb").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("desc").style.color = "white";
+  document.getElementById("whitebit").style.backgroundColor = "black";
+  document.getElementById("fmq").style.backgroundColor = "#3a3a3a";
+  document.getElementById("lilgrayguy").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("middlecircle").style.backgroundColor = "black";
+  document.getElementById("frontcircle").style.backgroundColor = "black";
+  document.getElementById("sq").style.color = "white";
+  document.getElementById("textim").style.color = "black";
+}
+if (sessionStorage.getItem("setToUse")) {
+current = sessionStorage.getItem("setToUse");
+sessionStorage.removeItem("setToUse");
+} else {
+window.location.href = "../../study/studyurlerror.html";
+}
+document.getElementById("qtext2").children[0].innerHTML = localStorage.getItem(`${current}n`) + ":";
+document.getElementById("bgimg").style.backgroundImage = `url("../../media/images/setcovers/${localStorage.getItem(current.concat("p"))}.png")`
+checknarrowwide();
+window.addEventListener("resize", checknarrowwide);
+function checknarrowwide() {
+  document.getElementById("yes").style.top = document.getElementById("tco").offsetTop + document.getElementById("question2").offsetTop + document.getElementById("tco").offsetHeight + 0.05 * window.innerHeight + "px";
+  document.getElementById("no").style.top = document.getElementById("tco").offsetTop + document.getElementById("question2").offsetTop + document.getElementById("tco").offsetHeight + 0.05 * window.innerHeight + "px";
+}
+allselectors = [false,false,false,false,false,false];
+allselectorsclone = [false,false,false,false,false,false];
+
+prefmod = -1;
+function togglebuttonmod(ntchange) {
+  if (allselectors[ntchange] == false) {
+    allselectors[ntchange] = true;
+    prefmod = ntchange;
+    for (i = 0; i < 6; i++) {
+      if (allselectors[i] == true && i != ntchange) {
+        togglebutton(i);
+      }
+    }
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "url('../../media/images/studymode/yes.png')";
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "#c12020";
+  } else {
+    prefmod = -1;
+    allselectors[ntchange] = false;
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "black";
+    } else {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "white";
+    }
+  }
+}
+function togglebutton(ntchange) {
+  if (allselectors[ntchange] == false) {
+    allselectors[ntchange] = true;
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "url('../../media/images/studymode/yes.png')";
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "#c12020";
+  } else {
+    allselectors[ntchange] = false;
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "black";
+    } else {
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "white";
+    }
+  }
+}
+currentaorw = "";
+nawa = ["w","a"];
+aawa = ["a", "w"];
+function aorwclick(ntchange) {
+  if (currentaorw != ntchange) {
+    currentaorw = ntchange;
+    document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundColor = "black";
+    } else {
+    document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundColor = "white";
+    }
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "url('../../media/images/studymode/yes.png')";
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "#c12020";
+  } else {
+    currentaorw = "";
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "black";
+    } else {
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "white";
+    }
+  }
+}
+allnames =
+["Written<br>Learner<br><span style='font-size: 3dvh; white-space: nowrap'>(Learning by Writing or Typing)</span>", 
+"Auditory<br>Learner<br><span style='font-size: 3dvh; white-space: nowrap'>(Learning by Repeating Aloud or Listening)</span>", 
+"Social<br>Learner<br><span style='font-size: 3dvh; white-space: nowrap'>(Learning by Studying with Friends)</span>", 
+"Logical<br>Learner<br><span style='font-size: 3dvh; white-space: nowrap'>(Learning by Making Connections or Analogies)</span>", 
+"Visual<br>Learner<br><span style='font-size: 3dvh; white-space: nowrap'>(Learning using Drawings or Models)</span>"]
+allnames2 = [0, "Written", "Auditory", "Social", "Logical", "Visual"];
+lll = 0;
+listoflsqs = ["tactile", "written", "auditory", "social", "logical", "visual"];
+lll2 = 0;''
+batterup = [0, "Does this Set Contain Questions/Answers that are Dates in Time?", "Should the Answers in this set be explained using a Whiteboard?"]
+lsvogs = ["terms", "chronological", "whiteboardrecommended"];
+function ans(answertq) {
+  lll2++;
+  if (lll2 < 3) {
+  pose("happy");
+  console.log(Math.floor((lll2 / 3) * 100))
+  document.getElementById("insloadbar").style.width = Math.floor((lll2 / 3) * 100) + "%";
+  document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+  document.getElementById("yes").classList.add("hidden");
+  document.getElementById("no").classList.add("hidden");
+  document.getElementById("tco").classList.add("hidden");
+  localStorage.setItem(current.concat(lsvogs[lll2-1]), answertq);
+  setTimeout(function() {
+    document.getElementById("tco").innerHTML = batterup[lll2];
+    checknarrowwide();
+  }, 600)
+  setTimeout(function() {
+    document.getElementById("insloadbar").style.backgroundColor = "#c12020";
+    document.getElementById("yes").classList.remove("hidden");
+    document.getElementById("no").classList.remove("hidden");
+    document.getElementById("tco").classList.remove("hidden");
+    pose("normal");
+  }, 1000)
+  } else { doten(answertq) };
+}
+function doten(yon) {
+  document.getElementById("yes").style.pointerEvents = "none";
+  document.getElementById("no").style.pointerEvents = "none";
+  localStorage.setItem(current.concat("whiteboardrecommended"), yon);
+  document.getElementById("insloadbar").style.width = "100%";
+  document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+  pose("happy");
+  setTimeout(function() {
+  window.location.href = `../../study/sets/study${current}.html`;
+  }, 2000);
+}
+
+currentq = 1;
+congratsmsg = ["Great Job!", "Perfect!", "Nice Work!", "Good Work!", "Good Job!"];
+nopemsg = ["Oops", "Not quite", ":(", "Not exactly", "Erm, actually..."];
+clbl = 0;
+function finish() {
+  window.location.href = "../../study/sets/study".concat(current, ".html");
+}
+function redo() {
+  sessionStorage.setItem("stu", current);
+  sessionStorage.setItem("wpr", "../study/studymodes/readandanswer");
+  window.location.href = "../../redirecting/";
+}
+function displaymomentarily(numtu) {
+  document.getElementsByClassName("pit1")[numtu].style.borderRadius = "2dvh";
+  document.getElementsByClassName("pit1")[numtu].style.filter = "none";
+  document.getElementsByClassName("pit1")[numtu].style.opacity = "1";
+  ntu3 = numtu;
+  setTimeout(adjback, 3000, ntu3);
+}
+function adjback(ntu2) {
+  document.getElementsByClassName("pit1")[ntu2].style.borderRadius = "9dvh";
+  document.getElementsByClassName("pit1")[ntu2].style.filter = "blur(5dvh)";
+   document.getElementsByClassName("pit1")[ntu2].style.opacity = "0.6";
+}
+// ===== Cubic Bezier Implementation =====
+function cubicBezier(x1, y1, x2, y2) {
+  function A(a1, a2) { return 1 - 3*a2 + 3*a1 }
+  function B(a1, a2) { return 3*a2 - 6*a1 }
+  function C(a1)     { return 3*a1 }
+
+  function bezier(t, a1, a2) {
+    return ((A(a1,a2)*t + B(a1,a2))*t + C(a1))*t
+  }
+  function slope(t, a1, a2) {
+    return 3*A(a1,a2)*t*t + 2*B(a1,a2)*t + C(a1)
+  }
+
+  function getT(x) {
+    let t = x
+    for (let i=0; i<5; i++) {
+      let s = slope(t, x1, x2)
+      if (s === 0) return t
+      let xCalc = bezier(t, x1, x2) - x
+      t -= xCalc / s
+    }
+    return t
+  }
+
+  return function(x) {
+    return bezier(getT(x), y1, y2)
+  }
+}
+
+// ===== Animation Loop =====
+function animate(target, duration, easing, callback) {
+  const start = performance.now()
+
+  function step(now) {
+    let progress = Math.min((now - start) / duration, 1)
+    let eased = easing(progress)
+    let val = eased * target
+    callback(val)
+    if (progress < 1) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
+}
+
+// ===== Example easing: CSS "ease-in-out" =====
+const easeInOut = cubicBezier(0.42, 0, 0.58, 1)
+const frontcircle = document.getElementById("frontcircle")
+
+
+// ===== Your Results Function =====
+function showresults() {
+  howdidido = Math.floor(360 * (allcorrect / allnumbers.length)).toString();
+  ofo = allcorrect / allnumbers.length;
+  if (ofo < 0.4) {
+    cfc = "#ff8500";
+    posescore("sad");
+  } else if (ofo < 0.7) {
+    cfc = "#ffe017";
+    posescore("confused");
+  } else if (ofo < 0.9) {
+    cfc = "#a8c96e";
+    posescore("happy");
+  } else {
+    cfc = "#2dcc70";
+    posescore("amazed");
+  } 
+  if (ofo == 1) {
+    createsq("e");
+  } else {
+    whichqs = [];
+    prevnumfound = 0;
+    for (a = 0; a < parseInt(localStorage.getItem(current.concat("qat"))); a++) {
+      numfound = 0;
+      for (b = 0; b < allnumbers.length; b++) {
+        if (allnumbers[b] == (a + 1).toString()) {
+          numfound++;
+        }
+      }
+      if (numfound > prevnumfound) {
+        whichqs = [];
+        whichqs.push((a + 1).toString());
+        prevnumfound = numfound;
+      } else if (numfound == prevnumfound) {
+        whichqs.push((a + 1).toString());
+      } else {}
+    }
+    for (z = 0; z < whichqs.length; z++) {
+      createsq(whichqs[z]);
+    }
+  }
+  if (howdidido == 360) {
+  document.getElementById("percentage").style.backgroundColor = "#2dcc70";
+  } else if (localStorage.getItem("darkmode") != "1") {
+  document.getElementById("percentage").style.backgroundImage = "conic-gradient(".concat(cfc, " 0deg, ", cfc, " ", howdidido, "deg, #efefef ", howdidido, "deg, #efefef 360deg)");
+  } else {
+  document.getElementById("percentage").style.backgroundImage = "conic-gradient(".concat(cfc, " 0deg, ", cfc, " ", howdidido, "deg, #3a3a3a ", howdidido, "deg, #3a3a3a 360deg)");
+  }
+  document.getElementById("textim").innerHTML = Math.floor(ofo * 100) + "%";
+  document.getElementById("firstpart").classList.add("hidden")
+  document.getElementById("secondpart").classList.remove("hidden")
+  setTimeout(function() {
+    frontcircle.classList.add("hidden");
+  }, 3000);
+  setTimeout(function() {
+      document.getElementById("textim").style.color = cfc;
+  animate(360, 2000, easeInOut, (val) => {
+    // Build a valid conic-gradient
+    frontcircle.style.backgroundColor = "rgba(0,0,0,0)";
+    if (localStorage.getItem("darkmode") == "1") {
+    frontcircle.style.backgroundImage = 
+      `conic-gradient(from 0deg, rgba(0,0,0,0) 0deg ${val}deg, black ${val}deg 360deg)`
+    } else {
+    frontcircle.style.backgroundImage = 
+      `conic-gradient(from 0deg, rgba(0,0,0,0) 0deg ${val}deg, white ${val}deg 360deg)`
+    }
+  })}, 1000);
+  setTimeout(function() {
+    document.getElementById("percentage").style.top = "30dvh";
+    document.getElementById("percentage").style.left = "10.5dvh";
+    document.getElementById("percentage").style.width = "15dvh";
+    document.getElementById("percentage").style.height = "15dvh";
+    document.getElementById("textim").style.fontSize = "3.33dvh";
+  }, 4000)
+  setTimeout(function() {
+    document.getElementById("whitebit").style.width = 0;
+    document.getElementById("finish").classList.remove("hidden");
+    document.getElementById("redo").classList.remove("hidden");
+  }, 6000)
+}
+
+allcorrect = 0;
+function createsq(type) {
+  if (type == "e") {
+    newSQ = document.createElement("div");
+    newSQ.innerHTML = "Nice Work! No struggle questions to show.";
+    if (localStorage.getItem("darkmode") == "1") {
+    newSQ.classList.add("sqqdm");
+    } else {
+    newSQ.classList.add("sqq");
+    }
+    document.getElementById("fmq").appendChild(newSQ);
+  } else {
+    newSQ = document.createElement("div");
+    newSQ.innerHTML = "Q: " + localStorage.getItem(current.concat("q", type)) + "<br><span style='font-weight: bold'>A: " + localStorage.getItem(current.concat("a", type)) + "</span>";
+    if (localStorage.getItem("darkmode") == "1") {
+    newSQ.classList.add("sqqdm");
+    } else {
+    newSQ.classList.add("sqq");
+    }
+    document.getElementById("fmq").appendChild(newSQ);
+    resizeSQs();
+  }
+}
+
+window.addEventListener("resize", resizeSQs);
+function resizeSQs() {
+  totaltop = 0.045 * window.innerHeight;
+  for (i = 0; i < document.getElementsByClassName("sqq").length; i++) {
+    document.getElementsByClassName("sqq")[i].style.top = totaltop + "px";
+    totaltop += document.getElementsByClassName("sqq")[i].offsetHeight + 0.01 * window.innerHeight;
+  }
+}
+function check() {
+  document.getElementById("check").setAttribute("onclick", "");
+  if (localStorage.getItem("gn") == "1") {
+    correcton = localStorage.getItem(current.concat("a", allnumbers[currentq - 1])).toUpperCase() == document.getElementById("answer").value.toUpperCase();
+  } else {
+    newword = "";
+    allwords = [];
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    thequestion = document.getElementById("answer").value.toLowerCase();
+    for (i = 0; i < thequestion.length; i++) {
+      if (i+1 == thequestion.length) {
+        if (alphabet.indexOf(thequestion[i]) != -1) {
+        allwords.push(newword.concat(thequestion[i]));
+        } else if (newword != "") {
+        allwords.push(newword);
+        }
+      } else if (alphabet.indexOf(thequestion[i]) != -1) {
+        newword = newword.concat(thequestion[i]);
+      } else {
+        if (newword != "") {
+        allwords.push(newword);
+        }
+        newword = "";
+      }
+    }
+    newword = "";
+    allwordsa = [];
+    thequestion = localStorage.getItem(current.concat("a", allnumbers[currentq - 1])).toLowerCase();
+    for (i = 0; i < thequestion.length; i++) {
+      if (i+1 == thequestion.length) {
+        if (alphabet.indexOf(thequestion[i]) != -1) {
+        allwordsa.push(newword.concat(thequestion[i]));
+        } else if (newword != "") {
+        allwordsa.push(newword);
+        }
+      } else if (alphabet.indexOf(thequestion[i]) != -1) {
+        newword = newword.concat(thequestion[i]);
+      } else {
+        if (newword != "") {
+        allwordsa.push(newword);
+        }
+        newword = "";
+      }
+    }
+    nallwords = [];
+    unimportantWords = [
+  "a","an","the","about","above","across","after","against","along","amid","among","around",
+  "at","before","behind","below","beneath","beside","between","beyond","by","despite","down",
+  "during","except","for","from","in","inside","into","near","of","off","on","onto","out",
+  "outside","over","since","through","throughout","till","to","toward","under","underneath",
+  "until","up","upon","with","within","without",
+  "der","die","das","ein","eine","einer","einem","einen","eines","dem","den","des",
+  "an","auf","aus","bei","durch","für","gegen","hinter","in","mit","nach","neben","ohne",
+  "seit","um","unter","über","von","vor","während","wegen","zu","zum","zur",
+  "il","lo","la","i","gli","le","un","una","uno","del","della","dello","dei","degli","dell'",
+  "a","da","di","in","su","con","tra","fra","sopra","sotto","senza","dopo","prima","fino","entro",
+  "le","la","les","un","une","des","du","de","d'","au","aux",
+  "à","chez","dans","en","sur","sous","devant","derrière","par","pour","sans","vers",
+  "avec","entre","pendant","jusqu’à","depuis","avant","après","près","autour",
+  "el","la","los","las","un","una","unos","unas","al","del",
+  "a","ante","bajo","con","contra","de","desde","en","entre","hacia","hasta",
+  "sin","sobre","tras","durante","mediante",
+  "and","or","but","nor","so","yet","for","although","because","since","unless","while","whereas","if","as","though","even","once","when",
+  "und","oder","aber","denn","doch","sondern","obwohl","weil","da","wenn","falls","sowie","solange","bis","bevor","nachdem","während","obgleich",
+  "e","o","ma","né","però","anche se","poiché","dato che","quando","finché","se","mentre","perché","come","anche","appena","fino a",
+  "et","ou","mais","ni","car","donc","tandis que","parce que","puisque","lorsque","si","quoique","bien que","comme","pendant que","avant que","après que",
+  "y","o","pero","ni","aunque","porque","pues","ya que","mientras","cuando","hasta que","si","como","una vez que"
+];
+
+    for (i = 0; i < allwords.length; i++) {
+      if (unimportantWords.indexOf(allwords[i]) == -1) {
+        nallwords.push(allwords[i]);
+      }
+    }
+    allwords = nallwords;
+    nallwords = [];
+    for (i = 0; i < allwordsa.length; i++) {
+      if (unimportantWords.indexOf(allwordsa[i]) == -1) {
+        nallwords.push(allwordsa[i]);
+      }
+    }
+    allwordsa = nallwords;
+    numtobeat = allwordsa.length * 0.85;
+    numhave = 0;
+    for (i = 0; i < allwords.length; i++) {
+      if (allwordsa.indexOf(allwords[i]) > -1) {
+        ogi = i;
+        if (allwordsa.indexOf(allwords[i]) <= i) {
+          i--;
+        }
+        eindex = allwordsa.indexOf(allwords[ogi]);
+        allwords.splice(allwords[ogi], 1);
+        allwordsa.splice(eindex, 1);
+        numhave++; 
+      }
+    }
+    correcton = numhave >= numtobeat;
+  }
+  if (correcton) {
+    if (currentq == allnumbers.length) {
+      clbl = 100;
+    }
+    if (localStorage.getItem("darkmode") == "1") {
+      document.getElementById("title").style.color = "white";
+      document.getElementById("popup").style.boxShadow = "0 0 10dvh black";
+    } else {
+      document.getElementById("title").style.color = "#c12020";
+      document.getElementById("popup").style.boxShadow = "0 0 10dvh rgb(173, 173, 173)";
+    }
+    allcorrect++;
+    pose("happy");
+    document.getElementById("answer").style.pointerEvents = "none";
+    document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
+    document.getElementById("popup").style.top = "60dvh";
+    random = Math.floor(Math.random() * congratsmsg.length);
+    document.getElementById("title").innerHTML = congratsmsg[random];
+    document.getElementById("desc").innerHTML = "<span style='font-weight: bold'>Correct Answer: </span>".concat(localStorage.getItem(current.concat("a", allnumbers[currentq - 1])), "<br><br><br><br><br>");
+  } else {
+    if (localStorage.getItem("darkmode") == "1") {
+      document.getElementById("title").style.color = "white";
+      document.getElementById("popup").style.boxShadow = "0 0 10dvh black";
+    } else {
+      document.getElementById("title").style.color = "#c12020";
+      document.getElementById("popup").style.boxShadow = "0 0 10dvh rgb(173, 173, 173)";
+    }
+    document.getElementById("answer").style.pointerEvents = "none";
+    pose("confused");
+    allnumbers.push(allnumbers[currentq - 1]);
+    document.getElementById("popup").style.top = "60dvh";
+    random = Math.floor(Math.random() * nopemsg.length);
+    document.getElementById("title").innerHTML = nopemsg[random];
+    document.getElementById("desc").innerHTML = "<span style='font-weight: bold'>Your Answer: </span>".concat(document.getElementById("answer").value, "<br><br><span style='font-weight: bold'>Correct Answer: </span>", localStorage.getItem(current.concat("a", allnumbers[currentq - 1])), "<br><br><br><br><br>");
+  }
+  if (clbl != 100) {
+  clbl += (100 - clbl) / (allnumbers.length + 1 - currentq);
+  }
+  document.getElementById("insloadbar").style.width = clbl + "%";
+}
+function pose(exp) {
+  if (exp == "confused") {
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "happy") {
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else {
+    document.getElementById("torahead").style.backgroundImage = "url('../../media/images/studymode/toraheadnormal.png')";
+    document.getElementById("torahead").style.transform = "translate(-50%, -50%) rotate(0deg)";
+  }
+}
+function posescore(exp) {
+  setTimeout(function() {
+  if (exp == "confused") {
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadconfused.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "happy") {
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadhappy.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else if (exp == "amazed") {
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadamazed.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+  } else {
+    document.getElementById("torahead2").style.backgroundImage = "url('../../media/images/studymode/toraheadsad.png')";
+    document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(30deg)";
+    setTimeout(function() {
+      document.getElementById("torahead2").style.transition = "1.2s transform";
+      window.innerHeight;
+      document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(-30deg)";
+    }, 800);
+    setTimeout(function() {
+      document.getElementById("torahead2").style.transition = "0.8s transform";
+      window.innerHeight;
+      document.getElementById("torahead2").style.transform = "translate(-50%, -50%) rotate(0deg)";
+    }, 2200)
+  }
+  }, 1500);
+}
+function next() {
+  if (currentq != allnumbers.length) {
+  document.getElementById("insloadbar").style.backgroundColor = "#c12020";
+  pose("normal");
+  document.getElementById("popup").style.top = "90dvh";
+    document.getElementById("popup").style.boxShadow = "none";
+    if (localStorage.getItem("darkmode") == "1") {
+    document.getElementById("title").style.color = "#3a3a3a";
+    } else {
+    document.getElementById("title").style.color = "#efefef";
+    }
+    document.getElementById("desc").innerHTML = "";
+    document.getElementById("question").style.opacity = 0;
+    document.getElementById("answer").style.opacity = 0;
+    document.getElementById("check").style.opacity = 0;
+    currentq++;
+    setTimeout(function() {
+    document.getElementById("answer").style.pointerEvents = "all";
+    document.getElementById("question").style.opacity = 1;
+    document.getElementById("answer").style.opacity = 1;
+    document.getElementById("check").style.opacity = 1;
+    document.getElementById("qtext").innerHTML = localStorage.getItem(current.concat("q", allnumbers[currentq - 1]));
+    document.getElementById("answer").value = "";
+    }, 700)
+    setTimeout(function() {
+    document.getElementById("check").setAttribute("onclick", "check()");
+    }, 1300);
+  } else { showresults(); }
+}
+</script>
 </html>
