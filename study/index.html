@@ -217,14 +217,24 @@ window.addEventListener("resize", resizeeverything);
 for (i = 1; i <= parseInt(localStorage.getItem("numofsets")); i++) {
   creategroup(i.toString());
 }
-function redirect(url) {
+function redirect(url, ttobb) {
+  if (localStorage.getItem("timed")) {
+  if (localStorage.getItem(ttobb+"whiteboardrecommended")) {
+  sessionStorage.setItem("setToUse", ttobb);
+  window.location.href = `../study/preferences/set${ttobb}.html`;
+  } else {
   window.location.href = url;
+  }
+  } else {
+  sessionStorage.setItem("setToUse", ttobb);
+  window.location.href = `../study/preferences/`;
+  }
 }
 function creategroup(n2c) {
   nDiv = document.createElement("div");
   nDiv.classList.add("group");
   nDiv.classList.add("grpfilter");
-  nDiv.setAttribute("onclick", "redirect('../study/sets/study" + n2c + ".html')");
+  nDiv.setAttribute("onclick", "redirect('../study/sets/study" + n2c + ".html', '" + n2c + "')");
   nDiv.style.backgroundImage = "url('../media/images/setcovers/".concat(localStorage.getItem(n2c + "p"), ".png')");
   document.getElementById("groups").appendChild(nDiv);
   nDivi = document.createElement("div");
