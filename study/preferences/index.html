@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <html>
-<body>
+<body>doten
 <div id="firstpart" class="">
 <div id="fullscreen">
   <div id="question2"><span id="qtext2">Would you consider yourself a:</span></div>
@@ -965,6 +965,8 @@ function donine() {
   }
 }
 function doten(yon) {
+  document.getElementById("yes").style.pointerEvents = "none";
+  document.getElementById("no").style.pointerEvents = "none";
   localStorage.setItem("timed", yon);
   document.getElementById("insloadbar").style.width = "100%";
   document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
