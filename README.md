@@ -41,8 +41,6 @@ Teachers and Students alike can download Study Slooth sets to their devices and 
 Study Modes like *Chronological Order* or *Sketch and Answer* promote actual understanding through visual representations that a student creates themself. Being able to explain narratives or diagrams is essential in many literature, science, logic, and social science classes.
 
 ---
----
----
 
 Final Note:
 **Study Slooth** does contain advertisements that were selected with the innocence of children in mind.
