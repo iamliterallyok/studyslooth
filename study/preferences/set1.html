@@ -517,7 +517,7 @@
     left: 3.5dvh;
     height: 7dvh;
     border-radius: 5dvh;
-    outline: 2dvh solid rgba(200, 200, 200, 0.3);
+    outline: 2dvh solid white;
     overflow: hidden;
   }
   #x {
@@ -544,7 +544,7 @@
     z-index: 10;
     width: calc(100% - 4.75dvh);
     height: 100dvh;
-    background-color: rgba(200, 200, 200, 0.3);
+    background-color: white;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -642,6 +642,8 @@ if (localStorage.getItem("darkmode") == "1") {
   window.innerHeight;
   document.getElementById("title").style.transition = "0.3s color";
   document.body.style.backgroundColor = "black";
+  document.getElementById("loadbar").style.outlineColor = "black";
+  document.getElementById("popup").style.backgroundColor = "black";
   document.getElementById("redo").style.outline = "1.5dvh solid #3a3a3a";
   document.getElementById("redo").style.backgroundColor = "black";
   document.getElementById("finish").style.outline = "1.5dvh solid #3a3a3a";
