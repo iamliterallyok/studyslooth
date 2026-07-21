@@ -384,7 +384,8 @@ if (parseInt(localStorage.getItem("numofsets")) < parseInt(current)) {
 }
 if (localStorage.getItem("timed")) {
 if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
-  window.location.href = "../../study/preferences/set".concat(current, ".html");
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = "../../study/preferences/set.html");
 }
 } else {
   sessionStorage.setItem("setToUse", current);
