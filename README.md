@@ -13,8 +13,6 @@ In *Study Mode*, students answer whether or not they are visual, auditory, writt
 Students can pair up as teachers host a game in *Play Mode* on a big screen or projector. No extra devices needed. Students race to present their answers with digitally facilitated physical learning through explaining answers aloud to a teacher, which means that answers can be evaluated based on conceptual understanding and not merely rote memorization. 
 
 ---
----
----
 
 **Study Slooth's** *Study Mode* and *Play Mode* simplify learning for both teachers and students in several ways:
 ## 1. One-Device Learning / Play Mode
