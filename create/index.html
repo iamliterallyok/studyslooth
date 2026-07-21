@@ -635,6 +635,15 @@ function save() {
   } else if (isempty) {
     alert("One of your questions or answers is missing text.")
   } else {
+    if (localStorage.getItem(current + "whiteboardrecommended")) {} else {
+      localStorage.removeItem(current + "whiteboardrecommended");
+    }
+    if (localStorage.getItem(current + "terms")) {} else {
+      localStorage.removeItem(current + "terms");
+    }
+    if (localStorage.getItem(current + "chronological")) {} else {
+      localStorage.removeItem(current + "chronological");
+    }
     localStorage.setItem("numofsets", (parseInt(localStorage.getItem("numofsets")) + 1).toString());
     localStorage.setItem(current.concat("qat"), numq.toString());
     localStorage.setItem(current.concat("n"), document.getElementsByClassName("mb")[0].value);
