@@ -697,7 +697,7 @@ function togglebuttonmod(ntchange) {
         togglebutton(i);
       }
     }
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "../../media/images/studymode/selectedbutton.png";
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "../../media/images/studymode/yes.png";
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "#c12020";
   } else {
     prefmod = -1;
@@ -713,7 +713,7 @@ function togglebuttonmod(ntchange) {
 function togglebutton(ntchange) {
   if (allselectors[ntchange] == false) {
     allselectors[ntchange] = true;
-    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "../../media/images/studymode/selectedbutton.png";
+    document.getElementsByClassName("clickablething")[ntchange].style.backgroundImage = "../../media/images/studymode/yes.png";
     document.getElementsByClassName("clickablething")[ntchange].style.backgroundColor = "#c12020";
   } else {
     allselectors[ntchange] = false;
@@ -737,7 +737,7 @@ function aorwclick(ntchange) {
     } else {
     document.getElementsByClassName("clickablething")[2+aawa.indexOf(ntchange)].style.backgroundColor = "white";
     }
-    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "../../media/images/studymode/selectedbutton.png";
+    document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundImage = "../../media/images/studymode/yes.png";
     document.getElementsByClassName("clickablething")[2+nawa.indexOf(ntchange)].style.backgroundColor = "#c12020";
   } else {
     currentaorw = "";
