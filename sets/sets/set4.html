@@ -667,7 +667,17 @@ if (localStorage.getItem("darkmode")) {} else {
 }
 ses = current;
 function redirectstudy() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  if (localStorage.getItem("timed")) {
+  if (localStorage.getItem(current+"whiteboardrecommended")) {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = `../../study/preferences/set${current}.html`;
+  } else {
+  window.location.href = `../../study/sets/study${current}.html`;
+  }
+  } else {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = `../../study/preferences/`;
+  }
 }
 function deleteset() {
   for (i = (parseInt(current) + 1); i < 11; i++) {
