@@ -3,7 +3,7 @@
 <script 
   src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
   integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
-  crossorigin="anonymous" z
+  crossorigin="anonymous" 
   referrerpolicy="no-referrer">
 </script>
 <body>
@@ -687,6 +687,21 @@ function deleteset() {
     localStorage.setItem((i - 1).toString().concat("qat"), localStorage.getItem(i.toString().concat("qat")));
     localStorage.setItem((i - 1).toString().concat("p"), localStorage.getItem(i.toString().concat("p")));
     localStorage.setItem((i - 1).toString().concat("wqc"), localStorage.getItem(i.toString().concat("wqc")));
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("whiteboardrecommended")))) {
+      localStorage.setItem((i - 1).toString().concat("whiteboardrecommended"), localStorage.getItem(i.toString().concat("whiteboardrecommended")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("whiteboardrecommended"));
+    }
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("terms")))) {
+      localStorage.setItem((i - 1).toString().concat("terms"), localStorage.getItem(i.toString().concat("terms")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("terms"));
+    }
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("chronological")))) {
+      localStorage.setItem((i - 1).toString().concat("chronological"), localStorage.getItem(i.toString().concat("chronological")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("chronological"));
+    }
     for (a = 1; a <= parseInt(localStorage.getItem(i.toString().concat("qat"))); a++) {
       localStorage.setItem((i - 1).toString().concat("q", a.toString()), localStorage.getItem(i.toString().concat("q", a.toString())));
       localStorage.setItem((i - 1).toString().concat("a", a.toString()), localStorage.getItem(i.toString().concat("a", a.toString())));
