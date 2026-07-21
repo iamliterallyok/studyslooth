@@ -1,6 +1,6 @@
 Copyright © 2026 iamliterallyok. All Rights Reserved.
 
-# License and Terms of Use | Projecttor
+# License and Terms of Use | Study Slooth™
 
 ### Update Notice
 
@@ -48,7 +48,7 @@ I grant You a free-to-use, limited, non-exclusive, non-transferable, revocable l
 
 **1.** This Software is owned solely by The Developer. 
 
-**2.** Any legally protected items of Projecttor, including its logos, branding, names, and trademarks are owned solely by The Developer and are not to be used by anyone but The Developer. 
+**2.** Any legally protected items of Study Slooth™, including its logos, branding, names, and trademarks are owned solely by The Developer and are not to be used by anyone but The Developer. 
 
 **3.** The Developer retains all right, title, and interest in and to the software.
 
