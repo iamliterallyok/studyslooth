@@ -975,6 +975,7 @@ function doten(yon) {
     if (localStorage.getItem(current + "whiteboardrecommended")) {
       window.location.href = `../../study/sets/study${current}.html`;
     } else {
+      sessionStorage.setItem("setToUse", current);
       window.location.href = `../../study/preferences/set${current}.html`;
     }
   }, 2000);
