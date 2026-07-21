@@ -669,10 +669,10 @@ ses = current;
 function redirectstudy() {
   if (localStorage.getItem("timed")) {
   if (localStorage.getItem(current+"whiteboardrecommended")) {
+  window.location.href = `../../study/sets/study${current}.html`;
+  } else {
   sessionStorage.setItem("setToUse", current);
   window.location.href = `../../study/preferences/set${current}.html`;
-  } else {
-  window.location.href = `../../study/sets/study${current}.html`;
   }
   } else {
   sessionStorage.setItem("setToUse", current);
