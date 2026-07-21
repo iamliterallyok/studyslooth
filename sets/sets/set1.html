@@ -3,7 +3,7 @@
 <script 
   src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
   integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
-  crossorigin="anonymous" 
+  crossorigin="anonymous" z
   referrerpolicy="no-referrer">
 </script>
 <body>
@@ -667,7 +667,17 @@ if (localStorage.getItem("darkmode")) {} else {
 }
 ses = current;
 function redirectstudy() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  if (localStorage.getItem("timed")) {
+  if (localStorage.getItem(current+"whiteboardrecommended")) {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = `../../study/preferences/set${current}.html`;
+  } else {
+  window.location.href = `../../study/sets/study${current}.html`;
+  }
+  } else {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = `../../study/preferences/`;
+  }
 }
 function deleteset() {
   for (i = (parseInt(current) + 1); i < 11; i++) {
