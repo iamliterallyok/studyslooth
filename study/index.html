@@ -220,10 +220,10 @@ for (i = 1; i <= parseInt(localStorage.getItem("numofsets")); i++) {
 function redirect(url, ttobb) {
   if (localStorage.getItem("timed")) {
   if (localStorage.getItem(ttobb+"whiteboardrecommended")) {
+  window.location.href = url;
+  } else {
   sessionStorage.setItem("setToUse", ttobb);
   window.location.href = `../study/preferences/set${ttobb}.html`;
-  } else {
-  window.location.href = url;
   }
   } else {
   sessionStorage.setItem("setToUse", ttobb);
