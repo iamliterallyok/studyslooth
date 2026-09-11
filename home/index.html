@@ -664,9 +664,9 @@
     width: 14vh;
     border-radius: 2dvh;
     border: none;
-    backdrop-filter: blur(8lvh) brightness(4.5);
-    -webkit-backdrop-filter: blur(8lvh) brightness(4.5);
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
     background-size: cover;
     background-image: url("../media/images/menu.png");
     background-position: 50% 50%;
@@ -703,8 +703,9 @@
     left: 0;
     width: 100dvw;
     height: 15lvh;
-    backdrop-filter: blur(8lvh) brightness(4.5);
-    -webkit-backdrop-filter: blur(8lvh) brightness(4.5);
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
   }
   .hplink {
     position: absolute;
@@ -736,6 +737,8 @@
 
 <script>
 if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("menubutton").style.backgroundColor = "rgba(0,0,0,0)";
+  document.getElementById("toptoolbar").style.backgroundColor = "rgba(0,0,0,0)";
   document.getElementById("lightgreyone").style.backgroundColor = "#262626";
   document.getElementById("lightgreytwo").style.backgroundColor = "#262626";
   document.getElementById("toptoolbar").style.backdropFilter = "blur(8lvh) brightness(0.222)";
@@ -757,6 +760,7 @@ if (localStorage.getItem("darkmode") == "1") {
     document.getElementsByClassName("lildropdown")[0].children[i].style.color = "black";
   }
 }
+nnexs = ["r", "g", "b"];
 oldnopr = -1;
 startingPoint = [0,0,0,0,0,0];
 stptvals = ["bloq red wid", "bloq red narr", "bloq blue wid", "bloq blue narr", "bloq green wid", "bloq green narr"];
@@ -801,7 +805,7 @@ function rotatethru(wideNarrow, leftRight, colortu) {
   }
   
   if (!leftRight) {
-  moveinspot = oldspot + nopr;
+  moveinspot = oldspot + newnoprs[nnexs.indexOf(colortu.substring(0,1))];
   } else {
   moveinspot = oldspot - 1;
   }
@@ -837,7 +841,7 @@ function rotatethru(wideNarrow, leftRight, colortu) {
         newalvals.push(oldalvals[oldalvals.length-1]);
         }
         } else {
-        newalvals.push(`calc(-1 * ((100% - ${(nopr-1)*2.5}lvh) / ${nopr} + 2.5lvh))`);
+        newalvals.push(`calc(-1 * ((100% - ${(newnoprs[nnexs.indexOf(colortu.substring(0,1))]-1)*2.5}lvh) / ${newnoprs[nnexs.indexOf(colortu.substring(0,1))]} + 2.5lvh))`);
         }
 
       }
@@ -872,7 +876,7 @@ function rotatethru(wideNarrow, leftRight, colortu) {
       newalvals = [];
       oldalvals = window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"];
       for (i = 0; i < oldalvals.length; i++) {
-        if (i != oldspot+nopr-1) {
+        if (i != oldspot+newnoprs[nnexs.indexOf(colortu.substring(0,1))]-1) {
         if (i != oldalvals.length-1) {
         newalvals.push(oldalvals[i+1]);
         } else {
@@ -887,7 +891,7 @@ function rotatethru(wideNarrow, leftRight, colortu) {
       window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"] = [...newalvals];
       
       indexestu = [];
-      for (b = omis; b <= oldspot+nopr-1; b++) {
+      for (b = omis; b <= oldspot+newnoprs[nnexs.indexOf(colortu.substring(0,1))]-1; b++) {
         if (b >= maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]) {
           indexestu.push(b - maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]);
         } else if (b < 0) {
@@ -929,7 +933,7 @@ function calculateratios(className,buttonid) {
     document.getElementById(buttonid + "left").classList.remove("hidden");
     document.getElementById(buttonid + "right").classList.remove("hidden");
   }
-
+  newnoprs.push(nopr);
   for (i = 0; i < document.getElementsByClassName(className).length; i++) {
     document.getElementsByClassName(className)[i].style.transition = "none";
   }
@@ -968,6 +972,7 @@ function calculatetoolbar() {
     }
     lastElement = document.getElementById("orangeredone").children[2].children[document.getElementById("orangeredone").children[2].children.length - 1];
     document.getElementById("orangeredone").style.height = `calc(${lastElement.offsetTop + lastElement.offsetHeight}px + 7lvh)`;
+    newnoprs = [];
     calculateratios("bloq red narr", "screna");
     calculateratios("bloq blue narr", "scbuna");
     calculateratios("bloq green narr", "scgrna");
@@ -988,6 +993,7 @@ function calculatetoolbar() {
     }
     lastElement = document.getElementById("orangeredone").children[1].children[document.getElementById("orangeredone").children[1].children.length - 1];
     document.getElementById("orangeredone").style.height = `calc(${lastElement.offsetTop + lastElement.offsetHeight}px + 7lvh)`
+    newnoprs = [];
     calculateratios("bloq red wid", "screwi");
     calculateratios("bloq blue wid", "scbuwi");
     calculateratios("bloq green wid", "scgrwi");
