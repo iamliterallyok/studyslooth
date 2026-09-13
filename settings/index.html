@@ -1,0 +1,343 @@
+<head>
+<link rel="manifest" href="../manifest.json"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
+
+<div id="sidebar">
+<a href="../home/"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/playorange.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../create/"><div style="top: 54dvh" class="hyperlink"><img src="../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a><div style="top: 85.5dvh" class="hyperlink selected"><img src="../media/images/toolbar/settingsselected.png" class="hpimg"><p class="hplabel selected">Settings</p></div></a>
+</div>
+<div id="content">
+<div id="heading"><img src="../media/images/settingslogo.png" id="logo"></div>
+<p class="body4">
+  <br><br><br><br><br style="line-height: 1lvh">
+  Dark Mode<button onclick="moveslider(0)" class="sslider"><div class="lilc"></div></button>
+<br><br><br><br></p>
+</div>
+</div>
+</body>
+<style>
+  .lilc {
+    position: absolute;
+    top: 0.25lvh;
+    left: 0.25lvh;
+    height: 3lvh;
+    width: 3lvh;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .sslider {
+    margin-left: 2lvh;
+    margin-top: -0.5lvh;
+    background-color: #efefef;
+    height: 3.5lvh;
+    width: 7lvh;
+    position: relative;
+    vertical-align: baseline;
+    display: inline;
+    outline: 0.5lvh solid black;
+    border: none;
+    border-radius: 1.75lvh;
+  }
+  .body4 {
+    text-decoration: none;
+    word-wrap: break-word;
+    color: black;
+    font-family: fredokaone;
+    text-align: left;
+    width: calc(100dvw - 20lvh);
+    font-weight: 500;
+    text-align: left;
+    margin-left: 50%;
+    transform: translate(-50%);
+    font-size: 3.75lvh;
+  }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#enot {
+  word-wrap: break-word;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  color: black;
+  font-size: 3dvh;
+  text-align: center;
+}
+#desc {
+  position: absolute;
+  left: 2dvh;
+  top: 16.75dvh;
+  color: black;
+  font-size: 3dvh;
+}
+@font-face {
+  font-family: fredokaone;
+  src: url("../media/fonts/fredokaone.otf");
+}
+body {
+  font-family: fredokaone;
+}
+#logo {
+  height: 90%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.darkmodeselected {
+  color: black;
+  background-color: white;
+}
+.selected {
+  color: white;
+  background-color: #ff8500;
+}
+.hplabel {
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  left: 50%;
+  bottom: 0.75dvh;
+  height: auto;
+  transform: translate(-50%, 0%);
+}
+.hyperlink {
+  color: #ff8500;
+  position: absolute;
+  width: 9dvh;
+  padding: 1.5dvh;
+  height: 12dvh;
+  font-size: 2dvh;
+}
+.hpimg {
+  top: 1.5dvh;
+  left: 1.5dvh;
+  width: 9dvh;
+  position: absolute;
+  height: 9dvh;
+}
+.darkmodehyperlink {
+  color: white;
+  position: absolute;
+  width: 9dvh;
+  padding: 1.5dvh;
+  height: 12dvh;
+  font-size: 2dvh;
+}
+.author {
+  font-size: 2dvh;
+  font-weight: normal;
+}
+.insidetext {
+  font-weight: bold;
+  font-size: 3dvh;
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.group {
+  height: 15dvh;
+  outline: 1.5dvh solid black;
+  border-radius: 1.5dvh;
+  overflow: hidden;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  filter: brightness(150%);
+}
+.groupdarkmode {
+  height: 15dvh;
+  color: white;
+  outline: 1.5dvh solid white;
+  border-radius: 1.5dvh;
+  overflow: hidden;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#groups {
+  width: 100%;
+  position: absolute;
+  top: 21dvh;
+  height: auto;
+}
+#heading {
+  z-index: 2;
+  position: fixed;
+  width: calc(100% - 14.75dvh);
+  height: 17.5dvh;
+  background-color: #ff8500;
+  right: 0;
+  top: 0;
+}
+#content {
+  position: absolute;
+  width: calc(100% - 14.75dvh);
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-image: url("../media/images/whitebg.png");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.halfwhite {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.halfblack {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#sidebar {
+  background-color: white;
+  outline: 3dvh solid #ff8500;
+  width: 12dvh;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+}
+</style>
+<script>
+if (localStorage.getItem("darkmode")) {} else {
+  localStorage.setItem("darkmode", "0");
+}
+arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
+if (localStorage.getItem("darkmode") == "1") {
+  moveslider(0);
+  document.body.style.backgroundColor = "black";
+  document.getElementById("heading").style.backgroundColor = "white";
+  document.getElementById("sidebar").style.outline = "3dvh solid white";
+  document.getElementById("sidebar").style.backgroundColor = "black";
+  document.getElementById("logo").style.filter = "invert(1)";
+  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
+    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
+      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.color = "black";
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "black.png";
+    } else {
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "selected.png";
+      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
+    }
+  }
+}
+setTimeout(setalltransitions, 10);
+function setalltransitions() {
+  document.body.style.transition = "0.8s background-color";
+  document.getElementById("heading").style.transition = "0.8s background-color";
+  document.getElementById("sidebar").style.transition = "0.8s outline-color, 0.8s background-color";
+  document.getElementsByClassName("body4")[0].style.transition = "0.8s color";
+  document.getElementById("logo").style.transition = "0.8s filter";
+  document.getElementById("copyrightnotice").style.transition = "0.8s filter";
+  for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
+    document.getElementsByClassName("lilc")[i].style.transition = "0.8s left, 0.8s background-color";
+    document.getElementsByClassName("sslider")[i].style.transition = "0.8s background-color, 0.8s outline-color";
+  }
+  for (i = 0; i < document.getElementsByClassName("hyperlink").length; i++) {
+    document.getElementsByClassName("hyperlink")[i].style.transition = "0.8s background-color";
+    document.getElementsByClassName("hplabel")[i].style.transition = "0.8s background-color, 0.8s color";
+    document.getElementsByClassName("hpimg")[i].style.transition = "0.8s filter";
+  }
+}
+allsliders = [false];
+function moveslider(index2u) {
+  if (allsliders[index2u] == true) {
+    allsliders[index2u] = false;
+    document.getElementsByClassName("sslider")[index2u].style.backgroundColor = "#efefef";
+    document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "black";
+    document.getElementsByClassName("lilc")[index2u].style.left = "0.25lvh";
+    if (index2u == 0) {
+      for (i = 0; i < allsliders.length; i++) {
+        if (allsliders[i] == false) {
+          document.getElementsByClassName("sslider")[i].style.backgroundColor = "#efefef";
+          document.getElementsByClassName("lilc")[i].style.backgroundColor = "black";
+        }
+      }
+      document.getElementById("copyrightnotice").style.filter = "invert(0)";
+      for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
+        document.getElementsByClassName("sslider")[i].style.outlineColor = "black";
+      }
+      document.getElementsByClassName("body4")[0].style.color = "black";
+      document.body.style.backgroundColor = "white";
+      document.getElementById("heading").style.backgroundColor = "#ff8500";
+      document.getElementById("sidebar").style.outline = "3dvh solid #ff8500";
+      document.getElementById("sidebar").style.backgroundColor = "white";
+      document.getElementById("logo").style.filter = "invert(0)";
+      for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
+        if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
+          document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "#ff8500";
+          document.getElementsByClassName("hplabel")[i].style.backgroundColor = "#ff8500";
+          document.getElementsByClassName("hplabel")[i].style.color = "white";
+          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(1)";
+        } else {
+          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(1) invert(0)"
+          document.getElementsByClassName("hyperlink")[i].classList.remove("darkmodehyperlink");
+        }
+      }
+    }
+  } else {
+    allsliders[index2u] = true;
+    document.getElementsByClassName("sslider")[index2u].style.backgroundColor = "#ff8500";
+    document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "white";
+    document.getElementsByClassName("lilc")[index2u].style.left = "3.75lvh";
+    if (index2u == 0) {
+      for (i = 0; i < allsliders.length; i++) {
+        if (allsliders[i] == false) {
+          document.getElementsByClassName("sslider")[i].style.backgroundColor = "#3a3a3a";
+          document.getElementsByClassName("lilc")[i].style.backgroundColor = "white";
+        }
+      }
+      document.getElementById("copyrightnotice").style.filter = "invert(1)";
+      for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
+        document.getElementsByClassName("sslider")[i].style.outlineColor = "white";
+      }
+      document.getElementsByClassName("body4")[0].style.color = "white";
+      document.body.style.backgroundColor = "black";
+      document.getElementById("heading").style.backgroundColor = "white";
+      document.getElementById("sidebar").style.outline = "3dvh solid white";
+      document.getElementById("sidebar").style.backgroundColor = "black";
+      document.getElementById("logo").style.filter = "invert(1)";
+      for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
+        if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
+          document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
+          document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
+          document.getElementsByClassName("hplabel")[i].style.color = "black";
+          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(0)";
+        } else {
+          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(0) invert(1)"
+          document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
+        }
+      }
+    }
+  }
+}
+
+</script>
