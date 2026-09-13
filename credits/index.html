@@ -17,7 +17,7 @@
 <div id="toptoolbar">
   <a href="../home/"><img src="../media/images/sslogo.png" id="logo"></a>
   <a href="../help-center/" style="right: 54.5lvh" class="hplink">HELP CENTER</a>
-  <a style="right: 30lvh" class="hplink legaldd">LEGAL
+  <a onclick="opentoolbar()" style="right: 30lvh" class="hplink legaldd">LEGAL
   <div class="blankspace"></div>
   <span class="lildropdown">
   <span onclick="redirect('../license/')">LICENSE<br></span>
@@ -827,9 +827,9 @@ And obtains favor from the Lord;"<br><br style="line-height: 1lvh">-Proverbs 8:3
     width: 14vh;
     border-radius: 2dvh;
     border: none;
-    backdrop-filter: blur(8lvh) brightness(4.5);
-    -webkit-backdrop-filter: blur(8lvh) brightness(4.5);
-    background-color: rgba(0,0,0,0);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
+    background-color: rgba(255,255,255,0.85);
     background-size: cover;
     background-image: url("../media/images/menu.png");
     background-position: 50% 50%;
@@ -866,8 +866,9 @@ And obtains favor from the Lord;"<br><br style="line-height: 1lvh">-Proverbs 8:3
     left: 0;
     width: 100dvw;
     height: 15lvh;
-    backdrop-filter: blur(8lvh) brightness(4.5);
-    -webkit-backdrop-filter: blur(8lvh) brightness(4.5);
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
   }
   .hplink {
     position: absolute;
@@ -899,6 +900,8 @@ And obtains favor from the Lord;"<br><br style="line-height: 1lvh">-Proverbs 8:3
 
 <script>
 if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("menubutton").style.backgroundColor = "rgba(0,0,0,0)";
+  document.getElementById("toptoolbar").style.backgroundColor = "rgba(0,0,0,0)";
   document.getElementById("lightgreyone").style.background = "#262626";
   document.getElementById("others2").children[document.getElementById("others2").children.length - 1].style.color = "white";
   document.getElementById("others").children[document.getElementById("others").children.length - 1].style.color = "white";
@@ -1059,6 +1062,21 @@ function rotatethru(wideNarrow, leftRight, colortu) {
     document.getElementById(buttonidrt + "left").style.pointerEvents = "all";
     document.getElementById(buttonidrt + "right").style.pointerEvents = "all";
   }, 300);
+}
+opentb = true;
+function opentoolbar() {
+  if (opentb) {
+  opentb = false;
+  document.getElementsByClassName("lildropdown")[0].style.display = "block";
+  window.addEventListener("mouseup", closeldd);
+  } else {
+  opentb = true;
+  closeldd();
+  }
+}
+function closeldd() {
+  document.getElementsByClassName("lildropdown")[0].style.display = "none";
+  window.removeEventListener("mouseup", closeldd);
 }
 function calculateratios(className,buttonid) {
   width = window.innerWidth;
