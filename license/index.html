@@ -16,7 +16,7 @@
 <div id="toptoolbar">
   <a href="../home/"><img src="../media/images/sslogo.png" id="logo"></a>
   <a href="../help-center/" style="right: 54.5lvh" class="hplink">HELP CENTER</a>
-  <a style="right: 30lvh" class="hplink legaldd">LEGAL
+  <a onclick="opentoolbar()" style="right: 30lvh" class="hplink legaldd">LEGAL
   <div class="blankspace"></div>
   <span class="lildropdown">
   <span onclick="redirect('../license/')">LICENSE<br></span>
@@ -953,6 +953,21 @@ function calculateratios(className,buttonid) {
     window[alvals[stptvals.indexOf(className)] + "alvals"].push(document.getElementsByClassName(className)[itu].style.left);
   }
   }, 1);
+}
+opentb = true;
+function opentoolbar() {
+  if (opentb) {
+  opentb = false;
+  document.getElementsByClassName("lildropdown")[0].style.display = "block";
+  window.addEventListener("mouseup", closeldd);
+  } else {
+  opentb = true;
+  closeldd();
+  }
+}
+function closeldd() {
+  document.getElementsByClassName("lildropdown")[0].style.display = "none";
+  window.removeEventListener("mouseup", closeldd);
 }
 function calculatetoolbar() {
   if (window.innerHeight / window.innerWidth > 0.8) {
