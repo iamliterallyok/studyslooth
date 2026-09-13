@@ -233,22 +233,6 @@ if (localStorage.getItem("darkmode")) {} else {
 arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
 if (localStorage.getItem("darkmode") == "1") {
   moveslider(0);
-  document.body.style.backgroundColor = "black";
-  document.getElementById("heading").style.backgroundColor = "white";
-  document.getElementById("sidebar").style.outline = "3dvh solid white";
-  document.getElementById("sidebar").style.backgroundColor = "black";
-  document.getElementById("logo").style.filter = "invert(1)";
-  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
-    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
-      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "black.png";
-    } else {
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "selected.png";
-      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
-    }
-  }
 }
 setTimeout(setalltransitions, 10);
 function setalltransitions() {
