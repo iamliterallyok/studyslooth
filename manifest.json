@@ -1,0 +1,20 @@
+{
+  "short_name": "Study Slooth",
+  "name": "Study Slooth",
+  "icons": [
+    {
+      "src": "../media/images/studysloothlogo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../media/images/studysloothlogo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "white",
+  "background_color": "#ff8500"
+}
