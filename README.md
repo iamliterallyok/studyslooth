@@ -16,7 +16,7 @@ Students can pair up as teachers host a game in *Play Mode* on a big screen or p
 
 **Study Slooth™'s** *Study Mode* and *Play Mode* simplify learning for both teachers and students in several ways:
 ## 1. One-Device Learning / Play Mode
-Teachers no longer have to worry about their students slacking off and navigating to other sites, as Study Slooth™ runs solely on the teacher's device during *Play Mode.* 
+Teachers no longer have to worry about their students navigating to other sites, as Study Slooth™ runs solely on the teacher's device during *Play Mode.* 
 
 One-device learning in Study Slooth™'s *Play Mode* also accommodates school systems where devices are limited.
 
