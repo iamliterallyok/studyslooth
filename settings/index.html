@@ -226,6 +226,7 @@ body {
 }
 </style>
 <script>
+allsliders = [false];
 if (localStorage.getItem("darkmode")) {} else {
   localStorage.setItem("darkmode", "0");
 }
@@ -267,7 +268,6 @@ function setalltransitions() {
     document.getElementsByClassName("hpimg")[i].style.transition = "0.8s filter";
   }
 }
-allsliders = [false];
 function moveslider(index2u) {
   if (allsliders[index2u] == true) {
     allsliders[index2u] = false;
