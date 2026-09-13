@@ -275,6 +275,7 @@ function moveslider(index2u) {
     document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "black";
     document.getElementsByClassName("lilc")[index2u].style.left = "0.25lvh";
     if (index2u == 0) {
+      localStorage.setItem("darkmode", "0");
       for (i = 0; i < allsliders.length; i++) {
         if (allsliders[i] == false) {
           document.getElementsByClassName("sslider")[i].style.backgroundColor = "#efefef";
@@ -309,6 +310,7 @@ function moveslider(index2u) {
     document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "white";
     document.getElementsByClassName("lilc")[index2u].style.left = "3.75lvh";
     if (index2u == 0) {
+      localStorage.setItem("darkmode", "1");
       for (i = 0; i < allsliders.length; i++) {
         if (allsliders[i] == false) {
           document.getElementsByClassName("sslider")[i].style.backgroundColor = "#3a3a3a";
