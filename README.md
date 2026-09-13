@@ -1,6 +1,6 @@
 Copyright © 2026 Study Slooth. All Rights Reserved.
 
-<img width="2519" height="1049" alt="studyslooth" src="https://github.com/user-attachments/assets/28a01a38-d159-4310-9d06-28aa280a80c2" />
+<img width="2493" height="990" alt="sslogo" src="https://github.com/user-attachments/assets/992ff1f9-627c-47b2-89cc-aff8da9be92b" />
 
 **Study Slooth™** is a free-to-use, client-side educational web application. Study Slooth™ has two major programs which propel learning:
 
