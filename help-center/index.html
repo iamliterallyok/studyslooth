@@ -1,0 +1,934 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Slooth</title>
+<meta name="description" content="Personalized Learning">
+<meta name="subject" content="Educational Software">
+<meta name="keywords" content="personalized, education, learning, study">
+<link rel="manifest" href="../manifest.json"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+</head>
+
+<!-- TOOLBAR -->
+<div id="toptoolbar">
+  <a href="../home/"><img src="../media/images/sslogo.png" id="logo"></a>
+  <a href="../help-center/" style="right: 54.5lvh" class="hplink">HELP CENTER</a>
+  <a onclick="opentoolbar()" style="right: 30lvh" class="hplink legaldd">LEGAL
+  <div class="blankspace"></div>
+  <span class="lildropdown">
+  <span onclick="redirect('../license/')">LICENSE<br></span>
+  <span onclick="redirect('../privacy-policy/')">PRIVACY POLICY<br></span>
+  <span onclick="redirect('../ad-policy/')">AD POLICY<br></span>
+  </span>
+  </a>
+  <a href="../credits/" style="right: calc(3lvh + 8.142lvh)" class="hplink">CREDITS</a>
+  <div id="orangedivider"></div>
+</div>
+<button class="hidden" onclick="menu(true)" id="menubutton"></button>
+<div class="hidden" onclick="menu(true)" id="theabyss"></div>
+<div class="hidden" id="sidetoolbar">
+  <a href="../home/"><img src="../media/images/sslogo.png" id="logovertical"></a>
+  <a href="../help-center/" style="top: 20lvh" class="hplinkvert">HELP CENTER</a>
+  <a href="../license/" style="top: 37lvh" class="hplinkvert">LICENSE</a>
+  <a href="../privacy-policy/" style="top: 47lvh" class="hplinkvert">PRIVACY POLICY</a>
+  <a href="../ad-policy/" style="top: 64lvh" class="hplinkvert">AD POLICY</a>
+  <a href="../credits/" style="top: 74lvh" class="hplinkvert">CREDITS</a>
+  <div id="orangedividervertical"></div>
+</div>
+<!-- TOOLBAR -->
+
+<div id="content">
+
+<div id="lightgreyone">
+<div class="display">
+  <h2 class="title4">Help Center<br><span class="tiny" style="font-size: 4lvh; text-decoration: underline"></span></h2>
+  <p class="body4">
+  To report any bugs or design issues, please submit the form below:
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGdBWdiCsrmzy5wqm-IJSYVsEF3T7rFquJrDWK0TOLrBRgYw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <br><br>For any other concerns, please email me at studyslooth@gmail.com.
+<br><br><br><br></p>
+</div>
+</div>
+
+<div id="hyperlinks">
+<div class="wide display">
+  <span class="row">
+  <a href="../home/">Home</a><br>
+  <a href="../study/">Study</a><br>
+  <a href="../play/">Play</a><br>
+  <a href="../sets/">Sets</a><br>
+  <a href="../create/">Create</a><br>
+  <a href="../import/">Import</a><br>
+  <a href="../settings/">Settings</a><br>
+  </span>
+  <span class="row" style="left: 34lvh">
+  <a href="../license/">License</a><br>
+  <a href="../privacy-policy/">Privacy Policy</a><br>
+  <a href="../ad-policy/">Ad Policy</a><br>
+  <a href="../credits/">Credits</a><br>
+  <a href="../help-center/">Help Center</a><br><br>
+  <span style="font-size: 2.8lvh; color: white; line-height: 2.8lvh;" >© 2026 Study Slooth<br>All Rights Reserved.</span>
+  </span>
+  <img id="happytwins" src="../media/images/happytwins.png">
+  <div id="dbht"></div>
+</div>
+<div class="narrow display">
+  <div id="bothrows">
+  <span style="left: 0lvh" class="row">
+  <a href="../home/">Home</a><br>
+  <a href="../study/">Study</a><br>
+  <a href="../play/">Play</a><br>
+  <a href="../sets/">Sets</a><br>
+  <a href="../create/">Create</a><br>
+  <a href="../import/">Import</a><br>
+  <a href="../settings/">Settings</a><br>
+  </span>
+  <span class="row" style="left: 17lvh">
+  <a href="../license/">License</a><br>
+  <a href="../privacy-policy/">Privacy Policy</a><br>
+  <a href="../ad-policy/">Ad Policy</a><br>
+  <a href="../credits/">Credits</a><br>
+  <a href="../help-center/">Help Center</a><br><br>
+  <span style="font-size: 2.8lvh; color: white; line-height: 2.8lvh;" >© 2026 Study Slooth<br>All Rights Reserved.</span>
+  </span>
+  </div>
+  <img id="happytwins" src="../media/images/happytwins.png" style="left: 50%; top: 65lvh">
+  <div id="dbht" style="left: 50%; top: 50lvh"></div>
+</div>
+</div>
+
+</div>
+
+<style>
+  iframe {
+    background-color: #ff8500;
+    margin-top: 3.5lvh;
+    border-radius: 5lvh;
+    width: calc(100dvw - 6lvh);
+    height: 90lvh;
+    max-width: 120lvh;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+  .body4.narro {
+    font-size: 4.5lvh;
+  }
+  .title4.narro {
+    margin-top: 4lvh;
+  }
+  .body4.narro span {
+    font-size: 7lvh;
+  }
+  .body4 span {
+    font-size: 5lvh;
+    font-weight: 650;
+    text-decoration: underline;
+  }
+  .title4 {
+    line-height: 6lvh;
+    word-wrap: break-word;
+    color: #ff8500;
+    font-family: "Special Gothic Condensed One";
+    text-align: center;
+    width: calc(100dvw - 20lvh);
+    margin-top: 25lvh;
+    font-weight: normal;
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    font-size: 7.5lvh;
+
+  }
+  .body4 {
+    text-decoration: none;
+    word-wrap: break-word;
+    color: black;
+    font-family: "Fredoka";
+    text-align: center;
+    width: calc(100dvw - 20lvh);
+    min-width: 45lvh;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    font-size: 4lvh;
+  }
+  a {
+    text-decoration: none;
+  }
+  .blankspace {
+    position: absolute;
+    top: 8lvh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 24lvh;
+    height: 4lvh;
+    display: none;
+  }
+  .legaldd {
+    z-index: 100;
+  }
+  .legaldd:hover .blankspace {
+    display: block;
+  }
+  .legaldd:hover .lildropdown {
+    display: block;
+  }
+  .lildropdown span:hover {
+    text-decoration: underline;
+  }
+
+  .lildropdown {
+    position: absolute;
+    background-color: #ff8500;
+    color: white;
+    top: 11lvh;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 1dvh;
+    display: none;
+    white-space: nowrap;
+    font-size: 4.5lvh;
+    z-index: 1000;
+  }
+  #bothrows {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    width: 43lvh;
+    height: 100lvh;
+  }
+  #dbht {
+    right: 9.5lvh;
+    background-color: #ea7b7b;
+    position: absolute;
+    height: 30lvh;
+    width: 30lvh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(15lvh);
+  }
+  #happytwins {
+    z-index: 1;
+    right: 9.5lvh;
+    position: absolute;
+    height: 24lvh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .row a {
+    color: white;
+    text-decoration: underline;
+  }
+  .row {
+    white-space: nowrap;
+    z-index: 1;
+    position: absolute;
+    top: 4lvh;
+    left: 10lvh;
+    font-family: "Fredoka";
+    font-size: 4lvh;
+    font-weight: 600;
+    line-height: 6lvh;
+  }
+  #hyperlinks {
+    background-color: #c12020;
+    position: absolute;
+    left: 0;
+    width: 100dvw;
+    height: 52lvh;
+    overflow: hidden;
+  }
+  .sdmodetry.narrower {
+    overflow: hidden;
+    position: absolute; 
+    height: 80lvh;
+    width: calc(100dvw - 10lvh);
+    top: 7lvh;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 6lvh;
+    box-shadow: 0dvh 3dvh 8dvh rgba(0,0,0,0.3);
+  }
+  .modenarrow {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  #jett {
+    position: absolute;
+    top: 101lvh;
+    height: 35lvh;
+    width: auto;
+    left: calc(10lvh + 0.45*(100dvw - 20lvh) + 4lvh);
+    transform: translate(-50%);
+    pointer-events: none;
+  }
+  #tora {
+    position: absolute;
+    top: 34lvh;
+    height: 35lvh;
+    width: auto;
+    left: calc(10lvh + 0.55*(100dvw - 20lvh) - 4lvh);
+    transform: translate(-50%);
+    pointer-events: none;
+  }
+  .middletext {
+    width: 100%;
+    text-align: center;
+    color: white;
+    left: 0;
+    position: absolute;
+    top: 47%;
+    transform: translate(0%, -50%);
+    font-size: 8lvh;
+    font-family: "Special Gothic Condensed One";
+    line-height: 7lvh;
+  }
+  .bannertitle {
+    font-family: "Fredoka";
+    font-weight: 700;
+    color: white;
+    font-size: 5.3lvh;
+    letter-spacing: 0.5lvh;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    top: 4lvh;
+    width: 100%;
+    left: 0;
+  }
+  .modecontent {
+    height: 100%;
+    width: 45%;
+    top: 0;
+    position: absolute;
+  }
+  .mockup {
+    pointer-events: none;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .sdmodetry.wider {
+    overflow: hidden;
+    position: absolute; 
+    height: 60lvh;
+    width: calc(100dvw - 20lvh);
+    top: 7lvh;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 10lvh;
+    box-shadow: 0dvh 3dvh 8dvh rgba(0,0,0,0.3);
+  }
+  .trr:hover {
+    background-color: #3a3a3a;
+  }
+  .trr.right .instr {
+    position: absolute;
+    left: 4.1lvh;
+    transform: translate(-50%, -50%) rotateZ(90deg);
+    top: 4lvh;
+    cursor: pointer;
+  }
+  .trr.left .instr {
+    position: absolute;
+    left: 3.9lvh;
+    transform: translate(-50%, -50%) rotateZ(270deg);
+    top: 4lvh;
+    cursor: pointer;
+  }
+  .trr {
+    transition: 0.6s background-color;
+    position: absolute;
+    width: 8lvh;
+    height: 8lvh;
+    font-size: 10lvh;
+    border: none;
+    border-radius: 50%;
+    font-family: "Fredoka";
+    font-weight: 700;
+    box-shadow: 0dvh 0dvh 8dvh rgba(0,0,0,0.4);
+    background-color: white;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+  }
+  .trr.red {
+    color: #c12020;
+  }
+  .trr.blue {
+    color: #1d83af;
+  }
+  .trr.green {
+    color: #50af1d;
+  }
+  .bloq.red {
+    background-color: #c12020;
+  }
+  .bloq.blue {
+    background-color: #1d83af;
+  }
+  .bloq.green {
+    background-color: #50af1d;
+  }
+  .bloq {
+    height: 100%;
+    position: absolute;
+    border-radius: 2.5dvh;
+    overflow: hidden;
+    transition: 0.6s left;
+    background-size: cover;
+    background-position: 0% 50%;
+  }
+  .allr.right {
+    left: 4lvh;
+  }
+  .allr.left {
+    right: 4lvh;
+  }
+  .allr.center {
+    left: 50%;
+    transform: translate(-50%);
+    width: calc(100dvw - 8lvh);
+    height: 45lvh;
+  }
+  .allr {
+    overflow: hidden;
+    width: calc(100dvw - 31lvh);
+    height: 25lvh;
+    bottom: 4lvh;
+    position: absolute;
+    border-radius: 4lvh;
+  }
+  .wsvertical .wstitle {
+    font-size: clamp(0.1lvh, calc((92dvw) * 0.08), 5.5lvh);
+    width: initial;
+    max-width: calc(80dvw - 4lvh);
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .wsvertical {
+    container-type: inline-size;
+    font-size: 5lvh;
+    font-family: "Fredoka";
+    font-weight: 650;
+    width: 100dvw;
+    left: 0;
+    position: absolute;
+    height: 60lvh;
+    background-color: white;
+    font-weight: 700;
+    letter-spacing: 0.2lvh;
+    text-align: center;
+  }
+  .wstitle {
+    top: 2.5vh;
+    left: 4lvh;
+    width: calc(100% - 8lvh);
+    position: absolute;
+  }
+  .whitedisplay.left {
+    left: -10lvh;
+    text-align: right;
+  }
+  .whitedisplay.right {
+    right: -10lvh;
+    text-align: left;
+  }
+  .whitedisplay {
+    font-size: 5.5lvh;
+    font-family: "Fredoka";
+    font-weight: 650;
+    width: calc(100dvw - 13lvh);
+    position: absolute;
+    height: 40lvh;
+    border-radius: 7lvh;
+    background-color: white;
+    font-weight: 700;
+    letter-spacing: 0.2lvh;
+  }
+  #ssit {
+    white-space: wrap;
+    font-family: "Fredoka";
+    font-weight: 600;
+  }
+  #ssititle {
+    top: 6.5lvh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color: white;
+    text-align: center;
+    font-size: 9lvh;
+    line-height: 7.5lvh;
+    font-family: "Special Gothic Condensed One";
+  }
+  #orangeredone {
+    background: linear-gradient(225deg, #ff8500, #c12020);
+    width: 100dvw;
+    top: 100lvh;
+    position: absolute;
+    height: 100lvh;
+  }
+  #phonemockup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90lvh;
+    width: auto;
+  }
+  #bigimage {
+    right: 65lvh;
+    position: absolute;
+    height: 80lvh;
+    width: auto;
+    top: 22.5lvh;
+  }
+  .startnow:hover {
+    filter: brightness(1.3);
+    font-size: 5lvh;
+  }
+  .startnow {
+    white-space: nowrap;
+    transform: translate(50%, -50%);
+    position: absolute;
+    border: none;
+    font-size: 4lvh;
+    padding: 2.5lvh;
+    border-radius: 2.5lvh;
+    color: white;
+    font-family: "Fredoka";
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0dvh 3dvh 3dvh rgba(0,0,0,0.2);
+    letter-spacing: 1lvh;
+    transition: 0.6s filter, 0.6s font-size;
+  }
+  .logolg {
+    pointer-events: none;
+    transform: translateX(50%);
+    right: 33lvh;
+    position: absolute;
+    height: 18lvh;
+    width: auto;
+  }
+  #content {
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 0;
+    overflow-x: hidden;
+  }
+  #lightgreyone {
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    background: linear-gradient(#fff3e6);
+    position: absolute;
+    overflow: hidden;
+  }
+  #lightgreytwo {
+    left: 0;
+    width: 100dvw;
+    height: 141lvh;
+    background-color: #efefef;
+    position: absolute;
+    overflow: hidden;
+  }
+  #orangedividervertical {
+    top: 0;
+    left: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 0.8lvh;
+    height: 100dvh;
+    background-color: #ff8500;
+  }
+  #sidetoolbar {
+    z-index: 501;
+    left: -36lvh;
+    width: 35lvh;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(12lvh) brightness(7);
+    -webkit-backdrop-filter: blur(12lvh) brightness(7);
+  }
+  #theabyss {
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 500;
+    cursor: pointer;
+  }
+  #menubutton {
+    cursor: pointer;
+    top: 3lvh;
+    right: 3lvh;
+    position: fixed;
+    outline: 0.8lvh solid #ff8500;
+    height: 14lvh;
+    width: 14vh;
+    border-radius: 2dvh;
+    border: none;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
+    background-size: cover;
+    background-image: url("../media/images/menu.png");
+    background-position: 50% 50%;
+    z-index: 200;
+  }
+  #logo {
+    cursor: pointer;
+    position: absolute;
+    height: 9.5lvh;
+    left: 3lvh;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #logovertical {
+    cursor: pointer;
+    position: absolute;
+    height: 13lvh;
+    left: 0.5lvh;
+    top: 3.5lvh;
+  }
+  #orangedivider {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: translateY(50%);
+    height: 0.6lvh;
+    width: 100dvw;
+    background-color: #ff8500;
+  }
+  #toptoolbar {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 15lvh;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8lvh) brightness(2.5);
+    -webkit-backdrop-filter: blur(8lvh) brightness(2.5);
+  }
+  .hplink {
+    position: absolute;
+    font-size: 6lvh;
+    color: #ff8500;
+    font-family: "Special Gothic Condensed One";
+    top: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+  }
+  .hplinkvert {
+    position: absolute;
+    font-size: 8lvh;
+    max-width: 31lvh;
+    color: #ff8500;
+    font-family: "Special Gothic Condensed One";
+    cursor: pointer;
+    line-height: 7lvh;
+    left: 3lvh;
+  }
+  .hplink:hover, .hplinkvert:hover {
+    text-decoration: underline;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+if (localStorage.getItem("darkmode") == "1") {
+  document.getElementById("menubutton").style.backgroundColor = "rgba(0,0,0,0)";
+  document.getElementById("toptoolbar").style.backgroundColor = "rgba(0,0,0,0)";
+  document.getElementById("lightgreyone").style.background = "#262626";
+  document.getElementsByClassName("body4")[0].style.color = "white";
+  document.getElementById("toptoolbar").style.backdropFilter = "blur(8lvh) brightness(0.222)";
+  document.getElementById("toptoolbar").style['-webkit-backdrop-filter'] = "blur(8lvh) brightness(0.222)";
+  document.getElementById("sidetoolbar").style.backdropFilter = "blur(8lvh) brightness(0.222)";
+  document.getElementById("sidetoolbar").style['-webkit-backdrop-filter'] = "blur(8lvh) brightness(0.222)";
+  document.getElementById("menubutton").style.backdropFilter = "blur(8lvh) brightness(0.222)";
+  document.getElementById("menubutton").style['-webkit-backdrop-filter'] = "blur(8lvh) brightness(0.222)";
+}
+oldnopr = -1;
+startingPoint = [0,0,0,0,0,0];
+stptvals = ["bloq red wid", "bloq red narr", "bloq blue wid", "bloq blue narr", "bloq green wid", "bloq green narr"];
+alvals = ["redwide", "rednarrow", "bluewide", "bluenarrow", "greenwide", "greennarrow"];
+maxnums = [6,6,6,6,6,6];
+menuOut = false;
+calculatetoolbar();
+function getlvh() {
+  console.log(event.target.offsetWidth / window.innerHeight * 50);
+}
+window.addEventListener("resize", calculatetoolbar);
+function rotatethru(wideNarrow, leftRight, colortu) {
+  buttonidrt = event.target.id;
+  if (buttonidrt.substring(0,1) != "s") {
+    buttonidrt = event.target.parentElement.id;
+  }
+  buttonidrt = buttonidrt.substring(0,6);
+  document.getElementById(buttonidrt + "left").style.pointerEvents = "none";
+  document.getElementById(buttonidrt + "right").style.pointerEvents = "none";
+  if (wideNarrow) { shortenedWON = "wid" } else { shortenedWON = "narr" }
+
+  oldspot = startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]
+
+  if (!leftRight) {
+    tviq = startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)];
+    if (tviq != maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] - 1) {
+      startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] = tviq + 1;
+      newspot = tviq + 1;
+    } else {
+      startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] = 0;
+      newspot = 0;
+    }
+  } else {
+    tviq = startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)];
+    if (tviq != 0) {
+      startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] = tviq - 1;
+      newspot = tviq - 1;
+    } else {
+      startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] = maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] - 1;
+      newspot = maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] - 1;
+    }
+  }
+  
+  if (!leftRight) {
+  moveinspot = oldspot + nopr;
+  } else {
+  moveinspot = oldspot - 1;
+  }
+  omis = moveinspot;
+  if (moveinspot >= maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]) {
+    moveinspot -= maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)];
+  } else if (moveinspot < 0) {
+    moveinspot += maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)];
+  }
+  stptu = startingPoint[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)];
+  if (wideNarrow) { fullname = "wide" } else { fullname = "narrow" }
+  idtg = "all" + colortu + "s" + fullname;
+  if (!leftRight) {
+    px2of = document.getElementById(idtg).offsetWidth;
+    document.getElementById(idtg).children[moveinspot].style.transition = "none";
+    window.innerHeight;
+    document.getElementById(idtg).children[moveinspot].style.left = `calc(${px2of}px + 2.5dvh)`;
+    setTimeout(function() {
+    for (i = 0; i < document.getElementById(idtg).children.length; i++) {
+      document.getElementById(idtg).children[i].style.transition = "0.6s left";
+    }
+    }, 1)
+    setTimeout(function() {
+      newalvals = [];
+      oldalvals = window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"];
+      for (i = 0; i < oldalvals.length; i++) {
+
+
+        if (i != oldspot) {
+        if (i != 0) {
+        newalvals.push(oldalvals[i-1]);
+        } else {
+        newalvals.push(oldalvals[oldalvals.length-1]);
+        }
+        } else {
+        newalvals.push(`calc(-1 * ((100% - ${(nopr-1)*2.5}lvh) / ${nopr} + 2.5lvh))`);
+        }
+
+      }
+      window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"] = [...newalvals];
+      
+      indexestu = [];
+      for (b = oldspot; b <= omis; b++) {
+        if (b >= maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]) {
+          indexestu.push(b - maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]);
+        } else {
+          indexestu.push(b);
+        }
+      }
+      for (i = 0; i < document.getElementById(idtg).children.length; i++) {
+        if (indexestu.indexOf(i) != -1) {
+        document.getElementById(idtg).children[i].style.left = window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"][i];
+        }
+      }
+    }, 2)
+
+  } else {
+    px2of = document.getElementById(idtg).children[moveinspot].offsetWidth;
+    document.getElementById(idtg).children[moveinspot].style.transition = "none";
+    window.innerHeight;
+    document.getElementById(idtg).children[moveinspot].style.left = `calc(-${px2of}px - 2.5dvh)`;
+    setTimeout(function() {
+    for (i = 0; i < document.getElementById(idtg).children.length; i++) {
+      document.getElementById(idtg).children[i].style.transition = "0.6s left";
+    }
+    }, 1)
+    setTimeout(function() {
+      newalvals = [];
+      oldalvals = window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"];
+      for (i = 0; i < oldalvals.length; i++) {
+        if (i != oldspot+nopr-1) {
+        if (i != oldalvals.length-1) {
+        newalvals.push(oldalvals[i+1]);
+        } else {
+        newalvals.push(oldalvals[0]);
+        }
+        } else {
+        newalvals.push(`calc(${document.getElementById(idtg).offsetWidth}px + 2.5dvh)`);
+        }
+
+      }
+
+      window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"] = [...newalvals];
+      
+      indexestu = [];
+      for (b = omis; b <= oldspot+nopr-1; b++) {
+        if (b >= maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]) {
+          indexestu.push(b - maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)]);
+        } else if (b < 0) {
+          indexestu.push(maxnums[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] - 1);
+        } else {
+          indexestu.push(b);
+        }
+      }
+      for (i = 0; i < document.getElementById(idtg).children.length; i++) {
+        if (indexestu.indexOf(i) != -1) {
+        document.getElementById(idtg).children[i].style.left = window[alvals[stptvals.indexOf("bloq " + colortu + " " + shortenedWON)] + "alvals"][i];
+        }
+      }
+    }, 2)
+  }
+  setTimeout(function() {
+    document.getElementById(buttonidrt + "left").style.pointerEvents = "all";
+    document.getElementById(buttonidrt + "right").style.pointerEvents = "all";
+  }, 300);
+}
+function calculateratios(className,buttonid) {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  space = (window.innerWidth) - window.innerHeight * 0.1475;
+  ratio = height / width;
+  ratio = (ratio / 3) * 2;
+  margin = window.innerHeight * 0.02;
+  nopr = parseInt((1 / (ratio / 1.5)) * 1.5);
+  if (oldnopr != nopr && oldnopr != -1) {
+    startingPoint = [0,0,0,0,0,0];
+  }
+  oldnopr = nopr;
+  stptu = startingPoint[stptvals.indexOf(className)];
+  if (nopr >= maxnums[stptvals.indexOf(className)]) { 
+    nopr = maxnums[stptvals.indexOf(className)]; 
+    document.getElementById(buttonid + "left").classList.add("hidden");
+    document.getElementById(buttonid + "right").classList.add("hidden");
+  } else {
+    document.getElementById(buttonid + "left").classList.remove("hidden");
+    document.getElementById(buttonid + "right").classList.remove("hidden");
+  }
+
+  for (i = 0; i < document.getElementsByClassName(className).length; i++) {
+    document.getElementsByClassName(className)[i].style.transition = "none";
+  }
+  setTimeout(function() {
+  window[alvals[stptvals.indexOf(className)] + "alvals"] = [];
+  for (i = 0; i < document.getElementsByClassName(className).length; i++) {
+    if (i+stptu >= maxnums[stptvals.indexOf(className)]) {
+      itu = i+stptu - maxnums[stptvals.indexOf(className)];
+    } else {
+      itu = i+stptu;
+    }
+    document.getElementsByClassName(className)[itu].style.width = `calc((100% - ${(nopr-1)*2.5}lvh) / ${nopr})`;
+    document.getElementsByClassName(className)[itu].style.left = `calc(${i} * ((100% - ${(nopr-1)*2.5}lvh) / ${nopr} + 2.5lvh))`; 
+    window[alvals[stptvals.indexOf(className)] + "alvals"].push(document.getElementsByClassName(className)[itu].style.left);
+  }
+  }, 1);
+}
+opentb = true;
+function opentoolbar() {
+  if (opentb) {
+  opentb = false;
+  document.getElementsByClassName("lildropdown")[0].style.display = "block";
+  window.addEventListener("mouseup", closeldd);
+  } else {
+  opentb = true;
+  closeldd();
+  }
+}
+function closeldd() {
+  document.getElementsByClassName("lildropdown")[0].style.display = "none";
+  window.removeEventListener("mouseup", closeldd);
+}
+function calculatetoolbar() {
+  if (window.innerHeight / window.innerWidth > 0.8) {
+    document.getElementById("toptoolbar").classList.add("hidden");
+    document.getElementById("menubutton").classList.remove("hidden");
+    document.getElementById("sidetoolbar").classList.remove("hidden");
+    for (i = 0; i < document.getElementsByClassName("wide").length; i++) {
+      document.getElementsByClassName("wide")[i].classList.add("hidden");
+    }
+    for (i = 0; i < document.getElementsByClassName("narrow").length; i++) {
+      document.getElementsByClassName("narrow")[i].classList.remove("hidden");
+    }
+    document.getElementById("hyperlinks").style.height = "85lvh";
+  } else {
+    document.getElementById("toptoolbar").classList.remove("hidden");
+    document.getElementById("menubutton").classList.add("hidden");
+    document.getElementById("sidetoolbar").classList.add("hidden");
+    if (menuOut) {
+    menu(false);
+    }
+    for (i = 0; i < document.getElementsByClassName("wide").length; i++) {
+      document.getElementsByClassName("wide")[i].classList.remove("hidden");
+    }
+    for (i = 0; i < document.getElementsByClassName("narrow").length; i++) {
+      document.getElementsByClassName("narrow")[i].classList.add("hidden");
+    }
+    document.getElementById("hyperlinks").style.height = "52lvh";
+  }
+  document.getElementById("hyperlinks").style.top = document.getElementById("lightgreyone").offsetHeight;
+}
+function menu(isanimation) {
+  if (isanimation) {
+    document.getElementById("theabyss").style.transition = "1s opacity";
+    document.getElementById("sidetoolbar").style.transition = "1s left";
+  } else {
+    document.getElementById("theabyss").style.transition = "none";
+    document.getElementById("sidetoolbar").style.transition = "none";
+  }
+  setTimeout(function() {
+    if (menuOut) {
+      menuOut = false;
+      document.getElementById("sidetoolbar").style.left = "-36lvh";
+      document.getElementById("theabyss").classList.add("hidden");
+    } else {
+      menuOut = true;
+      document.getElementById("sidetoolbar").style.left = "0";
+      document.getElementById("theabyss").classList.remove("hidden");
+    }
+  }, 1);
+}
+function redirect(page) {
+  window.location.href = page;
+}
+</script>
