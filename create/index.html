@@ -1105,7 +1105,9 @@ function runsearch(querytu) {
       .then(response => response.json())
       .then(data => {
         nawp = [];
+        photos = [];
         for (i = 0; i < data.results.length; i++) {
+        photos.push(data.results[i]);
         nawp.push(data.results[i].urls.regular);
         nawp.push(data.results[i].urls.full);
         nawp.push(data.results[i].user.name);
@@ -1178,6 +1180,7 @@ function selectimg(indexto) {
       document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
     }
   }
+  triggerUnsplashDownload(photos[indexto]);
 }
 
 document.getElementsByClassName("mb")[0].addEventListener("keydown", function() {
@@ -1193,6 +1196,18 @@ document.getElementsByClassName("mb")[0].addEventListener("keydown", function() 
 window.addEventListener("click", isbr);
 window.addEventListener("keydown", isbr);
 
+function triggerUnsplashDownload(photo) {
+  fetch("https://studyslooth-unsplash.studyslooth.workers.dev/track-download", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      download_location: photo.links.download_location
+    })
+  });
+}
+  
 function isbr() {
   setTimeout(function() {
     passblanktest = true;
