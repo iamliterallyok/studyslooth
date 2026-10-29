@@ -532,10 +532,13 @@ select {
 }
 </style>
 <script>
-fetch("https://studyslooth-unsplash.studyslooth.workers.dev/?query=space")
+fetch("https://studyslooth-unsplash.studyslooth.workers.dev/?query=nature")
   .then(response => response.json())
   .then(data => {
-    console.log(data.results);
+    console.log(data.results[0].urls.regular);
+    console.log(data.results[0].user.name);
+    console.log(data.results[0].user.links.html);
+    console.log(data.results[0].alt-description);
   });
 if (localStorage.getItem("rem6") != "1") {
   document.getElementById("srem6").classList.remove("hidden");
