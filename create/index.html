@@ -532,6 +532,11 @@ select {
 }
 </style>
 <script>
+fetch("https://studyslooth-unsplash.studyslooth.workers.dev/?query=space")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.results);
+  });
 if (localStorage.getItem("rem6") != "1") {
   document.getElementById("srem6").classList.remove("hidden");
   localStorage.setItem("rem6", "1");
