@@ -1111,14 +1111,18 @@ function runsearch(querytu) {
         nawp.push(data.results[i].user.links.html);
         nawp.push(data.results[i].alt_description);
         }
+        pastQueries.push(querytu.toLowerCase());
+        pqlist.push(nawp);
+        displayResults();
     });
-    pastQueries.push(querytu.toLowerCase());
-    pqlist.push(nawp);
   } else {
     nawp = [...pqlist[pastQueries.indexOf(querytu.toLowerCase())]];
+    displayResults();
   }
+
+  function displayResults() {  
   lastone = -1;
-  for (i = 0; i < 60; i++) {
+  for (i = 0; i < nawp.length; i++) {
     rem = i % 5;
     wlevel = (i - rem) / 5;
     rem++;
@@ -1147,6 +1151,7 @@ function runsearch(querytu) {
     }
   }
   currentquery = querytu;
+  }
   } else {
     alert("Wait a few seconds before searching again.");
   }
