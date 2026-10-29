@@ -1086,6 +1086,7 @@ function runsearch(querytu) {
   document.getElementById("noresults").classList.add("hidden");
   for (i = 0; i < 12; i++) {
     document.getElementsByClassName("oot")[i].classList.remove("hidden");
+    document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
   }
   cantapagain = false;
   setTimeout(function() {
@@ -1129,6 +1130,9 @@ function runsearch(querytu) {
     switch (rem) {
       case 1:
         document.getElementsByClassName("ootimg")[wlevel].style.backgroundImage = `url("${nawp[i]}")`;
+        if (selectedimage === nawp[i]) {
+          document.getElementsByClassName("ootimg")[wlevel].classList.add("selectedoot");
+        }
         break;
       case 3:
         luname = nawp[i];
