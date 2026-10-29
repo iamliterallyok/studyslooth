@@ -1079,6 +1079,7 @@ pqlist = [[
   "purple cells"
 ]];
 //reg first, full res second
+selectedimage = -1;
 cantapagain = true;
 runsearch("");
 function runsearch(querytu) {
@@ -1169,7 +1170,6 @@ document.getElementById("searchbar").addEventListener("keydown", (event) => {
   }
 });
 
-selectedimage = -1;
 function selectimg(indexto) {
   document.getElementById("fadedbg").style.backgroundImage = `url('${nawp[indexto*5]}')`;
   selectedimage = nawp[indexto*5];
