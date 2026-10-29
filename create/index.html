@@ -532,14 +532,26 @@ select {
 }
 </style>
 <script>
-fetch("https://studyslooth-unsplash.studyslooth.workers.dev/?query=nature")
+fetch(
+  "https://studyslooth-unsplash.studyslooth.workers.dev/?" +
+  new URLSearchParams({
+    query: "nature",
+    orientation: "landscape",
+    page: "1",
+    per_page: "30",
+    order_by: "relevant",
+    content_filter: "high"
+  }))
   .then(response => response.json())
   .then(data => {
-    console.log(data.results[0].urls.regular);
-    console.log(data.results[0].user.name);
-    console.log(data.results[0].user.links.html);
-    console.log(data.results[0].alt_description);
-  });
+    for (i = 0; i < 30; i++) {
+    console.log(data.results[i].urls.regular);
+    console.log(data.results[i].urls.full);
+    console.log(data.results[i].user.name);
+    console.log(data.results[i].user.links.html);
+    console.log(data.results[i].alt_description);
+    }
+});
 if (localStorage.getItem("rem6") != "1") {
   document.getElementById("srem6").classList.remove("hidden");
   localStorage.setItem("rem6", "1");
