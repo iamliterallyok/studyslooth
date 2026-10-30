@@ -7,23 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <link rel="manifest" href="../manifest.json"/>
-<script type="module">
-  import { Profanease, Category } from "https://esm.sh/profanease";
-  import { categorized } from "https://esm.sh/profanease/langs/en";
-
-  const filter = new Profanease({
-    languages: [categorized],
-    categories: [
-      Category.PROFANITY,
-      Category.SLUR,
-      Category.SEXUAL
-    ],
-    normalize: "aggressive"
-  });
-
-  window.isSafeSearch = (query) => !filter.check(query);
-  window.dispatchEvent(new Event("filterReady"))
-</script>
 <script  
   src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
   integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
@@ -1098,9 +1081,7 @@ pqlist = [[
 //reg first, full res second
 selectedimage = -1;
 cantapagain = true;
-window.addEventListener("filterReady", () => {
-  runsearch("");
-});
+runsearch("");
 function runsearch(querytu) {
   if (cantapagain) {
   document.getElementById("noresults").classList.add("hidden");
@@ -1112,7 +1093,7 @@ function runsearch(querytu) {
   setTimeout(function() {
     cantapagain = true;
   }, 6000);
-  if (!isSafeSearch(querytu)) {
+  if (isSafeQuery(querytu)) {
     document.getElementById("noresults").classList.remove("hidden");
     for (i = 0; i < 12; i++) {
       document.getElementsByClassName("oot")[i].classList.add("hidden");
@@ -1254,6 +1235,73 @@ function isbr() {
       document.getElementById("savebtn").style.opacity = 0.5;
     }
   }, 10);
+}
+
+encryptionKey = "Slooth_2026_X7pQ";
+encryptedTerms = [
+"ZnVjaw==","ZnVja2luZw==","ZnVja2Vy","ZnVja2Vk","ZnVja2FibGU=","ZnVja2ZhY2U=","ZnVja2VyeQ==","ZnVja2hlYWQ=","ZnVja3Vw","ZnVja29mZg==","ZnVja2l0","ZnVja2luZyBvZmY=","ZnVja2VkIHVw","ZnVja2luZyBhcm91bmQ=","ZnVja2luZyBzdHVmZg==",
+"c2hpdA==","c2hpdHR5","c2hpdGhlYWQ=","c2hpdGZhY2U=","c2hpdGxpc3Q=","c2hpdG1hbg==","c2hpdGJyYWlu","c2hpdHN0b3Jt","c2hpdHRlZA==","c2hpdHRpbmc=","c2hpdHRlci","c2hpdGxvYWQ=","c2hpdHBvc3Q=","c2hpdGJveA==","c2hpdHk=",
+"YXNzaG9sZQ==","YXNzaG9sZXM=","YXNzaGF0","YXNzaGF0dGVyeQ==","Yml0Y2g=","Yml0Y2hlcw==","Yml0Y2h5","Yml0Y2hpbmc=","Yml0Y2hzbGFw","Yml0Y2hmaXQ=","Yml0Y2hib3k=","Yml0Y2hmYWNl","ZGFtbg==","ZGFtbWl0","ZGFtbmVk",
+"Y3JhcA==","Y3JhcHB5","Y3JhcHBpbmc=","Y3JhcGZhY2U=","Y3JhcHNob3Q=","c3Vjaw==","c3Vja2Vy","c3Vja2luZw==","c3Vja2Vk","c3Vja3Vw","c3Vja2ZhY2U=","c3Vja3N1Yg==","c3Vja2luZyBvZmY=","bW90aGVyZnVja2Vy","c29uIG9mIGEgYml0Y2g=",
+"c2V4","c2V4dWFs","c2V4dWFsbHk=","c2V4dWFsaXR5","c2V4d29yaw==","c2V4d29ya2Vy","c2V4dGluZw==","cG9ybg==","cG9ybm8=","cG9ybm9ncmFwaHk=","cG9ybiB2aWRlb3M=","cG9ybiBwaWN0dXJlcw==","cG9ybiBzaXRlcw==","cG9ybiBzdGFy","ZnJlZSBwb3Ju",
+"bnVkZQ==","bnVkZXM=","bmFrZWQ=","bmFrZWRuZXNz","bmFrZWQgcGhvdG9z","bmFrZWQgd29tZW4=","bmFrZWQgbWVu","ZXJvdGlj","ZXJvdGljYQ==","ZXhwbGljaXQ=","ZXhwbGljaXQgaW1hZ2Vz","ZXhwbGljaXQgdmlkZW9z","aGFyZGNvcmU=","c29mdGNvcmU=","aGVudGFp",
+"bWFzdHVyYmF0ZQ==","bWFzdHVyYmF0aW9u","b3JnYXNt","b3JnYXNtaWM=","aG9ybnk=","c2V4dGluZw==","c2V4IGNsaXBz","c2V4IHZpZGVvcw==","c2V4IHBpY3R1cmVz","c2V4IHN0b3JpZXM=","c2V4IGNoYXQ=","c2V4IGNhbGw=","c2V4IGd1aWRl","c2V4IHRveXM=","c2V4dWFsIGNvbnRlbnQ=",
+"ZGljaw==","Y29jaw==","cGVuaXM=","dmFnaW5h","cHVzc3k=","Y2xpdA==","Ym9vYnM=","dGl0cw==","YnJlYXN0cw==","YnV0dA==","YW51cw==","c2Nyb3R1bQ==","c2VtZW4=","c3Blcm0=","cG9ybiB0b3k=",
+"cG9ybm8gZ2lybHM=","cG9ybm8gYm95cw==","cG9ybm8gY2xpcHM=","cG9ybm8gc3RhcnM=","cG9ybm8gZnJlZQ==","ZnJlZSBzZXg=","ZnJlZSBudWRlcw==","ZXhwbGljaXQgcGhvdG9z","ZXhwbGljaXQgcGljdHVyZXM=","c2V4dmluZyBwaG90b3M=","c2V4dmluZyB2aWRlb3M=","c2V4dGluZyBpbWFnZXM=","c2V4IGltYWdlcw==","c2V4IHZpZGVv",
+"cmFwZQ==","c2V4dWFsIGFzc2F1bHQ=","c2V4dWFsIGFidXNl","ZXJvdGljIGltYWdlcw==","ZXJvdGljIHZpZGVvcw==","aW50aW1hdGUgaW1hZ2Vz","cHJpdmF0ZSBwaG90b3M=","cHJpdmF0ZSB2aWRlb3M=","c2V4dWFsIHBpY3R1cmVz","c2V4dWFsIHZpZGVvcw==","YWR1bHQgY29udGVudA==","YWR1bHQgaW1hZ2Vz","YWR1bHQgdmlkZW9z","YWR1bHQgc2l0ZXM=","YWR1bHQgZW50ZXJ0YWlubWVudA==",
+"c2x1cg==","cmFjaWFsIHNsdXI=","aG9tb3Bob2JpYw==","dHJhbnNwaG9iaWM=","c2V4aXN0","c2V4aXN0IHNs dXI=","aGF0ZSBzcGVlY2g=","cmFjaWFsIGhhdGU=","cmFjaWFsIGluc3VsdA==","cmFjaWFsIGVwaXRoZXQ=","ZGlzY3JpbWluYXRpb24=","bmF6aQ==","bmF6aXNt","c3VwcmVtYWNpc3Q=","d2hpdGUgc3VwcmVtYWN5",
+"Y29jYWluZQ==","bWV0aGFtcGhldGFtaW5l","aGVyb2lu","bWFyaWp1YW5h","bW9sbHk=","Y3JhY2s=","bWV0aA==","ZmVudGFueWw=","bHNk","cHN5Y2hlZGVsaWM=","ZHJ1Z3M=","ZHJ1ZyB1c2U=","ZHJ1ZyBzYWxl","c3R1ZmYgdG8gZ2V0IGhpZ2g=","c3RyaXBwZXI=",
+"cG9ybg==","cG9ybiBodWI=","cG9ybiBzdGFy","cG9ybiBjbGlw","cG9ybiBjbGlwcw==","cG9ybiBwaG90bw==","cG9ybiBwaG90b3M=","cG9ybiBwaWN0dXJl","cG9ybiBwaWN0dXJlcw==","cG9ybiB2aWRlbw==","cG9ybiB2aWRlb3M=","cG9ybiBzaXRl","cG9ybiBzaXRlcw==","cG9ybiBzZWFyY2g=","cG9ybiBzdHJlYW0=",
+"bnVkZSBwaG90bw==","bnVkZSBwaG90b3M=","bnVkZSBwaWN0dXJl","bnVkZSBwaWN0dXJlcw==","bnVkZSB2aWRlbw==","bnVkZSB2aWRlb3M=","bmFrZWQgcGljdHVyZXM=","bmFrZWQgYm9kaWVz","bmFrZWQgYm9keQ==","bmFrZWQgcGVvcGxl","bmFrZWQgZ2lybHM=","bmFrZWQgYm95cw==","bmFrZWQgd29tYW4=","bmFrZWQgbWFu","bmFrZWQgc2VsZg==",
+"ZXJvdGljIHBpY3R1cmVz","ZXJvdGljIHZpZGVvcw==","ZXJvdGljIHN0b3JpZXM=","ZXJvdGljIGJvb2tz","ZXJvdGljIHNpdGVz","ZXJvdGljIGNvbnRlbnQ=","ZXhwbGljaXQgc2V4","ZXhwbGljaXQgY29udGVudA==","ZXhwbGljaXQgZ2lybHM=","ZXhwbGljaXQgYm95cw==","ZXhwbGljaXQgd29tZW4=","ZXhwbGljaXQgbWVu","ZXhwbGljaXQgbW92aWVz","ZXhwbGljaXQgc2NlbmVz","ZXhwbGljaXQgc2VhcmNo",
+"YWR1bHQgcG9ybg==","YWR1bHQgc2V4","YWR1bHQgbnVkZXM=","YWR1bHQgY2xpcHM=","YWR1bHQgcGljdHVyZXM=","YWR1bHQgdmlkZW8=","YWR1bHQgdmlkZW9z","YWR1bHQgc2VhcmNo","YWR1bHQgc3Rvcmllcw==","YWR1bHQgZmlsbXM=","YWR1bHQgZW50ZXJ0YWlubWVudA==","YWR1bHQgc2l0ZQ==","YWR1bHQgc2l0ZXM=","YWR1bHQgY2hhdA==","YWR1bHQgY29tbXVuaXR5",
+"c2V4eQ==","c2V4aWVzdA==","c2V4eSBwaG90b3M=","c2V4eSB2aWRlb3M=","c2V4eSBwaWN0dXJlcw==","c2V4eSBib2R5","c2V4eSBib2RpZXM=","c2V4eSBjbG90aGVz","c2V4eSBvdXRmaXQ=","c2V4eSBtb2RlbA==","c2V4eSBtb2RlbHM=","c2V4eSBnaXJscw==","c2V4eSBib3lz","c2V4eSB3b21lbg==","c2V4eSBtZW4=",
+"b3JnYXNtIHZpZGVv","b3JnYXNtIHBob3Rv","b3JnYXNtIHBpY3R1cmU=","bWFzdHVyYmF0aW9uIHZpZGVv","bWFzdHVyYmF0aW9uIHBob3Rv","bWFzdHVyYmF0aW9uIHBpY3R1cmU=","c2V4IHRveXM=","c2V4IHRveSBwaG90b3M=","c2V4IHRveSB2aWRlb3M=","c2V4IHNob3A=","c2V4IHByb2R1Y3Rz","c2V4IHN0b3Jl","c2V4IHN0b3Jlcw==","c2V4IGd1aWRl","c2V4IGVkdWNhdGlvbg==",
+"Y2hpbGQgcG9ybg==","Y2hpbGQgZXhwbG9pdGF0aW9u","bWlub3IgcG9ybg==","bWlub3IgZXhwbGljaXQ=","Y2hpbGQgZXhwbGljaXQ=","Y2hpbGQgbnVkZXM=","Y2hpbGQgc2V4dWFs","c2V4dWFsIG1pbm9y","bWlub3Igc2V4dWFs","c2V4dWFsIGNoaWxk","Y2hpbGQgYWJ1c2U=","Y2hpbGQgbW9sZXN0YXRpb24=","Y2hpbGQgc2FmZXR5","c2V4dWFsIGV4cGxvaXRhdGlvbg==","ZXhwbG9pdGF0aW9u",
+"ZnVjaw==","c2hpdA==","YXNzaG9sZQ==","Yml0Y2g=","ZGFtbg==","Y3JhcA==","c3Vjaw==","Y29jaw==","ZGljaw==","cHVzc3k=","cGVuaXM=","dmFnaW5h","Ym9vYnM=","dGl0cw==","YnV0dA==", "bmlnZ2Vy"]
+//These terms were generated by Artificial Intelligence. Study Slooth does not condone nor stand for any of the encrypted terms listed before these lines. Study Slooth seeks to prohibit images searches that may lead to indecent content on a service offered to children.
+
+alphanumeric = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+
+document.getElementById("a").innerHTML = isSafeQuery("hello");
+
+function isSafeQuery(queryttu) {
+    tntu = [...encryptedTerms.map(term => atob(term))];
+    searchQueryTU = separateintowords(queryttu);
+    
+    /*document.getElementById("a").innerHTML = JSON.stringify(tntu);*/
+    issafe = true;
+    for (a = 0; a < searchQueryTU.length; a++) {
+        if (tntu.indexOf(searchQueryTU[a]) != -1) {
+            issafe = false;
+            return true;
+            break;
+        }
+    }
+    if (issafe) {
+    return false;
+    }
+}
+function separateintowords(ogs) {
+    finalwords = [];
+    newword = "";
+    originalString = ogs.toString();
+    for (i = 0; i < originalString.length; i++) {
+        if (newword != "" && i+1 == originalString.length) {
+           if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+               newword = newword + originalString[i];
+           }
+           finalwords.push(newword); 
+        } else if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+            newword = newword + originalString[i];
+        } else {
+            if (newword != "") {
+                finalwords.push(newword);
+            }
+            newword = "";
+        }
+    }
+    return finalwords;
 }
 
 </script>
