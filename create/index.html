@@ -7,6 +7,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <link rel="manifest" href="../manifest.json"/>
+<script type="module">
+  import { Profanease, Category } from "https://esm.sh/profanease";
+  import { categorized } from "https://esm.sh/profanease/langs/en";
+
+  const filter = new Profanease({
+    languages: [categorized],
+    categories: [
+      Category.PROFANITY,
+      Category.SLUR,
+      Category.SEXUAL
+    ],
+    normalize: "aggressive"
+  });
+
+  window.isSafeSearch = (query) => !filter.check(query);
+  window.dispatchEvent(new Event("filterReady"))
+</script>
 <script  
   src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
   integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
@@ -1081,7 +1098,9 @@ pqlist = [[
 //reg first, full res second
 selectedimage = -1;
 cantapagain = true;
-runsearch("");
+window.addEventListener("filterReady", () => {
+  runsearch("");
+});
 function runsearch(querytu) {
   if (cantapagain) {
   document.getElementById("noresults").classList.add("hidden");
@@ -1093,6 +1112,12 @@ function runsearch(querytu) {
   setTimeout(function() {
     cantapagain = true;
   }, 6000);
+  if (!isSafeSearch(querytu)) {
+    document.getElementById("noresults").classList.remove("hidden");
+    for (i = 0; i < 12; i++) {
+      document.getElementsByClassName("oot")[i].classList.add("hidden");
+    }
+  } else {
   if (pastQueries.indexOf(querytu.toLowerCase()) == -1) {
     fetch(
       "https://studyslooth-unsplash.studyslooth.workers.dev/?" +
@@ -1122,6 +1147,7 @@ function runsearch(querytu) {
   } else {
     nawp = [...pqlist[pastQueries.indexOf(querytu.toLowerCase())]];
     displayResults();
+  }
   }
 
   function displayResults() {  
