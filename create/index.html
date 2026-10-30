@@ -1148,6 +1148,9 @@ runsearch("");
 function runsearch(querytu) {
   if (cantapagain) {
   document.getElementById("noresults").classList.add("hidden");
+  document.getElementById("actualpics").scrollTop = 0;
+  window.innerHeight;
+  document.getElementById("actualpics").style.overflowY = "scroll";
   for (i = 0; i < 12; i++) {
     document.getElementsByClassName("oot")[i].classList.remove("hidden");
     document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
@@ -1156,8 +1159,11 @@ function runsearch(querytu) {
   setTimeout(function() {
     cantapagain = true;
   }, 6000);
-  if (isSafeQuery(querytu)) {
+  if (isSafeQuery(querytu.toLowerCase())) {
     document.getElementById("noresults").classList.remove("hidden");
+    document.getElementById("actualpics").scrollTop = 0;
+    window.innerHeight;
+    document.getElementById("actualpics").style.overflowY = "hidden";
     for (i = 0; i < 12; i++) {
       document.getElementsByClassName("oot")[i].classList.add("hidden");
     }
@@ -1219,6 +1225,9 @@ function runsearch(querytu) {
   }
   if (lastone == -1) {
     document.getElementById("noresults").classList.remove("hidden");
+    document.getElementById("actualpics").scrollTop = 0;
+    window.innerHeight;
+    document.getElementById("actualpics").style.overflowY = "hidden";
     for (i = 0; i < 12; i++) {
       document.getElementsByClassName("oot")[i].classList.add("hidden");
     }
