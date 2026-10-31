@@ -1,0 +1,1304 @@
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="manifest" href="../manifest.json"/>
+<script  
+  src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
+  integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer">
+</script>
+<body>
+<span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
+<div id="reminders">
+<div class="srembg hidden" id="srem6"><div class="srem"><img src="../media/images/torafullbody.png" class="srimgtoraa"><div class="wrapbox"></div><div onclick="document.getElementById('srem6').classList.add('hidden'); document.getElementById('srem7').classList.remove('hidden')" class="srembutton">Got it!</div>Use the <img src="../media/images/add.png" class="imginsidetext"> and <img src="../media/images/delete.png" class="imginsidetext"> buttons to add and remove questions you want to study. You can have up to 300 questions and 300 answers.</div></div>
+<div class="srembg hidden" id="srem7">
+<div class="picture"><select class="category"><option>Biology and Life Science</option></select><div class="actualpics">
+<div style="background-image: url('../media/images/setcovers/1.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/2.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/3.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/4.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/5.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/6.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/7.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/8.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/9.png')" class="picselection2"></div>
+<div style="background-image: url('../media/images/setcovers/10.png')" class="picselection2"></div>
+</div></div>
+</div>
+<div id="sidebar">
+<a href="../home/"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a><div style="top: 54dvh" class="hyperlink selected"><img src="../media/images/toolbar/createselected.png" class="hpimg"><p class="hplabel selected">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+
+</div>
+<div id="content">
+<div id='creambackground'>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+</div>
+<div id="heading">
+<div id="fadedbg"></div><span id="nameofset">New Set</span></div>
+
+
+<div id="qaa">Questions/Answers
+<div class="hidden" id="topcreamthing"></div>
+<div id="bottomcreamthing"></div>
+<div id="actualquestions">
+<div onclick="addgroup()" id="addquestion">
+<img src="https://raw.githubusercontent.com/iamliterallyok/studyslooth/refs/heads/main/media/images/add.png" style="filter: invert(1)" class="imginsidetext"> Add Question
+</div>
+<div id="manifest">Manifest
+<p class="lfm">Set Name: </p>
+<textarea maxlength="50" placeholder="Set Name Here..." style="top: 7lvh" class="mb"></textarea>
+<p class="lfm">Set Author: </p>
+<textarea maxlength="50" placeholder="Author's Name Here..." style="top: 14.5lvh" class="mb"></textarea>
+<p class="lfm">Picture: </p>
+<div id="picture">
+<input placeholder="Search" id="searchbar"><button id="searchbutton" onclick="runsearch(document.getElementById('searchbar').value)">🔍︎</button>
+<div id="bottomdisclaimer">ㅤPowered By <img src="https://unsplash-assets.imgix.net/marketing/press-logotype.svg?auto=format&fit=crop&q=60" style="filter: invert(1)" class="imginsidetext2">
+</div>
+
+<div id="actualpics">
+  <span id="noresults">No Results were found for your Search.</span>
+  <div onclick="selectimg(0)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(1)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(2)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(3)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(4)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(5)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(6)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(7)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(8)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(9)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(10)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+  <div onclick="selectimg(11)" class="oot"><div class="ootimg"></div><div class="ootbt"></div></div>
+</div>
+  
+</div>
+</div>
+<div onclick="save()" id="savebtn">Save</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</body>
+<style>
+#noresults {
+  z-index: 10;
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  width: calc(100% - 2lvh);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Fredoka";
+  font-weight: 650;
+  word-wrap: break-word;
+  font-size: 3.5lvh;
+}
+:root {
+  --nopr: calc((round(pow(100dvw / 100lvh, 1.4) * 2, 1)));
+}
+.oot {
+  margin-left: 2lvh;
+  margin-top: 0.5lvh;
+  margin-bottom: 1.5lvh;
+  width: calc((100% - 2lvh * (var(--nopr) + 1)) / var(--nopr));
+  min-height: 15lvh;
+  position: relative;
+  border-radius: 1lvh;
+  overflow: hidden;
+  font-family: "Fredoka";
+  font-weight: 500;
+  outline: 0lvh solid white;
+  transition: 0.1s outline, 0.1s filter;
+  background-color: #c12020;
+}
+.selectedoot {
+  outline: 1lvh solid #c12020;
+  filter: brightness(1.5);
+}
+.selectedoot:hover {
+  outline: 1lvh solid white;
+}
+.oot:hover {
+  outline: 1lvh solid white;
+}
+.ootbt {
+  word-wrap: break-word;
+  position: relative;
+  min-height: 1.75lvh;
+  background-color: #c12020;
+  color: white;
+  padding: 1lvh;
+  font-size: 1.75lvh;
+  left: 0;
+  margin-top: 11.25lvh;
+  width: 100%;
+  text-align: left;
+}
+.ootbt a {
+  text-decoration: underline;
+  color: white;
+}
+.ootimg {
+  position: absolute;
+  height: 11.25lvh;
+  background-color: black;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#actualpics {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 7lvh;
+  width: 100%;
+  left: 0;
+  height: 24lvh;
+  z-index: 100;
+  overflow-y: scroll;
+}
+#picture {
+  background-color: #3a3a3a;
+  width: calc(100% - 4lvh);
+  margin-left: 50%;
+  transform: translate(-50%);
+  height: 35lvh;
+  margin-top: 1lvh;
+  border-radius: 2lvh;
+  margin-bottom: 1.75lvh;
+  overflow: hidden;
+}
+#bottomdisclaimer {
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  height: 3lvh;
+  color: white;
+  font-size: 2lvh;
+  font-family: "Fredoka";
+  font-weight: 450;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 0.5lvh;
+  pointer-events: none;
+}
+#searchbutton {
+  position: absolute;
+  right: 1lvh;
+  top: 1lvh;
+  height: 5lvh;
+  background-color: #c12020;
+  width: 5lvh;
+  border-radius: 1lvh;
+  color: white;
+  font-size: 3lvh;
+  transition: 0.6s filter;
+  border: none;
+  cursor: pointer;
+}
+#searchbutton:hover {
+  filter: brightness(1.2);
+}
+#searchbar {
+  field-sizing: content;
+  color: white;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 3lvh;
+  width: calc(100% - 2lvh);
+  border: none;
+  border-radius: 1lvh;
+  resize: none;
+  left: 50%;
+  height: 5lvh;
+  transform: translate(-50%);
+  background-color: rgba(0,0,0,1);
+  margin-top: 1lvh;
+  padding: 1.5lvh;
+  min-height: 1lvh;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mb {
+  field-sizing: content;
+  color: #3a3a3a;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 3lvh;
+  width: calc(100% - 4lvh);
+  border: none;
+  border-radius: 2lvh;
+  resize: none;
+  margin-left: 50%;
+  transform: translate(-50%);
+  background-color: rgba(255,255,255,1);
+  margin-top: 0.5lvh;
+  padding: 1.5lvh;
+  min-height: 1lvh;
+}
+.picselection {
+  
+}
+#actualpics {
+
+}
+.lfm {
+  font-size: 3lvh;
+  color: white;
+  font-family: "Fredoka";
+  text-align: left;
+  margin-left: 2lvh;
+  margin-bottom: 0.5lvh;
+  margin-top: 2lvh;
+}
+#manifest {
+  overflow: hidden;
+  margin-top: 3lvh;
+  width: calc(100% - 5lvh);
+  border-radius: 3lvh;
+  margin-left: 1lvh;
+  background-color: #ff8500;
+  box-shadow: 0 1lvh 0lvh rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+  padding: 1lvh;
+  padding-top: 2lvh;
+}
+.srembg {
+  z-index: 10000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.imginsidetext {
+  height: 3.5lvh;
+  width: 3.5lvh;
+  position: relative;
+  vertical-align: baseline;
+}
+.imginsidetext2 {
+  top: 2.3lvh;
+  left: 15.5lvh;
+  height: 9lvh;
+  width: 12lvh;
+  position: absolute;
+  vertical-align: baseline;
+  margin-top: -5lvh;
+}
+.wrapbox {
+  position: relative;
+  float: right;
+  width: 19lvh;
+  height: 43.28lvh;
+  margin-right: -9.2lvh;
+  shape-outside: inset(20lvh 0 0 0); /* 20lvh empty space above */
+  clip-path: inset(20lvh 0 0 0); /* for visual debug */
+}
+  .srembutton {
+    background-color: white;         
+    height: 4.5lvh;
+    width: 12.5lvh;
+    color: #c12020;
+    outline: 1.5lvh solid #c12020;
+    font-family: fredokaone;
+    font-size: 3.5lvh;
+    text-align: center;
+    position: absolute;
+    border: none;
+    border-radius: 1lvh;
+    bottom: -3lvh;
+    left: 8.102lvh;
+  }
+  .srimgtora {
+    width: 18lvh;
+    height: 22.28lvh;
+    position: absolute;
+    bottom: -2lvh;
+    right: -8.604lvh;
+  }
+  .srem {
+    font-size: 3.5lvh;
+    color: #c12020;
+    text-align: left;
+    word-wrap: break-word;
+    
+    background-color: white;
+    outline: 2lvh solid #c12020;
+    border-radius: 2lvh;
+    padding: 1lvh;
+    width: 36lvh;
+    height: 36lvh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+.deletegroup {
+  margin-bottom: 3lvh;
+  border-radius: 2lvh;
+  height: 5lvh;
+  padding: 1lvh;
+  width: 20lvh;
+  margin-left: calc(100% - 25lvh);
+  background-color: white;
+  font-family: "Fredoka";
+  font-size: 4lvh;
+}
+.blank:placeholder {
+  color: #3a3a3a;
+}
+.blank {
+  field-sizing: content;
+  color: #3a3a3a;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 3lvh;
+  width: calc(100dvw - 30.75lvh);
+  border: none;
+  border-radius: 2lvh;
+  resize: none;
+  left: 2lvh;
+  background-color: rgba(255,255,255,1);
+  margin-top: 4.5lvh;
+  padding: 1.5lvh;
+  min-height: 1lvh;
+}
+.answer {
+  color: white;
+  white-space: nowrap;
+  font-size: 3lvh;
+  font-weight: normal;
+  text-align: left;
+  width: calc((100% - 6lvh));
+  min-height: 1lvh;
+  border-radius: 1lvh;
+  padding: 1lvh;
+  margin-left: 2lvh;
+  margin-bottom: 2lvh;
+  font-family: "Fredoka";
+  font-weight: 650;
+}
+.questionspan, .answerspan {
+  position: absolute;
+}
+.question {
+  color: white;
+  white-space: nowrap;
+  font-size: 3lvh;
+  font-weight: normal;
+  text-align: left;
+  width: calc((100% - 6lvh));
+  min-height: 1lvh;
+  border-radius: 1lvh;
+  padding: 1lvh;
+  margin-left: 2lvh;
+  margin-top: 2lvh;
+  font-family: "Fredoka";
+  font-weight: 650;
+}
+#actualquestions {
+  width: 100%;
+  height: calc(100% - 8lvh);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  overflow-y: scroll;
+}
+#topcreamthing {
+  position: fixed;
+  top: 28lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 3lvh);
+  z-index: 10000;
+  background-image: linear-gradient(rgb(255,254,240), rgba(0,0,0,0));
+  transition: 0.3s opacity;
+  pointer-events: none;
+}
+#bottomcreamthing {
+  position: fixed;
+  bottom: 4lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 3lvh);
+  z-index: 10000;
+  transition: 0.3s opacity;
+  background-image: linear-gradient(rgba(0,0,0,0), rgb(255,254,240));
+  pointer-events: none;
+}
+.qgroup:hover {
+  transform: translateY(-1lvh);
+  box-shadow: 0 2lvh 0lvh rgba(0,0,0,0.2);
+}
+#manifest:hover {
+  transform: translateY(-1lvh);
+  box-shadow: 0 2lvh 0lvh rgba(0,0,0,0.2);
+}
+.qgroup {
+  overflow: hidden;
+  margin-top: 1lvh;
+  margin-bottom: 3lvh;
+  width: calc(100% - 3lvh);
+  border-radius: 3lvh;
+  margin-left: 1lvh;
+  background-color: #c12020;
+  box-shadow: 0 1lvh 0lvh rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+#savebtn {
+  height: 5lvh;
+  color: white;
+  font-family: "Fredoka";
+  font-size: 4lvh;
+  padding: 1lvh;
+  margin-left: 50%;
+  transform: translate(-50%);
+  background-color: #c12020;
+  opacity: 0.5;
+  margin-top: 3lvh;
+  margin-bottom: 7lvh;
+  border-radius: 3lvh;
+  cursor: pointer;
+  width: 15lvh;
+  box-shadow: 0 1lvh 0lvh rgba(0,0,0,0.2);
+  transition: 0.3s, 0.6s opacity;
+}
+#addquestion {
+  height: 5lvh;
+  color: white;
+  font-family: "Fredoka";
+  font-size: 4lvh;
+  padding: 1lvh;
+  margin-left: calc(50% - 16lvh);
+  background-color: #3a3a3a;
+  margin-top: 2lvh;
+  border-radius: 3lvh;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 32lvh;
+  box-shadow: 0 1lvh 0lvh rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+#qaa {
+  width: calc(100% - 4lvh);
+  height: 75.5lvh;
+  border-radius: 1lvh;
+  position: absolute;
+  left: 2lvh;
+  top: 20lvh;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4.5lvh;
+  font-family: "Special Gothic Condensed One";
+  color: #c12020;
+  letter-spacing: 0.15lvh;
+}
+#nexbutton {
+  background-color: #c12020;
+  left: 4lvh;
+  bottom: 1.5lvh;
+  padding: 1lvh;
+  font-size: 4lvh;
+  border-radius: 3lvh;
+  text-align: center;
+  color: white;
+  outline: 1lvh solid rgb(255,254,240);
+  position: absolute;
+  cursor: pointer;
+  z-index: 20000;
+  transition: 0.6s filter, 0.6s font-size, 0.6s width, 0.6s border-radius;
+}
+#addquestion:hover {
+  transform: translateY(-0.5lvh);
+  box-shadow: 0 1.5lvh 0lvh rgba(0,0,0,0.2);
+}
+#savebtn:hover {
+  transform: translate(-50%, -0.5lvh);
+  box-shadow: 0 1.5lvh 0lvh rgba(0,0,0,0.2);
+}
+.actualpics {
+  width: 100%;
+  overflow: hidden;
+  height: calc(100% - 3lvh);
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
+.selectedpic {
+  filter: brightness(150%);
+  outline: 1lvh solid black;
+}
+.selectedpicdarkmode {
+  backdrop-filter: brightness(67%);
+  outline: 1lvh solid white;
+}
+
+.picselection2 {
+  outline-offset: -1lvh;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 1lvh;
+  height: 8lvh;
+  border-radius: 1lvh;
+}
+.category {
+  pointer-events: none;
+  width: 100%;
+  height: 3lvh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 0;
+  border: 0;
+  background-color: black;
+  color: white;
+}
+.picture {
+  width: calc(((100% - 14.75lvh) - 8lvh) / 2 - 2.5lvh);
+  height: 13lvh;
+  outline: 0.5lvh solid black;
+  background-color: white;
+  border-radius: 0.5lvh;
+  position: absolute;
+  right: 5.5lvh;
+  top: 26.5lvh;
+}
+.obj {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  height: 4lvh;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.5lvh;
+  top: 1.5lvh;
+  border-radius: 1lvh;
+  outline: 1.5lvh solid black;
+}
+#insidetoolbar {
+  width: 43lvh;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+}
+#toolbar {
+  width: 100%;
+  height: 7lvh;
+  top: 20lvh;
+  position: absolute;
+}
+#fadedbg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+#nameofset {
+  width: 100%;
+  text-align: center;
+  max-height: 17.5lvh;
+  position: absolute;
+  left: 50%;
+  font-size: 6lvh;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@font-face {
+  font-family: fredokaone;
+  src: url("../media/fonts/fredokaone.otf");
+}
+body {
+  font-family: fredokaone;
+}
+#logo {
+  height: 90%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.selected {
+  color: white;
+  background-color: #c12020;
+}
+.hpimg {
+  top: 1.5lvh;
+  left: 1.5lvh;
+  width: 9lvh;
+  position: absolute;
+  height: 9lvh;
+}
+.hplabel {
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  left: 50%;
+  bottom: 0.75lvh;
+  height: auto;
+  transform: translate(-50%, 0%);
+}
+.hyperlink {
+  color: #c12020;
+  position: absolute;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
+}
+.author {
+  font-size: 2lvh;
+  font-weight: normal;
+}
+.insidetext {
+  font-weight: bold;
+  font-size: 3lvh;
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.group {
+  height: 15lvh;
+  outline: 1.5lvh solid black;
+  border-radius: 1.5lvh;
+  overflow: hidden;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  filter: brightness(150%);
+}
+#groups {
+  width: 100%;
+  position: absolute;
+  top: 21lvh;
+  height: 200%;
+}
+#heading {
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  width: calc(100% - 14.75lvh);
+  height: 17.5lvh;
+  background-color: #c12020;
+  right: 0;
+  top: 0;
+}
+#content {
+  position: absolute;
+  width: calc(100% - 14.75lvh);
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-image: url("https://raw.githubusercontent.com/iamliterallyok/studyslooth/refs/heads/main/media/images/whitebg.png");
+  background-position: 50% 50%;
+  background-filter: 50%;
+  background-size: cover;
+  overflow: hidden;
+  background-color: rgb(255, 254, 240);
+}
+.creamsicle {
+  width: 50lvh;
+  height: 50lvh;
+  position: absolute;
+  background-color: rgb(255, 254, 240);
+  filter: blur(20lvh);
+  transform: translate(-50%, -50%);
+}
+#creambackground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255, 254, 240, 0.55);
+  z-index: 0;
+}
+.halfwhite {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#sidebar {
+  background-color: white;
+  outline: 3lvh solid #c12020;
+  width: 12lvh;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+}
+.darkmodehyperlink {
+  color: white;
+  position: absolute;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
+}
+select {
+  font-family: fredokaone;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+</style>
+<script>
+if (localStorage.getItem("numofsets")) {} else {
+  localStorage.setItem("numofsets", "0");
+}
+if (sessionStorage.getItem("lsa")) {
+  current = sessionStorage.getItem("lsa");
+} else {
+  window.location.href = "../sets/setnotfound.html"
+}
+numq = 0;
+function removegroup() {
+  for (i = 0; i < document.getElementsByClassName("deletegroup").length; i++) {
+    if (event.target == document.getElementsByClassName("deletegroup")[i] || event.target.parentElement == document.getElementsByClassName("deletegroup")[i]) {
+      groupToDelete = i;
+      break;
+    }
+  }
+  numq--;
+  document.getElementsByClassName("qgroup")[groupToDelete].remove();
+  for (i = groupToDelete; i < document.getElementsByClassName("qgroup").length; i++) {
+    document.getElementsByClassName("questionspan")[i].textContent = "Question ".concat((i + 1).toString(), ": ");
+    document.getElementsByClassName("answerspan")[i].textContent = "Answer ".concat((i + 1).toString(), ": ");
+    document.getElementsByClassName("qgroup")[i].style.top =  0.005 * window.innerHeight + (i * window.innerHeight * 0.16);
+  }
+  resizeeverything();
+}
+document.getElementsByClassName("mb")[0].value = localStorage.getItem(current + "n");
+document.getElementsByClassName("mb")[1].value = localStorage.getItem(current + "a");
+document.getElementById("nameofset").innerHTML = localStorage.getItem(current + "n");
+for (i = 0; i < parseInt(localStorage.getItem(current.concat("qat"))); i++) {
+  addgroup();
+  document.getElementsByClassName("qblank")[i].value = localStorage.getItem(current.concat("q", (i + 1).toString()));
+  document.getElementsByClassName("ablank")[i].value = localStorage.getItem(current.concat("a", (i + 1).toString()));
+}
+function addgroup() {
+  if (numq != 300) {
+  numq++;
+  newGroup = document.createElement("div");
+  newGroup.classList.add("qgroup");
+  document.getElementById("actualquestions").insertBefore(newGroup, document.getElementById("addquestion"));
+  newQ = document.createElement("div");
+  newQ.classList.add("question");
+  newSpan = document.createElement("span");
+  newSpan.innerHTML = "Question ".concat(numq.toString(), ": ");
+  newSpan.classList.add("questionspan");
+  newQ.appendChild(newSpan);  
+  newTxtArea = document.createElement("textarea");
+  newTxtArea.classList.add("blank");
+  newTxtArea.placeholder = "Type out a Question to study here...";
+  newTxtArea.setAttribute("maxlength", "500");
+  newTxtArea.classList.add("qblank");
+  newQ.appendChild(newTxtArea);
+  newGroup.appendChild(newQ);
+  newA = document.createElement("div");
+  newA.classList.add("answer");
+  newSpan = document.createElement("span");
+  newSpan.innerHTML = "Answer ".concat(numq.toString(), ": ");
+  newSpan.classList.add("answerspan");
+  newA.appendChild(newSpan);
+  newTxtArea2 = document.createElement("textarea");
+  newTxtArea2.classList.add("blank");
+  newTxtArea2.placeholder = "...and its corresponding Answer here!";
+  newTxtArea2.classList.add("ablank");
+  newTxtArea2.setAttribute("maxlength", "1000");
+  newA.appendChild(newTxtArea2);
+  newGroup.appendChild(newA);
+  newRemove = document.createElement("div");
+  newRemove.classList.add("deletegroup");
+  newRemove.innerHTML = "<img src='https://raw.githubusercontent.com/iamliterallyok/studyslooth/refs/heads/main/media/images/delete.png' class='imginsidetext'> Delete";
+  newGroup.appendChild(newRemove);
+  newGroup.style.top = 0.005 * window.innerHeight + ((numq - 1) * window.innerHeight * 0.16);
+  newRemove.setAttribute("onclick", "removegroup()");
+  if (localStorage.getItem("darkmode") == "1") {
+    newTxtArea.style.backgroundColor = "black";
+    newTxtArea.style.color = "white";
+    newTxtArea2.style.backgroundColor = "black";
+    newTxtArea2.style.color = "white";
+    newRemove.style.backgroundColor = "black";
+  }
+  }
+}
+function save() {
+  isempty = false;
+  for (i = 0; i < document.getElementsByClassName("qblank").length; i++) {
+    if (document.getElementsByClassName("qblank")[i].value == "" || document.getElementsByClassName("ablank")[i].value == "") {
+      isempty = true;
+    }
+  }
+  if (numq == 0) {
+    alert("Please add at least one question to your set.")
+  } else if (document.getElementsByClassName("mb")[0].value == "") {
+    alert("Please enter a unique set name.")
+  } else if (document.getElementsByClassName("mb")[1].value == "") {
+    alert("Please enter the set author's name.")
+  } else if (isempty) {
+    alert("One of your questions or answers is missing text.")
+  } else if (selectedimage == -1) {
+    alert("Please select a set picture.")
+  } else {
+    localStorage.setItem(current.concat("qat"), numq.toString());
+    localStorage.setItem(current.concat("n"), document.getElementsByClassName("mb")[0].value);
+    localStorage.setItem(current.concat("a"), document.getElementsByClassName("mb")[1].value);
+    localStorage.setItem(current.concat("p"), currentselectedpic.toString());
+    for (i = 0; i < document.getElementsByClassName("qblank").length; i++) {
+      localStorage.setItem(current.concat("q", (i + 1).toString()), document.getElementsByClassName("qblank")[i].value);
+      localStorage.setItem(current.concat("a", (i + 1).toString()), document.getElementsByClassName("ablank")[i].value);
+    }
+    window.location.href = "../../sets/";
+  }
+}
+resizeeverything();
+window.addEventListener("resize", resizeeverything);
+document.getElementById("fadedbg").style.backgroundImage = "url('../media/images/setcovers/" + localStorage.getItem(current + "p") + ".png')";
+selectedimage = localStorage.getItem(current + "p");
+document.getElementById("fadedbg").style.backgroundImage = `url('${localStorage.getItem(current + "p")}')`;
+isbr();
+function redirect(url) {
+  window.location.href = url;
+}
+function resizeeverything() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  space = (window.innerWidth) - window.innerHeight * 0.1475;
+  ratio = height / width;
+  if (ratio > 1) {
+    for (i = 0; i < document.getElementsByClassName("questionspan").length; i++) {
+      document.getElementsByClassName("questionspan")[i].innerHTML = "Q".concat((i + 1).toString(), ": ");
+      document.getElementsByClassName("answerspan")[i].innerHTML = "A".concat((i + 1).toString(), ": ");
+    }
+  } else {
+    for (i = 0; i < document.getElementsByClassName("questionspan").length; i++) {
+      document.getElementsByClassName("questionspan")[i].innerHTML = "Question ".concat((i + 1).toString(), ": ");
+      document.getElementsByClassName("answerspan")[i].innerHTML = "Answer ".concat((i + 1).toString(), ": ");
+    }
+  }
+  for (a = 0; a < document.getElementsByClassName("questionspan").length; a++) {
+    document.getElementsByClassName("qgroup")[a].style.top = (0.005 * window.innerHeight) + (a * window.innerHeight * 0.16);
+  }
+  ratio = (ratio / 3) * 2;
+  margin = window.innerHeight * 0.02;
+  nopr = parseInt((1 / (ratio / 1.5)) * 1.5);
+  for (i = 0; i < document.getElementsByClassName("picselection").length; i++) {
+    document.getElementsByClassName("picselection")[i].style.width = (document.getElementById("actualpics").offsetWidth - (((1 + nopr) / 100) * window.innerHeight)) / nopr;
+    document.getElementsByClassName("picselection2")[i].style.width = (document.getElementById("actualpics").offsetWidth - (((1 + nopr) / 100) * window.innerHeight)) / nopr;
+    widthVal = (document.getElementById("actualpics").offsetWidth - (((1 + nopr) / 100) * window.innerHeight)) / nopr;
+    remainder = (i + 1) % nopr;
+    if (remainder == 0) { remainder = nopr }
+    document.getElementsByClassName("picselection")[i].style.left = (0.01 * window.innerHeight) + ((remainder - 1) * (widthVal + (0.01 * window.innerHeight)));
+    document.getElementsByClassName("picselection2")[i].style.left = (0.01 * window.innerHeight) + ((remainder - 1) * (widthVal + (0.01 * window.innerHeight)));
+    level = ((i + 1) - remainder) / nopr;
+    document.getElementsByClassName("picselection")[i].style.top = 0.01 * window.innerHeight + (level * (0.09 * window.innerHeight));
+    document.getElementsByClassName("picselection2")[i].style.top = 0.01 * window.innerHeight + (level * (0.09 * window.innerHeight));
+  }
+  //resize the text/name
+}
+if (localStorage.getItem("darkmode")) {} else {
+  localStorage.setItem("darkmode", "0");
+}
+arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
+if (localStorage.getItem("darkmode") == "1") {
+  document.body.style.backgroundColor = "black";
+  document.getElementById("heading").style.backgroundColor = "white";
+  document.getElementById("sidebar").style.outline = "3lvh solid white";
+  document.getElementById("sidebar").style.backgroundColor = "black";
+  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
+    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
+      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.color = "black";
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "black.png";
+    } else {
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "selected.png";
+      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
+    }
+  }
+  document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
+  for (i = 0; i < 4; i++) {
+    document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
+  }
+  document.getElementById("topcreamthing").style.backgroundImage = "linear-gradient(#3a3a3a, rgba(0,0,0,0))";
+  document.getElementById("bottomcreamthing").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("creambackground").style.opacity = "0.5";
+  document.getElementById("content").style.backgroundColor = "#3a3a3a";
+  document.getElementsByClassName("mb")[0].style.color = "white";
+  document.getElementsByClassName("mb")[0].style.backgroundColor = "black";
+  document.getElementsByClassName("mb")[1].style.color = "white";
+  document.getElementsByClassName("mb")[1].style.backgroundColor = "black";
+  document.getElementById("nameofset").style.color = "black";
+  document.getElementById("qaa").style.color = "white";
+  document.getElementById("addquestion").style.backgroundColor = "rgb(255,254,240)";
+  document.getElementById("addquestion").style.color = "black";
+  document.getElementById("addquestion").children[0].style.filter = "invert(0)";
+  document.getElementsByClassName("imginsidetext")[0].style.filter = "invert(1)";
+}
+setTimeout(adjustgradients, 1, document.getElementById("actualquestions"));
+document.getElementById("actualquestions").addEventListener("scroll", (event) => {
+  adjustgradients(document.getElementById("actualquestions"));
+}
+);
+function adjustgradients(elementtu) {
+  if (elementtu.scrollTop > 0) {
+    document.getElementById("topcreamthing").classList.remove("hidden");
+  } else {
+    document.getElementById("topcreamthing").classList.add("hidden");
+  }
+  if (Math.floor(elementtu.scrollHeight) > Math.floor(elementtu.scrollTop + elementtu.offsetHeight)) {
+    document.getElementById("bottomcreamthing").classList.remove("hidden");
+  } else {
+    document.getElementById("bottomcreamthing").classList.add("hidden");
+  }
+}
+
+pastQueries = [""]
+pqlist = [[
+"https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YXJ0fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YXJ0fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "adrianna geo",
+  "https://unsplash.com/@adrigeo_",
+  "a painting on the ceiling of a building",
+
+  "https://images.unsplash.com/photo-1628595351029-c2bf17511435?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c2NpZW5jZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1628595351029-c2bf17511435?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c2NpZW5jZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Braňo",
+  "https://unsplash.com/@3dparadise",
+  "dna double helix render on blue",
+
+  "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Z2VvZ3JhcGh5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Z2VvZ3JhcGh5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "Kyle Glenn",
+  "https://unsplash.com/@kylejglenn",
+  "desk globe on table", 
+  "https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bGl0ZXJhdHVyZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bGl0ZXJhdHVyZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Gülfer ERGİN",
+  "https://unsplash.com/@gulfergin_01",
+  "pile of open paperback books",
+
+  "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8aGlzdG9yeXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8aGlzdG9yeXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Andrew Neel",
+  "https://unsplash.com/@andrewtneel",
+  "maps lying on the floor",
+
+  "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Conny Schneider",
+  "https://unsplash.com/@choys_",
+  "a blue background with lines and dots",
+
+  "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8d3JpdGluZ3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8d3JpdGluZ3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Aaron Burden",
+  "https://unsplash.com/@aaronburden",
+  "fountain pen on black lined paper",
+
+  "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljc3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljc3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Artturi Jalli",
+  "https://unsplash.com/@artturijalli",
+  "a chalkboard with some writing on it",
+
+  "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Y2hlbWlzdHJ5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Y2hlbWlzdHJ5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "Vedrana Filipović",
+  "https://unsplash.com/@vedranafilipovic",
+  "round clear glass on white paper",
+
+  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c3R1ZHlpbmd8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c3R1ZHlpbmd8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=85",
+  "Unseen Studio",
+  "https://unsplash.com/@uns__nstudio",
+  "person writing on brown wooden table near white ceramic mug",
+
+  "https://images.unsplash.com/photo-1635372722656-389f87a941b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bWF0aGVtYXRpY3N8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1635372722656-389f87a941b7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bWF0aGVtYXRpY3N8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=85",
+  "Thomas T",
+  "https://unsplash.com/@pyssling240",
+  "a blackboard with a lot of writing on it",
+
+  "https://images.unsplash.com/photo-1576086213369-97a306d36557?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YmlvbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1576086213369-97a306d36557?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YmlvbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "National Cancer Institute",
+  "https://unsplash.com/@nci",
+  "purple cells"
+]];
+//reg first, full res second
+cantapagain = true;
+encryptedTerms = [
+"ZnVjaw==","ZnVja2luZw==","ZnVja2Vy","ZnVja2Vk","ZnVja2FibGU=","ZnVja2ZhY2U=","ZnVja2VyeQ==","ZnVja2hlYWQ=","ZnVja3Vw","ZnVja29mZg==","ZnVja2l0","ZnVja2luZyBvZmY=","ZnVja2VkIHVw","ZnVja2luZyBhcm91bmQ=","ZnVja2luZyBzdHVmZg==",
+"c2hpdA==","c2hpdHR5","c2hpdGhlYWQ=","c2hpdGZhY2U=","c2hpdGxpc3Q=","c2hpdG1hbg==","c2hpdGJyYWlu","c2hpdHN0b3Jt","c2hpdHRlZA==","c2hpdHRpbmc=","c2hpdHRlci","c2hpdGxvYWQ=","c2hpdHBvc3Q=","c2hpdGJveA==","c2hpdHk=",
+"YXNzaG9sZQ==","YXNzaG9sZXM=","YXNzaGF0","YXNzaGF0dGVyeQ==","Yml0Y2g=","Yml0Y2hlcw==","Yml0Y2h5","Yml0Y2hpbmc=","Yml0Y2hzbGFw","Yml0Y2hmaXQ=","Yml0Y2hib3k=","Yml0Y2hmYWNl","ZGFtbg==","ZGFtbWl0","ZGFtbmVk",
+"Y3JhcA==","Y3JhcHB5","Y3JhcHBpbmc=","Y3JhcGZhY2U=","Y3JhcHNob3Q=","c3Vjaw==","c3Vja2Vy","c3Vja2luZw==","c3Vja2Vk","c3Vja3Vw","c3Vja2ZhY2U=","c3Vja3N1Yg==","c3Vja2luZyBvZmY=","bW90aGVyZnVja2Vy","c29uIG9mIGEgYml0Y2g=",
+"c2V4","c2V4dWFs","c2V4dWFsbHk=","c2V4dWFsaXR5","c2V4d29yaw==","c2V4d29ya2Vy","c2V4dGluZw==","cG9ybg==","cG9ybm8=","cG9ybm9ncmFwaHk=","cG9ybiB2aWRlb3M=","cG9ybiBwaWN0dXJlcw==","cG9ybiBzaXRlcw==","cG9ybiBzdGFy","ZnJlZSBwb3Ju",
+"bnVkZQ==","bnVkZXM=","bmFrZWQ=","bmFrZWRuZXNz","bmFrZWQgcGhvdG9z","bmFrZWQgd29tZW4=","bmFrZWQgbWVu","ZXJvdGlj","ZXJvdGljYQ==","ZXhwbGljaXQ=","ZXhwbGljaXQgaW1hZ2Vz","ZXhwbGljaXQgdmlkZW9z","aGFyZGNvcmU=","c29mdGNvcmU=","aGVudGFp",
+"bWFzdHVyYmF0ZQ==","bWFzdHVyYmF0aW9u","b3JnYXNt","b3JnYXNtaWM=","aG9ybnk=","c2V4dGluZw==","c2V4IGNsaXBz","c2V4IHZpZGVvcw==","c2V4IHBpY3R1cmVz","c2V4IHN0b3JpZXM=","c2V4IGNoYXQ=","c2V4IGNhbGw=","c2V4IGd1aWRl","c2V4IHRveXM=","c2V4dWFsIGNvbnRlbnQ=",
+"ZGljaw==","Y29jaw==","cGVuaXM=","dmFnaW5h","cHVzc3k=","Y2xpdA==","Ym9vYnM=","dGl0cw==","YnJlYXN0cw==","YnV0dA==","YW51cw==","c2Nyb3R1bQ==","c2VtZW4=","c3Blcm0=","cG9ybiB0b3k=",
+"cG9ybm8gZ2lybHM=","cG9ybm8gYm95cw==","cG9ybm8gY2xpcHM=","cG9ybm8gc3RhcnM=","cG9ybm8gZnJlZQ==","ZnJlZSBzZXg=","ZnJlZSBudWRlcw==","ZXhwbGljaXQgcGhvdG9z","ZXhwbGljaXQgcGljdHVyZXM=","c2V4dmluZyBwaG90b3M=","c2V4dmluZyB2aWRlb3M=","c2V4dGluZyBpbWFnZXM=","c2V4IGltYWdlcw==","c2V4IHZpZGVv",
+"cmFwZQ==","c2V4dWFsIGFzc2F1bHQ=","c2V4dWFsIGFidXNl","ZXJvdGljIGltYWdlcw==","ZXJvdGljIHZpZGVvcw==","aW50aW1hdGUgaW1hZ2Vz","cHJpdmF0ZSBwaG90b3M=","cHJpdmF0ZSB2aWRlb3M=","c2V4dWFsIHBpY3R1cmVz","c2V4dWFsIHZpZGVvcw==","YWR1bHQgY29udGVudA==","YWR1bHQgaW1hZ2Vz","YWR1bHQgdmlkZW9z","YWR1bHQgc2l0ZXM=","YWR1bHQgZW50ZXJ0YWlubWVudA==",
+"c2x1cg==","cmFjaWFsIHNsdXI=","aG9tb3Bob2JpYw==","dHJhbnNwaG9iaWM=","c2V4aXN0","c2V4aXN0IHNs dXI=","aGF0ZSBzcGVlY2g=","cmFjaWFsIGhhdGU=","cmFjaWFsIGluc3VsdA==","cmFjaWFsIGVwaXRoZXQ=","ZGlzY3JpbWluYXRpb24=","bmF6aQ==","bmF6aXNt","c3VwcmVtYWNpc3Q=","d2hpdGUgc3VwcmVtYWN5",
+"Y29jYWluZQ==","bWV0aGFtcGhldGFtaW5l","aGVyb2lu","bWFyaWp1YW5h","bW9sbHk=","Y3JhY2s=","bWV0aA==","ZmVudGFueWw=","bHNk","cHN5Y2hlZGVsaWM=","ZHJ1Z3M=","ZHJ1ZyB1c2U=","ZHJ1ZyBzYWxl","c3R1ZmYgdG8gZ2V0IGhpZ2g=","c3RyaXBwZXI=",
+"cG9ybg==","cG9ybiBodWI=","cG9ybiBzdGFy","cG9ybiBjbGlw","cG9ybiBjbGlwcw==","cG9ybiBwaG90bw==","cG9ybiBwaG90b3M=","cG9ybiBwaWN0dXJl","cG9ybiBwaWN0dXJlcw==","cG9ybiB2aWRlbw==","cG9ybiB2aWRlb3M=","cG9ybiBzaXRl","cG9ybiBzaXRlcw==","cG9ybiBzZWFyY2g=","cG9ybiBzdHJlYW0=",
+"bnVkZSBwaG90bw==","bnVkZSBwaG90b3M=","bnVkZSBwaWN0dXJl","bnVkZSBwaWN0dXJlcw==","bnVkZSB2aWRlbw==","bnVkZSB2aWRlb3M=","bmFrZWQgcGljdHVyZXM=","bmFrZWQgYm9kaWVz","bmFrZWQgYm9keQ==","bmFrZWQgcGVvcGxl","bmFrZWQgZ2lybHM=","bmFrZWQgYm95cw==","bmFrZWQgd29tYW4=","bmFrZWQgbWFu","bmFrZWQgc2VsZg==",
+"ZXJvdGljIHBpY3R1cmVz","ZXJvdGljIHZpZGVvcw==","ZXJvdGljIHN0b3JpZXM=","ZXJvdGljIGJvb2tz","ZXJvdGljIHNpdGVz","ZXJvdGljIGNvbnRlbnQ=","ZXhwbGljaXQgc2V4","ZXhwbGljaXQgY29udGVudA==","ZXhwbGljaXQgZ2lybHM=","ZXhwbGljaXQgYm95cw==","ZXhwbGljaXQgd29tZW4=","ZXhwbGljaXQgbWVu","ZXhwbGljaXQgbW92aWVz","ZXhwbGljaXQgc2NlbmVz","ZXhwbGljaXQgc2VhcmNo",
+"YWR1bHQgcG9ybg==","YWR1bHQgc2V4","YWR1bHQgbnVkZXM=","YWR1bHQgY2xpcHM=","YWR1bHQgcGljdHVyZXM=","YWR1bHQgdmlkZW8=","YWR1bHQgdmlkZW9z","YWR1bHQgc2VhcmNo","YWR1bHQgc3Rvcmllcw==","YWR1bHQgZmlsbXM=","YWR1bHQgZW50ZXJ0YWlubWVudA==","YWR1bHQgc2l0ZQ==","YWR1bHQgc2l0ZXM=","YWR1bHQgY2hhdA==","YWR1bHQgY29tbXVuaXR5",
+"c2V4eQ==","c2V4aWVzdA==","c2V4eSBwaG90b3M=","c2V4eSB2aWRlb3M=","c2V4eSBwaWN0dXJlcw==","c2V4eSBib2R5","c2V4eSBib2RpZXM=","c2V4eSBjbG90aGVz","c2V4eSBvdXRmaXQ=","c2V4eSBtb2RlbA==","c2V4eSBtb2RlbHM=","c2V4eSBnaXJscw==","c2V4eSBib3lz","c2V4eSB3b21lbg==","c2V4eSBtZW4=",
+"b3JnYXNtIHZpZGVv","b3JnYXNtIHBob3Rv","b3JnYXNtIHBpY3R1cmU=","bWFzdHVyYmF0aW9uIHZpZGVv","bWFzdHVyYmF0aW9uIHBob3Rv","bWFzdHVyYmF0aW9uIHBpY3R1cmU=","c2V4IHRveXM=","c2V4IHRveSBwaG90b3M=","c2V4IHRveSB2aWRlb3M=","c2V4IHNob3A=","c2V4IHByb2R1Y3Rz","c2V4IHN0b3Jl","c2V4IHN0b3Jlcw==","c2V4IGd1aWRl","c2V4IGVkdWNhdGlvbg==",
+"Y2hpbGQgcG9ybg==","Y2hpbGQgZXhwbG9pdGF0aW9u","bWlub3IgcG9ybg==","bWlub3IgZXhwbGljaXQ=","Y2hpbGQgZXhwbGljaXQ=","Y2hpbGQgbnVkZXM=","Y2hpbGQgc2V4dWFs","c2V4dWFsIG1pbm9y","bWlub3Igc2V4dWFs","c2V4dWFsIGNoaWxk","Y2hpbGQgYWJ1c2U=","Y2hpbGQgbW9sZXN0YXRpb24=","Y2hpbGQgc2FmZXR5","c2V4dWFsIGV4cGxvaXRhdGlvbg==","ZXhwbG9pdGF0aW9u",
+"ZnVjaw==","c2hpdA==","YXNzaG9sZQ==","Yml0Y2g=","ZGFtbg==","Y3JhcA==","c3Vjaw==","Y29jaw==","ZGljaw==","cHVzc3k=","cGVuaXM=","dmFnaW5h","Ym9vYnM=","dGl0cw==","YnV0dA==", "bmlnZ2Vy"]
+//These terms were generated by Artificial Intelligence. Study Slooth does not condone nor stand for any of the encrypted terms listed before these lines. Study Slooth seeks to prohibit images searches that may lead to indecent content on a service offered to children.
+
+alphanumeric = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+
+function isSafeQuery(queryttu) {
+    tntu = [...encryptedTerms.map(term => atob(term))];
+    searchQueryTU = separateintowords(queryttu);
+    
+    issafe = true;
+    for (a = 0; a < searchQueryTU.length; a++) {
+        if (tntu.indexOf(searchQueryTU[a]) != -1) {
+            issafe = false;
+            return true;
+            break;
+        }
+    }
+    if (issafe) {
+    return false;
+    }
+}
+function separateintowords(ogs) {
+    finalwords = [];
+    newword = "";
+    originalString = ogs.toString();
+    for (i = 0; i < originalString.length; i++) {
+        if (newword != "" && i+1 == originalString.length) {
+           if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+               newword = newword + originalString[i];
+           }
+           finalwords.push(newword); 
+        } else if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+            newword = newword + originalString[i];
+        } else {
+            if (newword != "") {
+                finalwords.push(newword);
+            }
+            newword = "";
+        }
+    }
+    return finalwords;
+}
+runsearch("");
+function runsearch(querytu) {
+  if (cantapagain) {
+  document.getElementById("noresults").classList.add("hidden");
+  document.getElementById("actualpics").scrollTop = 0;
+  window.innerHeight;
+  document.getElementById("actualpics").style.overflowY = "scroll";
+  for (i = 0; i < 12; i++) {
+    document.getElementsByClassName("oot")[i].classList.remove("hidden");
+    document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
+  }
+  cantapagain = false;
+  setTimeout(function() {
+    cantapagain = true;
+  }, 6000);
+  if (isSafeQuery(querytu.toLowerCase())) {
+    document.getElementById("noresults").classList.remove("hidden");
+    document.getElementById("actualpics").scrollTop = 0;
+    window.innerHeight;
+    document.getElementById("actualpics").style.overflowY = "hidden";
+    for (i = 0; i < 12; i++) {
+      document.getElementsByClassName("oot")[i].classList.add("hidden");
+    }
+  } else {
+  if (pastQueries.indexOf(querytu.toLowerCase()) == -1) {
+    fetch(
+      "https://studyslooth-unsplash.studyslooth.workers.dev/?" +
+      new URLSearchParams({
+        query: querytu,
+        orientation: "landscape",
+        page: "1",
+        order_by: "relevant",
+        content_filter: "high"
+      }))
+      .then(response => response.json())
+      .then(data => {
+        nawp = [];
+        photos = [];
+        for (i = 0; i < data.results.length; i++) {
+        photos.push(data.results[i]);
+        nawp.push(data.results[i].urls.regular);
+        nawp.push(data.results[i].urls.full);
+        nawp.push(data.results[i].user.name);
+        nawp.push(data.results[i].user.links.html);
+        nawp.push(data.results[i].alt_description);
+        }
+        pastQueries.push(querytu.toLowerCase());
+        pqlist.push(nawp);
+        displayResults();
+    });
+  } else {
+    nawp = [...pqlist[pastQueries.indexOf(querytu.toLowerCase())]];
+    displayResults();
+  }
+  }
+
+  function displayResults() {  
+  lastone = -1;
+  for (i = 0; i < nawp.length; i++) {
+    rem = i % 5;
+    wlevel = (i - rem) / 5;
+    rem++;
+    switch (rem) {
+      case 1:
+        document.getElementsByClassName("ootimg")[wlevel].style.backgroundImage = `url("${nawp[i]}")`;
+        if (selectedimage === nawp[i]) {
+          document.getElementsByClassName("ootimg")[wlevel].classList.add("selectedoot");
+        }
+        break;
+      case 3:
+        luname = nawp[i];
+        break;
+      case 4:
+        lunu = nawp[i];
+        document.getElementsByClassName("ootbt")[wlevel].innerHTML = `<a target="_blank" href="${lunu}?utm_source=study_slooth&utm_medium=referral">${luname}</a> on <a target="_blank" href="https://www.unsplash.com?utm_source=study_slooth&utm_medium=referral">Unsplash</a>`
+        break;
+    }
+    lastone = i;
+  }
+  if (lastone == -1) {
+    document.getElementById("noresults").classList.remove("hidden");
+    document.getElementById("actualpics").scrollTop = 0;
+    window.innerHeight;
+    document.getElementById("actualpics").style.overflowY = "hidden";
+    for (i = 0; i < 12; i++) {
+      document.getElementsByClassName("oot")[i].classList.add("hidden");
+    }
+  } else if (lastone < 59) {
+    for (i = 59; i != lastone; i-=5) {
+      document.getElementsByClassName("oot")[(i+1)/5-1].classList.add("hidden");
+    }
+  }
+  currentquery = querytu;
+  }
+  } else {
+    alert("Wait a few seconds before searching again.");
+  }
+}
+
+document.getElementById("searchbar").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    runsearch(document.getElementById("searchbar").value);
+  }
+});
+
+function selectimg(indexto) {
+  document.getElementById("fadedbg").style.backgroundImage = `url('${nawp[indexto*5]}')`;
+  selectedimage = nawp[indexto*5];
+  for (i = 0; i < 12; i++) {
+    if (i == indexto) {
+      document.getElementsByClassName("oot")[i].classList.add("selectedoot");
+    } else {
+      document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
+    }
+  }
+  triggerUnsplashDownload(photos[indexto]);
+}
+
+document.getElementsByClassName("mb")[0].addEventListener("keydown", function() {
+  setTimeout(function() {
+  if (document.getElementsByClassName("mb")[0].value == "") {
+    document.getElementById("nameofset").innerHTML = "New Set";
+  } else {
+    document.getElementById("nameofset").innerHTML = document.getElementsByClassName("mb")[0].value;
+  }
+  }, 10);
+})
+
+window.addEventListener("click", isbr);
+window.addEventListener("keydown", isbr);
+
+function triggerUnsplashDownload(photo) {
+  fetch("https://studyslooth-unsplash.studyslooth.workers.dev/track-download", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      download_location: photo.links.download_location
+    })
+  });
+}
+  
+function isbr() {
+  setTimeout(function() {
+    passblanktest = true;
+    for (i = 0; i < document.getElementsByClassName("blank").length; i++) {
+      if (document.getElementsByClassName("blank")[i].value == "") {
+        passblanktest = false;
+      }
+    }
+    if (
+      document.getElementsByClassName("mb")[0].value != "" &&
+      document.getElementsByClassName("mb")[1].value != "" &&
+      passblanktest &&
+      selectedimage != -1 &&
+      numq > 0
+    ) {
+      document.getElementById("savebtn").style.opacity = 1;
+    } else {
+      document.getElementById("savebtn").style.opacity = 0.5;
+    }
+  }, 10);
+}
+
+</script>
