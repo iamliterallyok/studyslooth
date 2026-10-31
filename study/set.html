@@ -1,0 +1,467 @@
+<head>
+<link rel="manifest" href="manifest.json"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" 
+  integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer">
+</script>
+</head>
+<base href="https://www.studyslooth.com/sets/">
+<body>
+  <span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
+
+<div id="sidebar">
+<a href="../home/"><div style="top: 0lvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5lvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27lvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../sets/"><div style="top: 40.5lvh" class="hyperlink"><img src="../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../create/"><div style="top: 54lvh" class="hyperlink"><img src="../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5lvh" class="hyperlink"><img src="../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../settings/"><div style="top: 85.5lvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+
+</div>
+<div id="content">
+<div id="actcontent">
+<div id="setthing">
+  <div id="naa">
+    <textarea maxlength="50" class="txtarea"></textarea>
+    <textarea maxlength="50" style="margin-top: 1lvh; font-size: clamp(1.5lvh, 3dvw, 4lvh);" class="txtarea"></textarea>
+  </div>
+  <div onclick="window.location.href = '../sets/edit.html'" id="edit">Edit</div>
+  <div id="bgimg"></div>
+</div>
+<div id="holdsbuttons">
+  <div onclick="window.location.href = '../study/study.html'" class="buttonth study">Study</div>
+  <div onclick="window.location.href = '../play/play.html'"class="buttonth play">Play</div>
+  <div onclick="download()" class="buttonth download">Download</div>
+  <div onclick="deleteset()" class="buttonth delete">Delete</div>
+</div>
+</div>
+<div id='creambackground'>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+</div>
+<div id="heading">
+<div id="fadedbg"></div><span id="nameofset">Set Name</span></div>
+</div>
+</div>
+</body>
+<style>
+:root {
+  --nopr: min(calc((round(pow(100dvw / 100lvh, 1.4) * 2, 1))), 2);
+}
+.buttonth {
+  height: 6lvh;
+  width: calc((100% - (var(--nopr)) * 2lvh) / var(--nopr) - 4lvh);
+  margin-left: 1lvh;
+  margin-right: 1lvh; 
+  margin-bottom: 2lvh;
+  cursor: pointer;
+  text-align: center;
+  font-size: 5.5lvh;
+  padding: 2lvh;
+  padding-bottom: 3.5lvh;
+  color: white;
+  box-shadow: 0 1lvh 0 rgba(0,0,0,0.2);
+  border-radius: 4lvh;
+  background-color: #c12020;
+  transition: 0.6s;
+  background-image: none;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.buttonth:hover {
+  box-shadow: 0 2lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+.buttonth.play:hover {
+  background-image: url("https://raw.githubusercontent.com/iamliterallyok/studyslooth/refs/heads/main/media/images/classic/classicbackground.gif");
+}
+.buttonth.study:hover {
+  background-image: url("https://raw.githubusercontent.com/iamliterallyok/studyslooth/refs/heads/main/media/images/studymode/magicmemorizebackground.gif");
+}
+.buttonth.download:hover {
+  background-color: #3a3a3a;
+}
+.buttonth.delete:hover {
+  background-color: #3a3a3a;
+  color: #c12020;
+}
+.buttonth.dmm:hover {
+  background-color: white;
+}
+.buttonth.dmm.download:hover {
+  color: #3a3a3a;
+}
+#holdsbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: 50%;
+  width: calc(100% - 6lvh);
+  max-width: 82lvh;
+  margin-top: 4lvh;
+  transform: translate(-50%);
+}
+.txtarea {
+  margin-left: 50%;
+  transform: translate(-50%);
+  background: none;
+  border: 0.5lvh dashed rgba(255,255,255,0.65);
+  border-radius: 2lvh;
+  text-align: center;
+  resize: none;
+  color: white;
+  min-width: 10lvh;
+  field-sizing: content;
+  max-width: calc(100% - 4lvh);
+  text-overflow: ellipsis;
+  font-family: "Fredoka";
+  font-weight: 650;
+  font-size: clamp(2lvh, 5dvw, 6lvh);
+  overflow: hidden;
+}
+.txtarea:focus {
+  border: 0.5lvh dashed white;
+  outline: none;
+}
+#naa {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+#edit {
+  position: absolute;
+  bottom: 2lvh;
+  right: 2lvh;
+  height: 4lvh;
+  width: 9lvh;
+  border-radius: 6lvh;
+  z-index: 2;
+  border: none;
+  background-color: white;
+  color: #c12020;
+  font-size: 4lvh;
+  padding: 2lvh;
+  padding-top: 1.5lvh;
+  text-align: center;
+  transition: 0.6s;
+}
+#edit:hover {
+  background-color: #c12020;
+  color: white;
+}
+#actcontent {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#bgimg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+#setthing {
+  overflow: hidden;
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: calc(100% - 8lvh);
+  height: 42.5lvh;
+  margin-top: 22lvh;
+  z-index: 1;
+  max-width: 80lvh;
+  border-radius: 6lvh;
+  cursor: pointer;
+  background-color: black;
+  transition: 0.6s;
+  box-shadow: 0lvh 1lvh 0lvh rgba(0,0,0,0.2);
+}
+#setthing:hover {
+  max-width: 84lvh;
+  height: 45lvh;
+  box-shadow: 0lvh 2lvh 0lvh rgba(0,0,0,0.2);
+}
+.creamsicle {
+  width: 50lvh;
+  height: 50lvh;
+  position: absolute;
+  background-color: rgb(255, 254, 240);
+  filter: blur(20lvh);
+  transform: translate(-50%, -50%);
+}
+#creambackground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255, 254, 240, 0.55);
+  z-index: 0;
+}
+#returnhome {
+  outline: 1lvh solid black;
+  height: 5lvh;
+  border-radius: 1lvh;
+  width: 25lvh;
+  top: 38lvh;
+  position: absolute;
+  font-size: 4lvh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: white;
+}
+#jatis {
+  height: 20lvh;
+  width: auto;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 22lvh;
+}
+#message {
+  white-space: nowrap;
+  text-align: center;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+#logo {
+  height: 90%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#fadedbg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+#nameofset {
+  width: 100%;
+  text-align: center;
+  max-height: 17.5lvh;
+  position: absolute;
+  left: 50%;
+  font-size: 6lvh;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@font-face {
+  font-family: fredokaone;
+  src: url("../media/fonts/fredokaone.otf");
+}
+body {
+  font-family: fredokaone;
+  background-color: rgb(255,254,240);
+}
+.selected {
+  color: white;
+  background-color: #c12020;
+}
+.hpimg {
+  top: 1.5lvh;
+  left: 1.5lvh;
+  width: 9lvh;
+  position: absolute;
+  height: 9lvh;
+}
+.hplabel {
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  left: 50%;
+  bottom: 0.75lvh;
+  height: auto;
+  transform: translate(-50%, 0%);
+}
+.hyperlink {
+  color: #c12020;
+  position: absolute;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
+}
+#heading {
+  z-index: 2;
+  position: fixed;
+  overflow: hidden;
+  width: calc(100% - 14.75lvh);
+  height: 17.5lvh;
+  background-color: #c12020;
+  right: 0;
+  top: 0;
+}
+#content {
+  position: absolute;
+  width: calc(100% - 14.75lvh);
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-image: url("../media/images/whitebg.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  overflow: hidden;
+}
+#sidebar {
+  background-color: white;
+  outline: 3lvh solid #c12020;
+  width: 12lvh;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+}
+.darkmodehyperlink {
+  color: white;
+  position: absolute;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
+}
+</style>
+<script>
+{
+  sessionStorage.setItem("lsa", "3");
+  /*
+  localStorage.setItem("3n", "six seven");
+  localStorage.setItem("3a", "kichael");
+  localStorage.setItem("3p", "https://images.unsplash.com/photo-1709688061860-a76fd6c26beb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
+  */
+}
+if (sessionStorage.getItem("lsa")) {
+  current = sessionStorage.getItem("lsa");
+} else {
+  window.location.href = "../sets/setnotfound.html"
+}
+if (localStorage.getItem("darkmode")) {} else {
+  localStorage.setItem("darkmode", "0");
+}
+document.getElementById("bgimg").style.backgroundImage = `url("${localStorage.getItem(current + "p")}")`;
+document.getElementById("fadedbg").style.backgroundImage = `url("${localStorage.getItem(current + "p")}")`;
+document.getElementById("nameofset").innerHTML = localStorage.getItem(current + "n");
+document.getElementsByClassName("txtarea")[0].value = localStorage.getItem(current + "n");
+document.getElementsByClassName("txtarea")[1].value = localStorage.getItem(current + "a");
+arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
+if (localStorage.getItem("darkmode") == "1") {
+  document.body.style.backgroundColor = "black";
+  document.getElementById("heading").style.backgroundColor = "white";
+  document.getElementById("sidebar").style.outline = "3lvh solid white";
+  document.getElementById("sidebar").style.backgroundColor = "black";
+  document.getElementById("nameofset").style.color = "black";
+  document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
+  document.getElementsByClassName("buttonth")[2].classList.add("dmm");
+  document.getElementsByClassName("buttonth")[3].classList.add("dmm");
+  for (i = 0; i < 4; i++) {
+    document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
+  }
+  document.getElementById("creambackground").style.opacity = "0.5";
+  document.body.style.backgroundColor = "#3a3a3a";
+  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
+    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
+      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("hplabel")[i].style.color = "black";
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
+    } else {
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
+      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
+    }
+  }
+}
+document.getElementsByClassName("txtarea")[0].addEventListener("keydown", function() {
+  setTimeout(function() {
+    if (document.getElementsByClassName("txtarea")[0].value != "") {
+      localStorage.setItem(current + "n", document.getElementsByClassName("txtarea")[0].value);
+    }
+    document.getElementById("nameofset").innerHTML = document.getElementsByClassName("txtarea")[0].value;
+  }, 10);
+});
+document.getElementsByClassName("txtarea")[1].addEventListener("keydown", function() {
+  setTimeout(function() {
+    if (document.getElementsByClassName("txtarea")[1].value != "") {
+      localStorage.setItem(current + "a", document.getElementsByClassName("txtarea")[1].value);
+    }
+  }, 10);
+});
+function download() {
+  qaaa = "";
+  for (i = 1; i < (parseInt(localStorage.getItem(current.concat("qat"))) + 1); i++) {
+    qaaa = qaaa.concat(localStorage.getItem(current.concat("q", i.toString())), "\\\\\\", localStorage.getItem(current.toString().concat("a", i.toString())), "\\\\\\");
+  }
+  var blob = new Blob([localStorage.getItem(current.concat("n")).concat("[]", localStorage.getItem(current.concat("a")), "[]", localStorage.getItem(current.concat("p")), "[]", qaaa)], {
+    type: "text/plain;charset=utf-8",
+    });
+  saveAs(blob, localStorage.getItem(current.concat("n")).concat(".studyslooth"));
+}
+function deleteset() {
+  for (i = (parseInt(current) + 1); i < 11; i++) {
+    localStorage.setItem((i - 1).toString().concat("bt"), localStorage.getItem(i.toString().concat("bt")));
+    localStorage.setItem((i - 1).toString().concat("n"), localStorage.getItem(i.toString().concat("n")));
+    localStorage.setItem((i - 1).toString().concat("a"), localStorage.getItem(i.toString().concat("a")));
+    localStorage.setItem((i - 1).toString().concat("qat"), localStorage.getItem(i.toString().concat("qat")));
+    localStorage.setItem((i - 1).toString().concat("p"), localStorage.getItem(i.toString().concat("p")));
+    localStorage.setItem((i - 1).toString().concat("wqc"), localStorage.getItem(i.toString().concat("wqc")));
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("whiteboardrecommended")))) {
+      localStorage.setItem((i - 1).toString().concat("whiteboardrecommended"), localStorage.getItem(i.toString().concat("whiteboardrecommended")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("whiteboardrecommended"));
+    }
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("terms")))) {
+      localStorage.setItem((i - 1).toString().concat("terms"), localStorage.getItem(i.toString().concat("terms")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("terms"));
+    }
+    if (localStorage.getItem(localStorage.getItem(i.toString().concat("chronological")))) {
+      localStorage.setItem((i - 1).toString().concat("chronological"), localStorage.getItem(i.toString().concat("chronological")));
+    } else {
+      localStorage.removeItem((i - 1).toString().concat("chronological"));
+    }
+    for (a = 1; a <= parseInt(localStorage.getItem(i.toString().concat("qat"))); a++) {
+      localStorage.setItem((i - 1).toString().concat("q", a.toString()), localStorage.getItem(i.toString().concat("q", a.toString())));
+      localStorage.setItem((i - 1).toString().concat("a", a.toString()), localStorage.getItem(i.toString().concat("a", a.toString())));
+    }
+  }
+  localStorage.setItem("numofsets", (parseInt(localStorage.getItem("numofsets")) - 1).toString());
+  window.location.href = "../../sets/";
+}
+</script>
+
