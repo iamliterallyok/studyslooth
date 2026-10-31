@@ -889,7 +889,7 @@ function save() {
     localStorage.setItem(current.concat("qat"), numq.toString());
     localStorage.setItem(current.concat("n"), document.getElementsByClassName("mb")[0].value);
     localStorage.setItem(current.concat("a"), document.getElementsByClassName("mb")[1].value);
-    localStorage.setItem(current.concat("p"), currentselectedpic.toString());
+    localStorage.setItem(current.concat("p"), selectedimage);
     for (i = 0; i < document.getElementsByClassName("qblank").length; i++) {
       localStorage.setItem(current.concat("q", (i + 1).toString()), document.getElementsByClassName("qblank")[i].value);
       localStorage.setItem(current.concat("a", (i + 1).toString()), document.getElementsByClassName("ablank")[i].value);
