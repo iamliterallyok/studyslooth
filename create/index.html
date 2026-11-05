@@ -1122,6 +1122,7 @@ window.addEventListener("drc", function() {
   runsearch("");
 });
 function runsearch(querytu) {
+  querytu = querytu.toLowerCase();
   document.getElementById("noresults").classList.add("hidden");
   document.getElementById("actualpics").scrollTop = 0;
   window.innerHeight;
