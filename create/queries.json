@@ -1,0 +1,8159 @@
+[
+  {
+    "query": "mathematics",
+    "aliases": [
+      "math",
+      "maths",
+      "mathematical",
+      "mathematics education",
+      "school math",
+      "numerical studies",
+      "mathematical science",
+      "quantitative reasoning",
+      "mathematical concepts",
+      "math lessons",
+      "math diagrams",
+      "mathematics classroom"
+    ]
+  },
+  {
+    "query": "arithmetic",
+    "aliases": [
+      "basic math",
+      "elementary math",
+      "number operations",
+      "addition",
+      "subtraction",
+      "multiplication",
+      "division",
+      "calculations",
+      "mental math",
+      "counting",
+      "number sense",
+      "arithmetic problems"
+    ]
+  },
+  {
+    "query": "fractions",
+    "aliases": [
+      "fraction math",
+      "parts of a whole",
+      "numerators",
+      "denominators",
+      "mixed numbers",
+      "proper fractions",
+      "improper fractions",
+      "equivalent fractions",
+      "fraction bars",
+      "fraction circles",
+      "fraction operations",
+      "fraction comparison"
+    ]
+  },
+  {
+    "query": "decimals",
+    "aliases": [
+      "decimal numbers",
+      "decimal places",
+      "tenths",
+      "hundredths",
+      "thousandths",
+      "decimal notation",
+      "decimal operations",
+      "place value",
+      "decimal conversion",
+      "decimal models",
+      "decimal fractions"
+    ]
+  },
+  {
+    "query": "percentages",
+    "aliases": [
+      "percent math",
+      "percent signs",
+      "percentage calculations",
+      "discounts",
+      "sales tax",
+      "interest rates",
+      "percent increase",
+      "percent decrease",
+      "percentage change",
+      "percent conversion",
+      "percentage models",
+      "hundredths"
+    ]
+  },
+  {
+    "query": "ratios and proportions",
+    "aliases": [
+      "ratios",
+      "proportions",
+      "ratio tables",
+      "equivalent ratios",
+      "unit rates",
+      "scale factors",
+      "proportional relationships",
+      "cross multiplication",
+      "direct proportion",
+      "indirect proportion",
+      "comparative quantities"
+    ]
+  },
+  {
+    "query": "integers",
+    "aliases": [
+      "positive numbers",
+      "negative numbers",
+      "whole numbers",
+      "number line",
+      "integer operations",
+      "signed numbers",
+      "absolute value",
+      "opposite numbers",
+      "integer addition",
+      "integer subtraction",
+      "integer multiplication",
+      "integer division"
+    ]
+  },
+  {
+    "query": "prime numbers",
+    "aliases": [
+      "primes",
+      "prime factorization",
+      "composite numbers",
+      "factors",
+      "divisibility",
+      "sieve of eratosthenes",
+      "greatest common factor",
+      "least common multiple",
+      "factor trees",
+      "number theory",
+      "divisors",
+      "relatively prime numbers"
+    ]
+  },
+  {
+    "query": "real numbers",
+    "aliases": [
+      "number systems",
+      "rational numbers",
+      "irrational numbers",
+      "integers",
+      "whole numbers",
+      "natural numbers",
+      "number sets",
+      "real number line",
+      "imaginary numbers",
+      "complex numbers",
+      "number classification"
+    ]
+  },
+  {
+    "query": "pre-algebra",
+    "aliases": [
+      "introductory algebra",
+      "basic algebra",
+      "beginning algebra",
+      "variables",
+      "expressions",
+      "number patterns",
+      "order of operations",
+      "pemdas",
+      "equations",
+      "math fundamentals",
+      "algebra foundations"
+    ]
+  },
+  {
+    "query": "algebra",
+    "aliases": [
+      "algebraic math",
+      "algebraic expressions",
+      "variables",
+      "equations",
+      "unknown values",
+      "solving equations",
+      "polynomials",
+      "mathematical symbols",
+      "algebra problems",
+      "algebra worksheets",
+      "algebraic reasoning",
+      "school algebra"
+    ]
+  },
+  {
+    "query": "linear equations",
+    "aliases": [
+      "solving for x",
+      "one variable equations",
+      "two variable equations",
+      "slope intercept form",
+      "systems of equations",
+      "linear functions",
+      "equation graphs",
+      "y equals mx plus b",
+      "coordinate plane",
+      "linear relationships",
+      "simultaneous equations",
+      "intercepts"
+    ]
+  },
+  {
+    "query": "quadratic equations",
+    "aliases": [
+      "parabolas",
+      "quadratic formula",
+      "factoring quadratics",
+      "completing the square",
+      "second degree equations",
+      "quadratic functions",
+      "roots",
+      "zeros",
+      "discriminant",
+      "vertex form",
+      "quadratic graphs",
+      "x squared equations"
+    ]
+  },
+  {
+    "query": "polynomials",
+    "aliases": [
+      "polynomial expressions",
+      "monomials",
+      "binomials",
+      "trinomials",
+      "polynomial functions",
+      "polynomial equations",
+      "factoring polynomials",
+      "polynomial degree",
+      "coefficients",
+      "synthetic division",
+      "polynomial graphs",
+      "algebraic terms"
+    ]
+  },
+  {
+    "query": "exponents",
+    "aliases": [
+      "exponent rules",
+      "powers of numbers",
+      "squared numbers",
+      "cubed numbers",
+      "indices",
+      "integer exponents",
+      "negative exponents",
+      "fractional exponents",
+      "power notation",
+      "scientific notation",
+      "laws of exponents",
+      "repeated multiplication"
+    ]
+  },
+  {
+    "query": "logarithms",
+    "aliases": [
+      "log functions",
+      "logarithmic equations",
+      "natural logarithms",
+      "common logarithms",
+      "logarithmic scales",
+      "log rules",
+      "exponential inverse",
+      "logarithmic graphs",
+      "base ten logarithms",
+      "ln functions",
+      "logarithmic expressions"
+    ]
+  },
+  {
+    "query": "sequences and series",
+    "aliases": [
+      "number sequences",
+      "arithmetic sequences",
+      "geometric sequences",
+      "fibonacci sequence",
+      "sequence patterns",
+      "infinite series",
+      "finite series",
+      "summation",
+      "recursive sequences",
+      "series notation",
+      "common difference",
+      "common ratio"
+    ]
+  },
+  {
+    "query": "mathematical functions",
+    "aliases": [
+      "functions in math",
+      "input and output",
+      "domain and range",
+      "function notation",
+      "mapping diagrams",
+      "function machines",
+      "independent variables",
+      "dependent variables",
+      "function rules",
+      "function graphs",
+      "inverse functions",
+      "composite functions"
+    ]
+  },
+  {
+    "query": "exponential functions",
+    "aliases": [
+      "exponential growth",
+      "exponential decay",
+      "growth curves",
+      "decay curves",
+      "doubling time",
+      "half life",
+      "compound interest",
+      "exponential equations",
+      "exponential graphs",
+      "growth models",
+      "decay models",
+      "exponential relationships"
+    ]
+  },
+  {
+    "query": "geometry",
+    "aliases": [
+      "shapes",
+      "geometric figures",
+      "spatial mathematics",
+      "points lines and planes",
+      "angles",
+      "polygons",
+      "circles",
+      "solids",
+      "geometric proofs",
+      "geometric constructions",
+      "euclidean geometry",
+      "plane geometry",
+      "solid geometry"
+    ]
+  },
+  {
+    "query": "triangles",
+    "aliases": [
+      "triangle geometry",
+      "equilateral triangles",
+      "isosceles triangles",
+      "scalene triangles",
+      "right triangles",
+      "acute triangles",
+      "obtuse triangles",
+      "triangle angles",
+      "triangle sides",
+      "triangle area",
+      "pythagorean theorem",
+      "congruent triangles",
+      "similar triangles"
+    ]
+  },
+  {
+    "query": "circles",
+    "aliases": [
+      "circle geometry",
+      "radius",
+      "diameter",
+      "circumference",
+      "area of a circle",
+      "pi",
+      "circle theorems",
+      "arcs",
+      "chords",
+      "sectors",
+      "tangents",
+      "concentric circles",
+      "circle equations"
+    ]
+  },
+  {
+    "query": "three dimensional geometry",
+    "aliases": [
+      "3d geometry",
+      "solid geometry",
+      "three dimensional shapes",
+      "cubes",
+      "spheres",
+      "cones",
+      "cylinders",
+      "prisms",
+      "pyramids",
+      "polyhedra",
+      "surface area",
+      "volume",
+      "spatial geometry"
+    ]
+  },
+  {
+    "query": "coordinate geometry",
+    "aliases": [
+      "analytic geometry",
+      "cartesian plane",
+      "coordinate plane",
+      "x axis",
+      "y axis",
+      "ordered pairs",
+      "plotting points",
+      "distance formula",
+      "midpoint formula",
+      "slope",
+      "coordinate graphs",
+      "cartesian coordinates"
+    ]
+  },
+  {
+    "query": "trigonometry",
+    "aliases": [
+      "trig",
+      "sine",
+      "cosine",
+      "tangent",
+      "soh cah toa",
+      "trigonometric functions",
+      "right triangle trigonometry",
+      "unit circle",
+      "trigonometric ratios",
+      "trig identities",
+      "angle measurements",
+      "radians",
+      "degrees"
+    ]
+  },
+  {
+    "query": "unit circle",
+    "aliases": [
+      "trigonometric circle",
+      "radian circle",
+      "sine and cosine circle",
+      "unit circle chart",
+      "trig values",
+      "special angles",
+      "reference angles",
+      "quadrants",
+      "radian measurements",
+      "trigonometric coordinates",
+      "circle of radius one"
+    ]
+  },
+  {
+    "query": "calculus",
+    "aliases": [
+      "advanced mathematics",
+      "differential calculus",
+      "integral calculus",
+      "limits",
+      "derivatives",
+      "integrals",
+      "rates of change",
+      "area under curves",
+      "calculus graphs",
+      "calculus equations",
+      "continuous change",
+      "mathematical analysis"
+    ]
+  },
+  {
+    "query": "derivatives",
+    "aliases": [
+      "differentiation",
+      "derivative rules",
+      "instantaneous rate of change",
+      "slope of a curve",
+      "power rule",
+      "chain rule",
+      "product rule",
+      "quotient rule",
+      "tangent lines",
+      "derivative graphs",
+      "first derivative",
+      "second derivative"
+    ]
+  },
+  {
+    "query": "integrals",
+    "aliases": [
+      "integration",
+      "definite integrals",
+      "indefinite integrals",
+      "antiderivatives",
+      "area under a curve",
+      "integration rules",
+      "integration techniques",
+      "riemann sums",
+      "integration by parts",
+      "u substitution",
+      "accumulation functions"
+    ]
+  },
+  {
+    "query": "statistics",
+    "aliases": [
+      "data analysis",
+      "statistical mathematics",
+      "data sets",
+      "mean",
+      "median",
+      "mode",
+      "standard deviation",
+      "variance",
+      "statistical graphs",
+      "data interpretation",
+      "descriptive statistics",
+      "inferential statistics",
+      "frequency distributions"
+    ]
+  },
+  {
+    "query": "probability",
+    "aliases": [
+      "chance",
+      "likelihood",
+      "random events",
+      "probability theory",
+      "probability distributions",
+      "independent events",
+      "dependent events",
+      "conditional probability",
+      "expected value",
+      "probability trees",
+      "dice probability",
+      "coin flips",
+      "combinations",
+      "permutations"
+    ]
+  },
+  {
+    "query": "combinatorics",
+    "aliases": [
+      "counting mathematics",
+      "permutations",
+      "combinations",
+      "factorials",
+      "counting principles",
+      "arrangements",
+      "selections",
+      "binomial theorem",
+      "pascal's triangle",
+      "combinatorial mathematics",
+      "discrete counting"
+    ]
+  },
+  {
+    "query": "number patterns",
+    "aliases": [
+      "mathematical patterns",
+      "number sequences",
+      "arithmetic patterns",
+      "geometric patterns",
+      "fibonacci numbers",
+      "repeating patterns",
+      "growing patterns",
+      "recursive patterns",
+      "visual patterns",
+      "sequence rules",
+      "pattern recognition"
+    ]
+  },
+  {
+    "query": "measurement",
+    "aliases": [
+      "units of measurement",
+      "length",
+      "mass",
+      "weight",
+      "volume",
+      "capacity",
+      "temperature",
+      "metric system",
+      "customary units",
+      "unit conversion",
+      "measuring tools",
+      "measurement scales"
+    ]
+  },
+  {
+    "query": "mathematical logic",
+    "aliases": [
+      "logic",
+      "logical reasoning",
+      "propositions",
+      "truth tables",
+      "deductive reasoning",
+      "inductive reasoning",
+      "proofs",
+      "mathematical statements",
+      "logical operators",
+      "sets and logic",
+      "formal logic"
+    ]
+  },
+  {
+    "query": "set theory",
+    "aliases": [
+      "sets",
+      "set notation",
+      "unions",
+      "intersections",
+      "subsets",
+      "complements",
+      "venn diagrams",
+      "universal sets",
+      "empty sets",
+      "set operations",
+      "mathematical sets"
+    ]
+  },
+  {
+    "query": "vectors",
+    "aliases": [
+      "vector mathematics",
+      "vector quantities",
+      "magnitude and direction",
+      "vector addition",
+      "vector subtraction",
+      "components",
+      "unit vectors",
+      "position vectors",
+      "vector diagrams",
+      "dot product",
+      "cross product"
+    ]
+  },
+  {
+    "query": "matrices",
+    "aliases": [
+      "matrix mathematics",
+      "matrix algebra",
+      "rows and columns",
+      "matrix operations",
+      "determinants",
+      "inverse matrices",
+      "identity matrix",
+      "transpose",
+      "linear transformations",
+      "matrix multiplication",
+      "systems of equations"
+    ]
+  },
+  {
+    "query": "financial mathematics",
+    "aliases": [
+      "business math",
+      "money math",
+      "interest calculations",
+      "simple interest",
+      "compound interest",
+      "loans",
+      "mortgages",
+      "budgets",
+      "tax calculations",
+      "financial formulas",
+      "percentages",
+      "personal finance math"
+    ]
+  },
+  {
+    "query": "biology",
+    "aliases": [
+      "life science",
+      "living organisms",
+      "study of life",
+      "biological science",
+      "organisms",
+      "living things",
+      "plants and animals",
+      "biological systems",
+      "life processes",
+      "biology diagrams",
+      "natural life",
+      "biological research"
+    ]
+  },
+  {
+    "query": "cell biology",
+    "aliases": [
+      "cells",
+      "cell science",
+      "cell structures",
+      "cell diagrams",
+      "microscopic cells",
+      "animal cells",
+      "plant cells",
+      "cell organelles",
+      "cell membrane",
+      "cytoplasm",
+      "nucleus",
+      "cell theory",
+      "cell functions"
+    ]
+  },
+  {
+    "query": "animal cells",
+    "aliases": [
+      "animal cell diagram",
+      "animal cell structure",
+      "eukaryotic cells",
+      "cell nucleus",
+      "mitochondria",
+      "cytoplasm",
+      "cell membrane",
+      "lysosomes",
+      "ribosomes",
+      "animal cell model",
+      "cell anatomy",
+      "animal cell parts"
+    ]
+  },
+  {
+    "query": "plant cells",
+    "aliases": [
+      "plant cell diagram",
+      "plant cell structure",
+      "chloroplasts",
+      "cell wall",
+      "central vacuole",
+      "plant cell organelles",
+      "photosynthetic cells",
+      "eukaryotic plant cells",
+      "plant cell model",
+      "cell anatomy",
+      "plant cell parts"
+    ]
+  },
+  {
+    "query": "cell division",
+    "aliases": [
+      "mitosis",
+      "meiosis",
+      "cell reproduction",
+      "cell cycle",
+      "daughter cells",
+      "chromosomes",
+      "prophase",
+      "metaphase",
+      "anaphase",
+      "telophase",
+      "cytokinesis",
+      "nuclear division"
+    ]
+  },
+  {
+    "query": "genetics",
+    "aliases": [
+      "heredity",
+      "dna inheritance",
+      "genes",
+      "genetic traits",
+      "alleles",
+      "dominant traits",
+      "recessive traits",
+      "genetic variation",
+      "chromosomes",
+      "inheritance patterns",
+      "punnett squares",
+      "genetic information"
+    ]
+  },
+  {
+    "query": "dna",
+    "aliases": [
+      "deoxyribonucleic acid",
+      "dna structure",
+      "double helix",
+      "genetic code",
+      "nucleotides",
+      "dna replication",
+      "genes",
+      "base pairs",
+      "adenine",
+      "thymine",
+      "guanine",
+      "cytosine",
+      "genetic material"
+    ]
+  },
+  {
+    "query": "rna",
+    "aliases": [
+      "ribonucleic acid",
+      "messenger rna",
+      "mrna",
+      "transfer rna",
+      "trna",
+      "ribosomal rna",
+      "rrna",
+      "rna structure",
+      "transcription",
+      "translation",
+      "protein synthesis",
+      "nucleic acids"
+    ]
+  },
+  {
+    "query": "evolution",
+    "aliases": [
+      "evolutionary biology",
+      "natural selection",
+      "adaptation",
+      "common ancestry",
+      "species evolution",
+      "evolutionary theory",
+      "charles darwin",
+      "genetic variation",
+      "speciation",
+      "fossil evidence",
+      "evolutionary tree",
+      "phylogenetics"
+    ]
+  },
+  {
+    "query": "human anatomy",
+    "aliases": [
+      "anatomy",
+      "human body",
+      "body systems",
+      "organs",
+      "organ systems",
+      "skeletal system",
+      "muscular system",
+      "nervous system",
+      "circulatory system",
+      "digestive system",
+      "respiratory system",
+      "human physiology",
+      "anatomical diagrams"
+    ]
+  },
+  {
+    "query": "human physiology",
+    "aliases": [
+      "body functions",
+      "physiology",
+      "how the body works",
+      "organ function",
+      "human systems",
+      "homeostasis",
+      "body regulation",
+      "circulation",
+      "respiration",
+      "digestion",
+      "hormones",
+      "physiological processes"
+    ]
+  },
+  {
+    "query": "skeletal system",
+    "aliases": [
+      "human skeleton",
+      "bones",
+      "bone anatomy",
+      "skull",
+      "spine",
+      "vertebrae",
+      "ribs",
+      "pelvis",
+      "femur",
+      "humerus",
+      "joints",
+      "cartilage",
+      "skeleton diagram"
+    ]
+  },
+  {
+    "query": "muscular system",
+    "aliases": [
+      "muscles",
+      "human muscles",
+      "muscle anatomy",
+      "skeletal muscles",
+      "smooth muscles",
+      "cardiac muscle",
+      "biceps",
+      "triceps",
+      "quadriceps",
+      "hamstrings",
+      "muscle groups",
+      "muscle fibers",
+      "muscle diagrams"
+    ]
+  },
+  {
+    "query": "nervous system",
+    "aliases": [
+      "brain",
+      "spinal cord",
+      "neurons",
+      "nerves",
+      "central nervous system",
+      "peripheral nervous system",
+      "neural pathways",
+      "nerve cells",
+      "synapses",
+      "brain anatomy",
+      "sensory neurons",
+      "motor neurons",
+      "neurobiology"
+    ]
+  },
+  {
+    "query": "circulatory system",
+    "aliases": [
+      "cardiovascular system",
+      "heart",
+      "blood vessels",
+      "arteries",
+      "veins",
+      "capillaries",
+      "blood circulation",
+      "red blood cells",
+      "white blood cells",
+      "plasma",
+      "heart anatomy",
+      "blood flow",
+      "cardiac system"
+    ]
+  },
+  {
+    "query": "digestive system",
+    "aliases": [
+      "human digestion",
+      "digestive organs",
+      "stomach",
+      "small intestine",
+      "large intestine",
+      "esophagus",
+      "liver",
+      "pancreas",
+      "gallbladder",
+      "digestive tract",
+      "nutrient absorption",
+      "gastrointestinal system"
+    ]
+  },
+  {
+    "query": "respiratory system",
+    "aliases": [
+      "human lungs",
+      "breathing",
+      "respiration",
+      "airways",
+      "trachea",
+      "bronchi",
+      "alveoli",
+      "diaphragm",
+      "lung anatomy",
+      "gas exchange",
+      "oxygen",
+      "carbon dioxide",
+      "pulmonary system"
+    ]
+  },
+  {
+    "query": "ecology",
+    "aliases": [
+      "ecosystems",
+      "environmental biology",
+      "organisms and environment",
+      "ecological relationships",
+      "habitats",
+      "biodiversity",
+      "food webs",
+      "food chains",
+      "ecological balance",
+      "populations",
+      "communities",
+      "ecological systems"
+    ]
+  },
+  {
+    "query": "ecosystems",
+    "aliases": [
+      "ecosystem science",
+      "biomes",
+      "habitats",
+      "ecological communities",
+      "food chains",
+      "food webs",
+      "producers",
+      "consumers",
+      "decomposers",
+      "energy flow",
+      "nutrient cycles",
+      "terrestrial ecosystems",
+      "aquatic ecosystems"
+    ]
+  },
+  {
+    "query": "photosynthesis",
+    "aliases": [
+      "plant food production",
+      "chlorophyll",
+      "sunlight and plants",
+      "light energy",
+      "carbon dioxide absorption",
+      "glucose production",
+      "oxygen production",
+      "photosynthesis diagram",
+      "chloroplasts",
+      "calvin cycle",
+      "light reactions",
+      "plant energy"
+    ]
+  },
+  {
+    "query": "cellular respiration",
+    "aliases": [
+      "aerobic respiration",
+      "anaerobic respiration",
+      "atp production",
+      "cell energy",
+      "mitochondria",
+      "glycolysis",
+      "krebs cycle",
+      "citric acid cycle",
+      "electron transport chain",
+      "glucose breakdown",
+      "energy metabolism",
+      "respiration diagram"
+    ]
+  },
+  {
+    "query": "microbiology",
+    "aliases": [
+      "microorganisms",
+      "microbes",
+      "microscopic organisms",
+      "bacteria",
+      "viruses",
+      "fungi",
+      "protozoa",
+      "microbial science",
+      "microbiology laboratory",
+      "microbial cultures",
+      "microscope slides",
+      "microbial life"
+    ]
+  },
+  {
+    "query": "bacteria",
+    "aliases": [
+      "bacterial cells",
+      "microbes",
+      "prokaryotes",
+      "bacilli",
+      "cocci",
+      "spirilla",
+      "bacterial colonies",
+      "bacterial cultures",
+      "bacterial structure",
+      "microbiology",
+      "beneficial bacteria",
+      "harmful bacteria"
+    ]
+  },
+  {
+    "query": "viruses",
+    "aliases": [
+      "viral biology",
+      "viral particles",
+      "virus structure",
+      "capsid",
+      "viral infection",
+      "viral replication",
+      "bacteriophages",
+      "influenza virus",
+      "coronavirus",
+      "microscopic viruses",
+      "virology",
+      "virus diagrams"
+    ]
+  },
+  {
+    "query": "fungi",
+    "aliases": [
+      "fungus",
+      "mushrooms",
+      "molds",
+      "yeasts",
+      "mycology",
+      "fungal organisms",
+      "spores",
+      "hyphae",
+      "mycelium",
+      "fungal cells",
+      "fungal kingdom",
+      "fungal biology"
+    ]
+  },
+  {
+    "query": "botany",
+    "aliases": [
+      "plant science",
+      "plant biology",
+      "plants",
+      "plant anatomy",
+      "plant classification",
+      "plant structures",
+      "plant reproduction",
+      "leaves",
+      "roots",
+      "stems",
+      "flowers",
+      "botanical studies"
+    ]
+  },
+  {
+    "query": "plant reproduction",
+    "aliases": [
+      "pollination",
+      "fertilization in plants",
+      "plant life cycle",
+      "seeds",
+      "seed dispersal",
+      "flower reproduction",
+      "pollen",
+      "stamens",
+      "pistils",
+      "angiosperms",
+      "gymnosperms",
+      "plant propagation"
+    ]
+  },
+  {
+    "query": "zoology",
+    "aliases": [
+      "animal science",
+      "animal biology",
+      "animal kingdom",
+      "animal classification",
+      "vertebrates",
+      "invertebrates",
+      "animal anatomy",
+      "animal behavior",
+      "wildlife biology",
+      "animal habitats",
+      "species",
+      "zoological studies"
+    ]
+  },
+  {
+    "query": "animal classification",
+    "aliases": [
+      "taxonomy",
+      "biological classification",
+      "kingdoms",
+      "phyla",
+      "classes",
+      "orders",
+      "families",
+      "genera",
+      "species",
+      "binomial nomenclature",
+      "vertebrate groups",
+      "invertebrate groups"
+    ]
+  },
+  {
+    "query": "animal behavior",
+    "aliases": [
+      "ethology",
+      "animal instincts",
+      "migration",
+      "hibernation",
+      "territorial behavior",
+      "social behavior",
+      "communication",
+      "mating behavior",
+      "foraging",
+      "predator behavior",
+      "pack behavior",
+      "wildlife behavior"
+    ]
+  },
+  {
+    "query": "marine biology",
+    "aliases": [
+      "ocean life",
+      "marine organisms",
+      "sea animals",
+      "coral reefs",
+      "marine ecosystems",
+      "ocean biodiversity",
+      "fish biology",
+      "marine mammals",
+      "plankton",
+      "underwater life",
+      "marine conservation",
+      "aquatic biology"
+    ]
+  },
+  {
+    "query": "biotechnology",
+    "aliases": [
+      "biological technology",
+      "genetic engineering",
+      "biomedical technology",
+      "biotechnology laboratory",
+      "dna technology",
+      "gene editing",
+      "crispr",
+      "biomanufacturing",
+      "biological research",
+      "industrial biotechnology",
+      "medical biotechnology"
+    ]
+  },
+  {
+    "query": "chemistry",
+    "aliases": [
+      "chemical science",
+      "matter",
+      "chemical reactions",
+      "elements",
+      "compounds",
+      "molecules",
+      "atoms",
+      "laboratory chemistry",
+      "chemical substances",
+      "chemical formulas",
+      "chemistry experiments",
+      "chemical properties"
+    ]
+  },
+  {
+    "query": "atomic structure",
+    "aliases": [
+      "atom",
+      "atomic model",
+      "protons",
+      "neutrons",
+      "electrons",
+      "electron shells",
+      "nucleus",
+      "atomic particles",
+      "atomic number",
+      "mass number",
+      "isotopes",
+      "bohr model",
+      "electron cloud"
+    ]
+  },
+  {
+    "query": "periodic table",
+    "aliases": [
+      "periodic table of elements",
+      "chemical elements",
+      "element chart",
+      "element symbols",
+      "atomic numbers",
+      "periodic trends",
+      "periods and groups",
+      "metals",
+      "nonmetals",
+      "metalloids",
+      "alkali metals",
+      "noble gases",
+      "transition metals"
+    ]
+  },
+  {
+    "query": "chemical elements",
+    "aliases": [
+      "elements",
+      "element names",
+      "element symbols",
+      "periodic elements",
+      "pure substances",
+      "atomic numbers",
+      "metal elements",
+      "nonmetal elements",
+      "metalloids",
+      "element samples",
+      "element properties",
+      "element collection"
+    ]
+  },
+  {
+    "query": "chemical bonds",
+    "aliases": [
+      "chemical bonding",
+      "ionic bonds",
+      "covalent bonds",
+      "metallic bonds",
+      "polar bonds",
+      "nonpolar bonds",
+      "electronegativity",
+      "valence electrons",
+      "molecular bonds",
+      "lewis structures",
+      "bond formation",
+      "intermolecular forces"
+    ]
+  },
+  {
+    "query": "molecules",
+    "aliases": [
+      "molecular structures",
+      "chemical molecules",
+      "molecular models",
+      "molecular geometry",
+      "atoms and molecules",
+      "molecular compounds",
+      "chemical structures",
+      "molecule diagrams",
+      "molecular bonds",
+      "water molecule",
+      "organic molecules",
+      "molecular formulas"
+    ]
+  },
+  {
+    "query": "chemical reactions",
+    "aliases": [
+      "chemical equations",
+      "reactants",
+      "products",
+      "reaction types",
+      "synthesis reactions",
+      "decomposition reactions",
+      "combustion",
+      "single replacement",
+      "double replacement",
+      "oxidation",
+      "reduction",
+      "balancing equations"
+    ]
+  },
+  {
+    "query": "stoichiometry",
+    "aliases": [
+      "chemical calculations",
+      "mole ratios",
+      "mole conversions",
+      "reaction quantities",
+      "limiting reactants",
+      "excess reactants",
+      "theoretical yield",
+      "actual yield",
+      "percent yield",
+      "balanced equations",
+      "chemical proportions",
+      "molar calculations"
+    ]
+  },
+  {
+    "query": "states of matter",
+    "aliases": [
+      "solid liquid gas",
+      "plasma",
+      "phases of matter",
+      "matter states",
+      "melting",
+      "freezing",
+      "evaporation",
+      "condensation",
+      "sublimation",
+      "deposition",
+      "phase transitions",
+      "particle models",
+      "kinetic molecular theory"
+    ]
+  },
+  {
+    "query": "solutions and mixtures",
+    "aliases": [
+      "mixtures",
+      "solutions",
+      "homogeneous mixtures",
+      "heterogeneous mixtures",
+      "solutes",
+      "solvents",
+      "concentrations",
+      "suspensions",
+      "colloids",
+      "dissolving",
+      "solubility",
+      "solution chemistry",
+      "separation techniques"
+    ]
+  },
+  {
+    "query": "acids and bases",
+    "aliases": [
+      "acid base chemistry",
+      "ph scale",
+      "acidic substances",
+      "alkaline substances",
+      "basic solutions",
+      "neutralization",
+      "indicators",
+      "litmus paper",
+      "strong acids",
+      "weak acids",
+      "strong bases",
+      "weak bases",
+      "hydrogen ions",
+      "hydroxide ions"
+    ]
+  },
+  {
+    "query": "organic chemistry",
+    "aliases": [
+      "carbon chemistry",
+      "carbon compounds",
+      "hydrocarbons",
+      "organic molecules",
+      "alkanes",
+      "alkenes",
+      "alkynes",
+      "functional groups",
+      "organic reactions",
+      "carbon chains",
+      "organic structures",
+      "isomers",
+      "polymer chemistry"
+    ]
+  },
+  {
+    "query": "polymers",
+    "aliases": [
+      "polymer science",
+      "plastics",
+      "macromolecules",
+      "monomers",
+      "polymer chains",
+      "synthetic polymers",
+      "natural polymers",
+      "polymerization",
+      "polyethylene",
+      "nylon",
+      "rubber",
+      "polymer structures"
+    ]
+  },
+  {
+    "query": "chemistry laboratory",
+    "aliases": [
+      "science lab",
+      "chemistry experiments",
+      "laboratory equipment",
+      "test tubes",
+      "beakers",
+      "flasks",
+      "graduated cylinders",
+      "pipettes",
+      "burettes",
+      "bunsen burners",
+      "chemical glassware",
+      "lab apparatus",
+      "laboratory science"
+    ]
+  },
+  {
+    "query": "chemical indicators",
+    "aliases": [
+      "ph indicators",
+      "litmus",
+      "universal indicator",
+      "phenolphthalein",
+      "bromothymol blue",
+      "acid base indicators",
+      "color change reactions",
+      "indicator solutions",
+      "chemical testing",
+      "ph paper",
+      "titration indicators"
+    ]
+  },
+  {
+    "query": "physics",
+    "aliases": [
+      "physical science",
+      "matter and energy",
+      "forces and motion",
+      "energy",
+      "mechanics",
+      "waves",
+      "electricity",
+      "magnetism",
+      "thermodynamics",
+      "quantum physics",
+      "classical physics",
+      "physical phenomena"
+    ]
+  },
+  {
+    "query": "motion and kinematics",
+    "aliases": [
+      "motion",
+      "kinematics",
+      "speed",
+      "velocity",
+      "acceleration",
+      "displacement",
+      "distance",
+      "position",
+      "motion graphs",
+      "distance time graphs",
+      "velocity time graphs",
+      "projectile motion",
+      "uniform motion"
+    ]
+  },
+  {
+    "query": "newton's laws of motion",
+    "aliases": [
+      "newton laws",
+      "laws of motion",
+      "first law",
+      "second law",
+      "third law",
+      "inertia",
+      "force equals mass times acceleration",
+      "action and reaction",
+      "net force",
+      "newtonian mechanics",
+      "balanced forces",
+      "unbalanced forces"
+    ]
+  },
+  {
+    "query": "forces",
+    "aliases": [
+      "force physics",
+      "push and pull",
+      "gravity",
+      "friction",
+      "tension",
+      "normal force",
+      "applied force",
+      "net force",
+      "balanced forces",
+      "unbalanced forces",
+      "free body diagrams",
+      "contact forces",
+      "noncontact forces"
+    ]
+  },
+  {
+    "query": "work and energy",
+    "aliases": [
+      "mechanical work",
+      "kinetic energy",
+      "potential energy",
+      "energy transfer",
+      "energy transformation",
+      "conservation of energy",
+      "work equations",
+      "power",
+      "mechanical energy",
+      "gravitational potential energy",
+      "elastic potential energy",
+      "energy diagrams"
+    ]
+  },
+  {
+    "query": "momentum and collisions",
+    "aliases": [
+      "momentum physics",
+      "linear momentum",
+      "impulse",
+      "collision physics",
+      "elastic collisions",
+      "inelastic collisions",
+      "conservation of momentum",
+      "momentum equations",
+      "impact",
+      "recoil",
+      "momentum diagrams",
+      "impulse momentum theorem"
+    ]
+  },
+  {
+    "query": "gravity",
+    "aliases": [
+      "gravitation",
+      "gravitational force",
+      "newton's gravity",
+      "gravity on earth",
+      "orbital gravity",
+      "gravitational fields",
+      "weight",
+      "free fall",
+      "gravitational acceleration",
+      "planetary gravity",
+      "gravity experiments",
+      "universal gravitation"
+    ]
+  },
+  {
+    "query": "waves",
+    "aliases": [
+      "wave physics",
+      "wave motion",
+      "transverse waves",
+      "longitudinal waves",
+      "mechanical waves",
+      "electromagnetic waves",
+      "wavelength",
+      "frequency",
+      "amplitude",
+      "wave speed",
+      "wave diagrams",
+      "interference",
+      "diffraction",
+      "reflection",
+      "refraction"
+    ]
+  },
+  {
+    "query": "sound",
+    "aliases": [
+      "sound waves",
+      "acoustics",
+      "sound physics",
+      "frequency",
+      "pitch",
+      "volume",
+      "amplitude",
+      "sound vibrations",
+      "longitudinal sound waves",
+      "echoes",
+      "resonance",
+      "doppler effect",
+      "sound propagation"
+    ]
+  },
+  {
+    "query": "light and optics",
+    "aliases": [
+      "optics",
+      "light physics",
+      "visible light",
+      "electromagnetic radiation",
+      "reflection",
+      "refraction",
+      "dispersion",
+      "lenses",
+      "mirrors",
+      "prisms",
+      "light spectrum",
+      "wavelengths",
+      "photons",
+      "light rays"
+    ]
+  },
+  {
+    "query": "electricity",
+    "aliases": [
+      "electrical science",
+      "electric current",
+      "voltage",
+      "resistance",
+      "electric circuits",
+      "electrons",
+      "static electricity",
+      "conductors",
+      "insulators",
+      "ohm's law",
+      "electrical energy",
+      "series circuits",
+      "parallel circuits",
+      "electric charge"
+    ]
+  },
+  {
+    "query": "magnetism",
+    "aliases": [
+      "magnetic fields",
+      "magnets",
+      "magnetic force",
+      "electromagnetism",
+      "north pole",
+      "south pole",
+      "magnetic poles",
+      "magnetic materials",
+      "electromagnets",
+      "compasses",
+      "magnetic induction",
+      "magnetic field lines"
+    ]
+  },
+  {
+    "query": "thermodynamics",
+    "aliases": [
+      "heat energy",
+      "thermal physics",
+      "temperature",
+      "heat transfer",
+      "conduction",
+      "convection",
+      "radiation",
+      "thermal equilibrium",
+      "laws of thermodynamics",
+      "entropy",
+      "specific heat",
+      "heat capacity",
+      "thermal energy"
+    ]
+  },
+  {
+    "query": "quantum physics",
+    "aliases": [
+      "quantum mechanics",
+      "quantum theory",
+      "subatomic physics",
+      "wave particle duality",
+      "quantum states",
+      "quantum particles",
+      "superposition",
+      "entanglement",
+      "uncertainty principle",
+      "quantum fields",
+      "photons",
+      "electron behavior"
+    ]
+  },
+  {
+    "query": "nuclear physics",
+    "aliases": [
+      "atomic nucleus",
+      "radioactivity",
+      "nuclear reactions",
+      "nuclear fission",
+      "nuclear fusion",
+      "protons and neutrons",
+      "isotopes",
+      "alpha decay",
+      "beta decay",
+      "gamma radiation",
+      "half life",
+      "nuclear energy",
+      "radioactive decay"
+    ]
+  },
+  {
+    "query": "earth science",
+    "aliases": [
+      "geoscience",
+      "earth systems",
+      "planet earth",
+      "earth processes",
+      "geology",
+      "meteorology",
+      "oceanography",
+      "environmental science",
+      "earth materials",
+      "earth structure",
+      "natural processes",
+      "physical geography"
+    ]
+  },
+  {
+    "query": "geology",
+    "aliases": [
+      "earth geology",
+      "rocks and minerals",
+      "earth's crust",
+      "geological formations",
+      "tectonic processes",
+      "geological science",
+      "rock layers",
+      "geological history",
+      "earth materials",
+      "geological maps",
+      "landforms",
+      "geological time"
+    ]
+  },
+  {
+    "query": "rocks",
+    "aliases": [
+      "rock types",
+      "igneous rocks",
+      "sedimentary rocks",
+      "metamorphic rocks",
+      "rock cycle",
+      "mineral composition",
+      "rock formations",
+      "geological specimens",
+      "rock samples",
+      "granite",
+      "basalt",
+      "limestone",
+      "sandstone",
+      "marble",
+      "slate"
+    ]
+  },
+  {
+    "query": "minerals",
+    "aliases": [
+      "mineral science",
+      "crystals",
+      "mineral identification",
+      "mineral properties",
+      "hardness scale",
+      "mohs scale",
+      "quartz",
+      "feldspar",
+      "calcite",
+      "mica",
+      "mineral specimens",
+      "gemstones",
+      "crystal structures",
+      "mineralogy"
+    ]
+  },
+  {
+    "query": "plate tectonics",
+    "aliases": [
+      "tectonic plates",
+      "continental drift",
+      "seafloor spreading",
+      "plate boundaries",
+      "convergent boundaries",
+      "divergent boundaries",
+      "transform boundaries",
+      "tectonic movement",
+      "subduction zones",
+      "continental plates",
+      "oceanic plates",
+      "mountain formation",
+      "pangaea"
+    ]
+  },
+  {
+    "query": "volcanoes",
+    "aliases": [
+      "volcanology",
+      "volcanic eruptions",
+      "lava",
+      "magma",
+      "volcanic mountains",
+      "shield volcanoes",
+      "stratovolcanoes",
+      "cinder cones",
+      "calderas",
+      "volcanic ash",
+      "magma chambers",
+      "volcanic vents",
+      "volcano anatomy"
+    ]
+  },
+  {
+    "query": "earthquakes",
+    "aliases": [
+      "seismic activity",
+      "seismology",
+      "fault lines",
+      "tectonic earthquakes",
+      "seismic waves",
+      "richter scale",
+      "moment magnitude scale",
+      "epicenter",
+      "focus",
+      "aftershocks",
+      "seismographs",
+      "earthquake zones",
+      "fault movement"
+    ]
+  },
+  {
+    "query": "fossils",
+    "aliases": [
+      "paleontology",
+      "fossil records",
+      "fossilized remains",
+      "prehistoric life",
+      "trace fossils",
+      "body fossils",
+      "petrified fossils",
+      "amber fossils",
+      "fossil excavation",
+      "dinosaur fossils",
+      "fossil imprints",
+      "geological record",
+      "ancient organisms"
+    ]
+  },
+  {
+    "query": "weather",
+    "aliases": [
+      "weather science",
+      "meteorology",
+      "weather conditions",
+      "clouds",
+      "rain",
+      "snow",
+      "storms",
+      "wind",
+      "temperature",
+      "humidity",
+      "precipitation",
+      "weather maps",
+      "weather forecasts",
+      "atmospheric conditions"
+    ]
+  },
+  {
+    "query": "clouds",
+    "aliases": [
+      "cloud formations",
+      "cloud types",
+      "cumulus",
+      "cirrus",
+      "stratus",
+      "cumulonimbus",
+      "nimbus clouds",
+      "cloud classification",
+      "cloud atlas",
+      "cloud photography",
+      "atmospheric water",
+      "cloud diagrams",
+      "cloud identification"
+    ]
+  },
+  {
+    "query": "storms",
+    "aliases": [
+      "severe weather",
+      "thunderstorms",
+      "hurricanes",
+      "tropical cyclones",
+      "tornadoes",
+      "blizzards",
+      "ice storms",
+      "hailstorms",
+      "windstorms",
+      "storm clouds",
+      "lightning",
+      "thunder",
+      "storm systems",
+      "cyclones"
+    ]
+  },
+  {
+    "query": "climate",
+    "aliases": [
+      "climate science",
+      "climate systems",
+      "climate zones",
+      "global climate",
+      "climate patterns",
+      "climate classification",
+      "temperature trends",
+      "precipitation patterns",
+      "climate graphs",
+      "climate maps",
+      "climate regions",
+      "climatology"
+    ]
+  },
+  {
+    "query": "oceanography",
+    "aliases": [
+      "ocean science",
+      "marine science",
+      "ocean systems",
+      "ocean currents",
+      "seawater",
+      "ocean floors",
+      "marine ecosystems",
+      "ocean circulation",
+      "ocean trenches",
+      "ocean ridges",
+      "ocean zones",
+      "underwater geography"
+    ]
+  },
+  {
+    "query": "ocean currents",
+    "aliases": [
+      "marine currents",
+      "ocean circulation",
+      "gulf stream",
+      "thermohaline circulation",
+      "surface currents",
+      "deep ocean currents",
+      "gyres",
+      "coriolis effect",
+      "upwelling",
+      "downwelling",
+      "ocean current maps",
+      "global conveyor belt"
+    ]
+  },
+  {
+    "query": "water cycle",
+    "aliases": [
+      "hydrologic cycle",
+      "evaporation",
+      "condensation",
+      "precipitation",
+      "collection",
+      "runoff",
+      "infiltration",
+      "transpiration",
+      "water cycle diagram",
+      "water circulation",
+      "cloud formation",
+      "groundwater recharge",
+      "hydrological processes"
+    ]
+  },
+  {
+    "query": "rivers and watersheds",
+    "aliases": [
+      "river systems",
+      "river basins",
+      "watershed science",
+      "drainage basins",
+      "tributaries",
+      "river deltas",
+      "floodplains",
+      "river channels",
+      "stream networks",
+      "river erosion",
+      "river landscapes",
+      "watershed maps",
+      "freshwater systems"
+    ]
+  },
+  {
+    "query": "environmental science",
+    "aliases": [
+      "environment",
+      "environmental studies",
+      "ecological science",
+      "conservation",
+      "pollution",
+      "natural resources",
+      "sustainability",
+      "environmental protection",
+      "human impact",
+      "ecosystem health",
+      "environmental research",
+      "climate change"
+    ]
+  },
+  {
+    "query": "pollution",
+    "aliases": [
+      "air pollution",
+      "water pollution",
+      "soil contamination",
+      "plastic pollution",
+      "noise pollution",
+      "light pollution",
+      "industrial pollution",
+      "smog",
+      "acid rain",
+      "pollutants",
+      "environmental contamination",
+      "marine pollution",
+      "waste management"
+    ]
+  },
+  {
+    "query": "renewable energy",
+    "aliases": [
+      "clean energy",
+      "solar power",
+      "wind power",
+      "hydroelectricity",
+      "geothermal energy",
+      "biomass energy",
+      "renewable resources",
+      "sustainable energy",
+      "green energy",
+      "solar panels",
+      "wind turbines",
+      "alternative energy",
+      "energy transition"
+    ]
+  },
+  {
+    "query": "astronomy",
+    "aliases": [
+      "space science",
+      "outer space",
+      "celestial objects",
+      "stars and planets",
+      "astronomical studies",
+      "universe",
+      "cosmos",
+      "astronomy education",
+      "astronomy diagrams",
+      "observational astronomy",
+      "celestial phenomena"
+    ]
+  },
+  {
+    "query": "solar system",
+    "aliases": [
+      "sun and planets",
+      "planetary system",
+      "solar system model",
+      "inner planets",
+      "outer planets",
+      "planet orbits",
+      "asteroid belt",
+      "dwarf planets",
+      "solar system diagram",
+      "planetary science",
+      "heliosphere"
+    ]
+  },
+  {
+    "query": "planets",
+    "aliases": [
+      "planetary science",
+      "mercury",
+      "venus",
+      "earth",
+      "mars",
+      "jupiter",
+      "saturn",
+      "uranus",
+      "neptune",
+      "gas giants",
+      "terrestrial planets",
+      "planet surfaces",
+      "planetary atmospheres"
+    ]
+  },
+  {
+    "query": "the sun",
+    "aliases": [
+      "solar science",
+      "solar astronomy",
+      "sun structure",
+      "solar flares",
+      "sunspots",
+      "solar prominences",
+      "solar corona",
+      "solar energy",
+      "solar activity",
+      "sun surface",
+      "solar atmosphere",
+      "nuclear fusion"
+    ]
+  },
+  {
+    "query": "the moon",
+    "aliases": [
+      "lunar science",
+      "earth's moon",
+      "lunar phases",
+      "moon phases",
+      "lunar surface",
+      "moon craters",
+      "lunar orbit",
+      "lunar eclipse",
+      "moon exploration",
+      "lunar geography",
+      "moon landing",
+      "lunar maria"
+    ]
+  },
+  {
+    "query": "stars",
+    "aliases": [
+      "stellar astronomy",
+      "star formation",
+      "star life cycle",
+      "red giants",
+      "white dwarfs",
+      "neutron stars",
+      "supergiants",
+      "main sequence stars",
+      "stellar evolution",
+      "star clusters",
+      "star systems",
+      "constellations"
+    ]
+  },
+  {
+    "query": "galaxies",
+    "aliases": [
+      "milky way",
+      "andromeda galaxy",
+      "spiral galaxies",
+      "elliptical galaxies",
+      "irregular galaxies",
+      "galactic structure",
+      "galaxy clusters",
+      "deep space",
+      "galaxy formation",
+      "galaxy evolution",
+      "cosmic structures",
+      "interstellar space"
+    ]
+  },
+  {
+    "query": "black holes",
+    "aliases": [
+      "black hole astronomy",
+      "event horizon",
+      "singularity",
+      "supermassive black holes",
+      "stellar black holes",
+      "accretion disks",
+      "gravitational collapse",
+      "space time",
+      "black hole images",
+      "relativity",
+      "gravitational lensing"
+    ]
+  },
+  {
+    "query": "constellations",
+    "aliases": [
+      "star patterns",
+      "orion",
+      "ursa major",
+      "ursa minor",
+      "cassiopeia",
+      "scorpius",
+      "leo constellation",
+      "zodiac constellations",
+      "star maps",
+      "night sky",
+      "constellation charts",
+      "celestial navigation"
+    ]
+  },
+  {
+    "query": "asteroids and comets",
+    "aliases": [
+      "asteroid belt",
+      "comets",
+      "meteoroids",
+      "meteors",
+      "meteorites",
+      "shooting stars",
+      "halley's comet",
+      "near earth objects",
+      "space rocks",
+      "minor planets",
+      "comet tails",
+      "asteroid impacts"
+    ]
+  },
+  {
+    "query": "space exploration",
+    "aliases": [
+      "space travel",
+      "space missions",
+      "spacecraft",
+      "space shuttles",
+      "rockets",
+      "astronauts",
+      "space stations",
+      "nasa",
+      "moon missions",
+      "mars exploration",
+      "satellites",
+      "space technology"
+    ]
+  },
+  {
+    "query": "astronauts",
+    "aliases": [
+      "space explorers",
+      "space travelers",
+      "cosmonauts",
+      "astronaut training",
+      "space suits",
+      "spacewalks",
+      "international space station crew",
+      "human spaceflight",
+      "astronaut equipment",
+      "space exploration",
+      "lunar astronauts"
+    ]
+  },
+  {
+    "query": "telescopes",
+    "aliases": [
+      "astronomical instruments",
+      "space telescopes",
+      "hubble telescope",
+      "james webb telescope",
+      "radio telescopes",
+      "refracting telescopes",
+      "reflecting telescopes",
+      "observatories",
+      "telescope lenses",
+      "stargazing equipment",
+      "astronomy instruments"
+    ]
+  },
+  {
+    "query": "the universe",
+    "aliases": [
+      "cosmos",
+      "observable universe",
+      "cosmology",
+      "universal expansion",
+      "big bang",
+      "dark matter",
+      "dark energy",
+      "cosmic background radiation",
+      "universal structure",
+      "cosmic evolution",
+      "deep universe",
+      "origin of the universe"
+    ]
+  },
+  {
+    "query": "space phenomena",
+    "aliases": [
+      "auroras",
+      "solar eclipses",
+      "lunar eclipses",
+      "meteor showers",
+      "supernovas",
+      "nebulae",
+      "pulsars",
+      "quasars",
+      "eclipses",
+      "cosmic events",
+      "astronomical phenomena",
+      "celestial events"
+    ]
+  },
+  {
+    "query": "geography",
+    "aliases": [
+      "geographical studies",
+      "earth geography",
+      "physical geography",
+      "human geography",
+      "world geography",
+      "geographic features",
+      "maps",
+      "landforms",
+      "continents",
+      "countries",
+      "geography education",
+      "geography diagrams"
+    ]
+  },
+  {
+    "query": "world geography",
+    "aliases": [
+      "global geography",
+      "world map",
+      "countries of the world",
+      "continents and oceans",
+      "international geography",
+      "global landscapes",
+      "world regions",
+      "geographic locations",
+      "world atlas",
+      "earth map",
+      "geographical diversity"
+    ]
+  },
+  {
+    "query": "continents",
+    "aliases": [
+      "seven continents",
+      "north america",
+      "south america",
+      "europe",
+      "asia",
+      "africa",
+      "australia",
+      "antarctica",
+      "continental geography",
+      "continent maps",
+      "land masses",
+      "world continents"
+    ]
+  },
+  {
+    "query": "countries",
+    "aliases": [
+      "nations",
+      "sovereign states",
+      "country maps",
+      "world nations",
+      "national borders",
+      "countries of the world",
+      "international geography",
+      "country locations",
+      "nation states",
+      "global regions",
+      "country profiles"
+    ]
+  },
+  {
+    "query": "world capitals",
+    "aliases": [
+      "capital cities",
+      "national capitals",
+      "government capitals",
+      "city locations",
+      "capital city maps",
+      "world city atlas",
+      "european capitals",
+      "asian capitals",
+      "african capitals",
+      "north american capitals",
+      "south american capitals"
+    ]
+  },
+  {
+    "query": "oceans",
+    "aliases": [
+      "world oceans",
+      "pacific ocean",
+      "atlantic ocean",
+      "indian ocean",
+      "arctic ocean",
+      "southern ocean",
+      "ocean geography",
+      "ocean maps",
+      "seas",
+      "marine geography",
+      "ocean basins",
+      "ocean landscapes"
+    ]
+  },
+  {
+    "query": "seas and gulfs",
+    "aliases": [
+      "mediterranean sea",
+      "caribbean sea",
+      "red sea",
+      "black sea",
+      "arabian sea",
+      "persian gulf",
+      "gulf of mexico",
+      "baltic sea",
+      "north sea",
+      "coral sea",
+      "marginal seas",
+      "coastal waters"
+    ]
+  },
+  {
+    "query": "mountains",
+    "aliases": [
+      "mountain ranges",
+      "mountain geography",
+      "himalayas",
+      "andes",
+      "rocky mountains",
+      "alps",
+      "appalachian mountains",
+      "mount everest",
+      "mountain peaks",
+      "highlands",
+      "mountain landscapes",
+      "mountain formation"
+    ]
+  },
+  {
+    "query": "deserts",
+    "aliases": [
+      "desert geography",
+      "sahara desert",
+      "gobi desert",
+      "arabian desert",
+      "mojave desert",
+      "atacama desert",
+      "kalahari desert",
+      "hot deserts",
+      "cold deserts",
+      "arid landscapes",
+      "sand dunes",
+      "desert ecosystems"
+    ]
+  },
+  {
+    "query": "forests",
+    "aliases": [
+      "forest ecosystems",
+      "rainforests",
+      "tropical forests",
+      "temperate forests",
+      "boreal forests",
+      "taiga",
+      "amazon rainforest",
+      "congo rainforest",
+      "woodlands",
+      "forest landscapes",
+      "tree habitats",
+      "forest biodiversity"
+    ]
+  },
+  {
+    "query": "grasslands",
+    "aliases": [
+      "prairies",
+      "savannas",
+      "steppes",
+      "temperate grasslands",
+      "tropical grasslands",
+      "african savanna",
+      "great plains",
+      "grassland ecosystems",
+      "open plains",
+      "prairie landscapes",
+      "grassland habitats"
+    ]
+  },
+  {
+    "query": "islands",
+    "aliases": [
+      "island geography",
+      "archipelagos",
+      "tropical islands",
+      "volcanic islands",
+      "coral islands",
+      "island chains",
+      "greenland",
+      "madagascar",
+      "hawaii",
+      "caribbean islands",
+      "island formations",
+      "island landscapes"
+    ]
+  },
+  {
+    "query": "peninsulas",
+    "aliases": [
+      "peninsula geography",
+      "arabian peninsula",
+      "iberian peninsula",
+      "balkan peninsula",
+      "korean peninsula",
+      "italian peninsula",
+      "scandinavian peninsula",
+      "florida peninsula",
+      "land projections",
+      "coastal landforms",
+      "peninsula maps"
+    ]
+  },
+  {
+    "query": "rivers",
+    "aliases": [
+      "river geography",
+      "amazon river",
+      "nile river",
+      "mississippi river",
+      "yangtze river",
+      "ganges river",
+      "danube river",
+      "river systems",
+      "tributaries",
+      "river deltas",
+      "waterways",
+      "freshwater rivers"
+    ]
+  },
+  {
+    "query": "lakes",
+    "aliases": [
+      "lake geography",
+      "great lakes",
+      "lake victoria",
+      "lake baikal",
+      "lake superior",
+      "freshwater lakes",
+      "saltwater lakes",
+      "glacial lakes",
+      "volcanic lakes",
+      "lake ecosystems",
+      "inland waters",
+      "lake landscapes"
+    ]
+  },
+  {
+    "query": "landforms",
+    "aliases": [
+      "geographical landforms",
+      "valleys",
+      "plateaus",
+      "plains",
+      "basins",
+      "canyons",
+      "cliffs",
+      "hills",
+      "mountains",
+      "deltas",
+      "peninsulas",
+      "natural landscapes",
+      "earth surface features"
+    ]
+  },
+  {
+    "query": "maps and cartography",
+    "aliases": [
+      "mapmaking",
+      "cartography",
+      "world maps",
+      "topographic maps",
+      "political maps",
+      "physical maps",
+      "thematic maps",
+      "map projections",
+      "map symbols",
+      "map scales",
+      "atlases",
+      "geographic information systems"
+    ]
+  },
+  {
+    "query": "climate zones",
+    "aliases": [
+      "climate regions",
+      "tropical climate",
+      "dry climate",
+      "temperate climate",
+      "continental climate",
+      "polar climate",
+      "mediterranean climate",
+      "arid regions",
+      "humid regions",
+      "koppen climate classification",
+      "climate maps"
+    ]
+  },
+  {
+    "query": "population geography",
+    "aliases": [
+      "human population",
+      "population density",
+      "population distribution",
+      "demographics",
+      "population maps",
+      "urban population",
+      "rural population",
+      "migration patterns",
+      "population growth",
+      "census data",
+      "settlement patterns"
+    ]
+  },
+  {
+    "query": "urban geography",
+    "aliases": [
+      "cities",
+      "urban areas",
+      "city planning",
+      "urban development",
+      "metropolitan areas",
+      "city landscapes",
+      "urbanization",
+      "urban design",
+      "city infrastructure",
+      "suburbs",
+      "downtown districts",
+      "urban environments"
+    ]
+  },
+  {
+    "query": "history",
+    "aliases": [
+      "historical studies",
+      "the past",
+      "world events",
+      "historical events",
+      "human history",
+      "civilizations",
+      "historical people",
+      "historical periods",
+      "historical artifacts",
+      "history education",
+      "history lessons",
+      "historical timelines"
+    ]
+  },
+  {
+    "query": "american history",
+    "aliases": [
+      "united states history",
+      "us history",
+      "usa history",
+      "american past",
+      "george washington",
+      "abraham lincoln",
+      "american revolution",
+      "american civil war",
+      "colonial america",
+      "founding fathers",
+      "declaration of independence",
+      "american presidents",
+      "united states historical events",
+      "american pioneers"
+    ]
+  },
+  {
+    "query": "european history",
+    "aliases": [
+      "europe's past",
+      "european civilizations",
+      "european historical events",
+      "european monarchies",
+      "european kingdoms",
+      "renaissance",
+      "french revolution",
+      "industrial revolution",
+      "world war i",
+      "world war ii",
+      "european empires",
+      "european historical figures",
+      "european historical maps"
+    ]
+  },
+  {
+    "query": "world history",
+    "aliases": [
+      "global history",
+      "human civilization",
+      "world civilizations",
+      "international history",
+      "historical empires",
+      "ancient civilizations",
+      "modern world",
+      "global historical events",
+      "world history timeline",
+      "human societies",
+      "historical cultures",
+      "world historical figures"
+    ]
+  },
+  {
+    "query": "ancient history",
+    "aliases": [
+      "ancient civilizations",
+      "antiquity",
+      "ancient world",
+      "ancient societies",
+      "ancient empires",
+      "ancient cultures",
+      "classical antiquity",
+      "ancient artifacts",
+      "ancient monuments",
+      "ancient rulers",
+      "ancient historical events",
+      "ancient history timeline"
+    ]
+  },
+  {
+    "query": "medieval history",
+    "aliases": [
+      "middle ages",
+      "medieval period",
+      "medieval europe",
+      "medieval kingdoms",
+      "medieval castles",
+      "knights",
+      "samurai",
+      "feudalism",
+      "medieval warfare",
+      "medieval society",
+      "medieval manuscripts",
+      "medieval monarchs",
+      "dark ages"
+    ]
+  },
+  {
+    "query": "modern history",
+    "aliases": [
+      "modern era",
+      "recent history",
+      "modern world history",
+      "industrial age",
+      "20th century",
+      "21st century",
+      "contemporary history",
+      "modern revolutions",
+      "modern political history",
+      "modern society",
+      "recent historical events",
+      "modern historical figures"
+    ]
+  },
+  {
+    "query": "asian history",
+    "aliases": [
+      "history of asia",
+      "east asian history",
+      "south asian history",
+      "southeast asian history",
+      "chinese history",
+      "japanese history",
+      "korean history",
+      "indian history",
+      "mongol empire",
+      "samurai",
+      "shoguns",
+      "asian dynasties",
+      "asian kingdoms",
+      "asian historical figures"
+    ]
+  },
+  {
+    "query": "african history",
+    "aliases": [
+      "history of africa",
+      "ancient africa",
+      "african kingdoms",
+      "african empires",
+      "kingdom of kush",
+      "mali empire",
+      "songhai empire",
+      "great zimbabwe",
+      "ethiopian history",
+      "egyptian history",
+      "african independence",
+      "african historical figures",
+      "african civilizations"
+    ]
+  },
+  {
+    "query": "latin american history",
+    "aliases": [
+      "south american history",
+      "central american history",
+      "mesoamerican history",
+      "aztec empire",
+      "maya civilization",
+      "inca empire",
+      "spanish conquest",
+      "portuguese colonization",
+      "latin american independence",
+      "brazilian history",
+      "mexican history",
+      "andean civilizations"
+    ]
+  },
+  {
+    "query": "middle eastern history",
+    "aliases": [
+      "history of the middle east",
+      "mesopotamia",
+      "persian empire",
+      "ottoman empire",
+      "arab history",
+      "ancient persia",
+      "islamic empires",
+      "levant history",
+      "babylonian empire",
+      "assyrian empire",
+      "middle eastern civilizations",
+      "middle eastern historical figures"
+    ]
+  },
+  {
+    "query": "indigenous history",
+    "aliases": [
+      "native american history",
+      "first nations history",
+      "aboriginal history",
+      "indigenous civilizations",
+      "native peoples",
+      "tribal history",
+      "precolonial societies",
+      "indigenous leaders",
+      "indigenous cultures",
+      "first peoples",
+      "traditional communities",
+      "indigenous heritage"
+    ]
+  },
+  {
+    "query": "colonial history",
+    "aliases": [
+      "colonialism",
+      "colonization",
+      "european colonial empires",
+      "colonial america",
+      "british empire",
+      "french colonial empire",
+      "spanish empire",
+      "portuguese empire",
+      "dutch empire",
+      "colonial settlements",
+      "colonial trade",
+      "decolonization"
+    ]
+  },
+  {
+    "query": "prehistory",
+    "aliases": [
+      "prehistoric times",
+      "stone age",
+      "bronze age",
+      "iron age",
+      "early humans",
+      "human origins",
+      "prehistoric archaeology",
+      "cave paintings",
+      "hunter gatherers",
+      "neolithic",
+      "paleolithic",
+      "mesolithic",
+      "prehistoric artifacts"
+    ]
+  },
+  {
+    "query": "egyptian history",
+    "aliases": [
+      "ancient egypt",
+      "egyptian civilization",
+      "pharaohs",
+      "pyramids",
+      "cleopatra",
+      "tutankhamun",
+      "ramses ii",
+      "egyptian dynasties",
+      "nile civilization",
+      "hieroglyphics",
+      "egyptian temples",
+      "ancient egyptian artifacts",
+      "egyptian mythology"
+    ]
+  },
+  {
+    "query": "greek history",
+    "aliases": [
+      "ancient greece",
+      "greek civilization",
+      "athens",
+      "sparta",
+      "alexander the great",
+      "greek city states",
+      "peloponnesian war",
+      "persian wars",
+      "athenian democracy",
+      "ancient greek culture",
+      "greek philosophers",
+      "greek historical figures"
+    ]
+  },
+  {
+    "query": "roman history",
+    "aliases": [
+      "ancient rome",
+      "roman empire",
+      "roman republic",
+      "julius caesar",
+      "augustus",
+      "roman emperors",
+      "roman legions",
+      "roman civilization",
+      "punic wars",
+      "roman architecture",
+      "roman senate",
+      "roman mythology",
+      "fall of rome"
+    ]
+  },
+  {
+    "query": "chinese history",
+    "aliases": [
+      "ancient china",
+      "chinese dynasties",
+      "qin dynasty",
+      "han dynasty",
+      "tang dynasty",
+      "ming dynasty",
+      "qing dynasty",
+      "great wall of china",
+      "terracotta army",
+      "chinese emperors",
+      "silk road",
+      "chinese inventions",
+      "chinese historical figures"
+    ]
+  },
+  {
+    "query": "japanese history",
+    "aliases": [
+      "ancient japan",
+      "feudal japan",
+      "samurai",
+      "shogun",
+      "shogunate",
+      "edo period",
+      "meiji restoration",
+      "tokugawa",
+      "japanese emperors",
+      "japanese castles",
+      "japanese dynasties",
+      "japanese historical figures",
+      "japanese culture"
+    ]
+  },
+  {
+    "query": "indian history",
+    "aliases": [
+      "ancient india",
+      "indus valley civilization",
+      "maurya empire",
+      "gupta empire",
+      "mughal empire",
+      "ashoka",
+      "akbar",
+      "british india",
+      "indian independence",
+      "mahatma gandhi",
+      "indian kingdoms",
+      "indian historical figures",
+      "south asian history"
+    ]
+  },
+  {
+    "query": "mesoamerican history",
+    "aliases": [
+      "maya civilization",
+      "aztec civilization",
+      "olmec civilization",
+      "teotihuacan",
+      "mayan cities",
+      "tenochtitlan",
+      "mesoamerican pyramids",
+      "mesoamerican cultures",
+      "ancient mexico",
+      "pre columbian civilizations",
+      "mesoamerican artifacts",
+      "mesoamerican rulers"
+    ]
+  },
+  {
+    "query": "viking history",
+    "aliases": [
+      "vikings",
+      "norse history",
+      "norsemen",
+      "viking age",
+      "viking ships",
+      "viking explorers",
+      "norse warriors",
+      "viking settlements",
+      "scandinavian history",
+      "viking raids",
+      "viking trade",
+      "norse mythology",
+      "viking artifacts"
+    ]
+  },
+  {
+    "query": "renaissance history",
+    "aliases": [
+      "renaissance",
+      "european renaissance",
+      "italian renaissance",
+      "leonardo da vinci",
+      "michelangelo",
+      "raphael",
+      "renaissance art",
+      "renaissance thinkers",
+      "humanism",
+      "medici family",
+      "renaissance architecture",
+      "renaissance inventions",
+      "renaissance scholars"
+    ]
+  },
+  {
+    "query": "industrial revolution",
+    "aliases": [
+      "industrialization",
+      "industrial age",
+      "factory system",
+      "steam engines",
+      "textile mills",
+      "coal mining",
+      "railways",
+      "mechanization",
+      "urban industrialization",
+      "james watt",
+      "industrial inventions",
+      "victorian industry",
+      "manufacturing history"
+    ]
+  },
+  {
+    "query": "american revolution",
+    "aliases": [
+      "revolutionary war",
+      "war of independence",
+      "american independence",
+      "george washington",
+      "thomas jefferson",
+      "benjamin franklin",
+      "paul revere",
+      "continental army",
+      "boston tea party",
+      "battle of yorktown",
+      "declaration of independence",
+      "american patriots",
+      "thirteen colonies"
+    ]
+  },
+  {
+    "query": "american civil war",
+    "aliases": [
+      "us civil war",
+      "civil war",
+      "union",
+      "confederacy",
+      "abraham lincoln",
+      "ulysses s grant",
+      "robert e lee",
+      "gettysburg",
+      "emancipation proclamation",
+      "underground railroad",
+      "reconstruction",
+      "civil war soldiers",
+      "american battlefields"
+    ]
+  },
+  {
+    "query": "world war i",
+    "aliases": [
+      "first world war",
+      "great war",
+      "1914 war",
+      "1918 war",
+      "trench warfare",
+      "western front",
+      "eastern front",
+      "allied powers",
+      "central powers",
+      "treaty of versailles",
+      "woodrow wilson",
+      "military history",
+      "world war one artifacts"
+    ]
+  },
+  {
+    "query": "world war ii",
+    "aliases": [
+      "second world war",
+      "1939 war",
+      "1945 war",
+      "allied powers",
+      "axis powers",
+      "d day",
+      "pearl harbor",
+      "holocaust history",
+      "winston churchill",
+      "franklin roosevelt",
+      "adolf hitler",
+      "pacific theater",
+      "european theater",
+      "world war two artifacts"
+    ]
+  },
+  {
+    "query": "cold war",
+    "aliases": [
+      "us soviet rivalry",
+      "united states soviet union",
+      "iron curtain",
+      "berlin wall",
+      "space race",
+      "arms race",
+      "nato",
+      "warsaw pact",
+      "cuban missile crisis",
+      "soviet union",
+      "cold war leaders",
+      "cold war propaganda",
+      "cold war history"
+    ]
+  },
+  {
+    "query": "historical wars",
+    "aliases": [
+      "military history",
+      "ancient battles",
+      "medieval battles",
+      "historical conflicts",
+      "warfare through history",
+      "battlefields",
+      "military campaigns",
+      "famous battles",
+      "historical armies",
+      "soldiers through history",
+      "war memorials",
+      "military uniforms",
+      "sieges"
+    ]
+  },
+  {
+    "query": "historical inventions",
+    "aliases": [
+      "history of inventions",
+      "famous inventors",
+      "historical technology",
+      "printing press",
+      "telephone invention",
+      "light bulb",
+      "steam engine",
+      "wheel",
+      "compass",
+      "printing technology",
+      "industrial inventions",
+      "scientific discoveries",
+      "invention timeline"
+    ]
+  },
+  {
+    "query": "historical exploration",
+    "aliases": [
+      "age of exploration",
+      "explorers",
+      "voyages",
+      "christopher columbus",
+      "ferdinand magellan",
+      "marco polo",
+      "lewis and clark",
+      "james cook",
+      "exploration ships",
+      "discovery voyages",
+      "historical expeditions",
+      "navigation history",
+      "polar exploration"
+    ]
+  },
+  {
+    "query": "historical figures",
+    "aliases": [
+      "famous people in history",
+      "historical leaders",
+      "important historical people",
+      "kings and queens",
+      "presidents",
+      "emperors",
+      "revolutionaries",
+      "explorers",
+      "scientists in history",
+      "military leaders",
+      "philosophers",
+      "historical portraits"
+    ]
+  },
+  {
+    "query": "kings and queens",
+    "aliases": [
+      "monarchs",
+      "royalty",
+      "royal families",
+      "medieval kings",
+      "european queens",
+      "historical rulers",
+      "emperors and empresses",
+      "royal crowns",
+      "thrones",
+      "palaces",
+      "monarchy",
+      "dynasties",
+      "royal portraits"
+    ]
+  },
+  {
+    "query": "knights and chivalry",
+    "aliases": [
+      "knights",
+      "medieval knights",
+      "chivalry",
+      "armor",
+      "knight armor",
+      "swords",
+      "medieval tournaments",
+      "jousting",
+      "knightly orders",
+      "knight horses",
+      "heraldry",
+      "medieval warriors",
+      "round table"
+    ]
+  },
+  {
+    "query": "castles and fortresses",
+    "aliases": [
+      "medieval castles",
+      "fortifications",
+      "fortresses",
+      "stone castles",
+      "castle towers",
+      "drawbridges",
+      "moats",
+      "battlements",
+      "medieval architecture",
+      "royal castles",
+      "castle ruins",
+      "castle defenses",
+      "historic strongholds"
+    ]
+  },
+  {
+    "query": "historical clothing",
+    "aliases": [
+      "historical fashion",
+      "period costumes",
+      "traditional historical dress",
+      "medieval clothing",
+      "victorian clothing",
+      "ancient clothing",
+      "renaissance fashion",
+      "historical uniforms",
+      "royal clothing",
+      "historical textiles",
+      "traditional garments",
+      "costume history"
+    ]
+  },
+  {
+    "query": "historical artifacts",
+    "aliases": [
+      "archaeological artifacts",
+      "ancient objects",
+      "historical objects",
+      "antique tools",
+      "ancient pottery",
+      "historical weapons",
+      "coins",
+      "manuscripts",
+      "relics",
+      "museum artifacts",
+      "archaeological finds",
+      "ancient jewelry",
+      "cultural artifacts"
+    ]
+  },
+  {
+    "query": "archaeology",
+    "aliases": [
+      "archaeological science",
+      "excavations",
+      "ancient ruins",
+      "archaeological sites",
+      "artifact discoveries",
+      "fossil excavation",
+      "ancient settlements",
+      "buried cities",
+      "archaeological digs",
+      "field archaeology",
+      "ancient monuments",
+      "archaeological research"
+    ]
+  },
+  {
+    "query": "government",
+    "aliases": [
+      "political systems",
+      "governance",
+      "public administration",
+      "national government",
+      "local government",
+      "federal government",
+      "government institutions",
+      "branches of government",
+      "political leadership",
+      "government buildings",
+      "civic institutions",
+      "state authority"
+    ]
+  },
+  {
+    "query": "civics",
+    "aliases": [
+      "civic education",
+      "citizenship",
+      "civic responsibility",
+      "rights and responsibilities",
+      "community participation",
+      "public service",
+      "democracy",
+      "voting",
+      "laws",
+      "government",
+      "civic engagement",
+      "citizenship education"
+    ]
+  },
+  {
+    "query": "democracy",
+    "aliases": [
+      "democratic government",
+      "representative democracy",
+      "direct democracy",
+      "elections",
+      "voting rights",
+      "popular sovereignty",
+      "citizen participation",
+      "democratic institutions",
+      "parliamentary democracy",
+      "constitutional democracy",
+      "democratic principles",
+      "self government"
+    ]
+  },
+  {
+    "query": "constitution",
+    "aliases": [
+      "constitutional law",
+      "united states constitution",
+      "constitutional principles",
+      "bill of rights",
+      "constitutional amendments",
+      "founding document",
+      "separation of powers",
+      "checks and balances",
+      "constitutional convention",
+      "government framework",
+      "civil liberties",
+      "constitutional history"
+    ]
+  },
+  {
+    "query": "political systems",
+    "aliases": [
+      "forms of government",
+      "democracy",
+      "monarchy",
+      "republic",
+      "dictatorship",
+      "authoritarianism",
+      "communism",
+      "socialism",
+      "federalism",
+      "parliamentary systems",
+      "presidential systems",
+      "political structures"
+    ]
+  },
+  {
+    "query": "elections",
+    "aliases": [
+      "voting",
+      "election process",
+      "ballots",
+      "polling stations",
+      "campaigns",
+      "presidential elections",
+      "local elections",
+      "electoral systems",
+      "electoral college",
+      "voter registration",
+      "election maps",
+      "democratic participation"
+    ]
+  },
+  {
+    "query": "world religions",
+    "aliases": [
+      "religion",
+      "religious traditions",
+      "faiths",
+      "belief systems",
+      "religious studies",
+      "world faiths",
+      "spiritual traditions",
+      "religious history",
+      "religious symbols",
+      "sacred texts",
+      "religious practices",
+      "comparative religion"
+    ]
+  },
+  {
+    "query": "christianity",
+    "aliases": [
+      "christian religion",
+      "jesus christ",
+      "bible",
+      "churches",
+      "christian traditions",
+      "catholicism",
+      "protestantism",
+      "eastern orthodoxy",
+      "christian symbols",
+      "christian history",
+      "christian art",
+      "christian architecture"
+    ]
+  },
+  {
+    "query": "islam",
+    "aliases": [
+      "muslim religion",
+      "quran",
+      "mosques",
+      "islamic history",
+      "islamic traditions",
+      "muslim culture",
+      "five pillars of islam",
+      "ramadan",
+      "islamic architecture",
+      "islamic art",
+      "islamic calligraphy",
+      "islamic civilization"
+    ]
+  },
+  {
+    "query": "judaism",
+    "aliases": [
+      "jewish religion",
+      "torah",
+      "synagogues",
+      "jewish history",
+      "jewish traditions",
+      "hebrew culture",
+      "hanukkah",
+      "passover",
+      "jewish symbols",
+      "jewish heritage",
+      "jewish art",
+      "jewish religious practices"
+    ]
+  },
+  {
+    "query": "hinduism",
+    "aliases": [
+      "hindu religion",
+      "vedas",
+      "hindu temples",
+      "hindu traditions",
+      "hindu deities",
+      "diwali",
+      "hindu philosophy",
+      "sanskrit",
+      "hindu art",
+      "hindu culture",
+      "hindu festivals",
+      "indian religious traditions"
+    ]
+  },
+  {
+    "query": "buddhism",
+    "aliases": [
+      "buddhist religion",
+      "buddha",
+      "buddhist temples",
+      "buddhist philosophy",
+      "four noble truths",
+      "eightfold path",
+      "meditation",
+      "buddhist art",
+      "buddhist traditions",
+      "buddhist monasteries",
+      "buddhist symbols",
+      "buddhist history"
+    ]
+  },
+  {
+    "query": "mythology",
+    "aliases": [
+      "myths",
+      "ancient myths",
+      "mythological stories",
+      "gods and goddesses",
+      "mythical creatures",
+      "creation myths",
+      "hero legends",
+      "mythological traditions",
+      "folklore",
+      "ancient legends",
+      "mythology art",
+      "world mythology"
+    ]
+  },
+  {
+    "query": "greek mythology",
+    "aliases": [
+      "greek gods",
+      "greek goddesses",
+      "zeus",
+      "athena",
+      "poseidon",
+      "hades",
+      "hercules",
+      "heracles",
+      "mount olympus",
+      "greek heroes",
+      "greek monsters",
+      "greek legends",
+      "olympian gods"
+    ]
+  },
+  {
+    "query": "norse mythology",
+    "aliases": [
+      "norse gods",
+      "viking mythology",
+      "odin",
+      "thor",
+      "loki",
+      "freya",
+      "asgard",
+      "yggdrasil",
+      "valhalla",
+      "ragnarok",
+      "norse legends",
+      "scandinavian mythology",
+      "norse creatures"
+    ]
+  },
+  {
+    "query": "language",
+    "aliases": [
+      "languages",
+      "linguistics",
+      "human communication",
+      "spoken language",
+      "written language",
+      "language studies",
+      "language learning",
+      "world languages",
+      "language education",
+      "language structure",
+      "language diagrams"
+    ]
+  },
+  {
+    "query": "english language",
+    "aliases": [
+      "english",
+      "english grammar",
+      "english vocabulary",
+      "english spelling",
+      "english pronunciation",
+      "english language arts",
+      "english lessons",
+      "english linguistics",
+      "english communication",
+      "english reading",
+      "english writing",
+      "english literature"
+    ]
+  },
+  {
+    "query": "spanish language",
+    "aliases": [
+      "spanish",
+      "español",
+      "spanish grammar",
+      "spanish vocabulary",
+      "spanish pronunciation",
+      "spanish lessons",
+      "spanish speaking",
+      "spanish writing",
+      "spanish reading",
+      "spanish verbs",
+      "spanish language learning"
+    ]
+  },
+  {
+    "query": "french language",
+    "aliases": [
+      "french",
+      "français",
+      "french grammar",
+      "french vocabulary",
+      "french pronunciation",
+      "french lessons",
+      "french speaking",
+      "french writing",
+      "french reading",
+      "french verbs",
+      "french language learning"
+    ]
+  },
+  {
+    "query": "german language",
+    "aliases": [
+      "german",
+      "deutsch",
+      "german grammar",
+      "german vocabulary",
+      "german pronunciation",
+      "german lessons",
+      "german speaking",
+      "german writing",
+      "german reading",
+      "german verbs",
+      "german language learning"
+    ]
+  },
+  {
+    "query": "chinese language",
+    "aliases": [
+      "mandarin",
+      "mandarin chinese",
+      "chinese characters",
+      "simplified chinese",
+      "traditional chinese",
+      "pinyin",
+      "chinese grammar",
+      "chinese vocabulary",
+      "chinese pronunciation",
+      "chinese writing",
+      "chinese language learning"
+    ]
+  },
+  {
+    "query": "japanese language",
+    "aliases": [
+      "japanese",
+      "日本語",
+      "japanese writing",
+      "hiragana",
+      "katakana",
+      "kanji",
+      "japanese grammar",
+      "japanese vocabulary",
+      "japanese pronunciation",
+      "japanese lessons",
+      "japanese language learning"
+    ]
+  },
+  {
+    "query": "latin language",
+    "aliases": [
+      "latin",
+      "classical latin",
+      "latin grammar",
+      "latin vocabulary",
+      "latin phrases",
+      "latin translations",
+      "latin alphabet",
+      "roman language",
+      "latin literature",
+      "latin inscriptions",
+      "latin language lessons"
+    ]
+  },
+  {
+    "query": "sign language",
+    "aliases": [
+      "american sign language",
+      "asl",
+      "british sign language",
+      "bsl",
+      "signed communication",
+      "hand signs",
+      "sign language alphabet",
+      "finger spelling",
+      "sign language gestures",
+      "deaf communication",
+      "sign language education"
+    ]
+  },
+  {
+    "query": "linguistics",
+    "aliases": [
+      "language science",
+      "language structure",
+      "phonetics",
+      "phonology",
+      "morphology",
+      "syntax",
+      "semantics",
+      "pragmatics",
+      "sociolinguistics",
+      "historical linguistics",
+      "language evolution",
+      "linguistic analysis"
+    ]
+  },
+  {
+    "query": "grammar",
+    "aliases": [
+      "sentence structure",
+      "parts of speech",
+      "nouns",
+      "verbs",
+      "adjectives",
+      "adverbs",
+      "pronouns",
+      "prepositions",
+      "conjunctions",
+      "punctuation",
+      "grammar rules",
+      "sentence diagramming"
+    ]
+  },
+  {
+    "query": "vocabulary",
+    "aliases": [
+      "word knowledge",
+      "word meanings",
+      "word lists",
+      "word definitions",
+      "synonyms",
+      "antonyms",
+      "homonyms",
+      "academic vocabulary",
+      "vocabulary building",
+      "word study",
+      "word recognition",
+      "language development"
+    ]
+  },
+  {
+    "query": "phonetics",
+    "aliases": [
+      "speech sounds",
+      "phonetic alphabet",
+      "international phonetic alphabet",
+      "ipa",
+      "vowel sounds",
+      "consonant sounds",
+      "articulation",
+      "pronunciation",
+      "phonetic transcription",
+      "speech science",
+      "sound symbols"
+    ]
+  },
+  {
+    "query": "writing systems",
+    "aliases": [
+      "alphabets",
+      "scripts",
+      "writing systems of the world",
+      "ancient scripts",
+      "hieroglyphics",
+      "cuneiform",
+      "latin alphabet",
+      "cyrillic alphabet",
+      "arabic script",
+      "chinese characters",
+      "japanese writing",
+      "writing symbols"
+    ]
+  },
+  {
+    "query": "translation",
+    "aliases": [
+      "language translation",
+      "interpreting",
+      "translators",
+      "multilingual communication",
+      "translated texts",
+      "language conversion",
+      "literary translation",
+      "machine translation",
+      "translation studies",
+      "bilingual texts",
+      "cross language communication"
+    ]
+  },
+  {
+    "query": "world languages",
+    "aliases": [
+      "global languages",
+      "international languages",
+      "spoken languages",
+      "language families",
+      "indo european languages",
+      "romance languages",
+      "germanic languages",
+      "slavic languages",
+      "sino tibetan languages",
+      "afroasiatic languages",
+      "language diversity"
+    ]
+  },
+  {
+    "query": "etymology",
+    "aliases": [
+      "word origins",
+      "history of words",
+      "word roots",
+      "linguistic origins",
+      "language history",
+      "word derivation",
+      "loanwords",
+      "historical linguistics",
+      "greek roots",
+      "latin roots",
+      "word evolution"
+    ]
+  },
+  {
+    "query": "communication",
+    "aliases": [
+      "human communication",
+      "verbal communication",
+      "nonverbal communication",
+      "body language",
+      "public speaking",
+      "interpersonal communication",
+      "written communication",
+      "visual communication",
+      "communication skills",
+      "mass communication",
+      "communication studies"
+    ]
+  },
+  {
+    "query": "rhetoric",
+    "aliases": [
+      "persuasive language",
+      "persuasion",
+      "rhetorical devices",
+      "ethos",
+      "pathos",
+      "logos",
+      "argumentation",
+      "public speaking",
+      "rhetorical analysis",
+      "figurative language",
+      "rhetorical strategies"
+    ]
+  },
+  {
+    "query": "debate",
+    "aliases": [
+      "formal debate",
+      "argumentation",
+      "debating",
+      "public speaking",
+      "competitive debate",
+      "rebuttals",
+      "cross examination",
+      "logical arguments",
+      "debate teams",
+      "debate competition",
+      "discussion techniques"
+    ]
+  },
+  {
+    "query": "literature",
+    "aliases": [
+      "books",
+      "written works",
+      "literary studies",
+      "classic literature",
+      "world literature",
+      "fiction",
+      "nonfiction",
+      "literary analysis",
+      "authors",
+      "novels",
+      "poetry",
+      "literary history"
+    ]
+  },
+  {
+    "query": "fiction",
+    "aliases": [
+      "fictional stories",
+      "imaginary stories",
+      "fiction books",
+      "short stories",
+      "novels",
+      "literary fiction",
+      "historical fiction",
+      "science fiction",
+      "fantasy fiction",
+      "mystery fiction",
+      "fiction writing"
+    ]
+  },
+  {
+    "query": "nonfiction",
+    "aliases": [
+      "true stories",
+      "factual books",
+      "informational texts",
+      "biographies",
+      "autobiographies",
+      "memoirs",
+      "essays",
+      "documentary writing",
+      "historical nonfiction",
+      "educational books",
+      "nonfiction literature"
+    ]
+  },
+  {
+    "query": "poetry",
+    "aliases": [
+      "poems",
+      "poets",
+      "verse",
+      "stanzas",
+      "rhyme",
+      "meter",
+      "sonnets",
+      "haiku",
+      "free verse",
+      "spoken word",
+      "poetry writing",
+      "poetry analysis"
+    ]
+  },
+  {
+    "query": "shakespeare",
+    "aliases": [
+      "william shakespeare",
+      "elizabethan literature",
+      "romeo and juliet",
+      "hamlet",
+      "macbeth",
+      "othello",
+      "king lear",
+      "a midsummer night's dream",
+      "shakespeare plays",
+      "shakespeare sonnets",
+      "globe theatre",
+      "bard of avon"
+    ]
+  },
+  {
+    "query": "classic literature",
+    "aliases": [
+      "literary classics",
+      "classic novels",
+      "great books",
+      "canonical literature",
+      "jane austen",
+      "charles dickens",
+      "mark twain",
+      "leo tolstoy",
+      "herman melville",
+      "victor hugo",
+      "classic authors",
+      "classic literature studies"
+    ]
+  },
+  {
+    "query": "children's literature",
+    "aliases": [
+      "children's books",
+      "picture books",
+      "fairy tales",
+      "bedtime stories",
+      "early readers",
+      "young readers",
+      "juvenile fiction",
+      "middle grade books",
+      "children's poetry",
+      "illustrated stories",
+      "children's authors"
+    ]
+  },
+  {
+    "query": "fantasy literature",
+    "aliases": [
+      "fantasy books",
+      "fantasy novels",
+      "magical worlds",
+      "dragons",
+      "wizards",
+      "witches",
+      "mythical kingdoms",
+      "epic fantasy",
+      "high fantasy",
+      "sword and sorcery",
+      "fantasy authors",
+      "fantasy storytelling"
+    ]
+  },
+  {
+    "query": "science fiction",
+    "aliases": [
+      "sci fi",
+      "science fiction books",
+      "futuristic fiction",
+      "space fiction",
+      "alien worlds",
+      "robot fiction",
+      "time travel stories",
+      "dystopian fiction",
+      "cyberpunk",
+      "space opera",
+      "speculative fiction",
+      "science fiction authors"
+    ]
+  },
+  {
+    "query": "mystery literature",
+    "aliases": [
+      "mystery books",
+      "detective fiction",
+      "whodunits",
+      "crime novels",
+      "sherlock holmes",
+      "agatha christie",
+      "murder mysteries",
+      "investigation stories",
+      "detective stories",
+      "mystery authors",
+      "suspense fiction"
+    ]
+  },
+  {
+    "query": "drama and plays",
+    "aliases": [
+      "theater scripts",
+      "stage plays",
+      "dramatic literature",
+      "playwriting",
+      "tragedy",
+      "comedy plays",
+      "stage drama",
+      "dramatic monologues",
+      "theatrical scripts",
+      "classical drama",
+      "modern drama",
+      "dramatic writing"
+    ]
+  },
+  {
+    "query": "literary genres",
+    "aliases": [
+      "book genres",
+      "fiction genres",
+      "nonfiction genres",
+      "mystery",
+      "fantasy",
+      "romance literature",
+      "historical fiction",
+      "horror literature",
+      "science fiction",
+      "adventure stories",
+      "literary categories",
+      "genre classification"
+    ]
+  },
+  {
+    "query": "literary devices",
+    "aliases": [
+      "figurative language",
+      "metaphors",
+      "similes",
+      "personification",
+      "alliteration",
+      "hyperbole",
+      "symbolism",
+      "foreshadowing",
+      "imagery",
+      "irony",
+      "motifs",
+      "literary techniques"
+    ]
+  },
+  {
+    "query": "storytelling",
+    "aliases": [
+      "narrative writing",
+      "story structure",
+      "plot",
+      "characters",
+      "setting",
+      "conflict",
+      "narrative arc",
+      "point of view",
+      "storytelling traditions",
+      "oral storytelling",
+      "creative writing",
+      "narrative techniques"
+    ]
+  },
+  {
+    "query": "creative writing",
+    "aliases": [
+      "writing stories",
+      "fiction writing",
+      "poetry writing",
+      "short story writing",
+      "novel writing",
+      "screenwriting",
+      "character development",
+      "plot development",
+      "writing prompts",
+      "creative expression",
+      "writing workshops"
+    ]
+  },
+  {
+    "query": "essay writing",
+    "aliases": [
+      "academic essays",
+      "argumentative essays",
+      "persuasive essays",
+      "expository writing",
+      "descriptive essays",
+      "narrative essays",
+      "thesis statements",
+      "essay structure",
+      "introduction paragraphs",
+      "conclusion paragraphs",
+      "academic writing"
+    ]
+  },
+  {
+    "query": "journalism",
+    "aliases": [
+      "news writing",
+      "reporting",
+      "journalists",
+      "newspapers",
+      "news articles",
+      "investigative journalism",
+      "photojournalism",
+      "broadcast journalism",
+      "press",
+      "newsrooms",
+      "journalistic ethics",
+      "media reporting"
+    ]
+  },
+  {
+    "query": "books and publishing",
+    "aliases": [
+      "book publishing",
+      "book printing",
+      "book design",
+      "book covers",
+      "bookbinding",
+      "libraries",
+      "bookstores",
+      "publishers",
+      "manuscripts",
+      "book editing",
+      "literary publishing",
+      "reading culture"
+    ]
+  },
+  {
+    "query": "mythical creatures",
+    "aliases": [
+      "dragons",
+      "griffins",
+      "unicorns",
+      "phoenixes",
+      "mermaids",
+      "centaurs",
+      "minotaurs",
+      "fairies",
+      "goblins",
+      "hydras",
+      "mythological beasts",
+      "legendary creatures"
+    ]
+  },
+  {
+    "query": "folklore and fairy tales",
+    "aliases": [
+      "folktales",
+      "fairy stories",
+      "folk stories",
+      "traditional tales",
+      "folk legends",
+      "brothers grimm",
+      "hans christian andersen",
+      "oral traditions",
+      "trickster tales",
+      "fables",
+      "cultural storytelling",
+      "folk narratives"
+    ]
+  },
+  {
+    "query": "art",
+    "aliases": [
+      "visual arts",
+      "fine arts",
+      "artwork",
+      "art education",
+      "art history",
+      "artistic expression",
+      "creative arts",
+      "artists",
+      "art techniques",
+      "art movements",
+      "art galleries",
+      "art studies"
+    ]
+  },
+  {
+    "query": "drawing",
+    "aliases": [
+      "sketching",
+      "pencil drawing",
+      "charcoal drawing",
+      "line art",
+      "figure drawing",
+      "still life drawing",
+      "portrait drawing",
+      "landscape drawing",
+      "technical drawing",
+      "drawing techniques",
+      "illustration",
+      "sketchbooks"
+    ]
+  },
+  {
+    "query": "painting",
+    "aliases": [
+      "paintings",
+      "paintbrushes",
+      "watercolor",
+      "acrylic painting",
+      "oil painting",
+      "gouache",
+      "canvas art",
+      "painting techniques",
+      "portrait painting",
+      "landscape painting",
+      "abstract painting",
+      "fine art painting"
+    ]
+  },
+  {
+    "query": "sculpture",
+    "aliases": [
+      "sculptural art",
+      "statues",
+      "carving",
+      "stone sculpture",
+      "wood carving",
+      "clay sculpture",
+      "bronze statues",
+      "marble sculpture",
+      "three dimensional art",
+      "installation sculpture",
+      "sculptors",
+      "sculpture techniques"
+    ]
+  },
+  {
+    "query": "photography",
+    "aliases": [
+      "photographs",
+      "photographic art",
+      "camera photography",
+      "portrait photography",
+      "landscape photography",
+      "street photography",
+      "wildlife photography",
+      "macro photography",
+      "studio photography",
+      "photojournalism",
+      "photography techniques",
+      "digital photography"
+    ]
+  },
+  {
+    "query": "digital art",
+    "aliases": [
+      "computer art",
+      "digital illustration",
+      "digital painting",
+      "tablet drawing",
+      "pixel art",
+      "vector art",
+      "3d digital art",
+      "graphic tablets",
+      "digital design",
+      "computer graphics",
+      "digital artists",
+      "generative art"
+    ]
+  },
+  {
+    "query": "graphic design",
+    "aliases": [
+      "visual design",
+      "graphic arts",
+      "typography",
+      "layout design",
+      "poster design",
+      "logo design",
+      "branding",
+      "visual communication",
+      "design elements",
+      "color theory",
+      "digital graphics",
+      "publication design"
+    ]
+  },
+  {
+    "query": "printmaking",
+    "aliases": [
+      "printing art",
+      "woodcut",
+      "linocut",
+      "etching",
+      "engraving",
+      "lithography",
+      "screen printing",
+      "relief printing",
+      "intaglio",
+      "monoprint",
+      "printmaking studio",
+      "art prints"
+    ]
+  },
+  {
+    "query": "ceramics and pottery",
+    "aliases": [
+      "pottery",
+      "ceramic art",
+      "clay work",
+      "pottery wheel",
+      "kilns",
+      "glazing",
+      "earthenware",
+      "stoneware",
+      "porcelain",
+      "ceramic sculpture",
+      "pottery making",
+      "ceramic techniques"
+    ]
+  },
+  {
+    "query": "textile arts",
+    "aliases": [
+      "fiber arts",
+      "weaving",
+      "embroidery",
+      "knitting",
+      "crochet",
+      "quilting",
+      "textile design",
+      "fabric art",
+      "tapestry",
+      "loom weaving",
+      "needlework",
+      "fiber crafts"
+    ]
+  },
+  {
+    "query": "art history",
+    "aliases": [
+      "history of art",
+      "historical art movements",
+      "ancient art",
+      "renaissance art",
+      "baroque art",
+      "impressionism",
+      "modernism",
+      "postmodernism",
+      "famous artists",
+      "art history timeline",
+      "museum collections",
+      "art movements"
+    ]
+  },
+  {
+    "query": "renaissance art",
+    "aliases": [
+      "renaissance painting",
+      "leonardo da vinci",
+      "michelangelo",
+      "raphael",
+      "sandro botticelli",
+      "mona lisa",
+      "sistine chapel",
+      "italian renaissance",
+      "renaissance sculpture",
+      "classical revival",
+      "renaissance masters"
+    ]
+  },
+  {
+    "query": "impressionism",
+    "aliases": [
+      "impressionist art",
+      "claude monet",
+      "pierre auguste renoir",
+      "edgar degas",
+      "berthe morisot",
+      "camille pissarro",
+      "impressionist paintings",
+      "plein air painting",
+      "light and color",
+      "french impressionism",
+      "impressionist artists"
+    ]
+  },
+  {
+    "query": "abstract art",
+    "aliases": [
+      "abstract painting",
+      "nonrepresentational art",
+      "geometric abstraction",
+      "abstract expressionism",
+      "wassily kandinsky",
+      "piet mondrian",
+      "jackson pollock",
+      "color field painting",
+      "abstract shapes",
+      "modern abstract art",
+      "nonfigurative art"
+    ]
+  },
+  {
+    "query": "surrealism",
+    "aliases": [
+      "surrealist art",
+      "salvador dalí",
+      "rené magritte",
+      "max ernst",
+      "dream imagery",
+      "surreal paintings",
+      "fantastical art",
+      "unconscious mind",
+      "surrealist movement",
+      "metaphysical imagery",
+      "surrealist artists"
+    ]
+  },
+  {
+    "query": "architecture",
+    "aliases": [
+      "architectural design",
+      "building design",
+      "architecture styles",
+      "architectural history",
+      "architectural structures",
+      "building plans",
+      "architectural drawings",
+      "famous buildings",
+      "architects",
+      "structural design",
+      "architectural models",
+      "built environment"
+    ]
+  },
+  {
+    "query": "interior design",
+    "aliases": [
+      "interior architecture",
+      "room design",
+      "home interiors",
+      "furniture layouts",
+      "interior decoration",
+      "residential design",
+      "commercial interiors",
+      "space planning",
+      "lighting design",
+      "interior styles",
+      "home decor",
+      "interior design concepts"
+    ]
+  },
+  {
+    "query": "fashion design",
+    "aliases": [
+      "fashion",
+      "clothing design",
+      "fashion illustration",
+      "fashion sketches",
+      "garment design",
+      "fashion collections",
+      "fashion designers",
+      "textile patterns",
+      "runway fashion",
+      "fashion industry",
+      "fashion history",
+      "fashion trends"
+    ]
+  },
+  {
+    "query": "crafts",
+    "aliases": [
+      "arts and crafts",
+      "handmade art",
+      "diy crafts",
+      "paper crafts",
+      "wood crafts",
+      "recycled crafts",
+      "craft projects",
+      "handicrafts",
+      "creative hobbies",
+      "craft supplies",
+      "decorative arts",
+      "craft techniques"
+    ]
+  },
+  {
+    "query": "color theory",
+    "aliases": [
+      "color wheel",
+      "primary colors",
+      "secondary colors",
+      "tertiary colors",
+      "complementary colors",
+      "analogous colors",
+      "color harmony",
+      "color mixing",
+      "hue saturation value",
+      "warm colors",
+      "cool colors",
+      "color relationships"
+    ]
+  },
+  {
+    "query": "music",
+    "aliases": [
+      "musical arts",
+      "music education",
+      "music theory",
+      "musical instruments",
+      "music history",
+      "musicians",
+      "composers",
+      "musical performance",
+      "music genres",
+      "sound and rhythm",
+      "music lessons",
+      "music studies"
+    ]
+  },
+  {
+    "query": "music theory",
+    "aliases": [
+      "musical notation",
+      "music composition",
+      "scales",
+      "chords",
+      "harmony",
+      "melody",
+      "rhythm",
+      "time signatures",
+      "key signatures",
+      "musical intervals",
+      "music reading",
+      "music theory diagrams"
+    ]
+  },
+  {
+    "query": "musical instruments",
+    "aliases": [
+      "instruments",
+      "orchestra instruments",
+      "band instruments",
+      "string instruments",
+      "wind instruments",
+      "brass instruments",
+      "percussion instruments",
+      "keyboard instruments",
+      "instrument families",
+      "musical equipment",
+      "instrument anatomy"
+    ]
+  },
+  {
+    "query": "piano",
+    "aliases": [
+      "keyboard piano",
+      "piano keys",
+      "piano lessons",
+      "grand piano",
+      "upright piano",
+      "piano playing",
+      "piano music",
+      "piano technique",
+      "piano keyboard",
+      "piano composition",
+      "piano practice"
+    ]
+  },
+  {
+    "query": "guitar",
+    "aliases": [
+      "acoustic guitar",
+      "electric guitar",
+      "classical guitar",
+      "guitar strings",
+      "guitar chords",
+      "guitar playing",
+      "guitar lessons",
+      "guitar anatomy",
+      "guitar techniques",
+      "bass guitar",
+      "guitar music"
+    ]
+  },
+  {
+    "query": "orchestra",
+    "aliases": [
+      "symphony orchestra",
+      "orchestral music",
+      "conductor",
+      "orchestra musicians",
+      "string section",
+      "brass section",
+      "woodwind section",
+      "percussion section",
+      "symphonic instruments",
+      "orchestra performance",
+      "classical orchestra"
+    ]
+  },
+  {
+    "query": "classical music",
+    "aliases": [
+      "classical composers",
+      "symphonies",
+      "concertos",
+      "sonatas",
+      "chamber music",
+      "baroque music",
+      "romantic music",
+      "mozart",
+      "beethoven",
+      "bach",
+      "orchestral classical music",
+      "classical compositions"
+    ]
+  },
+  {
+    "query": "jazz",
+    "aliases": [
+      "jazz music",
+      "jazz musicians",
+      "improvisation",
+      "bebop",
+      "swing music",
+      "duke ellington",
+      "louis armstrong",
+      "miles davis",
+      "jazz instruments",
+      "jazz bands",
+      "big band",
+      "jazz history"
+    ]
+  },
+  {
+    "query": "rock music",
+    "aliases": [
+      "rock and roll",
+      "classic rock",
+      "alternative rock",
+      "punk rock",
+      "hard rock",
+      "indie rock",
+      "rock bands",
+      "electric guitars",
+      "rock concerts",
+      "rock musicians",
+      "rock music history"
+    ]
+  },
+  {
+    "query": "hip hop",
+    "aliases": [
+      "hip hop music",
+      "rap",
+      "rapping",
+      "breakdancing",
+      "djing",
+      "turntablism",
+      "graffiti art",
+      "hip hop culture",
+      "hip hop dance",
+      "rap music",
+      "hip hop history"
+    ]
+  },
+  {
+    "query": "electronic music",
+    "aliases": [
+      "edm",
+      "electronic dance music",
+      "synthesizers",
+      "music production",
+      "electronic beats",
+      "house music",
+      "techno",
+      "trance",
+      "drum and bass",
+      "digital audio",
+      "electronic instruments"
+    ]
+  },
+  {
+    "query": "opera",
+    "aliases": [
+      "opera singing",
+      "operatic music",
+      "opera houses",
+      "arias",
+      "librettos",
+      "soprano",
+      "tenor",
+      "baritone",
+      "mezzo soprano",
+      "opera costumes",
+      "opera performances",
+      "classical vocal music"
+    ]
+  },
+  {
+    "query": "dance",
+    "aliases": [
+      "dance arts",
+      "choreography",
+      "dance performance",
+      "dance movements",
+      "dance styles",
+      "contemporary dance",
+      "folk dance",
+      "social dance",
+      "dance studios",
+      "dance education",
+      "movement arts"
+    ]
+  },
+  {
+    "query": "ballet",
+    "aliases": [
+      "classical ballet",
+      "ballet dancers",
+      "ballet positions",
+      "pointe shoes",
+      "ballet performance",
+      "ballet choreography",
+      "ballet studios",
+      "ballet costumes",
+      "the nutcracker",
+      "swan lake",
+      "ballet technique"
+    ]
+  },
+  {
+    "query": "theater",
+    "aliases": [
+      "theatre",
+      "stage performance",
+      "live theater",
+      "acting",
+      "stagecraft",
+      "playhouses",
+      "theater productions",
+      "dramatic arts",
+      "theater history",
+      "stage design",
+      "theatrical performance"
+    ]
+  },
+  {
+    "query": "film",
+    "aliases": [
+      "movies",
+      "cinema",
+      "motion pictures",
+      "filmmaking",
+      "film production",
+      "film directors",
+      "cinematography",
+      "movie studios",
+      "film history",
+      "movie theaters",
+      "film genres",
+      "screen acting"
+    ]
+  },
+  {
+    "query": "television",
+    "aliases": [
+      "tv",
+      "television programs",
+      "tv shows",
+      "broadcast television",
+      "television production",
+      "sitcoms",
+      "drama series",
+      "reality television",
+      "television history",
+      "tv studios",
+      "television broadcasting"
+    ]
+  },
+  {
+    "query": "animation",
+    "aliases": [
+      "animated films",
+      "cartoons",
+      "2d animation",
+      "3d animation",
+      "stop motion",
+      "traditional animation",
+      "computer animation",
+      "character animation",
+      "animated series",
+      "animation studios",
+      "animation techniques"
+    ]
+  },
+  {
+    "query": "video games",
+    "aliases": [
+      "gaming",
+      "video game design",
+      "game development",
+      "console games",
+      "pc gaming",
+      "arcade games",
+      "game characters",
+      "game art",
+      "game studios",
+      "gaming culture",
+      "interactive entertainment",
+      "game graphics"
+    ]
+  },
+  {
+    "query": "comics and graphic novels",
+    "aliases": [
+      "comic books",
+      "graphic storytelling",
+      "comic strips",
+      "manga",
+      "superhero comics",
+      "comic art",
+      "comic illustrators",
+      "comic panels",
+      "webcomics",
+      "graphic literature",
+      "comic book covers"
+    ]
+  },
+  {
+    "query": "architectural styles",
+    "aliases": [
+      "building styles",
+      "gothic architecture",
+      "romanesque architecture",
+      "baroque architecture",
+      "neoclassical architecture",
+      "art deco",
+      "modernist architecture",
+      "brutalist architecture",
+      "victorian architecture",
+      "renaissance architecture",
+      "architectural movements"
+    ]
+  },
+  {
+    "query": "skyscrapers",
+    "aliases": [
+      "high rise buildings",
+      "tall buildings",
+      "supertall buildings",
+      "urban towers",
+      "office towers",
+      "city skylines",
+      "modern skyscrapers",
+      "high rise architecture",
+      "tower buildings",
+      "skyscraper construction",
+      "famous skyscrapers"
+    ]
+  },
+  {
+    "query": "bridges",
+    "aliases": [
+      "bridge architecture",
+      "suspension bridges",
+      "arch bridges",
+      "cable stayed bridges",
+      "beam bridges",
+      "drawbridges",
+      "stone bridges",
+      "steel bridges",
+      "famous bridges",
+      "bridge engineering",
+      "bridge construction",
+      "bridge designs"
+    ]
+  },
+  {
+    "query": "monuments and landmarks",
+    "aliases": [
+      "famous landmarks",
+      "historic monuments",
+      "national monuments",
+      "world landmarks",
+      "memorials",
+      "statues",
+      "heritage sites",
+      "iconic structures",
+      "cultural landmarks",
+      "tourist attractions",
+      "monument architecture"
+    ]
+  },
+  {
+    "query": "urban planning",
+    "aliases": [
+      "city planning",
+      "urban development",
+      "city design",
+      "zoning",
+      "transportation planning",
+      "public spaces",
+      "urban infrastructure",
+      "smart cities",
+      "sustainable cities",
+      "urban renewal",
+      "metropolitan planning"
+    ]
+  },
+  {
+    "query": "city skylines",
+    "aliases": [
+      "urban skylines",
+      "cityscapes",
+      "downtown skylines",
+      "metropolitan skylines",
+      "night city photography",
+      "high rise city views",
+      "urban architecture",
+      "city panoramas",
+      "modern city views",
+      "famous city skylines"
+    ]
+  },
+  {
+    "query": "historic architecture",
+    "aliases": [
+      "historical buildings",
+      "heritage architecture",
+      "ancient buildings",
+      "medieval architecture",
+      "historic structures",
+      "preservation architecture",
+      "old buildings",
+      "historic homes",
+      "monuments",
+      "architectural heritage",
+      "restoration projects"
+    ]
+  },
+  {
+    "query": "sustainable architecture",
+    "aliases": [
+      "green buildings",
+      "eco architecture",
+      "sustainable buildings",
+      "passive house",
+      "energy efficient buildings",
+      "green roofs",
+      "solar architecture",
+      "environmentally friendly design",
+      "biophilic architecture",
+      "sustainable construction",
+      "eco friendly homes"
+    ]
+  },
+  {
+    "query": "famous cities",
+    "aliases": [
+      "world cities",
+      "new york city",
+      "london",
+      "paris",
+      "tokyo",
+      "rome",
+      "cairo",
+      "sydney",
+      "rio de janeiro",
+      "dubai",
+      "istanbul",
+      "city photography"
+    ]
+  },
+  {
+    "query": "transportation infrastructure",
+    "aliases": [
+      "roads",
+      "highways",
+      "railways",
+      "bridges",
+      "tunnels",
+      "airports",
+      "seaports",
+      "public transit",
+      "transportation networks",
+      "urban transit",
+      "infrastructure engineering",
+      "transportation systems"
+    ]
+  },
+  {
+    "query": "technology",
+    "aliases": [
+      "modern technology",
+      "technological innovations",
+      "digital technology",
+      "technology education",
+      "inventions",
+      "electronic devices",
+      "technology systems",
+      "future technology",
+      "technological advancements",
+      "technology history",
+      "technology diagrams"
+    ]
+  },
+  {
+    "query": "computers",
+    "aliases": [
+      "computer science",
+      "personal computers",
+      "desktop computers",
+      "laptop computers",
+      "computer hardware",
+      "computer systems",
+      "computer components",
+      "computer technology",
+      "computing devices",
+      "computer history",
+      "computer engineering"
+    ]
+  },
+  {
+    "query": "computer programming",
+    "aliases": [
+      "coding",
+      "software development",
+      "programming languages",
+      "computer code",
+      "algorithms",
+      "software engineering",
+      "web development",
+      "application development",
+      "programming education",
+      "coding lessons",
+      "computer programming languages"
+    ]
+  },
+  {
+    "query": "javascript",
+    "aliases": [
+      "js programming",
+      "javascript coding",
+      "web scripting",
+      "javascript functions",
+      "javascript arrays",
+      "javascript objects",
+      "javascript variables",
+      "javascript programming",
+      "ecmascript",
+      "frontend development",
+      "browser scripting"
+    ]
+  },
+  {
+    "query": "python programming",
+    "aliases": [
+      "python coding",
+      "python language",
+      "python scripts",
+      "python programming language",
+      "python functions",
+      "python libraries",
+      "python development",
+      "python syntax",
+      "python algorithms",
+      "python software",
+      "python tutorials"
+    ]
+  },
+  {
+    "query": "html and css",
+    "aliases": [
+      "web design code",
+      "html coding",
+      "css styling",
+      "hypertext markup language",
+      "cascading style sheets",
+      "web page structure",
+      "website styling",
+      "html elements",
+      "css layouts",
+      "web development basics",
+      "frontend web design"
+    ]
+  },
+  {
+    "query": "artificial intelligence",
+    "aliases": [
+      "ai",
+      "machine intelligence",
+      "ai technology",
+      "intelligent machines",
+      "machine learning",
+      "neural networks",
+      "generative ai",
+      "ai systems",
+      "computer intelligence",
+      "ai research",
+      "automated reasoning",
+      "artificial neural intelligence"
+    ]
+  },
+  {
+    "query": "machine learning",
+    "aliases": [
+      "ml",
+      "artificial intelligence",
+      "deep learning",
+      "training data",
+      "predictive models",
+      "neural networks",
+      "supervised learning",
+      "unsupervised learning",
+      "reinforcement learning",
+      "data modeling",
+      "machine learning algorithms",
+      "pattern recognition"
+    ]
+  },
+  {
+    "query": "robotics",
+    "aliases": [
+      "robots",
+      "robot engineering",
+      "robotic systems",
+      "industrial robots",
+      "humanoid robots",
+      "robot arms",
+      "autonomous robots",
+      "robot programming",
+      "robotics laboratory",
+      "robot design",
+      "robotics technology"
+    ]
+  },
+  {
+    "query": "internet",
+    "aliases": [
+      "world wide web",
+      "online networks",
+      "internet technology",
+      "web browsing",
+      "internet infrastructure",
+      "network communication",
+      "websites",
+      "online services",
+      "internet history",
+      "digital connectivity",
+      "internet systems"
+    ]
+  },
+  {
+    "query": "cybersecurity",
+    "aliases": [
+      "computer security",
+      "information security",
+      "digital security",
+      "network security",
+      "data protection",
+      "encryption",
+      "firewalls",
+      "cyber threats",
+      "secure computing",
+      "password security",
+      "cyber defense"
+    ]
+  },
+  {
+    "query": "computer networks",
+    "aliases": [
+      "networking",
+      "lan",
+      "wan",
+      "wireless networks",
+      "routers",
+      "network switches",
+      "network topology",
+      "internet protocols",
+      "ip addresses",
+      "data transmission",
+      "network infrastructure",
+      "computer communication"
+    ]
+  },
+  {
+    "query": "data science",
+    "aliases": [
+      "data analysis",
+      "big data",
+      "data visualization",
+      "data modeling",
+      "statistics",
+      "data mining",
+      "datasets",
+      "data processing",
+      "analytics",
+      "data research",
+      "computational analysis"
+    ]
+  },
+  {
+    "query": "databases",
+    "aliases": [
+      "database systems",
+      "sql",
+      "relational databases",
+      "database tables",
+      "data storage",
+      "database management",
+      "data queries",
+      "database design",
+      "database architecture",
+      "information systems",
+      "database technology"
+    ]
+  },
+  {
+    "query": "cloud computing",
+    "aliases": [
+      "cloud technology",
+      "cloud storage",
+      "remote servers",
+      "distributed computing",
+      "cloud infrastructure",
+      "online storage",
+      "virtual servers",
+      "cloud platforms",
+      "data centers",
+      "cloud services",
+      "cloud networking"
+    ]
+  },
+  {
+    "query": "electronics",
+    "aliases": [
+      "electronic circuits",
+      "electronic components",
+      "circuit boards",
+      "resistors",
+      "capacitors",
+      "transistors",
+      "diodes",
+      "semiconductors",
+      "microchips",
+      "electronic devices",
+      "electronics engineering",
+      "electronic systems"
+    ]
+  },
+  {
+    "query": "microchips",
+    "aliases": [
+      "computer chips",
+      "integrated circuits",
+      "semiconductor chips",
+      "microprocessors",
+      "silicon chips",
+      "chip manufacturing",
+      "computer processors",
+      "circuit design",
+      "transistors",
+      "electronic circuits",
+      "microelectronics"
+    ]
+  },
+  {
+    "query": "operating systems",
+    "aliases": [
+      "windows",
+      "macos",
+      "linux",
+      "android",
+      "ios",
+      "computer operating systems",
+      "system software",
+      "kernel",
+      "file systems",
+      "computer interfaces",
+      "os architecture"
+    ]
+  },
+  {
+    "query": "mobile technology",
+    "aliases": [
+      "smartphones",
+      "mobile phones",
+      "cell phones",
+      "tablets",
+      "mobile applications",
+      "wireless communication",
+      "mobile computing",
+      "touchscreens",
+      "smart devices",
+      "mobile operating systems",
+      "cellular technology"
+    ]
+  },
+  {
+    "query": "virtual reality",
+    "aliases": [
+      "vr",
+      "augmented reality",
+      "ar",
+      "mixed reality",
+      "immersive technology",
+      "virtual environments",
+      "vr headsets",
+      "3d simulations",
+      "virtual worlds",
+      "spatial computing",
+      "extended reality"
+    ]
+  },
+  {
+    "query": "3d printing",
+    "aliases": [
+      "additive manufacturing",
+      "3d printers",
+      "filament printing",
+      "resin printing",
+      "3d printed objects",
+      "rapid prototyping",
+      "layered manufacturing",
+      "3d modeling",
+      "digital fabrication",
+      "printing technology",
+      "3d printer designs"
+    ]
+  },
+  {
+    "query": "drones",
+    "aliases": [
+      "unmanned aerial vehicles",
+      "uavs",
+      "quadcopter",
+      "drone photography",
+      "aerial robotics",
+      "remote controlled aircraft",
+      "drone technology",
+      "drone cameras",
+      "autonomous flight",
+      "drone engineering",
+      "aerial vehicles"
+    ]
+  },
+  {
+    "query": "satellites",
+    "aliases": [
+      "artificial satellites",
+      "communications satellites",
+      "weather satellites",
+      "gps satellites",
+      "earth observation",
+      "orbital technology",
+      "satellite imagery",
+      "satellite communications",
+      "space infrastructure",
+      "satellite systems",
+      "orbital spacecraft"
+    ]
+  },
+  {
+    "query": "renewable technology",
+    "aliases": [
+      "green technology",
+      "clean technology",
+      "solar technology",
+      "wind technology",
+      "energy storage",
+      "battery technology",
+      "sustainable engineering",
+      "hydrogen energy",
+      "renewable power systems",
+      "environmental technology",
+      "clean energy innovation"
+    ]
+  },
+  {
+    "query": "digital media",
+    "aliases": [
+      "digital content",
+      "online media",
+      "multimedia",
+      "digital publishing",
+      "streaming media",
+      "digital communication",
+      "media technology",
+      "online platforms",
+      "digital production",
+      "interactive media",
+      "electronic media"
+    ]
+  },
+  {
+    "query": "engineering",
+    "aliases": [
+      "engineering science",
+      "applied science",
+      "engineering design",
+      "technical innovation",
+      "engineering projects",
+      "engineering disciplines",
+      "engineering diagrams",
+      "problem solving",
+      "engineering education",
+      "industrial design",
+      "engineering technology"
+    ]
+  },
+  {
+    "query": "mechanical engineering",
+    "aliases": [
+      "machine design",
+      "mechanical systems",
+      "engines",
+      "mechanisms",
+      "gears",
+      "pulleys",
+      "mechanical devices",
+      "thermodynamic systems",
+      "manufacturing machinery",
+      "mechanical engineering diagrams",
+      "machine components"
+    ]
+  },
+  {
+    "query": "civil engineering",
+    "aliases": [
+      "infrastructure engineering",
+      "structural engineering",
+      "roads and bridges",
+      "construction engineering",
+      "building infrastructure",
+      "dams",
+      "highways",
+      "foundations",
+      "public works",
+      "civil structures",
+      "construction projects"
+    ]
+  },
+  {
+    "query": "electrical engineering",
+    "aliases": [
+      "electrical systems",
+      "power engineering",
+      "circuit engineering",
+      "electric motors",
+      "generators",
+      "transformers",
+      "electrical grids",
+      "power distribution",
+      "electrical design",
+      "electrical components",
+      "electrical technology"
+    ]
+  },
+  {
+    "query": "chemical engineering",
+    "aliases": [
+      "chemical processes",
+      "industrial chemistry",
+      "process engineering",
+      "chemical plants",
+      "reactors",
+      "separation processes",
+      "industrial materials",
+      "chemical production",
+      "process design",
+      "chemical manufacturing",
+      "chemical engineering diagrams"
+    ]
+  },
+  {
+    "query": "aerospace engineering",
+    "aliases": [
+      "aeronautical engineering",
+      "spacecraft engineering",
+      "aircraft design",
+      "rocket engineering",
+      "flight mechanics",
+      "jet engines",
+      "aerodynamics",
+      "space vehicle design",
+      "airplane engineering",
+      "aviation technology",
+      "aerospace systems"
+    ]
+  },
+  {
+    "query": "structural engineering",
+    "aliases": [
+      "building structures",
+      "load bearing structures",
+      "steel frames",
+      "concrete structures",
+      "trusses",
+      "beams",
+      "columns",
+      "structural analysis",
+      "bridge structures",
+      "building foundations",
+      "structural design"
+    ]
+  },
+  {
+    "query": "automotive engineering",
+    "aliases": [
+      "car engineering",
+      "vehicle design",
+      "automobile technology",
+      "car engines",
+      "electric vehicles",
+      "hybrid vehicles",
+      "transmissions",
+      "vehicle mechanics",
+      "automotive systems",
+      "automotive manufacturing",
+      "car components"
+    ]
+  },
+  {
+    "query": "biomedical engineering",
+    "aliases": [
+      "medical engineering",
+      "medical devices",
+      "prosthetics",
+      "artificial organs",
+      "biomedical technology",
+      "medical imaging",
+      "biomechanics",
+      "healthcare technology",
+      "biomedical research",
+      "assistive devices",
+      "medical equipment"
+    ]
+  },
+  {
+    "query": "materials science",
+    "aliases": [
+      "material engineering",
+      "metals",
+      "alloys",
+      "ceramics",
+      "polymers",
+      "composites",
+      "nanomaterials",
+      "material properties",
+      "crystal structures",
+      "advanced materials",
+      "materials research"
+    ]
+  },
+  {
+    "query": "architecture engineering",
+    "aliases": [
+      "building engineering",
+      "building systems",
+      "architectural technology",
+      "construction design",
+      "building materials",
+      "structural systems",
+      "building services",
+      "building performance",
+      "architectural engineering",
+      "construction science"
+    ]
+  },
+  {
+    "query": "industrial engineering",
+    "aliases": [
+      "manufacturing systems",
+      "production engineering",
+      "factory design",
+      "operations research",
+      "process optimization",
+      "supply chains",
+      "quality control",
+      "industrial processes",
+      "production planning",
+      "factory automation",
+      "workflow design"
+    ]
+  },
+  {
+    "query": "environmental engineering",
+    "aliases": [
+      "environmental systems engineering",
+      "water treatment",
+      "wastewater treatment",
+      "pollution control",
+      "air quality engineering",
+      "environmental remediation",
+      "sustainable infrastructure",
+      "waste management",
+      "environmental technology",
+      "green engineering",
+      "water purification"
+    ]
+  },
+  {
+    "query": "robotic engineering",
+    "aliases": [
+      "robot design",
+      "robot construction",
+      "robotics engineering",
+      "robotic mechanisms",
+      "autonomous systems",
+      "robot sensors",
+      "robot actuators",
+      "industrial automation",
+      "robot prototypes",
+      "robotic arms",
+      "robot control systems"
+    ]
+  },
+  {
+    "query": "engineering tools",
+    "aliases": [
+      "technical tools",
+      "measuring instruments",
+      "calipers",
+      "micrometers",
+      "multimeters",
+      "wrenches",
+      "screwdrivers",
+      "drills",
+      "workshop equipment",
+      "engineering instruments",
+      "precision tools",
+      "technical equipment"
+    ]
+  },
+  {
+    "query": "everyday objects",
+    "aliases": [
+      "common objects",
+      "household objects",
+      "daily items",
+      "ordinary objects",
+      "everyday things",
+      "common household items",
+      "personal belongings",
+      "useful objects",
+      "familiar items",
+      "objects around us",
+      "daily life objects"
+    ]
+  },
+  {
+    "query": "household appliances",
+    "aliases": [
+      "home appliances",
+      "refrigerators",
+      "washing machines",
+      "dishwashers",
+      "microwaves",
+      "ovens",
+      "vacuum cleaners",
+      "toasters",
+      "blenders",
+      "kitchen appliances",
+      "laundry appliances",
+      "electrical appliances"
+    ]
+  },
+  {
+    "query": "furniture",
+    "aliases": [
+      "home furniture",
+      "chairs",
+      "tables",
+      "desks",
+      "sofas",
+      "beds",
+      "bookshelves",
+      "cabinets",
+      "dressers",
+      "office furniture",
+      "furniture design",
+      "interior furnishings"
+    ]
+  },
+  {
+    "query": "kitchen equipment",
+    "aliases": [
+      "cooking tools",
+      "kitchen utensils",
+      "pots and pans",
+      "knives",
+      "cutting boards",
+      "mixing bowls",
+      "measuring cups",
+      "spatulas",
+      "whisks",
+      "kitchen gadgets",
+      "baking equipment",
+      "culinary tools"
+    ]
+  },
+  {
+    "query": "clothing",
+    "aliases": [
+      "apparel",
+      "garments",
+      "fashion",
+      "shirts",
+      "pants",
+      "dresses",
+      "jackets",
+      "shoes",
+      "socks",
+      "uniforms",
+      "everyday wear",
+      "clothing styles"
+    ]
+  },
+  {
+    "query": "tools and hardware",
+    "aliases": [
+      "hand tools",
+      "power tools",
+      "hammers",
+      "screwdrivers",
+      "wrenches",
+      "pliers",
+      "saws",
+      "drills",
+      "nails",
+      "screws",
+      "workshop tools",
+      "construction tools"
+    ]
+  },
+  {
+    "query": "transportation",
+    "aliases": [
+      "transport",
+      "vehicles",
+      "cars",
+      "trains",
+      "airplanes",
+      "ships",
+      "buses",
+      "bicycles",
+      "motorcycles",
+      "public transportation",
+      "transportation systems",
+      "travel vehicles"
+    ]
+  },
+  {
+    "query": "cars",
+    "aliases": [
+      "automobiles",
+      "motor vehicles",
+      "sedans",
+      "suvs",
+      "sports cars",
+      "electric cars",
+      "classic cars",
+      "car engines",
+      "car interiors",
+      "car designs",
+      "car manufacturers",
+      "automotive industry"
+    ]
+  },
+  {
+    "query": "trains",
+    "aliases": [
+      "railways",
+      "railroad",
+      "locomotives",
+      "steam trains",
+      "electric trains",
+      "high speed rail",
+      "freight trains",
+      "passenger trains",
+      "subways",
+      "rail transportation",
+      "train stations",
+      "rail infrastructure"
+    ]
+  },
+  {
+    "query": "airplanes",
+    "aliases": [
+      "aircraft",
+      "aviation",
+      "commercial planes",
+      "passenger aircraft",
+      "jet planes",
+      "propeller aircraft",
+      "airliners",
+      "airplane engines",
+      "aircraft wings",
+      "flight technology",
+      "air transportation"
+    ]
+  },
+  {
+    "query": "ships and boats",
+    "aliases": [
+      "watercraft",
+      "sailing ships",
+      "cargo ships",
+      "cruise ships",
+      "fishing boats",
+      "naval vessels",
+      "sailboats",
+      "yachts",
+      "ferries",
+      "maritime transportation",
+      "shipbuilding",
+      "ocean vessels"
+    ]
+  },
+  {
+    "query": "bicycles",
+    "aliases": [
+      "bikes",
+      "cycling",
+      "mountain bikes",
+      "road bikes",
+      "bmx",
+      "bicycle parts",
+      "bicycle wheels",
+      "bike frames",
+      "bicycle mechanics",
+      "cycling equipment",
+      "bicycle transportation"
+    ]
+  },
+  {
+    "query": "occupations",
+    "aliases": [
+      "jobs",
+      "careers",
+      "professions",
+      "workers",
+      "workplaces",
+      "professional life",
+      "career education",
+      "different jobs",
+      "employment",
+      "occupational studies",
+      "workforce",
+      "career paths"
+    ]
+  },
+  {
+    "query": "teachers",
+    "aliases": [
+      "educators",
+      "school teachers",
+      "classroom teachers",
+      "teaching profession",
+      "education workers",
+      "instructors",
+      "professors",
+      "teaching activities",
+      "classroom instruction",
+      "school staff",
+      "teaching tools"
+    ]
+  },
+  {
+    "query": "scientists",
+    "aliases": [
+      "researchers",
+      "scientific careers",
+      "laboratory scientists",
+      "biologists",
+      "chemists",
+      "physicists",
+      "astronomers",
+      "geologists",
+      "scientific research",
+      "scientific equipment",
+      "science professions"
+    ]
+  },
+  {
+    "query": "doctors and medicine",
+    "aliases": [
+      "physicians",
+      "medical professionals",
+      "healthcare workers",
+      "doctors",
+      "medical offices",
+      "medical examination",
+      "clinical medicine",
+      "hospital doctors",
+      "medical equipment",
+      "medical careers",
+      "healthcare professions"
+    ]
+  },
+  {
+    "query": "construction workers",
+    "aliases": [
+      "builders",
+      "carpenters",
+      "masons",
+      "electricians",
+      "plumbers",
+      "construction crews",
+      "building trades",
+      "construction sites",
+      "hard hats",
+      "construction equipment",
+      "skilled trades"
+    ]
+  },
+  {
+    "query": "agriculture",
+    "aliases": [
+      "farming",
+      "farmers",
+      "crop production",
+      "livestock farming",
+      "agricultural machinery",
+      "irrigation",
+      "harvesting",
+      "planting crops",
+      "agricultural science",
+      "farm equipment",
+      "food production",
+      "rural agriculture"
+    ]
+  },
+  {
+    "query": "gardening",
+    "aliases": [
+      "garden plants",
+      "home gardening",
+      "vegetable gardens",
+      "flower gardens",
+      "garden tools",
+      "planting",
+      "pruning",
+      "composting",
+      "garden beds",
+      "horticulture",
+      "landscaping",
+      "garden design"
+    ]
+  },
+  {
+    "query": "public services",
+    "aliases": [
+      "community services",
+      "firefighters",
+      "police officers",
+      "paramedics",
+      "postal workers",
+      "sanitation workers",
+      "public transportation workers",
+      "emergency services",
+      "municipal services",
+      "public infrastructure",
+      "community workers"
+    ]
+  },
+  {
+    "query": "sports",
+    "aliases": [
+      "athletics",
+      "sporting activities",
+      "competitive sports",
+      "team sports",
+      "individual sports",
+      "sports education",
+      "sports equipment",
+      "sports competitions",
+      "athletes",
+      "physical competition",
+      "sports history",
+      "recreational sports"
+    ]
+  },
+  {
+    "query": "soccer",
+    "aliases": [
+      "football",
+      "association football",
+      "soccer players",
+      "soccer ball",
+      "goalkeepers",
+      "strikers",
+      "midfielders",
+      "defenders",
+      "soccer field",
+      "world cup",
+      "soccer teams",
+      "soccer matches"
+    ]
+  },
+  {
+    "query": "basketball",
+    "aliases": [
+      "basketball players",
+      "basketball court",
+      "basketball hoop",
+      "dribbling",
+      "shooting hoops",
+      "slam dunks",
+      "nba",
+      "basketball teams",
+      "basketball uniforms",
+      "basketball competition",
+      "basketball training"
+    ]
+  },
+  {
+    "query": "american football",
+    "aliases": [
+      "nfl",
+      "football players",
+      "football field",
+      "quarterbacks",
+      "touchdowns",
+      "tackles",
+      "football helmets",
+      "football uniforms",
+      "football teams",
+      "football games",
+      "gridiron football"
+    ]
+  },
+  {
+    "query": "baseball",
+    "aliases": [
+      "baseball players",
+      "baseball bat",
+      "baseball glove",
+      "baseball field",
+      "pitchers",
+      "catchers",
+      "home runs",
+      "baseball teams",
+      "major league baseball",
+      "baseball uniforms",
+      "baseball games"
+    ]
+  },
+  {
+    "query": "tennis",
+    "aliases": [
+      "tennis players",
+      "tennis racket",
+      "tennis court",
+      "tennis balls",
+      "singles tennis",
+      "doubles tennis",
+      "wimbledon",
+      "grand slam tennis",
+      "tennis serves",
+      "tennis matches",
+      "tennis tournaments"
+    ]
+  },
+  {
+    "query": "volleyball",
+    "aliases": [
+      "volleyball players",
+      "volleyball net",
+      "volleyball court",
+      "beach volleyball",
+      "indoor volleyball",
+      "spiking",
+      "serving",
+      "volleyball teams",
+      "volleyball uniforms",
+      "volleyball matches",
+      "volleyball tournaments"
+    ]
+  },
+  {
+    "query": "swimming",
+    "aliases": [
+      "competitive swimming",
+      "swimmers",
+      "swimming pools",
+      "freestyle swimming",
+      "backstroke",
+      "breaststroke",
+      "butterfly stroke",
+      "swimming races",
+      "swimming goggles",
+      "swim teams",
+      "aquatic sports"
+    ]
+  },
+  {
+    "query": "track and field",
+    "aliases": [
+      "athletics events",
+      "running races",
+      "sprinting",
+      "long distance running",
+      "hurdles",
+      "relay races",
+      "long jump",
+      "high jump",
+      "pole vault",
+      "shot put",
+      "discus throw",
+      "javelin throw",
+      "track meets"
+    ]
+  },
+  {
+    "query": "gymnastics",
+    "aliases": [
+      "gymnasts",
+      "artistic gymnastics",
+      "rhythmic gymnastics",
+      "balance beam",
+      "uneven bars",
+      "vault",
+      "floor exercise",
+      "parallel bars",
+      "pommel horse",
+      "gymnastics routines",
+      "gymnastics competition"
+    ]
+  },
+  {
+    "query": "golf",
+    "aliases": [
+      "golf players",
+      "golf courses",
+      "golf clubs",
+      "golf balls",
+      "putting",
+      "driving range",
+      "golf swing",
+      "golf tournaments",
+      "pga tour",
+      "golf carts",
+      "golf equipment"
+    ]
+  },
+  {
+    "query": "hockey",
+    "aliases": [
+      "ice hockey",
+      "field hockey",
+      "hockey players",
+      "hockey sticks",
+      "ice rink",
+      "pucks",
+      "goalies",
+      "hockey teams",
+      "nhl",
+      "hockey uniforms",
+      "hockey games"
+    ]
+  },
+  {
+    "query": "cricket",
+    "aliases": [
+      "cricket players",
+      "cricket bat",
+      "cricket ball",
+      "wickets",
+      "batsmen",
+      "bowlers",
+      "cricket pitch",
+      "cricket teams",
+      "test cricket",
+      "one day international",
+      "cricket tournaments"
+    ]
+  },
+  {
+    "query": "rugby",
+    "aliases": [
+      "rugby union",
+      "rugby league",
+      "rugby players",
+      "rugby ball",
+      "scrums",
+      "tries",
+      "rugby field",
+      "rugby teams",
+      "rugby uniforms",
+      "rugby matches",
+      "rugby tournaments"
+    ]
+  },
+  {
+    "query": "badminton",
+    "aliases": [
+      "badminton players",
+      "badminton racket",
+      "shuttlecock",
+      "badminton court",
+      "singles badminton",
+      "doubles badminton",
+      "badminton net",
+      "badminton matches",
+      "badminton tournaments",
+      "racket sports",
+      "badminton equipment"
+    ]
+  },
+  {
+    "query": "table tennis",
+    "aliases": [
+      "ping pong",
+      "table tennis players",
+      "paddles",
+      "ping pong ball",
+      "table tennis table",
+      "table tennis net",
+      "table tennis matches",
+      "table tennis tournaments",
+      "racket sports",
+      "table tennis equipment",
+      "table tennis competition"
+    ]
+  },
+  {
+    "query": "boxing",
+    "aliases": [
+      "boxing sport",
+      "boxers",
+      "boxing gloves",
+      "boxing ring",
+      "heavyweight boxing",
+      "boxing matches",
+      "boxing training",
+      "boxing championship",
+      "boxing equipment",
+      "professional boxing",
+      "amateur boxing"
+    ]
+  },
+  {
+    "query": "wrestling",
+    "aliases": [
+      "competitive wrestling",
+      "freestyle wrestling",
+      "greco roman wrestling",
+      "wrestlers",
+      "wrestling mats",
+      "wrestling matches",
+      "wrestling tournaments",
+      "wrestling uniforms",
+      "grappling",
+      "amateur wrestling",
+      "wrestling competition"
+    ]
+  },
+  {
+    "query": "martial arts",
+    "aliases": [
+      "karate",
+      "judo",
+      "taekwondo",
+      "kung fu",
+      "jiu jitsu",
+      "aikido",
+      "martial arts training",
+      "martial arts uniforms",
+      "martial arts belts",
+      "martial arts techniques",
+      "combat sports",
+      "traditional martial arts"
+    ]
+  },
+  {
+    "query": "cycling sports",
+    "aliases": [
+      "competitive cycling",
+      "road cycling",
+      "mountain biking",
+      "bmx racing",
+      "track cycling",
+      "cycling races",
+      "tour de france",
+      "bicycle racing",
+      "cycling teams",
+      "cycling helmets",
+      "professional cyclists"
+    ]
+  },
+  {
+    "query": "skiing",
+    "aliases": [
+      "alpine skiing",
+      "cross country skiing",
+      "ski slopes",
+      "ski resorts",
+      "skiers",
+      "ski equipment",
+      "ski racing",
+      "downhill skiing",
+      "slalom",
+      "ski lifts",
+      "winter sports"
+    ]
+  },
+  {
+    "query": "snowboarding",
+    "aliases": [
+      "snowboarders",
+      "snowboard equipment",
+      "snowboard tricks",
+      "snowboard parks",
+      "halfpipe",
+      "snowboard competitions",
+      "freestyle snowboarding",
+      "snowboard slopes",
+      "winter sports",
+      "snowboard racing"
+    ]
+  },
+  {
+    "query": "skateboarding",
+    "aliases": [
+      "skateboards",
+      "skateboarders",
+      "skate parks",
+      "skateboard tricks",
+      "street skating",
+      "vert skating",
+      "skateboard ramps",
+      "skateboard competitions",
+      "skateboard decks",
+      "skateboarding culture",
+      "extreme sports"
+    ]
+  },
+  {
+    "query": "surfing",
+    "aliases": [
+      "surfers",
+      "surfboards",
+      "surf breaks",
+      "ocean waves",
+      "surf competitions",
+      "surfing equipment",
+      "longboarding",
+      "shortboarding",
+      "big wave surfing",
+      "surf culture",
+      "water sports"
+    ]
+  },
+  {
+    "query": "olympic games",
+    "aliases": [
+      "olympics",
+      "summer olympics",
+      "winter olympics",
+      "olympic athletes",
+      "olympic medals",
+      "olympic rings",
+      "olympic sports",
+      "olympic stadium",
+      "olympic ceremonies",
+      "paralympic games",
+      "international sports competition"
+    ]
+  },
+  {
+    "query": "sports equipment",
+    "aliases": [
+      "athletic gear",
+      "sports gear",
+      "balls",
+      "rackets",
+      "helmets",
+      "protective equipment",
+      "sports uniforms",
+      "training equipment",
+      "fitness equipment",
+      "athletic accessories",
+      "sports technology"
+    ]
+  },
+  {
+    "query": "recreation",
+    "aliases": [
+      "leisure activities",
+      "recreational activities",
+      "free time",
+      "hobbies",
+      "outdoor recreation",
+      "indoor recreation",
+      "leisure sports",
+      "recreational hobbies",
+      "fun activities",
+      "recreation education",
+      "community recreation"
+    ]
+  },
+  {
+    "query": "camping",
+    "aliases": [
+      "camping trips",
+      "campgrounds",
+      "tents",
+      "sleeping bags",
+      "campfires",
+      "camping equipment",
+      "outdoor camping",
+      "backpacking",
+      "wilderness camping",
+      "camping supplies",
+      "camping activities"
+    ]
+  },
+  {
+    "query": "hiking",
+    "aliases": [
+      "hiking trails",
+      "trail walking",
+      "mountain hiking",
+      "nature walks",
+      "hikers",
+      "hiking boots",
+      "backpacking trails",
+      "national parks",
+      "trail maps",
+      "outdoor exploration",
+      "hiking equipment"
+    ]
+  },
+  {
+    "query": "fishing",
+    "aliases": [
+      "recreational fishing",
+      "angling",
+      "fishing rods",
+      "fishing reels",
+      "fishing boats",
+      "fly fishing",
+      "freshwater fishing",
+      "saltwater fishing",
+      "fishing tackle",
+      "fishing lures",
+      "fishing equipment"
+    ]
+  },
+  {
+    "query": "board games",
+    "aliases": [
+      "tabletop games",
+      "chess",
+      "checkers",
+      "monopoly",
+      "scrabble",
+      "playing boards",
+      "strategy games",
+      "family board games",
+      "game pieces",
+      "board game design",
+      "classic board games"
+    ]
+  },
+  {
+    "query": "card games",
+    "aliases": [
+      "playing cards",
+      "poker cards",
+      "bridge",
+      "solitaire",
+      "rummy",
+      "card decks",
+      "card games for families",
+      "trading card games",
+      "collectible cards",
+      "card game strategy",
+      "playing card designs"
+    ]
+  },
+  {
+    "query": "puzzles",
+    "aliases": [
+      "jigsaw puzzles",
+      "crossword puzzles",
+      "word searches",
+      "logic puzzles",
+      "brain teasers",
+      "sudoku",
+      "puzzle solving",
+      "puzzle pieces",
+      "puzzle books",
+      "mechanical puzzles",
+      "educational puzzles"
+    ]
+  },
+  {
+    "query": "collecting",
+    "aliases": [
+      "collections",
+      "collectibles",
+      "stamp collecting",
+      "coin collecting",
+      "antique collecting",
+      "trading cards",
+      "memorabilia",
+      "collectors",
+      "collection displays",
+      "hobby collections",
+      "collectible objects"
+    ]
+  },
+  {
+    "query": "photography hobbies",
+    "aliases": [
+      "amateur photography",
+      "hobby photographers",
+      "camera enthusiasts",
+      "photography walks",
+      "nature photography",
+      "street photography",
+      "macro photography",
+      "photo projects",
+      "camera equipment",
+      "creative photography",
+      "photography clubs"
+    ]
+  },
+  {
+    "query": "gardening hobbies",
+    "aliases": [
+      "home gardens",
+      "backyard gardening",
+      "container gardening",
+      "flower growing",
+      "vegetable growing",
+      "houseplants",
+      "garden projects",
+      "seed starting",
+      "plant care",
+      "garden hobbies",
+      "urban gardening"
+    ]
+  },
+  {
+    "query": "model building",
+    "aliases": [
+      "scale models",
+      "model kits",
+      "model airplanes",
+      "model trains",
+      "model cars",
+      "miniature models",
+      "plastic models",
+      "ship models",
+      "model making",
+      "hobby modeling",
+      "miniature construction"
+    ]
+  },
+  {
+    "query": "woodworking",
+    "aliases": [
+      "wood crafts",
+      "carpentry",
+      "wood carving",
+      "woodworking tools",
+      "wood furniture",
+      "wood joints",
+      "woodworking projects",
+      "woodshop",
+      "wood turning",
+      "woodworking techniques",
+      "woodworking designs"
+    ]
+  },
+  {
+    "query": "sewing",
+    "aliases": [
+      "sewing machines",
+      "needle and thread",
+      "fabric sewing",
+      "garment construction",
+      "sewing patterns",
+      "hand sewing",
+      "machine sewing",
+      "sewing projects",
+      "textile crafts",
+      "stitching",
+      "sewing supplies"
+    ]
+  },
+  {
+    "query": "knitting and crochet",
+    "aliases": [
+      "knitting needles",
+      "crochet hooks",
+      "yarn crafts",
+      "knitted garments",
+      "crochet patterns",
+      "knitting patterns",
+      "yarn",
+      "stitches",
+      "handmade scarves",
+      "fiber crafts",
+      "knitting projects"
+    ]
+  },
+  {
+    "query": "puzzles and brain games",
+    "aliases": [
+      "brain games",
+      "logic games",
+      "memory games",
+      "math puzzles",
+      "word games",
+      "riddles",
+      "reasoning games",
+      "problem solving games",
+      "educational games",
+      "mind challenges",
+      "brain teasers"
+    ]
+  },
+  {
+    "query": "animals",
+    "aliases": [
+      "animal kingdom",
+      "wildlife",
+      "creatures",
+      "animal species",
+      "animal life",
+      "vertebrates",
+      "invertebrates",
+      "mammals",
+      "birds",
+      "reptiles",
+      "amphibians",
+      "fish",
+      "animal biology",
+      "animal habitats"
+    ]
+  },
+  {
+    "query": "mammals",
+    "aliases": [
+      "mammalian animals",
+      "mammal species",
+      "land mammals",
+      "marine mammals",
+      "wild mammals",
+      "primates",
+      "rodents",
+      "carnivores",
+      "herbivores",
+      "omnivores",
+      "mammal anatomy",
+      "mammal classification"
+    ]
+  },
+  {
+    "query": "dogs",
+    "aliases": [
+      "domestic dogs",
+      "canines",
+      "dog breeds",
+      "puppies",
+      "working dogs",
+      "herding dogs",
+      "retrievers",
+      "german shepherds",
+      "golden retrievers",
+      "dog anatomy",
+      "dog behavior",
+      "pet dogs"
+    ]
+  },
+  {
+    "query": "cats",
+    "aliases": [
+      "domestic cats",
+      "felines",
+      "cat breeds",
+      "kittens",
+      "wild cats",
+      "house cats",
+      "big cats",
+      "lions",
+      "tigers",
+      "leopards",
+      "cat anatomy",
+      "feline behavior"
+    ]
+  },
+  {
+    "query": "birds",
+    "aliases": [
+      "avian animals",
+      "bird species",
+      "birdwatching",
+      "songbirds",
+      "raptors",
+      "waterfowl",
+      "migratory birds",
+      "parrots",
+      "eagles",
+      "owls",
+      "bird feathers",
+      "bird anatomy",
+      "ornithology"
+    ]
+  },
+  {
+    "query": "reptiles",
+    "aliases": [
+      "reptilian animals",
+      "snakes",
+      "lizards",
+      "turtles",
+      "tortoises",
+      "crocodiles",
+      "alligators",
+      "geckos",
+      "iguanas",
+      "chameleons",
+      "reptile anatomy",
+      "herpetology"
+    ]
+  },
+  {
+    "query": "amphibians",
+    "aliases": [
+      "frogs",
+      "toads",
+      "salamanders",
+      "newts",
+      "caecilians",
+      "amphibian species",
+      "tadpoles",
+      "frog life cycle",
+      "amphibian habitats",
+      "amphibian anatomy",
+      "herpetology",
+      "amphibian biology"
+    ]
+  },
+  {
+    "query": "fish",
+    "aliases": [
+      "aquatic animals",
+      "freshwater fish",
+      "saltwater fish",
+      "tropical fish",
+      "sharks",
+      "rays",
+      "salmon",
+      "trout",
+      "clownfish",
+      "goldfish",
+      "fish anatomy",
+      "ichthyology"
+    ]
+  },
+  {
+    "query": "insects",
+    "aliases": [
+      "insect species",
+      "arthropods",
+      "beetles",
+      "butterflies",
+      "moths",
+      "ants",
+      "bees",
+      "wasps",
+      "flies",
+      "mosquitoes",
+      "grasshoppers",
+      "dragonflies",
+      "entomology"
+    ]
+  },
+  {
+    "query": "arachnids",
+    "aliases": [
+      "spiders",
+      "scorpions",
+      "ticks",
+      "mites",
+      "tarantulas",
+      "web building spiders",
+      "arachnid anatomy",
+      "eight legged animals",
+      "arachnid species",
+      "spider webs",
+      "arachnology"
+    ]
+  },
+  {
+    "query": "marine animals",
+    "aliases": [
+      "sea creatures",
+      "ocean animals",
+      "dolphins",
+      "whales",
+      "sharks",
+      "seals",
+      "sea lions",
+      "octopuses",
+      "jellyfish",
+      "sea turtles",
+      "marine mammals",
+      "underwater wildlife"
+    ]
+  },
+  {
+    "query": "endangered animals",
+    "aliases": [
+      "threatened species",
+      "endangered wildlife",
+      "animal conservation",
+      "rare animals",
+      "vulnerable species",
+      "extinction risk",
+      "wildlife protection",
+      "conservation biology",
+      "giant pandas",
+      "tigers",
+      "rhinos",
+      "endangered species habitats"
+    ]
+  },
+  {
+    "query": "dinosaurs",
+    "aliases": [
+      "prehistoric animals",
+      "dinosaur species",
+      "tyrannosaurus rex",
+      "t rex",
+      "triceratops",
+      "stegosaurus",
+      "velociraptor",
+      "brachiosaurus",
+      "jurassic period",
+      "cretaceous period",
+      "dinosaur fossils",
+      "paleontology"
+    ]
+  },
+  {
+    "query": "animal habitats",
+    "aliases": [
+      "wildlife habitats",
+      "animal homes",
+      "natural habitats",
+      "forest habitats",
+      "desert habitats",
+      "wetland habitats",
+      "grassland habitats",
+      "marine habitats",
+      "nesting sites",
+      "burrows",
+      "animal shelters",
+      "habitat adaptation"
+    ]
+  },
+  {
+    "query": "animal adaptations",
+    "aliases": [
+      "biological adaptations",
+      "camouflage",
+      "mimicry",
+      "hibernation",
+      "migration",
+      "protective coloration",
+      "animal defenses",
+      "structural adaptations",
+      "behavioral adaptations",
+      "survival adaptations",
+      "evolutionary adaptations",
+      "animal survival"
+    ]
+  },
+  {
+    "query": "animal life cycles",
+    "aliases": [
+      "animal development",
+      "metamorphosis",
+      "life cycle diagrams",
+      "butterfly life cycle",
+      "frog life cycle",
+      "egg development",
+      "birth and growth",
+      "reproduction in animals",
+      "animal growth stages",
+      "larvae",
+      "pupae",
+      "animal reproduction"
+    ]
+  },
+  {
+    "query": "animal anatomy",
+    "aliases": [
+      "animal body structures",
+      "animal organs",
+      "animal skeletons",
+      "animal muscles",
+      "animal physiology",
+      "comparative anatomy",
+      "vertebrate anatomy",
+      "invertebrate anatomy",
+      "animal body systems",
+      "animal dissections",
+      "animal biology diagrams"
+    ]
+  },
+  {
+    "query": "animal tracks and signs",
+    "aliases": [
+      "animal footprints",
+      "wildlife tracks",
+      "paw prints",
+      "bird tracks",
+      "animal trails",
+      "tracking wildlife",
+      "animal scat",
+      "feeding signs",
+      "wildlife identification",
+      "animal spoor",
+      "track identification"
+    ]
+  },
+  {
+    "query": "invertebrates",
+    "aliases": [
+      "animals without backbones",
+      "mollusks",
+      "arthropods",
+      "worms",
+      "jellyfish",
+      "corals",
+      "sponges",
+      "starfish",
+      "sea urchins",
+      "crustaceans",
+      "invertebrate biology",
+      "invertebrate classification"
+    ]
+  },
+  {
+    "query": "mammal groups",
+    "aliases": [
+      "primates",
+      "marsupials",
+      "monotremes",
+      "rodents",
+      "bats",
+      "ungulates",
+      "carnivorans",
+      "cetaceans",
+      "pinnipeds",
+      "mammalian orders",
+      "mammal classification",
+      "mammal diversity"
+    ]
+  },
+  {
+    "query": "animal communication",
+    "aliases": [
+      "animal sounds",
+      "animal signals",
+      "bird calls",
+      "whale songs",
+      "bee dances",
+      "pheromones",
+      "visual signals",
+      "animal language",
+      "social signaling",
+      "communication in wildlife",
+      "animal vocalizations"
+    ]
+  },
+  {
+    "query": "animal migration",
+    "aliases": [
+      "migratory animals",
+      "bird migration",
+      "whale migration",
+      "salmon migration",
+      "monarch butterflies",
+      "seasonal migration",
+      "migration routes",
+      "wildlife journeys",
+      "animal navigation",
+      "migration patterns",
+      "migration maps"
+    ]
+  },
+  {
+    "query": "animal conservation",
+    "aliases": [
+      "wildlife conservation",
+      "species protection",
+      "habitat preservation",
+      "wildlife reserves",
+      "national parks",
+      "conservation programs",
+      "anti poaching",
+      "biodiversity protection",
+      "wildlife rehabilitation",
+      "conservation projects",
+      "species recovery"
+    ]
+  },
+  {
+    "query": "pets",
+    "aliases": [
+      "domestic animals",
+      "pet care",
+      "companion animals",
+      "pet dogs",
+      "pet cats",
+      "pet birds",
+      "pet fish",
+      "hamsters",
+      "guinea pigs",
+      "rabbits",
+      "pet habitats",
+      "animal companionship"
+    ]
+  },
+  {
+    "query": "farm animals",
+    "aliases": [
+      "livestock",
+      "cattle",
+      "cows",
+      "sheep",
+      "goats",
+      "pigs",
+      "chickens",
+      "ducks",
+      "horses",
+      "donkeys",
+      "barnyard animals",
+      "domesticated livestock",
+      "farm animal breeds"
+    ]
+  },
+  {
+    "query": "plants",
+    "aliases": [
+      "plant kingdom",
+      "plant life",
+      "flora",
+      "plant species",
+      "vegetation",
+      "plant biology",
+      "plant science",
+      "botany",
+      "wild plants",
+      "cultivated plants",
+      "plant classification",
+      "plant structures"
+    ]
+  },
+  {
+    "query": "trees",
+    "aliases": [
+      "tree species",
+      "forest trees",
+      "deciduous trees",
+      "evergreen trees",
+      "oak trees",
+      "maple trees",
+      "pine trees",
+      "redwoods",
+      "sequoias",
+      "tree trunks",
+      "tree leaves",
+      "tree roots",
+      "tree identification"
+    ]
+  },
+  {
+    "query": "flowers",
+    "aliases": [
+      "flowering plants",
+      "blossoms",
+      "wildflowers",
+      "garden flowers",
+      "petals",
+      "flower anatomy",
+      "flower arrangements",
+      "flower species",
+      "flowering season",
+      "flower gardens",
+      "pollination",
+      "botanical flowers"
+    ]
+  },
+  {
+    "query": "fruits",
+    "aliases": [
+      "fruit plants",
+      "fruit varieties",
+      "berries",
+      "citrus fruits",
+      "tropical fruits",
+      "apples",
+      "bananas",
+      "oranges",
+      "grapes",
+      "stone fruits",
+      "fruit anatomy",
+      "fruit development"
+    ]
+  },
+  {
+    "query": "vegetables",
+    "aliases": [
+      "vegetable plants",
+      "leafy greens",
+      "root vegetables",
+      "cruciferous vegetables",
+      "legumes",
+      "tomatoes",
+      "carrots",
+      "potatoes",
+      "broccoli",
+      "spinach",
+      "vegetable crops",
+      "edible plants"
+    ]
+  },
+  {
+    "query": "seeds and germination",
+    "aliases": [
+      "seed biology",
+      "seed structure",
+      "seed dispersal",
+      "seed germination",
+      "sprouting",
+      "seedlings",
+      "cotyledons",
+      "embryonic plants",
+      "seed coats",
+      "plant propagation",
+      "seed growth",
+      "plant reproduction"
+    ]
+  },
+  {
+    "query": "plant anatomy",
+    "aliases": [
+      "plant structures",
+      "roots",
+      "stems",
+      "leaves",
+      "flowers",
+      "fruits",
+      "vascular tissue",
+      "xylem",
+      "phloem",
+      "plant cells",
+      "plant organs",
+      "botanical diagrams"
+    ]
+  },
+  {
+    "query": "plant adaptations",
+    "aliases": [
+      "plant survival",
+      "desert plants",
+      "succulents",
+      "carnivorous plants",
+      "plant defenses",
+      "tendrils",
+      "thorns",
+      "leaf adaptations",
+      "root adaptations",
+      "water conservation",
+      "plant evolution",
+      "environmental adaptations"
+    ]
+  },
+  {
+    "query": "ferns and mosses",
+    "aliases": [
+      "ferns",
+      "mosses",
+      "bryophytes",
+      "pteridophytes",
+      "spore producing plants",
+      "nonflowering plants",
+      "fern fronds",
+      "moss gardens",
+      "club mosses",
+      "horsetails",
+      "primitive plants",
+      "spore reproduction"
+    ]
+  },
+  {
+    "query": "cacti and succulents",
+    "aliases": [
+      "cactus plants",
+      "succulent plants",
+      "desert succulents",
+      "aloe vera",
+      "prickly pear",
+      "saguaro cactus",
+      "water storage plants",
+      "xerophytes",
+      "desert vegetation",
+      "cactus flowers",
+      "succulent gardens"
+    ]
+  },
+  {
+    "query": "tropical plants",
+    "aliases": [
+      "tropical vegetation",
+      "jungle plants",
+      "rainforest flora",
+      "palm trees",
+      "orchids",
+      "bromeliads",
+      "tropical flowers",
+      "monstera",
+      "banana plants",
+      "tropical foliage",
+      "exotic plants"
+    ]
+  },
+  {
+    "query": "medicinal plants",
+    "aliases": [
+      "herbal plants",
+      "medicinal herbs",
+      "botanical medicine",
+      "healing plants",
+      "herbalism",
+      "aloe vera",
+      "chamomile",
+      "lavender",
+      "peppermint",
+      "medicinal botany",
+      "traditional herbal plants"
+    ]
+  },
+  {
+    "query": "plant classification",
+    "aliases": [
+      "plant taxonomy",
+      "plant families",
+      "flowering plants",
+      "gymnosperms",
+      "angiosperms",
+      "monocots",
+      "dicots",
+      "vascular plants",
+      "nonvascular plants",
+      "plant kingdoms",
+      "botanical identification",
+      "plant species"
+    ]
+  },
+  {
+    "query": "plant ecosystems",
+    "aliases": [
+      "vegetation communities",
+      "forest flora",
+      "grassland plants",
+      "wetland plants",
+      "aquatic plants",
+      "desert flora",
+      "plant biodiversity",
+      "native vegetation",
+      "plant habitats",
+      "ecological vegetation",
+      "plant communities"
+    ]
+  },
+  {
+    "query": "horticulture",
+    "aliases": [
+      "plant cultivation",
+      "garden science",
+      "crop growing",
+      "ornamental plants",
+      "nursery plants",
+      "greenhouses",
+      "plant propagation",
+      "landscape gardening",
+      "fruit cultivation",
+      "vegetable cultivation",
+      "horticultural science"
+    ]
+  },
+  {
+    "query": "nature",
+    "aliases": [
+      "natural world",
+      "outdoors",
+      "natural landscapes",
+      "wilderness",
+      "natural environments",
+      "earth's ecosystems",
+      "scenery",
+      "nature photography",
+      "natural wonders",
+      "wild places",
+      "natural phenomena",
+      "environment"
+    ]
+  },
+  {
+    "query": "forests and woodlands",
+    "aliases": [
+      "forests",
+      "woodlands",
+      "rainforests",
+      "temperate forests",
+      "boreal forests",
+      "taiga",
+      "amazon rainforest",
+      "congo rainforest",
+      "forest canopies",
+      "forest trails",
+      "woodland ecosystems",
+      "forest biodiversity"
+    ]
+  },
+  {
+    "query": "rainforests",
+    "aliases": [
+      "tropical rainforests",
+      "amazon rainforest",
+      "congo basin",
+      "daintree rainforest",
+      "tropical jungle",
+      "rainforest canopy",
+      "rainforest wildlife",
+      "rainforest plants",
+      "equatorial forests",
+      "rainforest ecosystems",
+      "tropical biodiversity"
+    ]
+  },
+  {
+    "query": "desert environments",
+    "aliases": [
+      "desert landscapes",
+      "arid environments",
+      "sand dunes",
+      "desert plants",
+      "desert animals",
+      "sahara",
+      "gobi",
+      "mojave",
+      "atacama",
+      "desert ecology",
+      "oasis",
+      "desert geology"
+    ]
+  },
+  {
+    "query": "wetlands",
+    "aliases": [
+      "marshes",
+      "swamps",
+      "bogs",
+      "fens",
+      "estuaries",
+      "mangroves",
+      "wetland ecosystems",
+      "freshwater wetlands",
+      "coastal wetlands",
+      "marsh plants",
+      "wetland wildlife",
+      "waterlogged habitats"
+    ]
+  },
+  {
+    "query": "coral reefs",
+    "aliases": [
+      "coral reef ecosystems",
+      "coral formations",
+      "reef fish",
+      "coral polyps",
+      "great barrier reef",
+      "tropical reefs",
+      "underwater coral",
+      "reef biodiversity",
+      "marine habitats",
+      "coral bleaching",
+      "coral conservation"
+    ]
+  },
+  {
+    "query": "natural landscapes",
+    "aliases": [
+      "scenic landscapes",
+      "wilderness scenery",
+      "mountain landscapes",
+      "coastal landscapes",
+      "forest scenery",
+      "desert scenery",
+      "valleys",
+      "waterfalls",
+      "canyons",
+      "natural vistas",
+      "landscape photography",
+      "geological scenery"
+    ]
+  },
+  {
+    "query": "waterfalls",
+    "aliases": [
+      "cascades",
+      "waterfall photography",
+      "plunging waterfalls",
+      "tiered waterfalls",
+      "river waterfalls",
+      "niagara falls",
+      "victoria falls",
+      "angel falls",
+      "iguazu falls",
+      "waterfall landscapes",
+      "natural cascades"
+    ]
+  },
+  {
+    "query": "caves",
+    "aliases": [
+      "caverns",
+      "cave systems",
+      "limestone caves",
+      "karst landscapes",
+      "stalactites",
+      "stalagmites",
+      "underground rivers",
+      "cave formations",
+      "cave exploration",
+      "speleology",
+      "cave geology",
+      "subterranean landscapes"
+    ]
+  },
+  {
+    "query": "glaciers",
+    "aliases": [
+      "ice formations",
+      "glacial landscapes",
+      "ice sheets",
+      "ice caps",
+      "glacial valleys",
+      "glacial erosion",
+      "polar ice",
+      "mountain glaciers",
+      "icebergs",
+      "glacial movement",
+      "glaciology",
+      "frozen landscapes"
+    ]
+  },
+  {
+    "query": "polar environments",
+    "aliases": [
+      "arctic",
+      "antarctica",
+      "polar regions",
+      "tundra",
+      "polar ice",
+      "ice shelves",
+      "arctic wildlife",
+      "antarctic wildlife",
+      "permafrost",
+      "polar landscapes",
+      "frozen ecosystems",
+      "polar research"
+    ]
+  },
+  {
+    "query": "wildlife conservation",
+    "aliases": [
+      "nature conservation",
+      "habitat protection",
+      "biodiversity conservation",
+      "protected areas",
+      "wildlife reserves",
+      "national parks",
+      "conservation science",
+      "endangered habitats",
+      "ecosystem restoration",
+      "species preservation",
+      "environmental stewardship"
+    ]
+  },
+  {
+    "query": "biodiversity",
+    "aliases": [
+      "biological diversity",
+      "species diversity",
+      "ecosystem diversity",
+      "genetic diversity",
+      "wildlife variety",
+      "plant diversity",
+      "animal diversity",
+      "biodiversity hotspots",
+      "conservation biology",
+      "species richness",
+      "ecological diversity"
+    ]
+  },
+  {
+    "query": "natural resources",
+    "aliases": [
+      "earth resources",
+      "renewable resources",
+      "nonrenewable resources",
+      "water resources",
+      "forest resources",
+      "mineral resources",
+      "fossil fuels",
+      "natural materials",
+      "resource management",
+      "resource conservation",
+      "resource extraction"
+    ]
+  },
+  {
+    "query": "sustainability",
+    "aliases": [
+      "sustainable living",
+      "environmental sustainability",
+      "sustainable development",
+      "conservation",
+      "renewable resources",
+      "circular economy",
+      "eco friendly practices",
+      "sustainable communities",
+      "green living",
+      "resource efficiency",
+      "environmental responsibility"
+    ]
+  },
+  {
+    "query": "food",
+    "aliases": [
+      "food science",
+      "cuisine",
+      "foods",
+      "ingredients",
+      "meals",
+      "nutrition",
+      "food culture",
+      "food photography",
+      "food groups",
+      "culinary arts",
+      "food studies",
+      "global cuisine"
+    ]
+  },
+  {
+    "query": "cooking",
+    "aliases": [
+      "culinary arts",
+      "food preparation",
+      "cooking techniques",
+      "home cooking",
+      "chefs",
+      "kitchen skills",
+      "cooking equipment",
+      "recipes",
+      "baking",
+      "frying",
+      "roasting",
+      "sautéing"
+    ]
+  },
+  {
+    "query": "baking",
+    "aliases": [
+      "baked goods",
+      "bread making",
+      "pastries",
+      "cakes",
+      "cookies",
+      "muffins",
+      "pies",
+      "baking ingredients",
+      "flour",
+      "yeast",
+      "baking techniques",
+      "pastry arts"
+    ]
+  },
+  {
+    "query": "bread",
+    "aliases": [
+      "bread making",
+      "loaves",
+      "sourdough",
+      "baguettes",
+      "whole grain bread",
+      "flatbread",
+      "rye bread",
+      "wheat bread",
+      "bread dough",
+      "bread baking",
+      "bread varieties",
+      "bakery"
+    ]
+  },
+  {
+    "query": "desserts",
+    "aliases": [
+      "sweets",
+      "sweet treats",
+      "cakes",
+      "cookies",
+      "ice cream",
+      "puddings",
+      "pies",
+      "pastries",
+      "chocolate desserts",
+      "fruit desserts",
+      "dessert recipes",
+      "confectionery"
+    ]
+  },
+  {
+    "query": "fruits and vegetables",
+    "aliases": [
+      "fresh produce",
+      "produce",
+      "fruit and vegetable nutrition",
+      "vegetable varieties",
+      "fruit varieties",
+      "farmers market",
+      "fresh fruits",
+      "fresh vegetables",
+      "seasonal produce",
+      "edible plants",
+      "healthy ingredients",
+      "produce photography"
+    ]
+  },
+  {
+    "query": "world cuisine",
+    "aliases": [
+      "international food",
+      "global cuisine",
+      "traditional dishes",
+      "regional cuisine",
+      "italian food",
+      "mexican food",
+      "indian food",
+      "chinese food",
+      "japanese food",
+      "french food",
+      "mediterranean food",
+      "cultural cuisine"
+    ]
+  },
+  {
+    "query": "food science",
+    "aliases": [
+      "culinary science",
+      "food chemistry",
+      "food preservation",
+      "fermentation",
+      "food safety",
+      "food processing",
+      "food technology",
+      "food microbiology",
+      "cooking chemistry",
+      "food experiments",
+      "food composition"
+    ]
+  },
+  {
+    "query": "nutrition",
+    "aliases": [
+      "nutritional science",
+      "nutrients",
+      "vitamins",
+      "minerals",
+      "proteins",
+      "carbohydrates",
+      "fats",
+      "dietary fiber",
+      "food groups",
+      "balanced nutrition",
+      "nutrition education",
+      "healthy eating"
+    ]
+  },
+  {
+    "query": "herbs and spices",
+    "aliases": [
+      "culinary herbs",
+      "spices",
+      "seasonings",
+      "basil",
+      "oregano",
+      "rosemary",
+      "thyme",
+      "cinnamon",
+      "turmeric",
+      "ginger",
+      "pepper",
+      "herb gardens"
+    ]
+  },
+  {
+    "query": "dairy products",
+    "aliases": [
+      "milk",
+      "cheese",
+      "yogurt",
+      "butter",
+      "cream",
+      "dairy foods",
+      "dairy farming",
+      "milk production",
+      "cheese making",
+      "fermented dairy",
+      "dairy ingredients",
+      "milk products"
+    ]
+  },
+  {
+    "query": "grains and cereals",
+    "aliases": [
+      "wheat",
+      "rice",
+      "oats",
+      "barley",
+      "corn",
+      "quinoa",
+      "millet",
+      "whole grains",
+      "cereal crops",
+      "grain farming",
+      "grain products",
+      "cereal foods"
+    ]
+  },
+  {
+    "query": "food markets",
+    "aliases": [
+      "farmers markets",
+      "grocery stores",
+      "food stalls",
+      "market produce",
+      "street food markets",
+      "food vendors",
+      "marketplaces",
+      "fresh produce markets",
+      "traditional markets",
+      "food shopping",
+      "market displays"
+    ]
+  },
+  {
+    "query": "food preservation",
+    "aliases": [
+      "canning",
+      "freezing food",
+      "dehydration",
+      "pickling",
+      "fermentation",
+      "smoking food",
+      "food storage",
+      "preserved foods",
+      "food packaging",
+      "food safety",
+      "traditional preservation methods"
+    ]
+  },
+  {
+    "query": "beverages",
+    "aliases": [
+      "drinks",
+      "water",
+      "juice",
+      "tea",
+      "coffee",
+      "hot chocolate",
+      "smoothies",
+      "lemonade",
+      "soft drinks",
+      "traditional beverages",
+      "drink preparation",
+      "beverage culture"
+    ]
+  },
+  {
+    "query": "culture",
+    "aliases": [
+      "human culture",
+      "cultural studies",
+      "traditions",
+      "customs",
+      "heritage",
+      "cultural identity",
+      "societies",
+      "cultural practices",
+      "world cultures",
+      "cultural diversity",
+      "cultural history",
+      "anthropology"
+    ]
+  },
+  {
+    "query": "world cultures",
+    "aliases": [
+      "global cultures",
+      "international cultures",
+      "cultural traditions",
+      "cultural diversity",
+      "traditional societies",
+      "cultural heritage",
+      "ethnography",
+      "cultural customs",
+      "world communities",
+      "cultural practices",
+      "human societies"
+    ]
+  },
+  {
+    "query": "traditions and customs",
+    "aliases": [
+      "cultural traditions",
+      "traditional practices",
+      "customs",
+      "heritage practices",
+      "ceremonies",
+      "rituals",
+      "traditional clothing",
+      "folk customs",
+      "community traditions",
+      "family traditions",
+      "cultural celebrations"
+    ]
+  },
+  {
+    "query": "festivals and celebrations",
+    "aliases": [
+      "cultural festivals",
+      "holiday celebrations",
+      "traditional festivals",
+      "public celebrations",
+      "parades",
+      "carnivals",
+      "community events",
+      "seasonal festivals",
+      "religious festivals",
+      "music festivals",
+      "festival traditions"
+    ]
+  },
+  {
+    "query": "world holidays",
+    "aliases": [
+      "international holidays",
+      "national holidays",
+      "cultural holidays",
+      "public holidays",
+      "traditional holidays",
+      "christmas",
+      "diwali",
+      "hanukkah",
+      "lunar new year",
+      "eid",
+      "thanksgiving",
+      "holiday traditions"
+    ]
+  },
+  {
+    "query": "cultural clothing",
+    "aliases": [
+      "traditional clothing",
+      "national dress",
+      "folk costumes",
+      "traditional garments",
+      "ceremonial clothing",
+      "kimono",
+      "sari",
+      "hanbok",
+      "kilt",
+      "dirndl",
+      "cultural fashion",
+      "heritage textiles"
+    ]
+  },
+  {
+    "query": "world flags",
+    "aliases": [
+      "national flags",
+      "country flags",
+      "flag designs",
+      "flag symbols",
+      "flag colors",
+      "international flags",
+      "historical flags",
+      "state flags",
+      "flag collections",
+      "vexillology",
+      "flag history",
+      "flag identification"
+    ]
+  },
+  {
+    "query": "national symbols",
+    "aliases": [
+      "national emblems",
+      "country symbols",
+      "national animals",
+      "national flowers",
+      "national birds",
+      "national monuments",
+      "coats of arms",
+      "national anthems",
+      "patriotic symbols",
+      "cultural emblems",
+      "state symbols"
+    ]
+  },
+  {
+    "query": "folklore traditions",
+    "aliases": [
+      "folk culture",
+      "folk music",
+      "folk art",
+      "folk dance",
+      "folk costumes",
+      "folk stories",
+      "oral traditions",
+      "traditional crafts",
+      "regional folklore",
+      "cultural legends",
+      "folk heritage"
+    ]
+  },
+  {
+    "query": "anthropology",
+    "aliases": [
+      "study of humanity",
+      "human societies",
+      "cultural anthropology",
+      "social anthropology",
+      "archaeological anthropology",
+      "human evolution",
+      "ethnography",
+      "cultural practices",
+      "human origins",
+      "anthropological research",
+      "social structures"
+    ]
+  },
+  {
+    "query": "sociology",
+    "aliases": [
+      "social science",
+      "human society",
+      "social structures",
+      "social groups",
+      "social institutions",
+      "social behavior",
+      "social relationships",
+      "social inequality",
+      "communities",
+      "social change",
+      "sociological research"
+    ]
+  },
+  {
+    "query": "economics",
+    "aliases": [
+      "economic science",
+      "markets",
+      "supply and demand",
+      "economic systems",
+      "trade",
+      "production",
+      "consumption",
+      "inflation",
+      "economic growth",
+      "microeconomics",
+      "macroeconomics",
+      "economic theory"
+    ]
+  },
+  {
+    "query": "business",
+    "aliases": [
+      "business studies",
+      "companies",
+      "entrepreneurship",
+      "management",
+      "marketing",
+      "commerce",
+      "organizations",
+      "business operations",
+      "small businesses",
+      "corporations",
+      "business education",
+      "business finance"
+    ]
+  },
+  {
+    "query": "education",
+    "aliases": [
+      "school",
+      "schooling",
+      "learning",
+      "educational",
+      "teaching",
+      "classroom",
+      "students",
+      "teachers",
+      "academic studies",
+      "education system",
+      "educational resources",
+      "school subjects",
+      "education technology"
+    ]
+  },
+  {
+    "query": "school subjects",
+    "aliases": [
+      "academic subjects",
+      "school curriculum",
+      "classroom learning",
+      "mathematics",
+      "science",
+      "history",
+      "geography",
+      "literature",
+      "language arts",
+      "social studies",
+      "school lessons",
+      "academic disciplines"
+    ]
+  }
+]
