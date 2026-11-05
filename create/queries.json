@@ -8803,6 +8803,7 @@
   {
     "query": "medieval history",
     "aliases": [
+      "medieval",
       "middle ages",
       "medieval period",
       "medieval europe",
@@ -14745,6 +14746,8 @@
   {
     "query": "color theory",
     "aliases": [
+      "color",
+      "colors",
       "color wheel",
       "primary colors",
       "secondary colors",
