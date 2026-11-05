@@ -6228,6 +6228,7 @@
       "ocean zones",
       "underwater geography",
       "ocean",
+      "water",
       "sea",
       "seas",
       "ocean water",
@@ -25798,7 +25799,6 @@
     "query": "beverages",
     "aliases": [
       "drinks",
-      "water",
       "juice",
       "tea",
       "coffee",
