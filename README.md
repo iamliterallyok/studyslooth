@@ -1,6 +1,6 @@
 Copyright © 2026 Study Slooth. All Rights Reserved.
 
-<img width="4000" height="1000" alt="readmebanner" src="https://github.com/media/images/sslogo.png" />
+<img width="4000" height="1000" alt="readmebanner" src="studyslooth.com/media/images/sslogo.png" />
 
 **Study Slooth™** isn't just another study tool. 
 
