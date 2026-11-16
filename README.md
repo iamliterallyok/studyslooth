@@ -1,6 +1,6 @@
 Copyright © 2026 Study Slooth. All Rights Reserved.
 
-<img width="2493" height="990" style="position: absolute; left: 50%; transform: translate(-50%)" alt="sslogo" src="https://github.com/user-attachments/assets/4575cc1e-c064-474a-842f-11ca9914e165" />
+<img width="1000" height="auto" style="position: absolute; left: 50%; transform: translate(-50%)" alt="sslogo" src="https://github.com/user-attachments/assets/4575cc1e-c064-474a-842f-11ca9914e165" />
 
 **Study Slooth™** isn't just another study tool. 
 
