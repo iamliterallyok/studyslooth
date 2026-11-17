@@ -1007,12 +1007,217 @@ function adjustgradients(elementtu) {
   }
 }
 
-v
-document.getElementById("searchbar").addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    runsearch(document.getElementById("searchbar").value);
-  }
+pastQueries = [""]
+pqlist = [[
+"https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YXJ0fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YXJ0fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "adrianna geo",
+  "https://unsplash.com/@adrigeo_",
+  "a painting on the ceiling of a building",
+
+  "https://images.unsplash.com/photo-1628595351029-c2bf17511435?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c2NpZW5jZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1628595351029-c2bf17511435?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c2NpZW5jZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Braňo",
+  "https://unsplash.com/@3dparadise",
+  "dna double helix render on blue",
+
+  "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Z2VvZ3JhcGh5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Z2VvZ3JhcGh5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "Kyle Glenn",
+  "https://unsplash.com/@kylejglenn",
+  "desk globe on table", 
+  "https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bGl0ZXJhdHVyZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bGl0ZXJhdHVyZXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Gülfer ERGİN",
+  "https://unsplash.com/@gulfergin_01",
+  "pile of open paperback books",
+
+  "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8aGlzdG9yeXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1473163928189-364b2c4e1135?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8aGlzdG9yeXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Andrew Neel",
+  "https://unsplash.com/@andrewtneel",
+  "maps lying on the floor",
+
+  "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8dGVjaG5vbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Conny Schneider",
+  "https://unsplash.com/@choys_",
+  "a blue background with lines and dots",
+
+  "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8d3JpdGluZ3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8d3JpdGluZ3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Aaron Burden",
+  "https://unsplash.com/@aaronburden",
+  "fountain pen on black lined paper",
+
+  "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljc3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8cGh5c2ljc3xlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "Artturi Jalli",
+  "https://unsplash.com/@artturijalli",
+  "a chalkboard with some writing on it",
+
+  "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Y2hlbWlzdHJ5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8Y2hlbWlzdHJ5fGVufDF8fHx8MTc5MzI0MzM1MHww&ixlib=rb-4.1.0&q=85",
+  "Vedrana Filipović",
+  "https://unsplash.com/@vedranafilipovic",
+  "round clear glass on white paper",
+
+  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c3R1ZHlpbmd8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8c3R1ZHlpbmd8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=85",
+  "Unseen Studio",
+  "https://unsplash.com/@uns__nstudio",
+  "person writing on brown wooden table near white ceramic mug",
+
+  "https://images.unsplash.com/photo-1635372722656-389f87a941b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bWF0aGVtYXRpY3N8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1635372722656-389f87a941b7?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8bWF0aGVtYXRpY3N8ZW58MXx8fHwxNzkzMjQzMzUwfDA&ixlib=rb-4.1.0&q=85",
+  "Thomas T",
+  "https://unsplash.com/@pyssling240",
+  "a blackboard with a lot of writing on it",
+
+  "https://images.unsplash.com/photo-1576086213369-97a306d36557?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YmlvbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "https://images.unsplash.com/photo-1576086213369-97a306d36557?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMTE2NjM1fDB8MXxzZWFyY2h8MXx8YmlvbG9neXxlbnwxfHx8fDE3OTMyNDMzNTB8MA&ixlib=rb-4.1.0&q=85",
+  "National Cancer Institute",
+  "https://unsplash.com/@nci",
+  "purple cells"
+]];
+//reg first, full res second
+selectedimage = -1;
+alphanumeric = [
+    "a", "b", "c", "d", "e", "f", "g",
+    "h", "i", "j", "k", "l", "m", "n",
+    "o", "p", "q", "r", "s", "t", "u",
+    "v", "w", "x", "y", "z",
+    "0", "1", "2", "3", "4", "5", "6",
+    "7", "8", "9"
+];
+function separateintowords(ogs) {
+    finalwords = [];
+    newword = "";
+    originalString = ogs.toString();
+    for (i = 0; i < originalString.length; i++) {
+        if (newword != "" && i+1 == originalString.length) {
+           if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+               newword = newword + originalString[i];
+           }
+           finalwords.push(newword); 
+        } else if (alphanumeric.indexOf(originalString.substring(i,i+1)) != -1) {
+            newword = newword + originalString[i];
+        } else {
+            if (newword != "") {
+                finalwords.push(newword);
+            }
+            newword = "";
+        }
+    }
+    return finalwords;
+}
+window.addEventListener("drc", function() {
+  runsearch("");
 });
+function runsearch(querytu) {
+  querytu = querytu.toLowerCase();
+  document.getElementById("noresults").classList.add("hidden");
+  document.getElementById("actualpics").scrollTop = 0;
+  window.innerHeight;
+  document.getElementById("actualpics").style.overflowY = "scroll";
+  for (i = 0; i < 12; i++) {
+    document.getElementsByClassName("oot")[i].classList.remove("hidden");
+    document.getElementsByClassName("oot")[i].classList.remove("selectedoot");
+  }
+  if (pastQueries.indexOf(querytu.toLowerCase()) == -1) {
+    getdatafromimage(lookforquery(separateintowords(querytu)));
+    pastQueries.push(querytu.toLowerCase());
+    pqlist.push(nawp);
+    displayResults();
+  } else {
+    nawp = [...pqlist[pastQueries.indexOf(querytu.toLowerCase())]];
+    displayResults();
+  }
+
+  function displayResults() {  
+  lastone = -1;
+  for (i = 0; i < nawp.length; i++) {
+    rem = i % 5;
+    wlevel = (i - rem) / 5;
+    rem++;
+    switch (rem) {
+      case 1:
+        document.getElementsByClassName("ootimg")[wlevel].style.backgroundImage = `url("${nawp[i]}")`;
+        if (selectedimage === nawp[i]) {
+          document.getElementsByClassName("ootimg")[wlevel].classList.add("selectedoot");
+        }
+        break;
+      case 3:
+        luname = nawp[i];
+        break;
+      case 4:
+        lunu = nawp[i];
+        document.getElementsByClassName("ootbt")[wlevel].innerHTML = `<a target="_blank" href="${lunu}?utm_source=study_slooth&utm_medium=referral">${luname}</a> on <a target="_blank" href="https://www.unsplash.com?utm_source=study_slooth&utm_medium=referral">Unsplash</a>`
+        break;
+    }
+    lastone = i;
+  }
+  if (lastone == -1) {
+    document.getElementById("noresults").classList.remove("hidden");
+    document.getElementById("actualpics").scrollTop = 0;
+    window.innerHeight;
+    document.getElementById("actualpics").style.overflowY = "hidden";
+    for (i = 0; i < 12; i++) {
+      document.getElementsByClassName("oot")[i].classList.add("hidden");
+    }
+  } else if (lastone < 59) {
+    for (i = 59; i != lastone; i-=5) {
+      document.getElementsByClassName("oot")[(i+1)/5-1].classList.add("hidden");
+    }
+  }
+  currentquery = querytu;
+  }
+}
+
+function lookforquery(tuq) {
+  finaltext = "";
+  for (i = 0; i < tuq.length; i++) {
+    if (i+1 != tuq.length) {
+    finaltext = finaltext + tuq[i] + " ";
+    } else {
+    finaltext = finaltext + tuq[i];
+    }
+  }
+  hapnd = false;
+  outerLoop:
+  for (i = 0; i < queries.length; i++) {
+    if (queries[i].query == finaltext) {
+      return queries[i].query;
+      hapnd = true;
+      break;
+    }
+    for (a = 0; a < queries[i].aliases.length; a++) {
+      if (queries[i].aliases[a] == finaltext) {
+        return queries[i].query;
+        hapnd = true;
+        break outerLoop;
+      }
+    }
+  }
+  if (hapnd == false) {
+    return false;
+  }
+}
+
+function getdatafromimage(quer) {
+  if (quer == false) {
+    nawp = [];
+  } else {
+    nawp = [];
+    for (a = 0; a < images[quer].length; a++) {
+      nawp.push(images[quer][a].image);
+      nawp.push(images[quer][a].description);
+      nawp.push(images[quer][a].photographer);
+      nawp.push(images[quer][a].photographerLink);
+      nawp.push(images[quer][a].photoLink);
+    }
+  }
+}
 
 function selectimg(indexto) {
   document.getElementById("fadedbg").style.backgroundImage = `url('${nawp[indexto*5]}')`;
@@ -1026,6 +1231,12 @@ function selectimg(indexto) {
   }
   triggerUnsplashDownload(photos[indexto]);
 }
+document.getElementById("searchbar").addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    runsearch(document.getElementById("searchbar").value);
+  }
+});
+
 
 document.getElementsByClassName("mb")[0].addEventListener("keydown", function() {
   setTimeout(function() {
