@@ -57,7 +57,7 @@
   bottom: 1.5lvh;
 }
 #mastersidebar {
-  z-index: 10000000;
+  z-index: 1;
   background-color: white;
   width: 13.5lvh;
   left: 0;
