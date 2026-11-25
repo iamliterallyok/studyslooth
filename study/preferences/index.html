@@ -979,7 +979,7 @@ function doten(yon) {
   pose("happy");
   setTimeout(function() {
     if (localStorage.getItem(current + "whiteboardrecommended")) {
-      window.location.href = `../../study/sets/study${current}.html`;
+      window.location.href = `../../study/`;
     } else {
       sessionStorage.setItem("setToUse", current);
       window.location.href = `../../study/preferences/set.html`;
