@@ -359,7 +359,7 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("topcreamthing").style.backgroundImage = "linear-gradient(#3a3a3a, rgba(0,0,0,0))";
   document.getElementById("bottomcreamthing").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
   document.getElementById("creambackground").style.opacity = "0.5";
-  document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
+  document.getElementById("mastersidebar").classList.add("darkmodetoolbar");
 }
 if (parseInt(localStorage.getItem("numofsets")) > 0) {
 for (i = 1; i <= parseInt(localStorage.getItem("numofsets")); i++) {
