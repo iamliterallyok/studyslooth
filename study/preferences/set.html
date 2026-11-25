@@ -664,11 +664,10 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("sq").style.color = "white";
   document.getElementById("textim").style.color = "black";
 }
-if (sessionStorage.getItem("setToUse")) {
-current = sessionStorage.getItem("setToUse");
-sessionStorage.removeItem("setToUse");
+if (sessionStorage.getItem("lsa")) {
+  current = sessionStorage.getItem("lsa");
 } else {
-window.location.href = "../../study/studyurlerror.html";
+  window.location.href = "../../study/studyurlerror.html"
 }
 document.getElementById("qtext2").children[0].innerHTML = localStorage.getItem(`${current}n`) + ":";
 document.getElementById("bgimg").style.backgroundImage = `url("../../media/images/setcovers/${localStorage.getItem(current.concat("p"))}.png")`
