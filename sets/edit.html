@@ -960,7 +960,7 @@ arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "set
 if (localStorage.getItem("darkmode") == "1") {
   document.body.style.backgroundColor = "black";
   document.getElementById("heading").style.backgroundColor = "white";
-  document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
+  document.getElementById("mastersidebar").classList.add("darkmodetoolbar");
   document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
   for (i = 0; i < 4; i++) {
     document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
