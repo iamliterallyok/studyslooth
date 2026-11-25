@@ -858,9 +858,9 @@ body.settings-theme-transition, body.settings-theme-transition * {
     document.body.classList.toggle("settings-dark", dark);
     document.getElementById("darkModeToggle").checked = dark;
     if (dark == "1") {
-    document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
+    document.getElementById("mastersidebar").classList.add("darkmodetoolbar");
     } else {
-    document.getElementById("mastersidebar").style.classList.remove("darkmodetoolbar");
+    document.getElementById("mastersidebar").classList.remove("darkmodetoolbar");
     }
   }
   if (localStorage.getItem("darkmode") === null) localStorage.setItem("darkmode", "0");
