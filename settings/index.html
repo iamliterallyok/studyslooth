@@ -2,64 +2,445 @@
 <link rel="manifest" href="../manifest.json"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
-
 <div id="sidebar">
-<a href="../home/"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="../play/"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/playorange.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a href="../create/"><div style="top: 54dvh" class="hyperlink"><img src="../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a><div style="top: 85.5dvh" class="hyperlink selected"><img src="../media/images/toolbar/settingsselected.png" class="hpimg"><p class="hplabel selected">Settings</p></div></a>
+<a href="../home/"><div style="top: 0lvh" class="hyperlink"><img src="../media/images/toolbar/homeorange.png" class="hpimg"><p class="hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5lvh" class="hyperlink"><img src="../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27lvh" class="hyperlink"><img src="../media/images/toolbar/playorange.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a href="../sets/"><div style="top: 40.5lvh" class="hyperlink"><img src="../media/images/toolbar/setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
+<a href="../create/"><div style="top: 54lvh" class="hyperlink"><img src="../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5lvh" class="hyperlink"><img src="../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a><div style="top: 85.5lvh" class="hyperlink selected"><img src="../media/images/toolbar/settingsselected.png" class="hpimg"><p class="hplabel selected">Settings</p></div></a>
 </div>
 <div id="content">
-<div id="heading"><img src="../media/images/settingslogo.png" id="logo"></div>
-<p class="body4">
-  <br><br><br><br><br style="line-height: 1lvh">
-  Dark Mode<button onclick="moveslider(0)" class="sslider"><div class="lilc"></div></button>
-<br><br><br><br></p>
+<div id='creambackground'>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
 </div>
+<div id="heading"><span id="nameofset">Settings</span></div>
+<main id="settingsMain">
+  <section class="settingsCard">
+    <h2>Appearance</h2>
+    <label class="settingRow" for="darkModeToggle"><span>Dark mode</span><input id="darkModeToggle" type="checkbox"><span class="switchVisual" aria-hidden="true"></span></label>
+    <p class="settingHint">Saved automatically.</p>
+  </section>
+  <section class="settingsCard">
+    <h2>Learning preferences</h2>
+    <p class="settingHint">Choose your styles and main preference.</p>
+    <div class="preferenceGrid">
+      <label><input type="checkbox" class="learningStyle" value="tactile"> Tactile</label>
+      <label><input type="checkbox" class="learningStyle" value="written"> Written</label>
+      <label><input type="checkbox" class="learningStyle" value="auditory"> Auditory</label>
+      <label><input type="checkbox" class="learningStyle" value="social"> Social</label>
+      <label><input type="checkbox" class="learningStyle" value="logical"> Logical</label>
+      <label><input type="checkbox" class="learningStyle" value="visual"> Visual</label>
+    </div>
+    <div class="fieldGroup">
+      <label class="fieldLabel" for="primaryLearningStyle">Main learning preference</label>
+      <select id="primaryLearningStyle">
+        <option value="t">Tactile</option><option value="w">Written</option><option value="a">Auditory</option>
+        <option value="s">Social</option><option value="l">Logical</option><option value="v">Visual</option>
+      </select>
+    </div>
+    <div class="fieldGroup">
+      <label class="fieldLabel" for="writtenAuditoryPreference">When choosing between Written and Auditory study methods, I have a greater preference for.</label>
+      <select id="writtenAuditoryPreference"><option value="w">Written</option><option value="a">Auditory</option></select>
+    </div>
+    <label class="settingRow" for="timedPreference"><span>I like activities with a time limit</span><input id="timedPreference" type="checkbox"></label>
+    <p id="learningStatus" class="settingStatus" aria-live="polite"></p>
+  </section>
+  <section class="settingsCard">
+    <h2>Individual set preferences</h2>
+    <div class="fieldGroup">
+      <label class="fieldLabel" for="setPicker">Choose a set</label>
+      <select id="setPicker"></select>
+    </div>
+    <div id="setPreferenceControls">
+      <label class="settingRow" for="termsPreference"><span>This set uses terms and definitions</span><input id="termsPreference" type="checkbox"></label>
+      <label class="settingRow" for="chronologicalPreference"><span>Questions are in chronological order</span><input id="chronologicalPreference" type="checkbox"></label>
+      <label class="settingRow" for="whiteboardPreference"><span>Recommend a whiteboard for this set</span><input id="whiteboardPreference" type="checkbox"></label>
+    </div>
+    <div class="buttonRow"><button id="downloadSetButton" type="button">Download this set</button><button id="deleteSetButton" type="button" class="secondaryButton">Delete this set</button></div>
+    <p id="setStatus" class="settingStatus" aria-live="polite"></p>
+  </section>
+  <section class="settingsCard">
+    <h2>Import and export sets</h2>
+    <p class="settingHint">Bundles replace all current sets after confirmation.</p>
+    <div class="buttonRow"><button id="exportAllButton" type="button">Download all sets</button><label class="fileButton" for="importAllInput">Import a bundle of sets</label><input id="importAllInput" type="file" accept=".json,application/json"></div>
+    <p id="bulkStatus" class="settingStatus" aria-live="polite"></p>
+  </section>
+</main>
+<div id="importConfirm" class="hidden" role="dialog" aria-modal="true" aria-labelledby="importConfirmTitle">
+  <section class="importConfirmCard">
+    <h2 id="importConfirmTitle">Replace all current sets?</h2>
+    <p id="importConfirmMessage"></p>
+    <div class="buttonRow">
+      <button id="cancelImportButton" class="secondaryButton" type="button">Cancel</button>
+      <button id="confirmReplaceButton" type="button">Replace all sets</button>
+    </div>
+  </section>
 </div>
-</body>
-<style>
-  .lilc {
-    position: absolute;
-    top: 0.25lvh;
-    left: 0.25lvh;
-    height: 3lvh;
-    width: 3lvh;
-    background-color: black;
-    border-radius: 50%;
-  }
-  .sslider {
-    margin-left: 2lvh;
-    margin-top: -0.5lvh;
-    background-color: #efefef;
-    height: 3.5lvh;
-    width: 7lvh;
-    position: relative;
-    vertical-align: baseline;
-    display: inline;
-    outline: 0.5lvh solid black;
-    border: none;
-    border-radius: 1.75lvh;
-  }
-  .body4 {
-    text-decoration: none;
-    word-wrap: break-word;
-    color: black;
-    font-family: fredokaone;
-    text-align: left;
-    width: calc(100dvw - 20lvh);
-    font-weight: 500;
-    text-align: left;
-    margin-left: 50%;
-    transform: translate(-50%);
-    font-size: 3.75lvh;
-  }
+<div class="hidden" id="topcreamthing"></div>
+<div class="hidden" id="bottomcreamthing"></div>
+</div>
+</body><style>
+.imginsidetext {
+  height: 5.5lvh;
+  width: 5.5lvh;
+  position: relative;
+  vertical-align: -10%;
+}
+#resume {
+  white-space: nowrap;
+  height: 8dvh;
+  position: absolute;
+  left: 50%;
+  top: 5lvh;
+  transform: translate(-50%);
+  font-size: 5.5lvh;
+  color: white;
+  background-color: #ff8500;
+  border-radius: 2.5dvh;
+  padding: 2.5lvh;
+  z-index: 200;
+  padding-bottom: 1lvh;
+  transition: 0.3s filter;
+}
+#new {
+  white-space: nowrap;
+  height: 8dvh;
+  position: absolute;
+  left: 50%;
+  bottom: 5lvh;
+  transform: translate(-50%);
+  font-size: 5.5lvh;
+  color: white;
+  background-color: #ff8500;
+  border-radius: 2.5dvh;
+  padding: 2.5lvh;
+  z-index: 200;
+  padding-bottom: 1lvh;
+  transition: 0.3s filter;
+}
+#resume:hover, #new:hover {
+  filter: brightness(1.8);
+}
+#fadedbg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+
+#playbutton {
+  cursor: pointer;
+  left: 50%;
+  bottom: -2.5dvh;
+  height: 8dvh;
+  width: 20dvh;
+  border-radius: 2dvh;
+  outline: 1.5dvh solid #ff8500;
+  transform: translate(-50%, 0%);
+  background-color: rgb(255, 254, 240);
+  color: #ff8500;
+  font-size: 6.5dvh;
+  text-align: center;
+  position: absolute;
+  transition: 0.6s background-color, 0.6s color, 0.6s width, 0.6s height, 0.6s font-size, 0.6s box-shadow;
+}
+#desconot {
+  width: calc(100dvw - 20lvh);
+  max-width: 80lvh;
+  margin-left: 50%;
+  margin-top: -5lvh;
+  transform: translate(-50%, 0%);
+  color: #ff8500;
+  text-align: center;
+  font-family: "Special Gothic Condensed One";
+  font-size: 3.25dvh;
+}
+#not {
+  width: calc(100dvw - 20lvh);
+  max-width: 80lvh;
+  word-wrap: break-word;
+  margin-top: 2dvh;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: #ff8500;
+  font-size: 5.5dvh;
+}
+#close {
+  color: #ff8500;
+  font-size: 7dvh;
+  text-align: center;
+  width: 9dvh;
+  background-color: rgb(255, 254, 240);
+  height: 9dvh;
+  right: -2dvh;
+  top: -2dvh;
+  position: absolute;
+  z-index: 11;
+  border-radius: 1.5dvh;
+  outline: 1.5dvh solid #ff8500;
+  cursor: pointer;
+  font-family: "Fredoka One";
+  font-weight: 700;
+  border: none;
+  transition: 0.6s background-color, 0.6s color, 0.6s width, 0.6s height, 0.6s font-size, 0.6s box-shadow;
+}
+#playbutton:hover {
+  background-color: #ff8500;
+  color: white;
+  width: 27dvh;
+  height: 10.5dvh;
+  font-size: 8.5lvh;
+  box-shadow: 0lvh -1lvh 6lvh rgba(0,0,0,0.5);
+}
+#close:hover {
+  background-color: #ff8500;
+  color: white;
+  width: 11dvh;
+  height: 11dvh;
+  font-size: 8.5lvh;
+  box-shadow: -1lvh 3lvh 2lvh rgba(0,0,0,0.3);
+}
+#windowthing {
+  width: calc(100% - 5.5dvh);
+  left: 2.75dvh;
+  outline: 1.75dvh solid #ff8500;
+  border-radius: 1.5dvh;
+  position: absolute;
+  height: 25dvh;
+  top: 2.75dvh;
+}
+#actpopup {
+  background-size: cover;
+  background-position: 50% 50%;
+  word-wrap: break-word;
+  padding: 4dvh;
+  padding-bottom: 10lvh;
+  padding-top: 6lvh;
+  background-color: rgb(255, 254, 240);
+  outline: 2dvh solid #ff8500;
+  border: none;
+  border-radius: 8dvh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#popup {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10000000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#wbgnew {
+  width: calc(100% - 14.75dvh);
+  height: 100dvh;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: -100000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("../../media/images/whitebg.png");
+}
+.sat {
+  white-space: nowrap;
+  font-size: 2.5dvh;
+  text-align: left;
+  width: fit-content;
+  color: black;
+  margin-left: 50%;
+  margin-bottom: 1lvh;
+  transform: translateX(calc((50% + 4dvh) * -1));
+}
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2dvh;
+  height: 2dvh;
+  background-color: #ff8500;
+  border-radius: 4dvh;
+  transition: 1s left;
+}
+.slidergroup {
+  right: -8dvh;
+  outline: 0.5dvh solid black;
+  border-radius: 4dvh;
+  position: absolute;
+  height: 2dvh;
+  top: 0.5dvh;
+  width: 5.5dvh;
+  background-color: white;
+  transition: 1s background-color;
+  cursor: pointer;
+}
+#mmlogo {
+
+  background-image: url("https://www.studyslooth.com/media/images/studymode/mmlogo.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  width: calc(100% - 6lvh);
+  height: calc(100% - 6lvh);
+  z-index: 1;
+  left: 3lvh;
+  top: 3lvh;
+  position: absolute;
+  transition: 0.3s filter;
+}
+#addnew {
+  width: 6lvh;
+  height: 6lvh;
+  left: 3lvh;
+  transform: translate(-50%);
+  filter: invert(29%) sepia(43%) saturate(3270%) hue-rotate(341deg) brightness(78%) contrast(104%);
+  position: relative;
+  vertical-align: baseline;
+}
+#addnewset {
+  font-size: 4lvh;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: absolute;
+  width: 100%;
+}
+#createnew {
+  position: relative;
+  height: 28.5lvh;
+  width: calc((100% - (var(--nopr)) * 2lvh) / var(--nopr) - 1.5lvh);
+  margin-left: 1.75lvh;
+  margin-right: 1.75lvh;
+  margin-bottom: 1.75lvh;
+  margin-top: 2.75lvh;
+  border-radius: 3.75lvh;
+  overflow: hidden;
+  color: #ff8500;
+  cursor: pointer;
+  transition: 0.6s box-shadow, 0.6s transform;
+  background-color: rgba(255,133,0,0.1);
+  outline: 0.75lvh dashed #ff8500;
+  box-shadow: 0 2lvh 0 rgba(0,0,0,0.2);
+}
+#createnew:hover {
+  box-shadow: 0 2.5lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+#createnew.full {
+  width: 100%;
+  height: 45lvh;
+}
+#nameofset {
+  width: 100%;
+  text-align: center;
+  max-height: 17.5lvh;
+  position: absolute;
+  left: 50%;
+  font-size: 10lvh;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#disclaimer {
+  margin-bottom: 0lvh;
+  width: calc(100% - 2lvh);
+  font-family: "Special Gothic Condensed One";
+  font-size: 4lvh;
+  padding: 1lvh;
+  background-color: white;
+  margin-left: 1lvh;
+  line-height: 4.5lvh;
+  color: #ff8500;
+  pointer-events: none;
+  position: abslolute;
+}
+.disclaimer2 {
+  margin-top: 3lvh;
+  margin-bottom: 1lvh;
+  width: calc(100% - 2lvh);
+  font-family: "Special Gothic Condensed One";
+  font-size: 4lvh;
+  padding: 1lvh;
+  background-color: white;
+  margin-left: 1lvh;
+  line-height: 4.5lvh;
+  color: #ff8500;
+  pointer-events: none;
+  position: abslolute;
+}
+#naa .big {
+  font-size: 3.5lvh;
+}
+#naa .small {
+  font-family: "Special Gothic Condensed One";
+}
+#naa {
+  width: calc(100% - 4lvh);
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: none;
+  text-overflow: ellipsis;
+  max-height: calc(100% - 4lvh);
+  text-align: center;
+  position: absolute;
+}
+.bgimg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-size: cover;
+  opacity: 1;
+  background-position: 50% 50%;
+  position: absolute;
+  transition: 0.3s filter;
+}
+.creamsicle {
+  width: 50lvh;
+  height: 50lvh;
+  position: absolute;
+  background-color: rgb(255, 254, 240);
+  filter: blur(20lvh);
+  transform: translate(-50%, -50%);
+}
+#creambackground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255, 254, 240, 0.55);
+  z-index: 0;
+}
+:root {
+  --nopr: calc((round(pow(100dvw / 100lvh, 1) * 1.4, 1)));
+}
 .hidden {
   opacity: 0;
   pointer-events: none;
@@ -72,15 +453,15 @@
   position: absolute;
   width: 100%;
   color: black;
-  font-size: 3dvh;
+  font-size: 3lvh;
   text-align: center;
 }
 #desc {
   position: absolute;
-  left: 2dvh;
-  top: 16.75dvh;
+  left: 2lvh;
+  top: 16.75lvh;
   color: black;
-  font-size: 3dvh;
+  font-size: 3lvh;
 }
 @font-face {
   font-family: fredokaone;
@@ -88,6 +469,7 @@
 }
 body {
   font-family: fredokaone;
+  background-color: rgb(255,254,240);
 }
 #logo {
   height: 90%;
@@ -111,219 +493,588 @@ body {
   font-weight: bold;
   text-align: center;
   left: 50%;
-  bottom: 0.75dvh;
+  bottom: 0.75lvh;
   height: auto;
   transform: translate(-50%, 0%);
 }
 .hyperlink {
   color: #ff8500;
   position: absolute;
-  width: 9dvh;
-  padding: 1.5dvh;
-  height: 12dvh;
-  font-size: 2dvh;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
 }
 .hpimg {
-  top: 1.5dvh;
-  left: 1.5dvh;
-  width: 9dvh;
+  top: 1.5lvh;
+  left: 1.5lvh;
+  width: 9lvh;
   position: absolute;
-  height: 9dvh;
+  height: 9lvh;
 }
 .darkmodehyperlink {
   color: white;
   position: absolute;
-  width: 9dvh;
-  padding: 1.5dvh;
-  height: 12dvh;
-  font-size: 2dvh;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
 }
-.author {
-  font-size: 2dvh;
-  font-weight: normal;
+#topcreamthing {
+  position: fixed;
+  top: 21lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 6lvh);
+  z-index: 10000;
+  background-image: linear-gradient(rgb(255,254,240), rgba(0,0,0,0));
+  transition: 0.3s opacity;
+  pointer-events: none;
 }
-.insidetext {
-  font-weight: bold;
-  font-size: 3dvh;
-  position: absolute;
-  padding: 0;
-  text-align: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+#bottomcreamthing {
+  position: fixed;
+  bottom: 0lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 6lvh);
+  z-index: 10000;
+  transition: 0.3s opacity;
+  background-image: linear-gradient(rgba(0,0,0,0), rgb(255,254,240));
+  pointer-events: none;
 }
 .group {
-  height: 15dvh;
-  outline: 1.5dvh solid black;
-  border-radius: 1.5dvh;
+  position: relative;
+  height: 30lvh;
+  width: calc((100% - (var(--nopr)) * 2lvh) / var(--nopr));
+  margin-left: 1lvh;
+  margin-right: 1lvh;
+  margin-bottom: 1lvh;
+  margin-top: 2lvh;
+  border-radius: 3.75lvh;
   overflow: hidden;
-  position: absolute;
-  background-size: cover;
-  background-position: 50% 50%;
-  filter: brightness(150%);
-}
-.groupdarkmode {
-  height: 15dvh;
   color: white;
-  outline: 1.5dvh solid white;
-  border-radius: 1.5dvh;
-  overflow: hidden;
-  position: absolute;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 0 1.5lvh 0 rgba(0,0,0,0.2);
+  transition: 0.6s box-shadow, 0.6s transform, 0.6s filter;
+}
+.mmgroup {
+  width: calc(100%);
+  height: 35lvh;
   background-size: cover;
   background-position: 50% 50%;
+  transition: 0.6s filter, 0.6s box-shadow, 0.6s transform;
+}
+.group1:hover {
+  filter: brightness(1.25);
+  box-shadow: 0 2.5lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+#evenbggroups {
+  width: calc(100% - 6lvh);
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  top: 21lvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 79lvh;
 }
 #groups {
   width: 100%;
+  left: 50%;
+  transform: translate(-50%);
   position: absolute;
-  top: 21dvh;
+  margin-top: 1lvh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
   height: auto;
 }
 #heading {
   z-index: 2;
   position: fixed;
-  width: calc(100% - 14.75dvh);
-  height: 17.5dvh;
+  width: calc(100% - 14.75lvh);
+  height: 17.5lvh;
   background-color: #ff8500;
   right: 0;
   top: 0;
 }
 #content {
   position: absolute;
-  width: calc(100% - 14.75dvh);
+  width: calc(100% - 14.75lvh);
   height: 100%;
   right: 0;
   top: 0;
   background-image: url("../media/images/whitebg.png");
   background-position: 50% 50%;
   background-size: cover;
-}
-.halfwhite {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.halfblack {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 #sidebar {
   background-color: white;
-  outline: 3dvh solid #ff8500;
-  width: 12dvh;
+  outline: 3lvh solid #ff8500;
+  width: 12lvh;
   left: 0;
   top: 0;
   height: 100%;
   position: fixed;
 }
+.groupdarkmode {
+  background-color: #ff8500;
+  color: white;
+}
+#settingsMain {
+  position: absolute;
+  left: 50%;
+  top: 19lvh;
+  transform: translateX(-50%);
+  width: calc(100% - 6lvh);
+  height: 78lvh;
+  overflow-y: auto;
+  padding: 0 1lvh 3lvh;
+  box-sizing: border-box;
+  z-index: 1;
+  color: #ff8500;
+}
+.hplabel { font-size: 2.3lvh; }
+.settingsCard {
+  overflow: hidden;
+  margin-top: 3lvh;
+  width: calc(100% - 2lvh);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3lvh;
+  background-color: #ff8500;
+  box-shadow: 0 1lvh 0lvh rgba(0,0,0,0.2);
+  color: white;
+  padding: 3lvh;
+  box-sizing: border-box;
+  font-family: fredokaone;
+  cursor: pointer;
+  transition: 0.3s transform, 0.3s box-shadow;
+}
+.settingsCard:hover { transform: translateY(-1lvh); box-shadow: 0 2lvh 0 rgba(0,0,0,0.2); }
+#settingsMain .settingsCard:nth-of-type(even) { background-color: #c12020; }
+.settingsCard h2 {
+  margin: 0 0 1lvh;
+  font-size: 4.4lvh;
+  color: white;
+}
+.settingHint, .settingStatus {
+  margin: 0.5lvh 0 1.5lvh;
+  font-family: "Special Gothic Condensed One";
+  font-size: 2.8lvh;
+}
+.settingHint { font-size: 3lvh; }
+.settingStatus { min-height: 2.8lvh; }
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5lvh;
+  padding: 1.5lvh 0;
+  font-size: 2.8lvh;
+  cursor: pointer;
+}
+.settingRow + .settingRow { margin-top: 0.75lvh; }
+.settingRow input, .preferenceGrid input {
+  appearance: none;
+  position: relative;
+  width: 6.5dvh;
+  height: 2.6dvh;
+  flex: 0 0 6.5dvh;
+  margin: 0;
+  border-radius: 4dvh;
+  outline: 0.5dvh solid black;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+.settingRow input::before, .preferenceGrid input::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.6dvh;
+  height: 2.6dvh;
+  border-radius: 4dvh;
+  background-color: #ff8500;
+  transition: left 0.6s ease;
+}
+.settingRow input:checked, .preferenceGrid input:checked { background-color: black; }
+.settingRow input:checked::before, .preferenceGrid input:checked::before { left: 3.9dvh; }
+.settingRow:hover, .preferenceGrid label:hover { filter: brightness(1.12); }
+.switchVisual { display: none; }
+.preferenceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17lvh, 1fr));
+  gap: 1.5lvh;
+  margin: 1.5lvh 0 2lvh;
+}
+.preferenceGrid label { display: flex; align-items: center; gap: 1.5lvh; font-size: 2.8lvh; }
+.fieldGroup { display: flex; flex-direction: column; gap: 0.5lvh; margin: 1.5lvh 0 2lvh; }
+.fieldLabel { display: block; margin: 0; font-family: "Special Gothic Condensed One"; font-size: 3.1lvh; }
+.settingsCard select {
+  display: block;
+  width: calc(100% - 2lvh);
+  min-height: 4lvh;
+  border: none;
+  border-radius: 2lvh;
+  background: rgba(255,255,255,1);
+  color: #3a3a3a;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 3.3lvh;
+  margin: 0;
+  padding: 0.5lvh 1lvh;
+}
+.settingsCard select:hover { filter: brightness(0.96); }
+.settingsCard select:focus-visible, .buttonRow button:focus-visible, .fileButton:focus-visible, .settingRow input:focus-visible, .preferenceGrid input:focus-visible {
+  outline: 0.5lvh solid white;
+  outline-offset: 0.5lvh;
+}
+.buttonRow { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25lvh; margin-top: 1.5lvh; }
+.buttonRow button, .fileButton {
+  display: inline-block;
+  padding: 2lvh;
+  border: none;
+  border-radius: 4lvh;
+  background-color: #c12020;
+  color: white;
+  font-family: "Fredoka";
+  font-weight: 600;
+  font-size: 3.3lvh;
+  box-shadow: 0 1lvh 0 rgba(0,0,0,0.2);
+  transition: 0.6s;
+  cursor: pointer;
+}
+.buttonRow button:not(:disabled):hover, .fileButton:hover {
+  background-color: #3a3a3a;
+  box-shadow: 0 2lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+.buttonRow button:not(:disabled):active, .fileButton:active { transform: translateY(0); box-shadow: 0 0.5lvh 0 rgba(0,0,0,0.2); }
+.buttonRow button:disabled { opacity: 0.55; cursor: not-allowed; }
+.buttonRow .secondaryButton { background-color: #ff8500; color: white; }
+#settingsMain .settingsCard:nth-of-type(odd) .buttonRow button,
+#settingsMain .settingsCard:nth-of-type(odd) .fileButton { background-color: #c12020; }
+#settingsMain .settingsCard:nth-of-type(even) .buttonRow button,
+#settingsMain .settingsCard:nth-of-type(even) .fileButton { background-color: #ff8500; }
+#settingsMain .settingsCard .buttonRow button:hover,
+#settingsMain .settingsCard .fileButton:hover { background-color: #3a3a3a; }
+#deleteSetButton:hover { color: #c12020; }
+#importAllInput { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+#importConfirm {
+  position: fixed;
+  inset: 0;
+  z-index: 20000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3lvh;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.78);
+}
+.importConfirmCard {
+  width: min(85lvh, calc(100vw - 8lvh));
+  padding: 3lvh;
+  border-radius: 3lvh;
+  box-sizing: border-box;
+  background: rgb(255,254,240);
+  color: #3a3a3a;
+  box-shadow: 0 2lvh 4lvh rgba(0,0,0,0.35);
+}
+.importConfirmCard h2 { margin: 0 0 1.5lvh; color: #ff8500; font-size: 4.4lvh; }
+.importConfirmCard p { margin: 0; font-family: "Special Gothic Condensed One"; font-size: 3.3lvh; }
+.importConfirmCard .buttonRow { justify-content: flex-end; }
+#topcreamthing {
+  position: fixed;
+  top: 19lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 20.7lvh);
+  z-index: 10000;
+  background-image: linear-gradient(rgb(255,254,240), rgba(0,0,0,0));
+  transition: 0.3s opacity;
+  pointer-events: none;
+}
+#bottomcreamthing {
+  position: fixed;
+  bottom: 0lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 20.7lvh);
+  z-index: 10000;
+  background-image: linear-gradient(rgba(0,0,0,0), rgb(255,254,240));
+  transition: 0.3s opacity;
+  pointer-events: none;
+}
+body.settings-dark { background: #3a3a3a; }
+body.settings-dark #content { background-image: none; background-color: #3a3a3a; }
+body.settings-dark #heading { background: white; }
+body.settings-dark #nameofset { color: black; }
+body.settings-dark #sidebar { background: black; outline-color: white; }
+body.settings-dark #creambackground { background-color: #3a3a3a; opacity: 0.5; }
+body.settings-dark .creamsicle { background-color: #3a3a3a; }
+body.settings-dark #topcreamthing { background-image: linear-gradient(#3a3a3a, rgba(0,0,0,0)); }
+body.settings-dark #bottomcreamthing { background-image: linear-gradient(rgba(0,0,0,0), #3a3a3a); }
+body.settings-dark .settingRow input, body.settings-dark .preferenceGrid input { background: black; outline-color: white; }
+body.settings-dark .settingRow input:checked, body.settings-dark .preferenceGrid input:checked { background: white; }
+body.settings-dark .hyperlink.selected, body.settings-dark .hplabel.selected { background: white; color: black; }
+body.settings-dark .hplabel { color: white; }
+body.settings-dark .settingsCard { background: #ff8500; color: white; }
+#settingsMain .settingsCard:nth-of-type(even), body.settings-dark #settingsMain .settingsCard:nth-of-type(even) { background-color: #c12020; }
+body.settings-dark #settingsMain { color: #ff8500; }
+body.settings-dark .settingsCard select { background: #3a3a3a; color: white; }
+body.settings-dark .buttonRow .secondaryButton { background: #ff8500; color: white; }
+body.settings-dark .importConfirmCard { background: #3a3a3a; color: white; }
+#importConfirm .buttonRow button:hover { background-color: white; color: #3a3a3a; outline: 0.4lvh solid #ff8500; }
+body.settings-theme-transition, body.settings-theme-transition * {
+  transition-property: background-color, color, border-color, outline-color, filter, opacity, box-shadow, transform, left;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+@media (max-width: 700px) {
+  #settingsMain { width: calc(100% - 3lvh); }
+  .settingsCard { padding: 3lvh; }
+  .buttonRow button, .fileButton { font-size: 2.5lvh; }
+}
 </style>
 <script>
-allsliders = [false];
-if (localStorage.getItem("darkmode")) {} else {
-  localStorage.setItem("darkmode", "0");
-}
-arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
-if (localStorage.getItem("darkmode") == "1") {
-  moveslider(0);
-}
-setTimeout(setalltransitions, 10);
-function setalltransitions() {
-  document.body.style.transition = "0.8s background-color";
-  document.getElementById("heading").style.transition = "0.8s background-color";
-  document.getElementById("sidebar").style.transition = "0.8s outline-color, 0.8s background-color";
-  document.getElementsByClassName("body4")[0].style.transition = "0.8s color";
-  document.getElementById("logo").style.transition = "0.8s filter";
-  document.getElementById("copyrightnotice").style.transition = "0.8s filter";
-  for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
-    document.getElementsByClassName("lilc")[i].style.transition = "0.8s left, 0.8s background-color";
-    document.getElementsByClassName("sslider")[i].style.transition = "0.8s background-color, 0.8s outline-color";
-  }
-  for (i = 0; i < document.getElementsByClassName("hyperlink").length; i++) {
-    document.getElementsByClassName("hyperlink")[i].style.transition = "0.8s background-color";
-    document.getElementsByClassName("hplabel")[i].style.transition = "0.8s background-color, 0.8s color";
-    document.getElementsByClassName("hpimg")[i].style.transition = "0.8s filter";
-  }
-}
-function moveslider(index2u) {
-  if (allsliders[index2u] == true) {
-    allsliders[index2u] = false;
-    document.getElementsByClassName("sslider")[index2u].style.backgroundColor = "#efefef";
-    document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "black";
-    document.getElementsByClassName("lilc")[index2u].style.left = "0.25lvh";
-    if (index2u == 0) {
-      localStorage.setItem("darkmode", "0");
-      for (i = 0; i < allsliders.length; i++) {
-        if (allsliders[i] == false) {
-          document.getElementsByClassName("sslider")[i].style.backgroundColor = "#efefef";
-          document.getElementsByClassName("lilc")[i].style.backgroundColor = "black";
-        }
-      }
-      document.getElementById("copyrightnotice").style.filter = "invert(0)";
-      for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
-        document.getElementsByClassName("sslider")[i].style.outlineColor = "black";
-      }
-      document.getElementsByClassName("body4")[0].style.color = "black";
-      document.body.style.backgroundColor = "white";
-      document.getElementById("heading").style.backgroundColor = "#ff8500";
-      document.getElementById("sidebar").style.outline = "3dvh solid #ff8500";
-      document.getElementById("sidebar").style.backgroundColor = "white";
-      document.getElementById("logo").style.filter = "invert(0)";
-      for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
-        if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
-          document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "#ff8500";
-          document.getElementsByClassName("hplabel")[i].style.backgroundColor = "#ff8500";
-          document.getElementsByClassName("hplabel")[i].style.color = "white";
-          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(1)";
-        } else {
-          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(1) invert(0)"
-          document.getElementsByClassName("hyperlink")[i].classList.remove("darkmodehyperlink");
-        }
-      }
-    }
-  } else {
-    allsliders[index2u] = true;
-    document.getElementsByClassName("sslider")[index2u].style.backgroundColor = "#ff8500";
-    document.getElementsByClassName("lilc")[index2u].style.backgroundColor = "white";
-    document.getElementsByClassName("lilc")[index2u].style.left = "3.75lvh";
-    if (index2u == 0) {
-      localStorage.setItem("darkmode", "1");
-      for (i = 0; i < allsliders.length; i++) {
-        if (allsliders[i] == false) {
-          document.getElementsByClassName("sslider")[i].style.backgroundColor = "#3a3a3a";
-          document.getElementsByClassName("lilc")[i].style.backgroundColor = "white";
-        }
-      }
-      document.getElementById("copyrightnotice").style.filter = "invert(1)";
-      for (i = 0; i < document.getElementsByClassName("sslider").length; i++) {
-        document.getElementsByClassName("sslider")[i].style.outlineColor = "white";
-      }
-      document.getElementsByClassName("body4")[0].style.color = "white";
-      document.body.style.backgroundColor = "black";
-      document.getElementById("heading").style.backgroundColor = "white";
-      document.getElementById("sidebar").style.outline = "3dvh solid white";
-      document.getElementById("sidebar").style.backgroundColor = "black";
-      document.getElementById("logo").style.filter = "invert(1)";
-      for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
-        if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
-          document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
-          document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
-          document.getElementsByClassName("hplabel")[i].style.color = "black";
-          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(0)";
-        } else {
-          document.getElementsByClassName("hpimg")[i].style.filter = "brightness(0) invert(1)"
-          document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
-        }
-      }
-    }
-  }
-}
+(() => {
+  const styleKeys = ["tactile", "written", "auditory", "social", "logical", "visual"];
+  const setPicker = document.getElementById("setPicker");
+  const setControls = document.getElementById("setPreferenceControls");
+  const settingsScroll = document.getElementById("settingsMain");
+  let pendingBackup = null;
+  const status = (id, message) => { document.getElementById(id).textContent = message; };
 
+  function applyTheme() {
+    const dark = localStorage.getItem("darkmode") === "1";
+    document.body.classList.toggle("settings-dark", dark);
+    document.getElementById("darkModeToggle").checked = dark;
+    const names = ["home", "study", "play", "sets", "create", "import", "settings"];
+    document.querySelectorAll("#sidebar .hpimg").forEach((img, index) => {
+      const selected = img.closest(".hyperlink").classList.contains("selected");
+      img.src = `../media/images/toolbar/${names[index]}${dark ? (selected ? "black" : "selected") : (selected ? "selected" : "orange")}.png`;
+    });
+  }
+  if (localStorage.getItem("darkmode") === null) localStorage.setItem("darkmode", "0");
+  applyTheme();
+  document.body.classList.add("settings-theme-transition");
+  document.getElementById("darkModeToggle").addEventListener("change", event => {
+    localStorage.setItem("darkmode", event.target.checked ? "1" : "0");
+    applyTheme();
+  });
+  window.addEventListener("storage", event => { if (event.key === "darkmode") applyTheme(); });
+
+  function populateLearningPreferences() {
+    document.querySelectorAll(".learningStyle").forEach(input => {
+      input.checked = localStorage.getItem(input.value) === "1";
+    });
+    const selectedPref = localStorage.getItem("pref") || "w";
+    document.getElementById("primaryLearningStyle").value = styleKeys.some(key => key[0] === selectedPref) ? selectedPref : "w";
+    document.getElementById("writtenAuditoryPreference").value = localStorage.getItem("aorw") || "w";
+    document.getElementById("timedPreference").checked = localStorage.getItem("timed") === "1";
+  }
+  function saveLearningPreferences() {
+    const checked = [...document.querySelectorAll(".learningStyle:checked")];
+    if (!checked.length) {
+      const first = document.querySelector(".learningStyle");
+      first.checked = true;
+      checked.push(first);
+    }
+    checked.forEach(input => localStorage.setItem(input.value, "1"));
+    document.querySelectorAll(".learningStyle:not(:checked)").forEach(input => localStorage.setItem(input.value, "0"));
+    const primary = document.getElementById("primaryLearningStyle");
+    if (![...checked].some(input => input.value[0] === primary.value)) primary.value = checked[0].value[0];
+    localStorage.setItem("pref", primary.value);
+    localStorage.setItem("aorw", document.getElementById("writtenAuditoryPreference").value);
+    localStorage.setItem("timed", document.getElementById("timedPreference").checked ? "1" : "0");
+    status("learningStatus", "Learning preferences saved.");
+  }
+  populateLearningPreferences();
+  document.querySelectorAll(".learningStyle, #primaryLearningStyle, #writtenAuditoryPreference, #timedPreference").forEach(input => input.addEventListener("change", saveLearningPreferences));
+
+  function setCount() { return Math.max(0, Math.min(10, parseInt(localStorage.getItem("numofsets") || "0", 10) || 0)); }
+  function adjustSettingGradients() {
+    const atBottom = Math.ceil(settingsScroll.scrollTop + settingsScroll.clientHeight) >= settingsScroll.scrollHeight - 2;
+    document.getElementById("topcreamthing").classList.toggle("hidden", settingsScroll.scrollTop <= 0);
+    document.getElementById("bottomcreamthing").classList.toggle("hidden", atBottom);
+  }
+  settingsScroll.addEventListener("scroll", adjustSettingGradients);
+  window.addEventListener("resize", adjustSettingGradients);
+  requestAnimationFrame(adjustSettingGradients);
+  function populateSetPicker(preferred) {
+    const count = setCount();
+    setPicker.replaceChildren();
+    for (let index = 1; index <= count; index++) {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = localStorage.getItem(index + "n") || `Set ${index}`;
+      setPicker.appendChild(option);
+    }
+    if (count) {
+      setPicker.value = String(Math.min(Math.max(1, Number(preferred) || 1), count));
+      setControls.hidden = false;
+      ["downloadSetButton", "deleteSetButton"].forEach(id => document.getElementById(id).disabled = false);
+      loadSetPreferences();
+    } else {
+      const option = document.createElement("option"); option.value = ""; option.textContent = "No sets saved"; setPicker.appendChild(option);
+      setControls.hidden = true;
+      ["downloadSetButton", "deleteSetButton"].forEach(id => document.getElementById(id).disabled = true);
+    }
+  }
+  function currentSet() { return setPicker.value; }
+  function loadSetPreferences() {
+    const index = currentSet();
+    if (!index) return;
+    document.getElementById("termsPreference").checked = localStorage.getItem(index + "terms") === "1";
+    document.getElementById("chronologicalPreference").checked = localStorage.getItem(index + "chronological") === "1";
+    document.getElementById("whiteboardPreference").checked = localStorage.getItem(index + "whiteboardrecommended") === "1";
+    status("setStatus", "");
+  }
+  function saveSetPreferences() {
+    const index = currentSet(); if (!index) return;
+    localStorage.setItem(index + "terms", document.getElementById("termsPreference").checked ? "1" : "0");
+    localStorage.setItem(index + "chronological", document.getElementById("chronologicalPreference").checked ? "1" : "0");
+    localStorage.setItem(index + "whiteboardrecommended", document.getElementById("whiteboardPreference").checked ? "1" : "0");
+    status("setStatus", "Set preferences saved.");
+  }
+  setPicker.addEventListener("change", loadSetPreferences);
+  ["termsPreference", "chronologicalPreference", "whiteboardPreference"].forEach(id => document.getElementById(id).addEventListener("change", saveSetPreferences));
+  populateSetPicker();
+
+  function downloadFile(blob, filename) {
+    const url = URL.createObjectURL(blob); const link = document.createElement("a");
+    link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function readSet(index) {
+    const questionCount = Math.max(0, parseInt(localStorage.getItem(index + "qat") || "0", 10) || 0);
+    const questions = [], answers = [];
+    for (let number = 1; number <= questionCount; number++) {
+      questions.push(localStorage.getItem(index + "q" + number) || "");
+      answers.push(localStorage.getItem(index + "a" + number) || "");
+    }
+    return {
+      name: localStorage.getItem(index + "n") || `Set ${index}`,
+      answer: localStorage.getItem(index + "a") || "",
+      cover: localStorage.getItem(index + "p") || "",
+      questionCount, questions, answers,
+      terms: localStorage.getItem(index + "terms") || "0",
+      chronological: localStorage.getItem(index + "chronological") || "0",
+      whiteboardrecommended: localStorage.getItem(index + "whiteboardrecommended") || "0",
+      wqc: localStorage.getItem(index + "wqc") || "0",
+      bt: localStorage.getItem(index + "bt") || ""
+    };
+  }
+  function downloadOneSet() {
+    const index = currentSet(); if (!index) return;
+    const set = readSet(index); let pairs = "";
+    const pairDelimiter = "\\".repeat(3);
+    for (let i = 0; i < set.questionCount; i++) pairs += set.questions[i] + pairDelimiter + set.answers[i] + pairDelimiter;
+    const fileText = `${set.name}[]${set.answer}[]${set.cover}[]${pairs}`;
+    const safeName = set.name.replace(/[\\/:*?"<>|]/g, "_");
+    downloadFile(new Blob([fileText], {type:"text/plain;charset=utf-8"}), `${safeName}.studyslooth`);
+  }
+  document.getElementById("downloadSetButton").addEventListener("click", downloadOneSet);
+
+  function removeSet(indexToRemove) {
+    const count = setCount();
+    const setKey = /^(\d+)(bt|n|a|qat|p|wqc|terms|chronological|whiteboardrecommended|q\d+|a\d+)$/;
+    const stored = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i), match = key && key.match(setKey);
+      if (match && Number(match[1]) >= indexToRemove && Number(match[1]) <= count) stored.push({key, index:Number(match[1]), suffix:match[2], value:localStorage.getItem(key)});
+    }
+    stored.forEach(item => localStorage.removeItem(item.key));
+    stored.forEach(item => {
+      if (item.index > indexToRemove) localStorage.setItem(`${item.index - 1}${item.suffix}`, item.value);
+    });
+    localStorage.setItem("numofsets", String(Math.max(0, count - 1)));
+    populateSetPicker(Math.min(Number(indexToRemove), count - 1));
+    status("setStatus", "Set deleted.");
+  }
+  document.getElementById("deleteSetButton").addEventListener("click", () => {
+    const index = currentSet(); if (!index) return;
+    const name = localStorage.getItem(index + "n") || `Set ${index}`;
+    if (window.confirm(`Delete “${name}” and its questions? This cannot be undone.`)) removeSet(Number(index));
+  });
+
+  document.getElementById("exportAllButton").addEventListener("click", () => {
+    const sets = []; for (let i = 1; i <= setCount(); i++) sets.push(readSet(i));
+    const backup = {format:"studyslooth-backup", version:1, createdAt:new Date().toISOString(), sets};
+    downloadFile(new Blob([JSON.stringify(backup, null, 2)], {type:"application/json"}), "studyslooth-sets-backup.json");
+    status("bulkStatus", `Downloaded a backup of ${sets.length} set${sets.length === 1 ? "" : "s"}.`);
+  });
+  const importConfirm = document.getElementById("importConfirm");
+  function closeImportConfirmation() {
+    pendingBackup = null;
+    importConfirm.classList.add("hidden");
+    settingsScroll.inert = false;
+    document.getElementById("sidebar").inert = false;
+    document.getElementById("importAllInput").focus();
+  }
+  document.getElementById("cancelImportButton").addEventListener("click", () => {
+    closeImportConfirmation();
+    status("bulkStatus", "Bundle import canceled. Your current sets were not changed.");
+  });
+  window.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !importConfirm.classList.contains("hidden")) closeImportConfirmation();
+  });
+  document.getElementById("importAllInput").addEventListener("change", async event => {
+    const file = event.target.files[0]; if (!file) return;
+    try {
+      const backup = JSON.parse(await file.text());
+      if (backup.format !== "studyslooth-backup" || backup.version !== 1 || !Array.isArray(backup.sets)) throw new Error("This file is not a Study Slooth sets backup.");
+      if (backup.sets.length > 10) throw new Error("A bundle can contain up to 10 sets.");
+      if (backup.sets.some(item => !item || typeof item.name !== "string" || !Array.isArray(item.questions) || !Array.isArray(item.answers) || item.questions.length > 300 || item.answers.length > 300)) throw new Error("The backup contains an invalid set.");
+      pendingBackup = backup;
+      const incoming = backup.sets.length;
+      const current = setCount();
+      document.getElementById("importConfirmMessage").textContent = `${incoming} set${incoming === 1 ? "" : "s"} will replace ${current} current set${current === 1 ? "" : "s"}. This cannot be undone; other settings stay unchanged.`;
+      importConfirm.classList.remove("hidden");
+      settingsScroll.inert = true;
+      document.getElementById("sidebar").inert = true;
+      document.getElementById("cancelImportButton").focus();
+    } catch (error) {
+      status("bulkStatus", error.message || "Could not read that backup file.");
+    } finally { event.target.value = ""; }
+  });
+  document.getElementById("confirmReplaceButton").addEventListener("click", () => {
+    if (!pendingBackup) return;
+    const backup = pendingBackup;
+    closeImportConfirmation();
+    const setKey = /^\d+(bt|n|a|qat|p|wqc|terms|chronological|whiteboardrecommended|q\d+|a\d+)$/;
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && setKey.test(key)) keysToRemove.push(key);
+    }
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+    backup.sets.forEach((item, position) => {
+      const index = position + 1;
+      const total = Math.max(item.questions.length, item.answers.length);
+      localStorage.setItem(index + "n", item.name);
+      localStorage.setItem(index + "a", String(item.answer || ""));
+      localStorage.setItem(index + "p", String(item.cover || ""));
+      localStorage.setItem(index + "qat", String(total));
+      localStorage.setItem(index + "terms", item.terms === "1" ? "1" : "0");
+      localStorage.setItem(index + "chronological", item.chronological === "1" ? "1" : "0");
+      localStorage.setItem(index + "whiteboardrecommended", item.whiteboardrecommended === "1" ? "1" : "0");
+      localStorage.setItem(index + "wqc", String(item.wqc || "0"));
+      localStorage.setItem(index + "bt", String(item.bt || ""));
+      for (let q = 1; q <= total; q++) {
+        localStorage.setItem(index + "q" + q, String(item.questions[q - 1] || ""));
+        localStorage.setItem(index + "a" + q, String(item.answers[q - 1] || ""));
+      }
+    });
+    localStorage.setItem("numofsets", String(backup.sets.length));
+    populateSetPicker(backup.sets.length ? String(backup.sets.length) : "");
+    adjustSettingGradients();
+    status("bulkStatus", `Replaced your current sets with ${backup.sets.length} set${backup.sets.length === 1 ? "" : "s"}.`);
+  });
+})();
 </script>
