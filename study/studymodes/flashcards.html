@@ -25,7 +25,7 @@
   <button onclick="addtopile()" id="malcircle"></button>
  <div id="question"></div>
  <textarea maxlength="1000" placeholder="Type the answer here..." id="answer"></textarea>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/'" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -708,7 +708,7 @@ function flip(numtouse) {
   }
 }
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 function redo() {
   sessionStorage.setItem("stu", current);
