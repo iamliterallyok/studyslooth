@@ -388,7 +388,7 @@ if (localStorage.getItem("darkmode") == "1") {
   }
   document.getElementById("creambackground").style.opacity = "0.5";
   document.body.style.backgroundColor = "#3a3a3a";
-  document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
+  document.getElementById("mastersidebar").classList.add("darkmodetoolbar");
 }
 document.getElementsByClassName("txtarea")[0].addEventListener("keydown", function() {
   setTimeout(function() {
