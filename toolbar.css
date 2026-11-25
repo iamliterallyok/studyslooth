@@ -1,0 +1,259 @@
+a {
+  text-decoration: none;
+}
+.sidebarimg {
+  width: 100%;
+  height: 5lvh;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 0.5lvh;
+  outline: none;
+  border: none;
+}
+#mastersidebar.orangesidebar .sidebarblock {
+  color: #ff8500;
+}
+#mastersidebar.redsidebar .sidebarblock {
+  color: #c12020;
+}
+@font-face {
+  font-family: fredokaone;
+  src: url("https://www.studyslooth.com/media/fonts/fredokaone.otf");
+}
+.sidebarblock {
+  margin-left: 0.75lvh;
+  width: calc(100% - 3.5lvh);
+  margin-top: 1.5lvh;
+  cursor: pointer;
+  border-radius: 2lvh;
+  background-color: rgb(255,254,240);
+  transition: 0.2s outline, 0.6s box-shadow, 0.6s transform;
+  padding: 1lvh;
+  font-family: fredokaone;
+  font-weight: normal;
+  text-align: center;
+  font-size: 2lvh;
+  overflow: hidden;
+}
+#mastersidebar.orangesidebar .sidebarblock {
+  outline: 0lvh solid #ff8500;
+}
+#mastersidebar.orangesidebar .sidebarblock:hover {
+  outline: 0.5lvh solid #ff8500;
+}
+#mastersidebar.redsidebar .sidebarblock {
+  outline: 0lvh solid #c12020;
+}
+#mastersidebar.redsidebar .sidebarblock:hover {
+  outline: 0.5lvh solid #c12020;
+}
+#mastersidebar .sidebarblock:hover {
+  box-shadow: 0lvh 0.75lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-0.75lvh);
+}
+.sidebarblock.bottom {
+  position: absolute;
+  bottom: 1.5lvh;
+}
+#mastersidebar {
+  z-index: 10000000;
+  background-color: white;
+  width: 13.5lvh;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+}
+#mastersidebar.orangesidebar {
+  outline: 1.5lvh solid #ff8500;
+}
+#mastersidebar.redsidebar {
+  outline: 1.5lvh solid #c12020;
+}
+#mastersidebar.orangesidebar #homeblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/homeorange.png");
+}
+#mastersidebar.redsidebar #homeblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/home.png");
+}
+#mastersidebar.orangesidebar #setsblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/setsorange.png");
+}
+#mastersidebar.redsidebar #setsblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/sets.png");
+}
+#mastersidebar.orangesidebar #settingsblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/settingsorange.png");
+}
+#mastersidebar.redsidebar #settingsblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/settings.png");
+}
+#mastersidebar.orangesidebar #createblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/createorange.png");
+}
+#mastersidebar.redsidebar #createblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/create.png");
+}
+#mastersidebar.orangesidebar #importblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/importorange.png");
+}
+#mastersidebar.redsidebar #importblock .sidebarimg {
+  background-image: url("https://www.studyslooth.com/media/images/toolbar/import.png");
+}
+
+#mastersidebar.darkmodetoolbar .sidebarblock {
+  background-color: #3a3a3a;
+  color: white;
+}
+#mastersidebar.darkmodetoolbar .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.darkmodetoolbar {
+  background-color: black;
+}
+#mastersidebar.homeselectedsidebar #homeblock .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.homeselectedsidebar.redsidebar #homeblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.homeselectedsidebar.orangesidebar #homeblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.homeselectedsidebar #homeblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.helpselectedsidebar.redsidebar #helpblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.helpselectedsidebar.orangesidebar #helpblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.helpselectedsidebar #helpblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.adsselectedsidebar.redsidebar #adsblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.adsselectedsidebar.orangesidebar #adsblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.adsselectedsidebar #adsblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.privacyselectedsidebar.redsidebar #privacyblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.privacyselectedsidebar.orangesidebar #privacyblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.privacyselectedsidebar #privacyblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.licenseselectedsidebar.redsidebar #licenseblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.licenseselectedsidebar.orangesidebar #licenseblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.licenseselectedsidebar #licenseblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.creditsselectedsidebar.redsidebar #creditsblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.creditsselectedsidebar.orangesidebar #creditsblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.creditsselectedsidebar #creditsblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.setsselectedsidebar #setsblock .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.setsselectedsidebar.redsidebar #setsblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.setsselectedsidebar.orangesidebar #setsblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.setsselectedsidebar #setsblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.createselectedsidebar #createblock .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.createselectedsidebar.redsidebar #createblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.createselectedsidebar.orangesidebar #createblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.createselectedsidebar #createblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.importselectedsidebar #importblock .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.importselectedsidebar.redsidebar #importblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.importselectedsidebar.orangesidebar #importblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.importselectedsidebar #importblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
+#mastersidebar.settingsselectedsidebar #settingsblock .sidebarimg {
+  filter: brightness(0) invert(1);
+}
+#mastersidebar.settingsselectedsidebar.redsidebar #settingsblock {
+  background-color: #c12020;
+  color: white;
+}
+#mastersidebar.settingsselectedsidebar.orangesidebar #settingsblock {
+  background-color: #ff8500;
+  color: white;
+}
+#mastersidebar.settingsselectedsidebar #settingsblock:hover {
+  outline: none;
+  box-shadow: none;
+  transform: none;
+}
