@@ -41,7 +41,7 @@
  </div>
  <div class="hidden" id="allquestions2">
  </div>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/'" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -892,7 +892,7 @@ for (i = 1; i <= parseInt(localStorage.getItem(current.concat("qat"))); i++) {
 clbl = 0;
 booleanVals = [true, false];
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 monthsfullnames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 box = document.getElementsByClassName('ddp')[0];
