@@ -27,7 +27,7 @@
  <textarea maxlength="1000" placeholder="Write an antonym here..." id="inputnotes"></textarea>
  <textarea class="hidden" maxlength="1000" placeholder="Type the definition here..." id="answer"></textarea>
  <div class="hidden" id="notes"></div>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -626,7 +626,7 @@ clbl = 0;
 notestoUse = [];
 isquestions = false;
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 function redo() {
   sessionStorage.setItem("stu", current);
