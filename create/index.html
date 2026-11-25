@@ -39,15 +39,18 @@ window.dispatchEvent(myEvent);
 <div style="background-image: url('../media/images/setcovers/10.png')" class="picselection2"></div>
 </div></div>
 </div>
-<div id="sidebar">
-<a href="../home/"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="../play/"><div style="top: 27dvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/sets.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a><div style="top: 54dvh" class="hyperlink selected"><img src="../media/images/toolbar/createselected.png" class="hpimg"><p class="hplabel selected">Create</p></div></a>
-<a href="../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
-
+<link rel="stylesheet" href="https://www.studyslooth.com/toolbar.css">
+<div id="mastersidebar" class="redsidebar createselectedtoolbar">
+  <a href="https://www.studyslooth.com/home/"><div id="homeblock" class="sidebarblock"><div class="sidebarimg"></div>HOME</div></a>
+  <a href="https://www.studyslooth.com/help-center/"><div id="helpblock" class="sidebarblock">HELP</div></a>
+  <a href="https://www.studyslooth.com/ad-policy/"><div id="adsblock" class="sidebarblock">ADS</div></a>
+  <a href="https://www.studyslooth.com/privacy-policy/"><div id="privacyblock" class="sidebarblock">PRIVACY</div></a>
+  <a href="https://www.studyslooth.com/license/"><div id="licenseblock" class="sidebarblock">LICENSE</div></a>
+  <a href="https://www.studyslooth.com/credits/"><div id="creditsblock" class="sidebarblock">CREDITS</div></a>
+  <a href="https://www.studyslooth.com/sets/"><div id="setsblock" class="sidebarblock"><div class="sidebarimg"></div>SETS</div></a>
+  <a href="https://www.studyslooth.com/create/"><div id="createblock" class="sidebarblock"><div class="sidebarimg"></div>CREATE</div></a>
+  <a href="https://www.studyslooth.com/import/"><div id="importblock" class="sidebarblock"><div class="sidebarimg"></div>IMPORT</div></a>
+  <a href="https://www.studyslooth.com/settings/"><div id="settingsblock" class="sidebarblock bottom"><div class="sidebarimg"></div>SETTINGS</div></a>
 </div>
 <div id="content">
 <div id='creambackground'>
@@ -964,19 +967,7 @@ arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "set
 if (localStorage.getItem("darkmode") == "1") {
   document.body.style.backgroundColor = "black";
   document.getElementById("heading").style.backgroundColor = "white";
-  document.getElementById("sidebar").style.outline = "3lvh solid white";
-  document.getElementById("sidebar").style.backgroundColor = "black";
-  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
-    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
-      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "black.png";
-    } else {
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "selected.png";
-      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
-    }
-  }
+  document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
   document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
   for (i = 0; i < 4; i++) {
     document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
