@@ -2,28 +2,402 @@
 <link rel="manifest" href="../manifest.json"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
 
+<div class="hidden" id="popup"><div id="actpopup">
+  <div onclick="document.getElementById('popup').classList.add('hidden'); resettogs()" id="close">X</div>
+  <p id="not"></p>
+  <p id="desconot"></p>
+  <div class="sat"><span class="satwtg">Answer with Voice</span><div onclick="toggle(1)" class="slidergroup"><div class="slider"></div></div></div>
+  <div class="sat"><span class="satwtg">Singleplayer/Multiplayer</span><div onclick="toggle(2)" class="slidergroup"><div class="slider"></div></div></div>
+  <div class="sat"><span class="satwtg">True or False Game Mode</span><div onclick="toggle(3)" class="slidergroup"><div class="slider"></div></div></div>
+  <div id="playbutton">Study</div>
+</div></div>
+<base href="https://www.studyslooth.com/play/">
 <div id="sidebar">
-<a href="../home/"><div style="top: 0dvh" class="hyperlink"><img src="../media/images/toolbar/homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="../study/"><div style="top: 13.5dvh" class="hyperlink"><img src="../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a><div style="top: 27dvh" class="hyperlink selected"><img src="../media/images/toolbar/playselected.png" class="hpimg"><p class="hplabel selected">Play</p></div></a>
-<a href="../sets/"><div style="top: 40.5dvh" class="hyperlink"><img src="../media/images/toolbar/setsorange.png" class="hpimg"><p class="hplabel">Sets</p></div></a>
-<a href="../create/"><div style="top: 54dvh" class="hyperlink"><img src="../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="../import/"><div style="top: 67.5dvh" class="hyperlink"><img src="../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="../settings/"><div style="top: 85.5dvh" class="hyperlink"><img src="../media/images/toolbar/settingsorange.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<a href="../home/"><div style="top: 0lvh" class="hyperlink"><img src="../media/images/toolbar/homeorange.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
+<a href="../study/"><div style="top: 13.5lvh" class="hyperlink"><img src="../media/images/toolbar/studyorange.png" class="hpimg"><p class="hplabel">Study</p></div></a>
+<a href="../play/"><div style="top: 27lvh" class="hyperlink"><img src="../media/images/toolbar/playorange.png" class="hpimg"><p class="hplabel">Play</p></div></a>
+<a><div style="top: 40.5lvh" class="hyperlink selected"><img src="../media/images/toolbar/setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
+<a href="../create/"><div style="top: 54lvh" class="hyperlink"><img src="../media/images/toolbar/createorange.png" class="hpimg"><p class="hplabel">Create</p></div></a>
+<a href="../import/"><div style="top: 67.5lvh" class="hyperlink"><img src="../media/images/toolbar/importorange.png" class="hpimg"><p class="hplabel">Import</p></div></a>
+<a href="../settings/"><div style="top: 85.5lvh" class="hyperlink"><img src="../media/images/toolbar/settingsorange.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
 </div>
 <div id="content">
-<div id="heading"><img src="../media/images/playlogo.png" id="logo"></div>
-<p id="desc">Click the set below you want to host a game with.</p>
+<div id='creambackground'>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+<div class="creamsicle" style="top: 0; left: 0"></div>
+<div class="creamsicle" style="top: 100%; left: 100%"></div>
+</div>
+<div id="heading">
+<div id="fadedbg"></div><span id="nameofset">Set Name</span></div>
+<div class="hidden" id="topcreamthing"></div>
+<div id="bottomcreamthing"></div>
+<div id="evenbggroups">
+<div id="disclaimer">Choose a game mode below to host an in-class study session:</div>
 <div id="groups">
 </div>
-<span id="enot" class="hidden">It's looking a little empty.<br>Click "Create" on the left to make a set.</span>
+</div>
 </div>
 </body>
 <style>
+.imginsidetext {
+  height: 5.5lvh;
+  width: 5.5lvh;
+  position: relative;
+  vertical-align: -10%;
+}
+#resume {
+  white-space: nowrap;
+  height: 8dvh;
+  position: absolute;
+  left: 50%;
+  top: 5lvh;
+  transform: translate(-50%);
+  font-size: 5.5lvh;
+  color: white;
+  background-color: #ff8500;
+  border-radius: 2.5dvh;
+  padding: 2.5lvh;
+  z-index: 200;
+  padding-bottom: 1lvh;
+  transition: 0.3s filter;
+}
+#new {
+  white-space: nowrap;
+  height: 8dvh;
+  position: absolute;
+  left: 50%;
+  bottom: 5lvh;
+  transform: translate(-50%);
+  font-size: 5.5lvh;
+  color: white;
+  background-color: #ff8500;
+  border-radius: 2.5dvh;
+  padding: 2.5lvh;
+  z-index: 200;
+  padding-bottom: 1lvh;
+  transition: 0.3s filter;
+}
+#resume:hover, #new:hover {
+  filter: brightness(1.8);
+}
+#fadedbg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  opacity: 0.5;
+}
+
+#playbutton {
+  cursor: pointer;
+  left: 50%;
+  bottom: -2.5dvh;
+  height: 8dvh;
+  width: 20dvh;
+  border-radius: 2dvh;
+  outline: 1.5dvh solid #ff8500;
+  transform: translate(-50%, 0%);
+  background-color: rgb(255, 254, 240);
+  color: #ff8500;
+  font-size: 6.5dvh;
+  text-align: center;
+  position: absolute;
+  transition: 0.6s background-color, 0.6s color, 0.6s width, 0.6s height, 0.6s font-size, 0.6s box-shadow;
+}
+#desconot {
+  width: calc(100dvw - 20lvh);
+  max-width: 80lvh;
+  margin-left: 50%;
+  margin-top: -5lvh;
+  transform: translate(-50%, 0%);
+  color: #ff8500;
+  text-align: center;
+  font-family: "Special Gothic Condensed One";
+  font-size: 3.25dvh;
+}
+#not {
+  width: calc(100dvw - 20lvh);
+  max-width: 80lvh;
+  word-wrap: break-word;
+  margin-top: 2dvh;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: #ff8500;
+  font-size: 5.5dvh;
+}
+#close {
+  color: #ff8500;
+  font-size: 7dvh;
+  text-align: center;
+  width: 9dvh;
+  background-color: rgb(255, 254, 240);
+  height: 9dvh;
+  right: -2dvh;
+  top: -2dvh;
+  position: absolute;
+  z-index: 11;
+  border-radius: 1.5dvh;
+  outline: 1.5dvh solid #ff8500;
+  cursor: pointer;
+  font-family: "Fredoka One";
+  font-weight: 700;
+  border: none;
+  transition: 0.6s background-color, 0.6s color, 0.6s width, 0.6s height, 0.6s font-size, 0.6s box-shadow;
+}
+#playbutton:hover {
+  background-color: #ff8500;
+  color: white;
+  width: 27dvh;
+  height: 10.5dvh;
+  font-size: 8.5lvh;
+  box-shadow: 0lvh -1lvh 6lvh rgba(0,0,0,0.5);
+}
+#close:hover {
+  background-color: #ff8500;
+  color: white;
+  width: 11dvh;
+  height: 11dvh;
+  font-size: 8.5lvh;
+  box-shadow: -1lvh 3lvh 2lvh rgba(0,0,0,0.3);
+}
+#windowthing {
+  width: calc(100% - 5.5dvh);
+  left: 2.75dvh;
+  outline: 1.75dvh solid #ff8500; 
+  border-radius: 1.5dvh;
+  position: absolute;
+  height: 25dvh;
+  top: 2.75dvh;
+}
+#actpopup {
+  background-size: cover;
+  background-position: 50% 50%;
+  word-wrap: break-word;
+  padding: 4dvh;
+  padding-bottom: 10lvh;
+  padding-top: 6lvh;
+  background-color: rgb(255, 254, 240);
+  outline: 2dvh solid #ff8500;
+  border: none;
+  border-radius: 8dvh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#popup {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10000000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#wbgnew {
+  width: calc(100% - 14.75dvh);
+  height: 100dvh;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: -100000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("../../media/images/whitebg.png");
+}
+.sat {
+  white-space: nowrap;
+  font-size: 2.5dvh;
+  text-align: left;
+  width: fit-content;
+  color: black;
+  margin-left: 50%;
+  margin-bottom: 1lvh;
+  transform: translateX(calc((50% + 4dvh) * -1));
+}
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2dvh;
+  height: 2dvh;
+  background-color: #ff8500;
+  border-radius: 4dvh;
+  transition: 1s left;
+}
+.slidergroup {
+  right: -8dvh;
+  outline: 0.5dvh solid black;
+  border-radius: 4dvh;
+  position: absolute;
+  height: 2dvh;
+  top: 0.5dvh;
+  width: 5.5dvh;
+  background-color: white;
+  transition: 1s background-color;
+  cursor: pointer;
+}
+#mmlogo {
+
+  background-image: url("https://www.studyslooth.com/media/images/studymode/mmlogo.png");
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  width: calc(100% - 6lvh);
+  height: calc(100% - 6lvh);
+  z-index: 1;
+  left: 3lvh;
+  top: 3lvh;
+  position: absolute;
+  transition: 0.3s filter;
+}
+#addnew {
+  width: 6lvh;
+  height: 6lvh;
+  left: 3lvh;
+  transform: translate(-50%);
+  filter: invert(29%) sepia(43%) saturate(3270%) hue-rotate(341deg) brightness(78%) contrast(104%);
+  position: relative;
+  vertical-align: baseline;
+}
+#addnewset {
+  font-size: 4lvh;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: absolute;
+  width: 100%;
+}
+#createnew {
+  position: relative;
+  height: 28.5lvh;
+  width: calc((100% - (var(--nopr)) * 2lvh) / var(--nopr) - 1.5lvh);
+  margin-left: 1.75lvh;
+  margin-right: 1.75lvh;
+  margin-bottom: 1.75lvh;
+  margin-top: 2.75lvh;
+  border-radius: 3.75lvh;
+  overflow: hidden;
+  color: #ff8500;
+  cursor: pointer;
+  transition: 0.6s box-shadow, 0.6s transform;
+  background-color: rgba(193,32,32,0.1);
+  outline: 0.75lvh dashed #ff8500;
+  box-shadow: 0 2lvh 0 rgba(0,0,0,0.2);
+}
+#createnew:hover {
+  box-shadow: 0 2.5lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+#createnew.full {
+  width: 100%;
+  height: 45lvh;
+}
+#nameofset {
+  width: 100%;
+  text-align: center;
+  max-height: 17.5lvh;
+  position: absolute;
+  left: 50%;
+  font-size: 10lvh;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#disclaimer {
+  margin-bottom: 0lvh;
+  width: calc(100% - 2lvh);
+  font-family: "Special Gothic Condensed One";
+  font-size: 4lvh;
+  padding: 1lvh;
+  background-color: white;
+  margin-left: 1lvh;
+  line-height: 4.5lvh;
+  color: #ff8500;
+  pointer-events: none;
+  position: abslolute;
+}
+.disclaimer2 {
+  margin-top: 3lvh;
+  margin-bottom: 1lvh;
+  width: calc(100% - 2lvh);
+  font-family: "Special Gothic Condensed One";
+  font-size: 4lvh;
+  padding: 1lvh;
+  background-color: white;
+  margin-left: 1lvh;
+  line-height: 4.5lvh;
+  color: #ff8500;
+  pointer-events: none;
+  position: abslolute;
+}
+#naa .big {
+  font-size: 3.5lvh;
+}
+#naa .small {
+  font-family: "Special Gothic Condensed One";
+}
+#naa {
+  width: calc(100% - 4lvh);
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: none;
+  text-overflow: ellipsis;
+  max-height: calc(100% - 4lvh);
+  text-align: center;
+  position: absolute;
+}
+.bgimg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-size: cover;
+  opacity: 1;
+  background-position: 50% 50%;
+  position: absolute;
+  transition: 0.3s filter;
+}
+.creamsicle {
+  width: 50lvh;
+  height: 50lvh;
+  position: absolute;
+  background-color: rgb(255, 254, 240);
+  filter: blur(20lvh);
+  transform: translate(-50%, -50%);
+}
+#creambackground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(255, 254, 240, 0.55);
+  z-index: 0;
+}
+:root {
+  --nopr: calc((round(pow(100dvw / 100lvh, 1) * 1.4, 1)));
+}
 .hidden {
   opacity: 0;
   pointer-events: none;
@@ -36,15 +410,15 @@
   position: absolute;
   width: 100%;
   color: black;
-  font-size: 3dvh;
+  font-size: 3lvh;
   text-align: center;
 }
 #desc {
   position: absolute;
-  left: 2dvh;
-  top: 16.75dvh;
+  left: 2lvh;
+  top: 16.75lvh;
   color: black;
-  font-size: 3dvh;
+  font-size: 3lvh;
 }
 @font-face {
   font-family: fredokaone;
@@ -52,6 +426,7 @@
 }
 body {
   font-family: fredokaone;
+  background-color: rgb(255,254,240);
 }
 #logo {
   height: 90%;
@@ -75,219 +450,569 @@ body {
   font-weight: bold;
   text-align: center;
   left: 50%;
-  bottom: 0.75dvh;
+  bottom: 0.75lvh;
   height: auto;
   transform: translate(-50%, 0%);
 }
 .hyperlink {
   color: #ff8500;
   position: absolute;
-  width: 9dvh;
-  padding: 1.5dvh;
-  height: 12dvh;
-  font-size: 2dvh;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
 }
 .hpimg {
-  top: 1.5dvh;
-  left: 1.5dvh;
-  width: 9dvh;
+  top: 1.5lvh;
+  left: 1.5lvh;
+  width: 9lvh;
   position: absolute;
-  height: 9dvh;
+  height: 9lvh;
 }
 .darkmodehyperlink {
   color: white;
   position: absolute;
-  width: 9dvh;
-  padding: 1.5dvh;
-  height: 12dvh;
-  font-size: 2dvh;
+  width: 9lvh;
+  padding: 1.5lvh;
+  height: 12lvh;
+  font-size: 2lvh;
 }
-.author {
-  font-size: 2dvh;
-  font-weight: normal;
+#topcreamthing {
+  position: fixed;
+  top: 21lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 6lvh);
+  z-index: 10000;
+  background-image: linear-gradient(rgb(255,254,240), rgba(0,0,0,0));
+  transition: 0.3s opacity;
+  pointer-events: none;
 }
-.insidetext {
-  font-weight: bold;
-  font-size: 3dvh;
-  position: absolute;
-  padding: 0;
-  text-align: center;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+#bottomcreamthing {
+  position: fixed;
+  bottom: 0lvh;
+  left: 17.7lvh;
+  height: 15lvh;
+  width: calc(100% - 6lvh);
+  z-index: 10000;
+  transition: 0.3s opacity;
+  background-image: linear-gradient(rgba(0,0,0,0), rgb(255,254,240));
+  pointer-events: none;
 }
 .group {
-  height: 15dvh;
-  outline: 1.5dvh solid black;
-  border-radius: 1.5dvh;
+  position: relative;
+  height: 30lvh;
+  width: calc((100% - (var(--nopr)) * 2lvh) / var(--nopr));
+  margin-left: 1lvh;
+  margin-right: 1lvh;
+  margin-bottom: 1lvh;
+  margin-top: 2lvh;
+  border-radius: 3.75lvh;
   overflow: hidden;
-  position: absolute;
-  background-size: cover;
-  background-position: 50% 50%;
-  filter: brightness(150%);
-}
-.groupdarkmode {
-  height: 15dvh;
   color: white;
-  outline: 1.5dvh solid white;
-  border-radius: 1.5dvh;
-  overflow: hidden;
-  position: absolute;
+  background-color: black;
+  cursor: pointer;
+  box-shadow: 0 1.5lvh 0 rgba(0,0,0,0.2);
+  transition: 0.6s box-shadow, 0.6s transform, 0.6s filter;
+}
+.mmgroup {
+  width: calc(100%);
+  height: 35lvh;
   background-size: cover;
   background-position: 50% 50%;
+  transition: 0.6s filter, 0.6s box-shadow, 0.6s transform;
+}
+.group1:hover {
+  filter: brightness(1.25);
+  box-shadow: 0 2.5lvh 0 rgba(0,0,0,0.2);
+  transform: translateY(-1lvh);
+}
+#evenbggroups {
+  width: calc(100% - 6lvh);
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  top: 21lvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 79lvh;
 }
 #groups {
   width: 100%;
+  left: 50%;
+  transform: translate(-50%);
   position: absolute;
-  top: 21dvh;
+  margin-top: 1lvh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
   height: auto;
 }
 #heading {
   z-index: 2;
   position: fixed;
-  width: calc(100% - 14.75dvh);
-  height: 17.5dvh;
+  width: calc(100% - 14.75lvh);
+  height: 17.5lvh;
   background-color: #ff8500;
   right: 0;
   top: 0;
 }
 #content {
   position: absolute;
-  width: calc(100% - 14.75dvh);
+  width: calc(100% - 14.75lvh);
   height: 100%;
   right: 0;
   top: 0;
   background-image: url("../media/images/whitebg.png");
   background-position: 50% 50%;
   background-size: cover;
-}
-.halfwhite {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.halfblack {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 #sidebar {
   background-color: white;
-  outline: 3dvh solid #ff8500;
-  width: 12dvh;
+  outline: 3lvh solid #ff8500;
+  width: 12lvh;
   left: 0;
   top: 0;
   height: 100%;
   position: fixed;
 }
+.groupdarkmode {
+  background-color: #ff8500;
+  color: white;
+}
 </style>
 <script>
-document.getElementById("groups").innerHTML = "";
+if (sessionStorage.getItem("lsa")) {
+  current = sessionStorage.getItem("lsa");
+} else {
+  window.location.href = "../sets/setnotfound.html"
+}
+document.getElementById("nameofset").innerHTML = localStorage.getItem(current + "n");
+document.getElementById("fadedbg").style.backgroundImage = `url("${localStorage.getItem(current + "p")}")`;
+if (localStorage.getItem("timed")) {
+if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = "../../study/preferences/set.html";
+}
+} else {
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = "../../study/preferences/";
+}
+function choice() {
+  document.getElementsByClassName("mmgroup")[0].classList.remove("mmgroup1");
+  document.getElementsByClassName("mmgroup")[0].classList.remove("group1");
+  document.getElementsByClassName("mmgroup")[0].style.boxShadow = "0 2.5lvh 0 rgba(0,0,0,0.2)";
+  document.getElementsByClassName("mmgroup")[0].style.transform = "translateY(-1lvh)";
+  document.getElementById("mmlogo").style.filter = "brightness(0.2)";
+  document.getElementById("mmlogo").style.filter = "brightness(0.2)";
+  document.getElementsByClassName("bgimg")[0].style.filter = "brightness(0.2)";
+  document.getElementById("resume").classList.remove("hidden");
+  document.getElementById("new").classList.remove("hidden");
+  document.getElementsByClassName("mmgroup")[0].style.backgroundColor = "black";
+}
+pages = ["answerwithanantonym", "processofelimination", "matchingsingleplayer", "chronologicalorder", "flashcards", "unscramble", "matchingmultiplayer", "trueorfalse", "hotseat", "hotseatmultiplayer", "hotseatauditory", "explain", "explainwithwhiteboard", "hotseattrueorfalse", "hotseatmultiplayertrueorfalse", "guesstheterm", "askandanswer", "sketchandanswer", "readandspeak", "listenandspeak", "unscrambleauditory", "fillintheblank", "readandanswer", "timedreadandanswer", "usenotestoanswer", "usenotestospeak", "antonymone", "antonymtwo", "notesone", "notestwo", "notesauditoryone", "notesauditorytwo", "sketchone", "sketchtwo"]
+function resume() {
+  if (event.target.id != "new") {
+  fullmm = localStorage.getItem(current + "mm");
+  ogmmexc = fullmm.substring(2);
+  nptogo = parseInt(fullmm[0]);
+  allplacestogo = [];
+  placeofint = "";
+  for (i = 0; i < ogmmexc.length; i++) {
+    if (ogmmexc[i] == "/") {
+      allplacestogo.push(parseInt(placeofint));
+      lindex = i;
+      break;
+    } else if (ogmmexc[i] == ".") {
+      allplacestogo.push(parseInt(placeofint));
+      placeofint = "";
+    } else {
+      placeofint = placeofint + ogmmexc[i];
+    }
+  }
+  sessionStorage.setItem("mm", current);
+  sessionStorage.setItem("stu", current);
+  if (nptogo == allplacestogo.length) {
+  sessionStorage.setItem("wpr", "../study/studymodes/magicmemorizesummary");
+  } else {
+  sessionStorage.setItem("wpr", "../study/studymodes/" + pages[allplacestogo[nptogo]]);
+  }
+  window.location.href = "../../redirecting/";
+  }
+}
+function restart() {
+  localStorage.removeItem(current + "mm");
+  localStorage.removeItem(current + "mmrefs");
+  sessionStorage.setItem("setToUse", current);
+  window.location.href = "../../study/studymodes/setupmagicmemorize.html";
+}
 if (localStorage.getItem("darkmode")) {} else {
   localStorage.setItem("darkmode", "0");
 }
-if ((parseInt(localStorage.getItem("numofsets")) > 0) == false) {
-  document.getElementById("desc").classList.add("hidden");
-  document.getElementById("enot").classList.remove("hidden");
-}
 arrayOfPictureNames = ["home", "study", "play", "sets", "create", "import", "settings"];
 if (localStorage.getItem("darkmode") == "1") {
-  document.body.style.backgroundColor = "black";
+  document.getElementById("nameofset").style.color = "black";
+  document.getElementById("disclaimer").style.backgroundColor = "black";
+  document.getElementById("disclaimer").style.color = "white";
+  for (i = 0; i < document.getElementsByClassName("disclaimer2").length; i++) {
+    document.getElementsByClassName("disclaimer2")[i].style.backgroundColor = "black";
+    document.getElementsByClassName("disclaimer2")[i].style.color = "white";
+  }
+  document.body.style.backgroundColor = "#3a3a3a";
   document.getElementById("heading").style.backgroundColor = "white";
-  document.getElementById("sidebar").style.outline = "3dvh solid white";
+  document.getElementById("sidebar").style.outline = "3lvh solid white";
   document.getElementById("sidebar").style.backgroundColor = "black";
-  document.getElementById("logo").style.filter = "invert(1)";
+  document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
+  for (i = 0; i < 4; i++) {
+    document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
+  }
+  document.getElementById("topcreamthing").style.backgroundImage = "linear-gradient(#3a3a3a, rgba(0,0,0,0))";
+  document.getElementById("bottomcreamthing").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
+  document.getElementById("creambackground").style.opacity = "0.5";
   for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
     if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
       document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
       document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "black.png";
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
     } else {
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i] + "selected.png";
+      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
       document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
     }
   }
 }
-resizeeverything();
-window.addEventListener("resize", resizeeverything);
-for (i = 1; i <= parseInt(localStorage.getItem("numofsets")); i++) {
-  creategroup(i.toString());
+
+oneswbgs = ["2048", "Grid Breaker", "Hot Seat", "Cast Fishing", "Continuous Tic-Tac-Toe", "Hot Seat-Multiplayer", "Hot Seat-Auditory", "Hot Seat-Multiplayer True or False", "Hot Seat-True or False", "True or False"];
+wstudymodes = ["Read and Answer", "Use Notes to Answer", "Practice Quiz", "Unscramble"];
+astudymodes = ["Ask and Answer", "Listen and Speak"];
+sstudymodes = ["Cast Fishing", "Continuous Tic-Tac-Toe", "Explain", "Guess the Term"];
+tstudymodes = ["2048", "Grid Breaker", "Hot Seat", "Fill-in-the-Blank"];
+vstudymodes = ["Flashcards", "Chronological Order", "Matching", "Sketch and Answer"];
+lstudymodes = ["Answer with an Antonym", "Process of Elimination", "True or False"];
+if (localStorage.getItem(current.concat("terms")) != "1") {
+  lstudymodes.splice(0, 1);
 }
-function redirect(url) {
+if (parseInt(localStorage.getItem(current.concat("qat"))) < 3) {
+  lstudymodes.splice(lstudymodes.indexOf("Process of Elimination"), 1);
+}
+if (parseInt(localStorage.getItem(current.concat("qat"))) < 4) {
+  tstudymodes.splice(tstudymodes.indexOf("Hot Seat"), 1);
+}
+if (localStorage.getItem(current.concat("chronological")) != "1") {
+  vstudymodes.splice(1, 1);
+}
+allgames = ["Answer with an Antonym", "Process of Elimination", "Matching-Singleplayer", "Chronological Order", "Flashcards", "Unscramble", "Matching-Multiplayer", "True or False", "Hot Seat", "Hot Seat-Multiplayer", "Hot Seat-Auditory", "Explain", "Explain with Whiteboard", "Hot Seat-True or False", "Hot Seat-Multiplayer True or False", "Guess the Term", "Ask and Answer", "Sketch and Answer", "Read and Speak", "Listen and Speak", "Unscramble-Auditory", "Fill-in-the-Blank", "Read and Answer", "Timed Read and Answer", "Use Notes to Answer", "Use Notes to Speak", "Practice Quiz", "Cast Fishing", "Continuous Tic-Tac-Toe", "2048", "Grid Breaker"];
+gametypes = [["l"], ["l","t"], ["l","t"], ["l","t","v"], ["t","v"], ["t","w"], ["s","t","v"], ["l","t"], ["l","t","w"], ["l","s","t","w"], ["a","l","t"], ["a","s"], ["a","s","v","w"], ["l","t","w"], ["l","s","t","w"], ["a","s","v"], ["a","s"], ["l","v","w"], ["a","w"], ["a"], ["a","t"], ["l","t","w"], ["w"], ["w"], ["l","w"], ["a","l","w"], ["l","w"], ["s","t","w"], ["s","t","w"], ["t","v","w"], ["t","v","w"]];
+gamedifs = [1, 2, 2, 4, 3, 2, 2, 2, 4, 3, 4, 5, 5, 2, 2, 2, 2, 1, 5, 5, 2, 2, 5, 5, 1, 1, 0, 4, 4, 4, 4];
+ogorder = ["w", "a", "s", "t", "v", "l"];
+longnames = ["auditory", "logical", "social", "tactile", "visual", "written"];
+userpref = [];
+for (i = 0; i < 6; i++) {
+  if (localStorage.getItem(longnames[i]) == "1") {
+    userpref.push(longnames[i].substring(0, 1));
+  }
+}
+rstudymodes = [];
+if (userpref.length == 1) {
+  for (i=0; i<window[userpref[0].concat("studymodes")].length; i++) {
+    rstudymodes.push(window[userpref[0].concat("studymodes")][i]);
+  }
+} else {
+  for (a = 0; a < gametypes.length; a++) {
+    if (JSON.stringify(gametypes[a]) == JSON.stringify(userpref)) {
+      rstudymodes.push(allgames[a]);
+    }
+  }
+  for (a = 0; a < userpref.length; a++) {
+    narray = [];
+    for (i = 0; i < userpref.length; i++) {
+      narray.push(userpref[i]);
+    }
+    narray.splice(a, 1);
+    for (v = 0; v < gametypes.length; v++) {
+      if (JSON.stringify(gametypes[v]) == JSON.stringify(narray)) {
+        rstudymodes.push(allgames[v]);
+      }
+    }
+    for (b = 0; b < narray.length; b++) {
+    narray.splice(b, 1);
+    for (w = 0; w < gametypes.length; w++) {
+      if (JSON.stringify(gametypes[w]) == JSON.stringify(narray)) {
+        rstudymodes.push(allgames[w]);
+      }
+    }
+    for (c = 0; c < narray.length; c++) {
+    narray.splice(c, 1);
+    for (x = 0; x < gametypes.length; x++) {
+      if (JSON.stringify(gametypes[x]) == JSON.stringify(narray)) {
+        rstudymodes.push(allgames[x]);
+      }
+    }
+  }
+  for (d = 0; d < narray.length; d++) {
+    narray.splice(d, 1);
+    for (y = 0; y < gametypes.length; y++) {
+      if (JSON.stringify(gametypes[y]) == JSON.stringify(narray)) {
+        rstudymodes.push(allgames[y]);
+      }
+    }
+  }
+  for (e = 0; e < narray.length; e++) {
+    narray.splice(e, 1);
+    for (z = 0; z < gametypes.length; z++) {
+      if (JSON.stringify(gametypes[z]) == JSON.stringify(narray)) {
+        rstudymodes.push(allgames[z]);
+      }
+    }
+  }
+  }
+  }
+}
+oldrstudymodes = rstudymodes;
+rstudymodes = [];
+for (i = 0; i < oldrstudymodes.length; i++) {
+  if (localStorage.getItem(current.concat("terms")) != "1" && oldrstudymodes[i] == "Answer with an Antonym") {}
+  else if (localStorage.getItem(current.concat("chronological")) != "1" && oldrstudymodes[i] == "Chronological Order") {}
+  else if (localStorage.getItem(current.concat("whiteboardrecommended")) != "1" && oldrstudymodes[i] == "Explain with Whiteboard") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 3 && oldrstudymodes[i] == "Process of Elimination") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 4 && oldrstudymodes[i] == "Hot Seat") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 4 && oldrstudymodes[i] == "Hot Seat-Multiplayer") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 4 && oldrstudymodes[i] == "Hot Seat-Auditory") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 4 && oldrstudymodes[i] == "Hot Seat-True or False") {}
+  else if (parseInt(localStorage.getItem(current.concat("qat"))) < 4 && oldrstudymodes[i] == "Hot Seat-Multiplayer True or False") {}
+  else if (rstudymodes.indexOf(oldrstudymodes[i]) > -1) {} else {
+    rstudymodes.push(oldrstudymodes[i]);
+  }
+}
+if (rstudymodes.length <= 2) {
+  for (i=0; i<window[localStorage.getItem("pref").concat("studymodes")].length; i++) {
+    ntp = true;
+    for (b = 0; b < rstudymodes.length; b++) {
+      if (window[localStorage.getItem("pref").concat("studymodes")][i] == rstudymodes[b]) {
+        ntp = false;
+      }
+    }
+    if (ntp) {
+    rstudymodes.push(window[localStorage.getItem("pref").concat("studymodes")][i]);
+    }
+  }
+}
+
+function redirect(url, lsat) {
+  sessionStorage.setItem("lsa", lsat);
   window.location.href = url;
 }
+function redirecttoads(whichpage) {
+  sessionStorage.setItem("stu", current);
+  sessionStorage.setItem("wpr", "../study/studymodes/".concat(whichpage));
+  window.location.href = "../redirecting/";
+}
+tog1 = 0;
+tog2 = 0;
+tog3 = 0;
+function resettogs() {
+  if (tog1 == 1) { toggle(1) }
+  if (tog2 == 1) { toggle(2) }
+  if (tog3 == 1) { toggle(3) }
+}
+function toggle(whichone) {
+  if (window["tog".concat(whichone.toString())] == 0) {
+    if (document.getElementById("not").innerHTML == "Hot Seat") {
+      if (whichone == 1 && tog2 == 1) { toggle(2) }
+      if (whichone == 1 && tog3 == 1) { toggle(3) }
+      if (whichone == 2 && tog1 == 1) { toggle(1) }
+      if (whichone == 3 && tog1 == 1) { toggle(1) }
+    }
+    if (document.getElementById("not").innerHTML == "Read and Answer") {
+      if (whichone == 1 && tog2 == 1) { toggle(2) }
+      if (whichone == 2 && tog1 == 1) { toggle(1) }
+    }
+    window["tog".concat(whichone.toString())] = 1;
+    if (localStorage.getItem("darkmode") == "1") {
+      document.getElementsByClassName("slidergroup")[whichone - 1].style.backgroundColor = "white";
+    } else {
+      document.getElementsByClassName("slidergroup")[whichone - 1].style.backgroundColor = "black";
+    }
+    document.getElementsByClassName("slider")[whichone - 1].style.left = "3.5dvh";
+  } else {
+    window["tog".concat(whichone.toString())] = 0;
+    if (localStorage.getItem("darkmode") == "1") {
+      document.getElementsByClassName("slidergroup")[whichone - 1].style.backgroundColor = "black";
+    } else {
+      document.getElementsByClassName("slidergroup")[whichone - 1].style.backgroundColor = "white";
+    }
+    document.getElementsByClassName("slider")[whichone - 1].style.left = "0dvh";
+  }
+}
+function resettogs() {
+  if (tog1 == 1) { toggle(1) }
+  if (tog2 == 1) { toggle(2) }
+  if (tog3 == 1) { toggle(3) }
+}
+function showpopup(nameofgame) {
+  document.getElementById("popup").classList.remove("hidden");
+  switch (nameofgame) {
+    case "hotseat":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('hotseatauditory');
+      } else if (tog2 == 1 && tog3 == 1) {
+      redirecttoads('hotseatmultiplayertrueorfalse');
+      } else if (tog2 == 1) {
+      redirecttoads('hotseatmultiplayer');
+      } else if (tog3 == 1) {
+      redirecttoads('hotseattrueorfalse');
+      } else {
+      redirecttoads('hotseat');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.remove("hidden");
+      document.getElementsByClassName("sat")[2].classList.remove("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
+      document.getElementsByClassName("satwtg")[1].textContent = "Singleplayer/Multiplayer";
+      document.getElementById("not").innerHTML = "Hot Seat";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/hotseatbackground.png')";
+      document.getElementById("desconot").innerHTML = "Race against the Clock to Answer Each Question. Use the buttons below to decide whether you want to study by speaking, with a friend, or with a simpler true-or-false game mode.";
+      break;
+    case "unscramble":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('unscrambleauditory');
+      } else {
+      redirecttoads('unscramble');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.add("hidden");
+      document.getElementsByClassName("sat")[2].classList.add("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
+      document.getElementById("not").innerHTML = "Unscramble";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
+      document.getElementById("desconot").innerHTML = "Unscramble the word to decipher the answer to a question. Use the buttons to control whether or not you answer with your keyboard or your voice.";
+      break;
+    case "explain":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('explainwithwhiteboard');
+      } else {
+      redirecttoads('explain');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.add("hidden");
+      document.getElementsByClassName("sat")[2].classList.add("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Whiteboard";
+      document.getElementById("not").innerHTML = "Explain";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
+      if (localStorage.getItem(current.concat('whiteboardrecommended')) != "1") {
+      document.getElementById("desconot").innerHTML = "Study by finding a friend and taking turns explaining the concept on the screen to one another.";
+      } else {
+      document.getElementById("desconot").innerHTML = "Study by finding a friend and taking turns explaining the concept on the screen to one another. Use the button below to decide whether you'd like a whiteboard to help explain a concept.";
+      }
+      break;
+    case "readand":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('readandspeak');
+      } else if (tog2 == 1) {
+      redirecttoads('timedreadandanswer');
+      } else {
+      redirecttoads('readandanswer');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.remove("hidden");
+      document.getElementsByClassName("sat")[2].classList.add("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
+      document.getElementsByClassName("satwtg")[1].textContent = "Timed Game Mode";
+      document.getElementById("not").innerHTML = "Read and Answer";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
+      document.getElementById("desconot").innerHTML = "Study by reading the question and typing out the answer. Use the buttons below to decide if you want to study using your voice or race the clock in the timed game mode.";
+      break;
+    case "matching":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('matchingmultiplayer');
+      } else {
+      redirecttoads('matchingsingleplayer');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.add("hidden");
+      document.getElementsByClassName("sat")[2].classList.add("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Singleplayer/Multiplayer";
+      document.getElementById("not").innerHTML = "Matching";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
+      document.getElementById("desconot").innerHTML = "Uncover matching tiles until you've cleared the board. Use the button below to decide whether you want to study by yourself or with a friend.";
+      break;
+    case "usenotes":
+      document.getElementById("playbutton").setAttribute("onclick", `
+      if (tog1 == 1) {
+      redirecttoads('usenotestospeak');
+      } else {
+      redirecttoads('usenotestoanswer');
+      }
+      `);
+      document.getElementsByClassName("sat")[1].classList.add("hidden");
+      document.getElementsByClassName("sat")[2].classList.add("hidden");
+      document.getElementsByClassName("satwtg")[0].textContent = "Answer with Voice";
+      document.getElementById("not").innerHTML = "Use Notes";
+      document.getElementById("actpopup").style.backgroundImage = "url('../../media/images/studymode/defaultstudymodebackground.png')";
+      document.getElementById("desconot").innerHTML = "Use your Notes to answer questions. Use the button below to decide whether or not you want to answer with your voice."; 
+      break;
+    default:
+      break;
+  }
+}
+games = ["classic", "classicw", "suddendeath", "alliances"];
+for (i = 0; i < games.length; i++) {
+  creategroup(games[i]);
+}
 function creategroup(n2c) {
+  nn2c = "";
+  for (f = 0; f < n2c.length; f++) {
+    if (n2c[f] != " " && n2c[f] != "-" && n2c[f] != "&") {
+      nn2c = nn2c + n2c[f].toLowerCase();
+    }
+  }
   nDiv = document.createElement("div");
   nDiv.classList.add("group");
+  nDiv.classList.add("group1");
   nDiv.classList.add("grpfilter");
-  nDiv.setAttribute("onclick", "redirect('sets/play" + n2c + ".html')");
-  nDiv.style.backgroundImage = "url('../media/images/setcovers/".concat(localStorage.getItem(n2c + "p"), ".png')");
-  document.getElementById("groups").appendChild(nDiv);
-  nDivi = document.createElement("div");
-  nDivi.classList.add("insidetext");
-  nDiv.appendChild(nDivi);
-  nDivw = document.createElement("div");
-  if (localStorage.getItem("darkmode") == "1") {
-  nDivw.classList.add("halfblack");
+  nbgimg = document.createElement("div");
+  nbgimg.classList.add("bgimg");
+  nDiv.appendChild(nbgimg);
+  document.getElementById("groups").insertBefore(nDiv, document.getElementById("createnew"));
+  nDiv2 = document.createElement("div");
+  nDiv2.id = "mmlogo";
+  if (n2c == "classicw") {
+  nDiv2.style.backgroundImage = `url('../media/images/classic/` + n2c.concat("logo.png") + "')";
+  nbgimg.style.backgroundImage = "url('../media/images/classic/classicwbackground.gif')";
   } else {
-  nDivw.classList.add("halfwhite");
+  nDiv2.style.backgroundImage = `url('../media/images/${n2c}/` + n2c.concat("logo.png") + "')";
+  nbgimg.style.backgroundImage = `url('../media/images/${n2c}/${n2c}background.gif')`;
   }
-  nDiv.appendChild(nDivw);
-  nSpann = document.createElement("span");
-  nSpann.innerHTML = localStorage.getItem(n2c + "n");
-  nSpann.classList.add("name");
-  nDivi.appendChild(nSpann);
-  nBR = document.createElement("br");
-  nDivi.appendChild(nBR);
-  nSpana = document.createElement("span");
-  nSpana.innerHTML = localStorage.getItem(n2c + "a");
-  nSpana.classList.add("author");
-  nDivi.appendChild(nSpana);
-  resizeeverything();
+  nDiv.setAttribute("onclick", "redirecttoads('../play/playmodes/".concat(n2c, "')"));
+  nDiv.appendChild(nDiv2);
 }
 if (localStorage.getItem("darkmode") == "1") {
-document.getElementById("desc").style.color = "white";
 ll = document.getElementsByClassName("group").length;
-document.getElementById("enot").style.color = "white";
 for (i = 0; i < ll; i++) {
   document.getElementsByClassName("group")[i].classList.add("groupdarkmode");
   document.getElementsByClassName("group")[i].classList.remove("grpfilter");
 }
 }
-function resizeeverything() {
-  width = window.innerWidth;
-  height = window.innerHeight;
-  space = (window.innerWidth) - window.innerHeight * 0.1475;
-  ratio = height / width;
-  ratio = (ratio / 3) * 2;
-  margin = window.innerHeight * 0.02;
-  nopr = parseInt((1 / (ratio / 1.5)) * 1.5);
-  for (i = 0; i < document.getElementsByClassName("group").length; i++) {
-    widthVal = (space - (window.innerHeight * 0.03) * nopr - margin * (nopr + 2)) / nopr;
-    document.getElementsByClassName("group")[i].style.width = widthVal;
-    remainder = (i + 1)%nopr;
-    if (remainder == 0) { remainder=nopr; }
-    document.getElementsByClassName("group")[i].style.left = (margin + window.innerHeight * 0.015) + (remainder - 1) * (widthVal + (margin + window.innerHeight * 0.03));
-    level = ((i + 1) - remainder) / nopr;
-    document.getElementsByClassName("group")[i].style.top = (level * (0.2 * window.innerHeight)) + 0.02 * window.innerHeight + document.getElementById("desc").offsetHeight;
-  }
-  ratio4heading = space / (window.innerHeight * 0.175);
-  ratiotocompareto = document.getElementById("logo").offsetWidth / document.getElementById("logo").offsetHeight;
-  if (ratio4heading > ratiotocompareto) {
-    document.getElementById("logo").style.height = 90 + "%";
-    document.getElementById("logo").style.width = "auto";
+adjustgradients(document.getElementById("evenbggroups"));
+document.getElementById("evenbggroups").addEventListener("scroll", function() {
+  adjustgradients(document.getElementById("evenbggroups"));
+});
+function adjustgradients(elementtu) {
+  if (elementtu.scrollTop > 0) {
+    document.getElementById("topcreamthing").classList.remove("hidden");
   } else {
-    document.getElementById("logo").style.width = 90 + "%";
-    document.getElementById("logo").style.height = "auto";
+    document.getElementById("topcreamthing").classList.add("hidden");
+  }
+  if (Math.floor(elementtu.scrollHeight) - 10 > Math.floor(elementtu.scrollTop + elementtu.offsetHeight)) {
+    document.getElementById("bottomcreamthing").classList.remove("hidden");
+  } else {
+    document.getElementById("bottomcreamthing").classList.add("hidden");
   }
 }
 </script>
