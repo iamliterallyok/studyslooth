@@ -670,7 +670,7 @@ if (sessionStorage.getItem("lsa")) {
   window.location.href = "../../study/studyurlerror.html"
 }
 document.getElementById("qtext2").children[0].innerHTML = localStorage.getItem(`${current}n`) + ":";
-document.getElementById("bgimg").style.backgroundImage = `url("../../media/images/setcovers/${localStorage.getItem(current.concat("p"))}.png")`
+document.getElementById("bgimg").style.backgroundImage = `url("${localStorage.getItem(current.concat("p"))}")`
 checknarrowwide();
 window.addEventListener("resize", checknarrowwide);
 function checknarrowwide() {
@@ -786,7 +786,7 @@ function doten(yon) {
   document.getElementById("insloadbar").style.backgroundColor = "#2dcc70";
   pose("happy");
   setTimeout(function() {
-  window.location.href = `../../study/sets/study${current}.html`;
+  window.location.href = `../../study/`;
   }, 2000);
 }
 
