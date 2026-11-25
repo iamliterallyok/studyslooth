@@ -24,7 +24,7 @@
    <button id="next" onclick="next()">Next</button>
  </div>
   </div>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/'" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -639,7 +639,7 @@ congratsmsg = ["Great Job!", "Perfect!", "Nice Work!", "Good Work!", "Good Job!"
 nopemsg = ["Oops", "Not quite", ":(", "Not exactly", "Erm, actually..."];
 clbl = 0;
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 function redo() {
   sessionStorage.setItem("stu", current);
