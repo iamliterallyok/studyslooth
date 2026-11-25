@@ -857,11 +857,11 @@ body.settings-theme-transition, body.settings-theme-transition * {
     const dark = localStorage.getItem("darkmode") === "1";
     document.body.classList.toggle("settings-dark", dark);
     document.getElementById("darkModeToggle").checked = dark;
-    const names = ["home", "study", "play", "sets", "create", "import", "settings"];
-    document.querySelectorAll("#sidebar .hpimg").forEach((img, index) => {
-      const selected = img.closest(".hyperlink").classList.contains("selected");
-      img.src = `../media/images/toolbar/${names[index]}${dark ? (selected ? "black" : "selected") : (selected ? "selected" : "orange")}.png`;
-    });
+    if (dark == "1") {
+    document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
+    } else {
+    document.getElementById("mastersidebar").style.classList.remove("darkmodetoolbar");
+    }
   }
   if (localStorage.getItem("darkmode") === null) localStorage.setItem("darkmode", "0");
   applyTheme();
@@ -1080,4 +1080,13 @@ body.settings-theme-transition, body.settings-theme-transition * {
     status("bulkStatus", `Replaced your current sets with ${backup.sets.length} set${backup.sets.length === 1 ? "" : "s"}.`);
   });
 })();
+setTimeout(function() {
+  document.getElementById("mastersidebar").style.transition = "0.6s background-color";
+  for (i = 0; i < document.getElementsByClassName("sidebarblock").length; i++) {
+    document.getElementsByClassName("sidebarblock")[i].style.transition = "0.6s color, 0.6s background-color, 0.2s outline, 0.6s box-shadow, 0.6s transition";
+  }
+  for (i = 0; i < document.getElementsByClassName("sidebarimg").length; i++) {
+    document.getElementsByClassName("sidebarimg")[i].style.transition = "0.6s filter";
+  }
+}, 10);
 </script>
