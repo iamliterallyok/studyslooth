@@ -25,7 +25,7 @@
   <button onclick="check(3)" style="left: calc(50% + 12.5dvh)" class="true"><span class="tofmt"></span></button>
  <div id="question"><span id="qtext">
  </span></div>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/'" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -612,7 +612,7 @@ function gentof() {
   }
 }
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 function redo() {
   sessionStorage.setItem("stu", current);
