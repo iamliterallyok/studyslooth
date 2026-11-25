@@ -36,7 +36,7 @@
    <option value="hi-IN">Hindi</option>
  </select>
  <textarea maxlength="1000" placeholder="Click the button and start talking and the answer will appear here..." id="answer"></textarea>
- <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/sets/study'.concat(current.concat('.html'))" id="x">X</span>
+ <div id="loadbar"><div id="insloadbar"></div></div><span onclick="window.location.href = '../../study/'" id="x">X</span>
 </div>
 <div id="secondpart" class="hidden">
      <button class="hidden" id="finish" onclick="finish()">Done</button>
@@ -674,7 +674,7 @@ synth = window.speechSynthesis;
       synth.cancel();
     }
 function finish() {
-  window.location.href = "../../study/sets/study".concat(current, ".html");
+  window.location.href = "../../study/";
 }
 function redo() {
   sessionStorage.setItem("stu", current);
