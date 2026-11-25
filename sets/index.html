@@ -8,14 +8,18 @@
   <span id="copyrightnotice" style="position: fixed; z-index: 2147483647; pointer-events: none; right: 1lvh; bottom: -1lvh; height: 3lvh; width: auto; color: white; font-family: fredokaone; background-color: black; font-size: 1.75lvh; padding: 0.5lvh; border-radius: 1lvh">© 2026 Study Slooth. All Rights Reserved.</span><script>localStorage.setItem("bfb", "1"); if (localStorage.getItem("darkmode") == "1") { document.getElementById("copyrightnotice").style.filter = "invert(1)" } </script>
 
 <base href="https://www.studyslooth.com/sets/">
-<div id="sidebar">
-<a href="../home/"><div style="top: 0lvh" class="hyperlink"><img src="../media/images/toolbar/home.png" class="hpimg"><p class=" hplabel">Home</p></div></a>
-<a href="../study/"><div style="top: 13.5lvh" class="hyperlink"><img src="../media/images/toolbar/study.png" class="hpimg"><p class="hplabel">Study</p></div></a>
-<a href="../play/"><div style="top: 27lvh" class="hyperlink"><img src="../media/images/toolbar/play.png" class="hpimg"><p class="hplabel">Play</p></div></a>
-<a><div style="top: 40.5lvh" class="hyperlink selected"><img src="../media/images/toolbar/setsselected.png" class="hpimg"><p class="hplabel selected">Sets</p></div></a>
-<a href="../create/"><div style="top: 54lvh" class="hyperlink"><img src="../media/images/toolbar/create.png" class="hpimg"><p class="hplabel">Create</p></div></a>
-<a href="../import/"><div style="top: 67.5lvh" class="hyperlink"><img src="../media/images/toolbar/import.png" class="hpimg"><p class="hplabel">Import</p></div></a>
-<a href="../settings/"><div style="top: 85.5lvh" class="hyperlink"><img src="../media/images/toolbar/settings.png" class="hpimg"><p class="hplabel">Settings</p></div></a>
+<link rel="stylesheet" href="https://www.studyslooth.com/toolbar.css">
+<div id="mastersidebar" class="redsidebar setsselectedsidebar">
+  <a href="https://www.studyslooth.com/home/"><div id="homeblock" class="sidebarblock"><div class="sidebarimg"></div>HOME</div></a>
+  <a href="https://www.studyslooth.com/help-center/"><div id="helpblock" class="sidebarblock">HELP</div></a>
+  <a href="https://www.studyslooth.com/ad-policy/"><div id="adsblock" class="sidebarblock">ADS</div></a>
+  <a href="https://www.studyslooth.com/privacy-policy/"><div id="privacyblock" class="sidebarblock">PRIVACY</div></a>
+  <a href="https://www.studyslooth.com/license/"><div id="licenseblock" class="sidebarblock">LICENSE</div></a>
+  <a href="https://www.studyslooth.com/credits/"><div id="creditsblock" class="sidebarblock">CREDITS</div></a>
+  <a href="https://www.studyslooth.com/sets/"><div id="setsblock" class="sidebarblock"><div class="sidebarimg"></div>SETS</div></a>
+  <a href="https://www.studyslooth.com/create/"><div id="createblock" class="sidebarblock"><div class="sidebarimg"></div>CREATE</div></a>
+  <a href="https://www.studyslooth.com/import/"><div id="importblock" class="sidebarblock"><div class="sidebarimg"></div>IMPORT</div></a>
+  <a href="https://www.studyslooth.com/settings/"><div id="settingsblock" class="sidebarblock bottom"><div class="sidebarimg"></div>SETTINGS</div></a>
 </div>
 <div id="content">
 <div id='creambackground'>
@@ -348,8 +352,6 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("createnew").style.color = "white";
   document.getElementById("addnew").style.filter = "brightness(0) invert(1)";
   document.getElementById("heading").style.backgroundColor = "white";
-  document.getElementById("sidebar").style.outline = "3lvh solid white";
-  document.getElementById("sidebar").style.backgroundColor = "black";
   document.getElementById("creambackground").style.backgroundColor = "#3a3a3a";
   for (i = 0; i < 4; i++) {
     document.getElementsByClassName("creamsicle")[i].style.backgroundColor = "#3a3a3a";
@@ -357,17 +359,7 @@ if (localStorage.getItem("darkmode") == "1") {
   document.getElementById("topcreamthing").style.backgroundImage = "linear-gradient(#3a3a3a, rgba(0,0,0,0))";
   document.getElementById("bottomcreamthing").style.backgroundImage = "linear-gradient(rgba(0,0,0,0), #3a3a3a)";
   document.getElementById("creambackground").style.opacity = "0.5";
-  for (i = 0; i < document.getElementsByClassName("hpimg").length; i++) {
-    if (document.getElementsByClassName("hyperlink")[i].classList.contains("selected")) {
-      document.getElementsByClassName("hyperlink")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.backgroundColor = "white";
-      document.getElementsByClassName("hplabel")[i].style.color = "black";
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("black.png");
-    } else {
-      document.getElementsByClassName("hpimg")[i].src = "../media/images/toolbar/" + arrayOfPictureNames[i].concat("selected.png");
-      document.getElementsByClassName("hyperlink")[i].classList.add("darkmodehyperlink");
-    }
-  }
+  document.getElementById("mastersidebar").style.classList.add("darkmodetoolbar");
 }
 if (parseInt(localStorage.getItem("numofsets")) > 0) {
 for (i = 1; i <= parseInt(localStorage.getItem("numofsets")); i++) {
