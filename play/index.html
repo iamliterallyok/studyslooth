@@ -590,28 +590,6 @@ if (sessionStorage.getItem("lsa")) {
 }
 document.getElementById("nameofset").innerHTML = localStorage.getItem(current + "n");
 document.getElementById("fadedbg").style.backgroundImage = `url("${localStorage.getItem(current + "p")}")`;
-if (localStorage.getItem("timed")) {
-if (localStorage.getItem(current.concat("whiteboardrecommended"))) {} else {
-  sessionStorage.setItem("setToUse", current);
-  window.location.href = "../../study/preferences/set.html";
-}
-} else {
-  sessionStorage.setItem("setToUse", current);
-  window.location.href = "../../study/preferences/";
-}
-function choice() {
-  document.getElementsByClassName("mmgroup")[0].classList.remove("mmgroup1");
-  document.getElementsByClassName("mmgroup")[0].classList.remove("group1");
-  document.getElementsByClassName("mmgroup")[0].style.boxShadow = "0 2.5lvh 0 rgba(0,0,0,0.2)";
-  document.getElementsByClassName("mmgroup")[0].style.transform = "translateY(-1lvh)";
-  document.getElementById("mmlogo").style.filter = "brightness(0.2)";
-  document.getElementById("mmlogo").style.filter = "brightness(0.2)";
-  document.getElementsByClassName("bgimg")[0].style.filter = "brightness(0.2)";
-  document.getElementById("resume").classList.remove("hidden");
-  document.getElementById("new").classList.remove("hidden");
-  document.getElementsByClassName("mmgroup")[0].style.backgroundColor = "black";
-}
-pages = ["answerwithanantonym", "processofelimination", "matchingsingleplayer", "chronologicalorder", "flashcards", "unscramble", "matchingmultiplayer", "trueorfalse", "hotseat", "hotseatmultiplayer", "hotseatauditory", "explain", "explainwithwhiteboard", "hotseattrueorfalse", "hotseatmultiplayertrueorfalse", "guesstheterm", "askandanswer", "sketchandanswer", "readandspeak", "listenandspeak", "unscrambleauditory", "fillintheblank", "readandanswer", "timedreadandanswer", "usenotestoanswer", "usenotestospeak", "antonymone", "antonymtwo", "notesone", "notestwo", "notesauditoryone", "notesauditorytwo", "sketchone", "sketchtwo"]
 function resume() {
   if (event.target.id != "new") {
   fullmm = localStorage.getItem(current + "mm");
